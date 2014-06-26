@@ -1,0 +1,17 @@
+
+
+Block: RawDecode
+
+# RawDecode_master  g.evtyp==3||g.evtyp==4||g.evtyp==8
+
+
+Block: Decode
+
+#Decode_master  true
+T3DL  DL.evtype==3
+T4DL  DL.evtype==4
+T8DL  DL.evtype==8
+
+
+Block: Physics
+

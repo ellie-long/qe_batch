@@ -1,0 +1,31 @@
+######################### BB SCINTILLATOR PLANE ############################
+Number of Scintillator paddles ------------------------------------------
+       13
+Crate,Slot,1st,Last ADC chans,Beg S1 chan --------------------------------------
+        8       1       0      12       1             - ADCs pads 1-13  (right)
+        8       1      13      25      14             - ADCs pads 14-26 (left)
+        8      16      26      38       1             - TDCs pads 1-13  (right)
+        8      16      39      51      14             - TDCs pads 14-26 (left)
+      -1        0       0       0       0
+X,Y,Z coords of S front plane in spectrom cs ----------------------------------
+     0.0    0.0      0.95                            - Meters
+Half of X, half of Y, full Z sizes of S1 ---------------------------------------
+    1.10   0.32     0.038                           - Meters
+Rotation angle of the S plane -------------------------------------------------
+     0.0                                             - Degrees
+TDC time offsets of S in TDC channels -------------------
+ 36 45 45 24 71 134 52 -11 -7 22 10 85 16 - Left Paddles
+ -76 51 -0 9 -48 -50 -60 11 -21 -40 -28 9 12 - Right Paddles
+Pedestal values of S ADC channels ---------------------------------------------
+  369.7 337.1 386.3 418.7 311.9 248.5 253.3 424.4 
+  468.1 432.3 480.7 306.2 304.8 - Left Paddles
+  395.8 302.6 272.7 306.1 379.3 384.1 372.0 366.0 
+  299.3 359.5 279.8 293.0 393.0 - Right Paddles 
+Amplitude transformation coefficients of S ADC channels -----------------------
+  1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 - Left Paddles
+  1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 - Right Paddles
+# TDC resolution (time per channel -- assuming it is 35ps/channel : putting in ns)
+ 0.035
+# Speed of light in the medium (m/ns)
+ 0.146
+################################################################################

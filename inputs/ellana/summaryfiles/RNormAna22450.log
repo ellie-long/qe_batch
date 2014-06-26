@@ -1,0 +1,67 @@
+#Trigger      Prescale      Num evt        Num in        Livetime
+#---           Factor       CODA file      Scalers
+   1                1         93909         93829         0.949
+   2                1          4572          5338         0.813
+   3         16777215             0         19530         0.000
+   4         16777215             0         20403         0.000
+   5            65535             0         30400         0.000
+   6            65535             0         20038         0.000
+   7            65535             2        194590         0.639
+   8              100          2077        205166         0.960
+#Warning: T2 livetime is significantly different than the average.
+Weighted averaged livetime  =  0.928 +-  0.054
+Number of events = 100000
+
+#Correction for non-synch of scalers =  1.054
+   1                1             0             0         0.000
+   2                1             0             0         0.000
+   3         16777215             0             0         0.000
+   4         16777215             0             0         0.000
+   5            65535             0             0         0.000
+   6            65535             0             0         0.000
+   7            65535             0             0         0.000
+   8              100             0             0         0.000
+
+Weighted averaged livetime  =    nan +-    nan
+Number of events = 0
+
+#Correction for non-synch of scalers =  0.000
+   1                1         14809         46365        -1.000
+   2                1           748          2633        -1.000
+   3         16777215             0          9618        -1.000
+   4         16777215             0         10024        -1.000
+   5            65535             0         14960        -1.000
+   6            65535             0          9856        -1.000
+   7            65535             2         95676        -1.000
+   8              100           339        101054        -1.000
+
+Weighted averaged livetime  = -1.000 +-  0.000
+Number of events = 15817
+
+#Correction for non-synch of scalers =  0.338
+   1                1             0             0         0.000
+   2                1             0             0         0.000
+   3         16777215             0             0         0.000
+   4         16777215             0             0         0.000
+   5            65535             0             0         0.000
+   6            65535             0             0         0.000
+   7            65535             0             0         0.000
+   8              100             0             0         0.000
+
+Weighted averaged livetime  =    nan +-    nan
+Number of events = 0
+
+#Correction for non-synch of scalers =  0.000
+   1                1         12219         46060        -1.000
+   2                1           616          2618        -1.000
+   3         16777215             0          9588        -1.000
+   4         16777215             0         10053        -1.000
+   5            65535             0         14950        -1.000
+   6            65535             0          9887        -1.000
+   7            65535             0         95979        -1.000
+   8              100           250        101079        -1.000
+
+Weighted averaged livetime  = -1.000 +-  0.000
+Number of events = 13011
+
+#Correction for non-synch of scalers =  0.279

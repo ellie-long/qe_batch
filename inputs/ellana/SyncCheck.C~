@@ -1,0 +1,58 @@
+// ROC sync check script
+// ROC <roc> vs ROC <refroc>
+// Author Jin Huang <jinhaung@jlab.org>
+
+SyncCheck(UInt_t roc, UInt_t refroc)
+{
+	TString name;
+	name.Form("DL.syncroc%d",roc);
+	TLeaf *l = T->FindLeaf(name);
+	name.Form("DL.syncroc%d",refroc);
+	TLeaf *refl = T->FindLeaf(name);
+	
+	Bool_t asdf=false;
+	if (l==NULL)
+	{
+		name.Form("D.timeroc%d",roc);
+		l = T->FindLeaf(name);
+		name.Form("D.timeroc%d",refroc);
+		refl = T->FindLeaf(name);
+		asdf=true;
+	} 
+
+	T->GetEntry(10);
+	Double_t min = l -> GetValue();
+	Double_t minref = refl -> GetValue();
+
+	UInt_t N = T->GetEntries();
+	T->GetEntry(N-10);
+	Double_t max = l -> GetValue();
+	Double_t maxref = refl -> GetValue();
+
+	name.Form("syncroc%d_%d",roc,refroc);
+	TH2F *hSync = new TH2F(name.Data(),name.Data(),100,minref,maxref,100,min,max);
+	if (asdf)
+	{
+		name.Form("D.timerocroc%d:D.timerocroc%d>>%s"
+				,roc,refroc,name.Data());
+	}
+	else
+	{
+		name.Form("DL.syncroc%d:DL.syncroc%d>>%s"
+				,roc,refroc,name.Data());
+	}
+	cout<<"T->Draw("<<name<<");"<<endl;
+	gStyle -> SetOptStat(0);
+	T->Draw(name,"","COLZ");
+	
+	name.Form("ROC%d VS ROC%d",roc,refroc);
+	hSync -> SetTitle(name);
+	name.Form("Fast Clk ROC%d",refroc);
+	hSync -> GetXaxis() -> SetLabelSize(0.02);
+	hSync -> GetXaxis() -> SetTitle(name);
+	
+	name.Form("Fast Clk ROC%d",roc);
+	hSync -> GetYaxis() -> SetLabelSize(0.02);
+	hSync -> GetYaxis() -> SetTitle(name);
+	
+}

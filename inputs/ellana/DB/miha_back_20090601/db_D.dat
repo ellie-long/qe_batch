@@ -1,0 +1,625 @@
+# Decoder data used by THaDecData class
+# R. Michaels, March 2002
+# Comments start with '#'
+#
+# Here is where to search for the variables of this class.
+# Syntax depends on whether crate/word = "crate" or "word".
+# If "crate", we are looking into crates by slot and channel.
+# if "word", we are looking at a position relative to a header.
+# Hence, either:
+# name     "crate"   crate-number    slot    channel
+# or:
+# name     "word"    crate-number    header  num-to-skip
+# For the latter case, if one specifies crate-number = 0, then the
+# entire event is searched for 'header' (which in this case must be unique).
+# If crate-number > 0, then only that crate is searched.
+#
+# If this file is not existing, THaDecData will use its own internal DefaultMap().
+
+# synch checking adcs
+synchadc1    crate     1       25      16
+synchadc2    crate     2       24      48
+synchadc3    crate     3       22       0
+synchadc4    crate     4       17      48
+synchadc14   crate    14        1       5
+
+# time stamps
+timestamp    word      0    fca56000   2
+timeroc1     word      1    fabc0006   4
+timeroc2     word      2    fabc0006   4
+timeroc3     word      3    fabc0006   6
+timeroc4     word      4    fabc0008   8
+timeroc8     word      8    fabc0008   7
+timeroc11    word      4    faaa0001   6
+timeroc11b   word      4    faaa0001   10
+timeroc11c   word      4    faaa0001   11
+timeroc10    word      2    faaa0001   6
+timeroc14    word     14    fabc0008   8
+timeroc15    word     15    fabc0008   8
+
+# roc event type
+evtyperoc1     word      1    fabc0006   5
+evtyperoc2     word      2    fabc0006   5
+evtyperoc3     word      3    fabc0006   5
+evtyperoc4     word      4    fabc0008   5
+evtyperoc8     word      8    fabc0008   5
+evtyperoc11    word      4    faaa0001   4
+evtyperoc10    word      2    faaa0001   4
+evtyperoc14    word      14    fabc0008   5
+evtyperoc15    word      15    fabc0008   5
+
+# private counter
+evtroc1     word      1    fabc0006   1
+evtroc2     word      2    fabc0006   1
+evtroc3     word      3    fabc0006   1
+evtroc4     word      4    fabc0008   3
+evtroc8     word      8    fabc0008   1
+evtroc11    word      4    faaa0001   7
+evtroc10    word      2    faaa0001   7
+evtroc14    word      14    fabc0008   3
+evtroc15    word      15    fabc0008   3
+
+# coda evt
+coevtroc1     word      1    fabc0006   2
+coevtroc2     word      2    fabc0006   2
+coevtroc3     word      3    fabc0006   7
+coevtroc4     word      4    fabc0008   4
+coevtroc8     word      8    fabc0008   4
+coevtroc11    word     11    cafe0000   1
+coevtroc14    word     14    fabc0008   4
+coevtroc15    word     15    fabc0008   4
+
+# syncclock
+syncroc1     word      1    fabc0006   6
+syncroc2     word      2    fabc0006   6
+syncroc8     word      8    fabc0008   8
+
+
+#helicity adc ROCs
+helroc1    crate     1	  23    48
+helroc2    crate     2    23    48
+helroc3    crate     3	  23    48
+helroc4    crate     4    21    48
+
+
+#slot 21 ROC4
+adc48      crate     4    21    48
+adc49      crate     4    21    49
+adc50      crate     4    21    50
+adc51      crate     4    21    51
+adc52      crate     4    21    52
+adc53      crate     4    21    53
+adc54      crate     4    21    54
+adc55      crate     4    21    55
+adc56      crate     4    21    56
+adc57      crate     4    21    57
+adc58      crate     4    21    58
+adc59      crate     4    21    59
+adc60      crate     4    21    60
+adc61      crate     4    21    61
+adc62      crate     4    21    62
+adc63      crate     4    21    63
+# vxclock
+vxroc1     word      1    fabc0006   4
+vxroc2     word      2    fabc0006   4
+vxroc3     word      3    fabc0006   4
+vxroc4     word      4    fabc0008   7
+vxroc14    word     14    fabc0008   7
+vxroc15    word     15    fabc0008   7
+
+# trigger bit pattern
+# bit1       crate      4    13       0
+# bit2       crate      4    13       1
+# bit3       crate      4    13       2
+# bit4       crate      4    13       3
+# bit5       crate      4    13       4
+# bit6       crate      4    13       5
+# bit7       crate      4    13       6
+# bit8       crate      4    13       7
+# bit9       crate      4    13       8
+# bit10      crate      4    13       9
+# bit11      crate      4    13      10
+# bit12      crate      4    13      11
+# bit13      crate      4    13      12
+
+# trigger bit pattern
+bit1       crate      2    12      64
+bit2       crate      2    12      65
+bit3       crate      2    12      66
+bit4       crate      2    12      67
+bit5       crate      2    12      68
+bit6       crate      2    12      69
+bit7       crate      2    12      70
+bit8       crate      2    12      71
+
+# trigger bit pattern
+Lbit1       crate      4    13      16
+Lbit2       crate      4    13      17
+Lbit3       crate      4    13      18
+Lbit4       crate      4    13      19
+Lbit5       crate      4    13      20
+Lbit6       crate      4    13      21
+Lbit7       crate      4    13      22
+Lbit8       crate      4    13      23
+Lbit9       crate      4    13      24
+
+# coincidence timing
+ctimel     crate      2     3      48
+ctimer     crate      1    21       4
+
+
+# EDTM pulser
+# edtpl      crate      4    13      48
+# TrigT3     crate      4    13      49
+# TrigT3L    crate      4    13      50
+# FastT3L    crate      4    13      51
+RTrigT1     crate      2    12      16
+RTrigT2     crate      2    12      17
+RTrigT3     crate      2    12      18
+RTrigT4     crate      2    12      19
+RTrigT5     crate      2    12      20
+RTrigT6     crate      2    12      21
+RTrigT7     crate      2    12      22
+RTrigT8     crate      2    12      23
+edtpr      crate      2    12      48
+# TrigT1     crate      2    12       1
+edtmND		crate	8	15	25
+edtmNDadc	crate	8	4	63
+ 
+# coincidence timing
+ctimel     crate      4    21      48
+ctimer     crate      2    16      32
+
+# helicity info from ADC(RHRS)
+tgspinup        crate      2    23      13
+tgspindn        crate      2    23      12
+MPS             crate      2    23      14
+helicity        crate      2    23      15
+
+# ROC8 extra info
+roc8rtry     word      8    fabc0008   1
+roc8l1a     word      8    fabc0008   9
+roc8gate     word      8    fabc0008   10
+roc8busy     word      8    fabc0008   11
+
+# HAND ADCs
+
+N1adcL0			crate		8     1		32
+N1adcL1			crate		8     1		33
+N1adcL2			crate		8     1		34
+N1adcL3			crate		8     1		35
+N1adcL4			crate		8     1		36
+N1adcL5			crate		8     1		37
+N1adcL6			crate		8     1		38
+N1adcL7			crate		8     1		39
+N1adcL8			crate		8     1		40
+N1adcL9			crate		8     1		41
+N1adcL10		crate		8     1		42
+N1adcL11		crate		8     1		43
+N1adcL12		crate		8     1		44
+N1adcL13		crate		8     1		45
+N1adcL14		crate		8     1		46
+N1adcL15		crate		8     1		47
+N1adcL16	 	crate		8     1		48
+N1adcL17		crate		8     1		49
+N1adcL18		crate		8     1		50
+N1adcL19		crate		8     1		51
+N1adcL20		crate		8     1		52
+N1adcL21		crate		8     1		53
+N1adcL22		crate		8     1		54
+N1adcL23		crate		8     1		55
+N1adcL24		crate		8     1		56
+N1adcL25		crate		8     1		57
+N1adcL26		crate		8     1		58
+N1adcL27		crate		8     1		59
+N1adcL28		crate		8     1		60
+N1adcL29		crate		8     1		61
+
+
+N1adcR0			crate		8     3		32
+N1adcR1			crate		8     3		33
+N1adcR2			crate		8     3		34
+N1adcR3			crate		8     3		35
+N1adcR4			crate		8     3		36
+N1adcR5			crate		8     3		37
+N1adcR6			crate		8     3		38
+N1adcR7			crate		8     3		39
+N1adcR8			crate		8     3		40
+N1adcR9			crate		8     3		41
+N1adcR10		crate		8     3		42
+N1adcR11		crate		8     3		43
+N1adcR12		crate		8     3		44
+N1adcR13		crate		8     3		45
+N1adcR14		crate		8     3		46
+N1adcR15		crate		8     3		47
+N1adcR16	 	crate		8     3		48
+N1adcR17		crate		8     3		49
+N1adcR18		crate		8     3		50
+N1adcR19		crate		8     3		51
+N1adcR20		crate		8     3		52
+N1adcR21		crate		8     3		53
+N1adcR22		crate		8     3		54
+N1adcR23		crate		8     3		55
+N1adcR24		crate		8     3		56
+N1adcR25		crate		8     3		57
+N1adcR26		crate		8     3		58
+N1adcR27		crate		8     3		59
+N1adcR28		crate		8     3		60
+N1adcR29		crate		8     3		61
+
+N2adcL0			crate		8     1		62
+N2adcL1			crate		8     1		63
+N2adcL2			crate		8     2		0
+N2adcL3			crate		8     2		1
+N2adcL4			crate		8     2		2
+N2adcL5			crate		8     2		3
+N2adcL6			crate		8     2		4
+N2adcL7			crate		8     2		5
+N2adcL8			crate		8     2		6
+N2adcL9			crate		8     2		7
+N2adcL10		crate		8     2		8
+N2adcL11		crate		8     2		9
+N2adcL12		crate		8     2		10
+N2adcL13		crate		8     2		11
+N2adcL14		crate		8     2		12
+N2adcL15		crate		8     2		13
+N2adcL16	 	crate		8     2		14
+N2adcL17		crate		8     2		15
+N2adcL18		crate		8     2		16
+N2adcL19		crate		8     2		17
+N2adcL20		crate		8     2		18
+N2adcL21		crate		8     2		19
+N2adcL22		crate		8     2		20
+N2adcL23		crate		8     2		21
+N2adcL24		crate		8     2		22
+
+N25adcL0			crate		8     1		62
+N25adcL1			crate		8     1		63
+N25adcL2			crate		8     5		0
+N25adcL3			crate		8     5		1
+N25adcL4			crate		8     5		2
+N25adcL5			crate		8     5		3
+N25adcL6			crate		8     5		4
+N25adcL7			crate		8     5		5
+N25adcL8			crate		8     5		6
+N25adcL9			crate		8     5		7
+N25adcL10		crate		8     5		8
+N25adcL11		crate		8     5		9
+N25adcL12		crate		8     5		10
+N25adcL13		crate		8     5		11
+N25adcL14		crate		8     5		12
+N25adcL15		crate		8     5		13
+N25adcL16	 	crate		8     5		14
+N25adcL17		crate		8     5		15
+N25adcL18		crate		8     5		16
+N25adcL19		crate		8     5		17
+N25adcL20		crate		8     5		18
+N25adcL21		crate		8     5		19
+N25adcL22		crate		8     5		20
+N25adcL23		crate		8     5		21
+N25adcL24		crate		8     5		22
+
+ND2ch0		crate		8	2	0
+ND2ch1		crate		8	2	1
+ND2ch2		crate		8	2	2
+ND2ch3		crate		8	2	3
+ND2ch4		crate		8	2	4
+ND2ch5		crate		8	2	5
+ND2ch6		crate		8	2	6
+ND2ch7		crate		8	2	7
+ND2ch8		crate		8	2	8
+ND2ch9		crate		8	2	9
+ND2ch10		crate		8	2	10
+ND2ch11		crate		8	2	11
+ND2ch12		crate		8	2	12
+ND2ch13		crate		8	2	13
+ND2ch14		crate		8	2	14
+ND2ch15		crate		8	2	15
+ND2ch16		crate		8	2	16
+ND2ch17		crate		8	2	17
+ND2ch18		crate		8	2	18
+ND2ch19		crate		8	2	19
+ND2ch20		crate		8	2	20
+ND2ch21		crate		8	2	21
+ND2ch22		crate		8	2	22
+ND2ch23		crate		8	2	23
+ND2ch24		crate		8	2	24
+ND2ch25		crate		8	2	25
+ND2ch26		crate		8	2	26
+ND2ch27		crate		8	2	27
+ND2ch28		crate		8	2	28
+ND2ch29		crate		8	2	29
+ND2ch30		crate		8	2	30
+ND2ch31		crate		8	2	31
+ND2ch32		crate		8	2	32
+ND2ch33		crate		8	2	33
+ND2ch34		crate		8	2	34
+ND2ch35		crate		8	2	35
+ND2ch36		crate		8	2	36
+ND2ch37		crate		8	2	37
+ND2ch38		crate		8	2	38
+ND2ch39		crate		8	2	39
+ND2ch40		crate		8	2	40
+ND2ch41		crate		8	2	41
+ND2ch42		crate		8	2	42
+ND2ch43		crate		8	2	43
+ND2ch44		crate		8	2	44
+ND2ch45		crate		8	2	45
+ND2ch46		crate		8	2	46
+ND2ch47		crate		8	2	47
+ND2ch48		crate		8	2	48
+ND2ch49		crate		8	2	49
+ND2ch50		crate		8	2	50
+ND2ch51		crate		8	2	51
+ND2ch52		crate		8	2	52
+ND2ch53		crate		8	2	53
+ND2ch54		crate		8	2	54
+ND2ch55		crate		8	2	55
+ND2ch56		crate		8	2	56
+ND2ch57		crate		8	2	57
+ND2ch58		crate		8	2	58
+ND2ch59		crate		8	2	59
+ND2ch60		crate		8	2	60
+ND2ch61		crate		8	2	61
+ND2ch62		crate		8	2	62
+ND2ch63		crate		8	2	63
+
+ND3ch0		crate		8	3	0
+ND3ch1		crate		8	3	1
+ND3ch2		crate		8	3	2
+ND3ch3		crate		8	3	3
+ND3ch4		crate		8	3	4
+ND3ch5		crate		8	3	5
+ND3ch6		crate		8	3	6
+ND3ch7		crate		8	3	7
+ND3ch8		crate		8	3	8
+ND3ch9		crate		8	3	9
+ND3ch10		crate		8	3	10
+ND3ch11		crate		8	3	11
+ND3ch12		crate		8	3	12
+ND3ch13		crate		8	3	13
+ND3ch14		crate		8	3	14
+ND3ch15		crate		8	3	15
+ND3ch16		crate		8	3	16
+ND3ch17		crate		8	3	17
+ND3ch18		crate		8	3	18
+ND3ch19		crate		8	3	19
+ND3ch20		crate		8	3	20
+ND3ch21		crate		8	3	21
+ND3ch22		crate		8	3	22
+ND3ch23		crate		8	3	23
+ND3ch24		crate		8	3	24
+ND3ch25		crate		8	3	25
+ND3ch26		crate		8	3	26
+ND3ch27		crate		8	3	27
+ND3ch28		crate		8	3	28
+ND3ch29		crate		8	3	29
+ND3ch30		crate		8	3	30
+ND3ch31		crate		8	3	31
+ND3ch32		crate		8	3	32
+ND3ch33		crate		8	3	33
+ND3ch34		crate		8	3	34
+ND3ch35		crate		8	3	35
+ND3ch36		crate		8	3	36
+ND3ch37		crate		8	3	37
+ND3ch38		crate		8	3	38
+ND3ch39		crate		8	3	39
+ND3ch40		crate		8	3	40
+ND3ch41		crate		8	3	41
+ND3ch42		crate		8	3	42
+ND3ch43		crate		8	3	43
+ND3ch44		crate		8	3	44
+ND3ch45		crate		8	3	45
+ND3ch46		crate		8	3	46
+ND3ch47		crate		8	3	47
+ND3ch48		crate		8	3	48
+ND3ch49		crate		8	3	49
+ND3ch50		crate		8	3	50
+ND3ch51		crate		8	3	51
+ND3ch52		crate		8	3	52
+ND3ch53		crate		8	3	53
+ND3ch54		crate		8	3	54
+ND3ch55		crate		8	3	55
+ND3ch56		crate		8	3	56
+ND3ch57		crate		8	3	57
+ND3ch58		crate		8	3	58
+ND3ch59		crate		8	3	59
+ND3ch60		crate		8	3	60
+ND3ch61		crate		8	3	61
+ND3ch62		crate		8	3	62
+ND3ch63		crate		8	3	63
+
+ND4ch0		crate		8	4	0
+ND4ch1		crate		8	4	1
+ND4ch2		crate		8	4	2
+ND4ch3		crate		8	4	3
+ND4ch4		crate		8	4	4
+ND4ch5		crate		8	4	5
+ND4ch6		crate		8	4	6
+ND4ch7		crate		8	4	7
+ND4ch8		crate		8	4	8
+ND4ch9		crate		8	4	9
+ND4ch10		crate		8	4	10
+ND4ch11		crate		8	4	11
+ND4ch12		crate		8	4	12
+ND4ch13		crate		8	4	13
+ND4ch14		crate		8	4	14
+ND4ch15		crate		8	4	15
+ND4ch16		crate		8	4	16
+ND4ch17		crate		8	4	17
+ND4ch18		crate		8	4	18
+ND4ch19		crate		8	4	19
+ND4ch20		crate		8	4	20
+ND4ch21		crate		8	4	21
+ND4ch22		crate		8	4	22
+ND4ch23		crate		8	4	23
+ND4ch24		crate		8	4	24
+ND4ch25		crate		8	4	25
+ND4ch26		crate		8	4	26
+ND4ch27		crate		8	4	27
+ND4ch28		crate		8	4	28
+ND4ch29		crate		8	4	29
+ND4ch30		crate		8	4	30
+ND4ch31		crate		8	4	31
+ND4ch32		crate		8	4	32
+ND4ch33		crate		8	4	33
+ND4ch34		crate		8	4	34
+ND4ch35		crate		8	4	35
+ND4ch36		crate		8	4	36
+ND4ch37		crate		8	4	37
+ND4ch38		crate		8	4	38
+ND4ch39		crate		8	4	39
+ND4ch40		crate		8	4	40
+ND4ch41		crate		8	4	41
+ND4ch42		crate		8	4	42
+ND4ch43		crate		8	4	43
+ND4ch44		crate		8	4	44
+ND4ch45		crate		8	4	45
+ND4ch46		crate		8	4	46
+ND4ch47		crate		8	4	47
+ND4ch48		crate		8	4	48
+ND4ch49		crate		8	4	49
+ND4ch50		crate		8	4	50
+ND4ch51		crate		8	4	51
+ND4ch52		crate		8	4	52
+ND4ch53		crate		8	4	53
+ND4ch54		crate		8	4	54
+ND4ch55		crate		8	4	55
+ND4ch56		crate		8	4	56
+ND4ch57		crate		8	4	57
+ND4ch58		crate		8	4	58
+ND4ch59		crate		8	4	59
+ND4ch60		crate		8	4	60
+ND4ch61		crate		8	4	61
+ND4ch62		crate		8	4	62
+ND4ch63		crate		8	4	63
+
+ND5ch0		crate		8	5	0
+ND5ch1		crate		8	5	1
+ND5ch2		crate		8	5	2
+ND5ch3		crate		8	5	3
+ND5ch4		crate		8	5	4
+ND5ch5		crate		8	5	5
+ND5ch6		crate		8	5	6
+ND5ch7		crate		8	5	7
+ND5ch8		crate		8	5	8
+ND5ch9		crate		8	5	9
+ND5ch10		crate		8	5	10
+ND5ch11		crate		8	5	11
+ND5ch12		crate		8	5	12
+ND5ch13		crate		8	5	13
+ND5ch14		crate		8	5	14
+ND5ch15		crate		8	5	15
+ND5ch16		crate		8	5	16
+ND5ch17		crate		8	5	17
+ND5ch18		crate		8	5	18
+ND5ch19		crate		8	5	19
+ND5ch20		crate		8	5	20
+ND5ch21		crate		8	5	21
+ND5ch22		crate		8	5	22
+ND5ch23		crate		8	5	23
+ND5ch24		crate		8	5	24
+ND5ch25		crate		8	5	25
+ND5ch26		crate		8	5	26
+ND5ch27		crate		8	5	27
+ND5ch28		crate		8	5	28
+ND5ch29		crate		8	5	29
+ND5ch30		crate		8	5	30
+ND5ch31		crate		8	5	31
+ND5ch32		crate		8	5	32
+ND5ch33		crate		8	5	33
+ND5ch34		crate		8	5	34
+ND5ch35		crate		8	5	35
+ND5ch36		crate		8	5	36
+ND5ch37		crate		8	5	37
+ND5ch38		crate		8	5	38
+ND5ch39		crate		8	5	39
+ND5ch40		crate		8	5	40
+ND5ch41		crate		8	5	41
+ND5ch42		crate		8	5	42
+ND5ch43		crate		8	5	43
+ND5ch44		crate		8	5	44
+ND5ch45		crate		8	5	45
+ND5ch46		crate		8	5	46
+ND5ch47		crate		8	5	47
+ND5ch48		crate		8	5	48
+ND5ch49		crate		8	5	49
+ND5ch50		crate		8	5	50
+ND5ch51		crate		8	5	51
+ND5ch52		crate		8	5	52
+ND5ch53		crate		8	5	53
+ND5ch54		crate		8	5	54
+ND5ch55		crate		8	5	55
+ND5ch56		crate		8	5	56
+ND5ch57		crate		8	5	57
+ND5ch58		crate		8	5	58
+ND5ch59		crate		8	5	59
+ND5ch60		crate		8	5	60
+ND5ch61		crate		8	5	61
+ND5ch62		crate		8	5	62
+ND5ch63		crate		8	5	63
+
+ND6ch0		crate		8	6	0
+ND6ch1		crate		8	6	1
+ND6ch2		crate		8	6	2
+ND6ch3		crate		8	6	3
+ND6ch4		crate		8	6	4
+ND6ch5		crate		8	6	5
+ND6ch6		crate		8	6	6
+ND6ch7		crate		8	6	7
+ND6ch8		crate		8	6	8
+ND6ch9		crate		8	6	9
+ND6ch10		crate		8	6	10
+ND6ch11		crate		8	6	11
+ND6ch12		crate		8	6	12
+ND6ch13		crate		8	6	13
+ND6ch14		crate		8	6	14
+ND6ch15		crate		8	6	15
+ND6ch16		crate		8	6	16
+ND6ch17		crate		8	6	17
+ND6ch18		crate		8	6	18
+ND6ch19		crate		8	6	19
+ND6ch20		crate		8	6	20
+ND6ch21		crate		8	6	21
+ND6ch22		crate		8	6	22
+ND6ch23		crate		8	6	23
+ND6ch24		crate		8	6	24
+ND6ch25		crate		8	6	25
+ND6ch26		crate		8	6	26
+ND6ch27		crate		8	6	27
+ND6ch28		crate		8	6	28
+ND6ch29		crate		8	6	29
+ND6ch30		crate		8	6	30
+ND6ch31		crate		8	6	31
+ND6ch32		crate		8	6	32
+ND6ch33		crate		8	6	33
+ND6ch34		crate		8	6	34
+ND6ch35		crate		8	6	35
+ND6ch36		crate		8	6	36
+ND6ch37		crate		8	6	37
+ND6ch38		crate		8	6	38
+ND6ch39		crate		8	6	39
+ND6ch40		crate		8	6	40
+ND6ch41		crate		8	6	41
+ND6ch42		crate		8	6	42
+ND6ch43		crate		8	6	43
+ND6ch44		crate		8	6	44
+ND6ch45		crate		8	6	45
+ND6ch46		crate		8	6	46
+ND6ch47		crate		8	6	47
+ND6ch48		crate		8	6	48
+ND6ch49		crate		8	6	49
+ND6ch50		crate		8	6	50
+ND6ch51		crate		8	6	51
+ND6ch52		crate		8	6	52
+ND6ch53		crate		8	6	53
+ND6ch54		crate		8	6	54
+ND6ch55		crate		8	6	55
+ND6ch56		crate		8	6	56
+ND6ch57		crate		8	6	57
+ND6ch58		crate		8	6	58
+ND6ch59		crate		8	6	59
+ND6ch60		crate		8	6	60
+ND6ch61		crate		8	6	61
+ND6ch62		crate		8	6	62
+ND6ch63		crate		8	6	63

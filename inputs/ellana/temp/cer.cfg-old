@@ -1,0 +1,285 @@
+protorootfile  ROOTfiles/e06014_det_BB_XXXXX.root 
+#protorootfile  ROOTfiles/e06014_phys_XXXXX.root 
+#protorootfile  ROOTfiles/e06014_cer_XXXXX.root 
+
+## 4118: 6V/10ns LED pulser
+#goldenrootfile ROOTfiles/e06014_det_BB_4118.root 
+## 4123: 8V/16.4ns LED pulser
+#goldenrootfile ROOTfiles/e06014_det_BB_4123.root 
+## 4126: 8V/45.4ns LED pulser
+#goldenrootfile ROOTfiles/e06014_det_BB_4126.root 
+
+#goldenrootfile ROOTfiles/e06014_det_BB_5375.root 
+goldenrootfile ROOTfiles/e06014_det_BB_5841.root 
+
+## Define cuts
+#definecut evcut  (ev_num>1000)
+
+## Uncomment next line to update histos as data comes in
+#watchfile
+
+## Canvas definitions
+#newpage 3 2
+#  title Misc histos
+#  hitdistT01
+#  hitdistA01
+#  B.tdc01.t1[0] 
+#  B.tdc01.t1[16]-B.tdc01.t1[0]  (B.tdc01.t1[16]>0)
+
+#definecut TRIG ((DL.evtypebits&(1<<1))!=0)
+definecut TRIG (DL.evtype==1)
+
+definecut TS   (abs(BB.sum.RT+330)<50)
+definecut PS   (BB.ts.ps.e>400)
+definecut VERT (abs(BB.tr.vz)<0.18)
+
+#definecut AS (BB.sum.RA>700)
+definecut AS ((BB.ts.ps.e+BB.ts.sh.e)>700)
+
+#definecut TC (abs(DL.BBcerTg01[Ndata.DL.BBcerTg01]-1650)<25||abs(DL.BBcerTg02[Ndata.DL.BBcerTg02]-1650)<25||abs(DL.BBcerTg03[Ndata.DL.BBcerTg03]-1650)<25||abs(DL.BBcerTg04[Ndata.DL.BBcerTg04]-1650)<25||abs(DL.BBcerTg05[Ndata.DL.BBcerTg05]-1650)<25||abs(DL.BBcerTg06[Ndata.DL.BBcerTg06]-1650)<25||abs(DL.BBcerTg07[Ndata.DL.BBcerTg07]-1650)<25||abs(DL.BBcerTg08[Ndata.DL.BBcerTg08]-1650)<25||abs(DL.BBcerTg09[Ndata.DL.BBcerTg09]-1650)<25)
+
+definecut TC (1==1)
+
+newpage 2 2
+	title BB Cer ADCs Pedestals
+	multiplot 0 3 BB_cer_a_ped_XXXXX
+
+newpage 2 2
+	title BB Cer ADCs Pedestals
+	multiplot 4 7 BB_cer_a_ped_XXXXX
+
+newpage 2 2
+	title BB Cer ADCs Pedestals
+	multiplot 8 11 BB_cer_a_ped_XXXXX
+
+newpage 2 2
+	title BB Cer ADCs Pedestals
+	multiplot 12 15 BB_cer_a_ped_XXXXX
+
+newpage 2 2
+	title BB Cer ADCs Pedestals
+	multiplot 16 19 BB_cer_a_ped_XXXXX
+
+newpage 2 2
+	title BB Cer ADCs tmp
+	BB_cer_A04
+	BB_cer_A11
+	BB_cer_A13
+
+#newpage 5 4 logy
+newpage 5 4
+	title BB Cer ADCs (DL
+	BB_cer_A01
+	BB_cer_A02
+	BB_cer_A03
+	BB_cer_A04
+	BB_cer_A05
+	BB_cer_A06
+	BB_cer_A07
+	BB_cer_A08
+	BB_cer_A09
+	BB_cer_A10
+	BB_cer_A11
+	BB_cer_A12
+	BB_cer_A13
+	BB_cer_A14
+	BB_cer_A15
+	BB_cer_A16
+	BB_cer_A17
+	BB_cer_A18
+	BB_cer_A19
+	BB_cer_A20
+
+newpage 5 4 logy
+	title BB Cer ADCs
+	multiplot 0 19 BB_cer_a_ped_XXXXX 
+
+newpage 2 2
+	title BB Cer ADCs Pedestals
+	multiplot 3 6 BB_cer_a_ped_XXXXX
+
+newpage 2 2
+	title BB Cer ADCs
+	BB_cer_A04
+	BB_cer_A05
+	BB_cer_A06
+	BB_cer_A07
+
+newpage 3 3 logy
+	title BB Cer ADCs (DL, RHRS side)
+	BB_cer_A11
+	BB_cer_A12
+	BB_cer_A13
+	BB_cer_A14
+	BB_cer_A15
+	BB_cer_A16
+	BB_cer_A17
+	BB_cer_A18
+	BB_cer_A20
+
+newpage 1 1 logy
+	DL.BBcerT11[0]-DL.BBcerT11[1]      (Ndata.DL.BBcerT11>=1)
+
+newpage 3 3 logy
+	DL.BBcerT11[0]
+	DL.BBcerT12
+	DL.BBcerT13
+	DL.BBcerT14
+	DL.BBcerT15
+	DL.BBcerT16
+	DL.BBcerT17
+	DL.BBcerT18
+	DL.BBcerT20
+
+newpage 5 4 logy
+	title BB Cer ADCs (all-Cer class)
+	multiplot 0 19 BB_cer_a_XXXXX
+
+newpage 1 2
+	title BB Cer ADC correlations 1
+	BB.cer.a[5]:BB.sum.rt
+	BB.cer.a[5]:BB.sum.RA
+
+newpage 1 2
+	title BB Cer ADC correlations 2
+	BB.cer.a[5]:BB.cer.t[5]
+	BB.cer.a[15]:BB.cer.t[15]
+
+newpage 5 4 logy
+	title BB Cer ADCs (all-DL class)
+	BB_cer_A01
+	BB_cer_A02
+	BB_cer_A03
+	BB_cer_A04
+	BB_cer_A05
+	BB_cer_A06
+	BB_cer_A07
+	BB_cer_A08
+	BB_cer_A09
+	BB_cer_A10
+	BB_cer_A11
+	BB_cer_A12
+	BB_cer_A13
+	BB_cer_A14
+	BB_cer_A15
+	BB_cer_A16
+	BB_cer_A17
+	BB_cer_A18
+	BB_cer_A19
+	BB_cer_A20
+
+newpage 2 2 
+	title BB Cer ADCs row 1,2 NC
+	BB.cer.a[0]   
+	BB.cer.a[10]  
+	BB.cer.a[1]   
+	BB.cer.a[11]  
+
+newpage 2 2 
+	title BB Cer ADCs row 3,4 NC
+	BB.cer.a[2]  
+	BB.cer.a[12]  
+	BB.cer.a[3]  
+	BB.cer.a[13]  
+
+newpage 2 2 
+	title BB Cer ADCs row 5,6 NC
+	BB.cer.a[4]  
+	BB.cer.a[14]  
+	BB.cer.a[5]  
+	BB.cer.a[15]  
+
+newpage 2 2 
+	title BB Cer ADCs row 7.8 NC
+	BB.cer.a[6]  
+	BB.cer.a[16]  
+	BB.cer.a[7]  
+	BB.cer.a[17]  
+
+newpage 2 2 
+	title BB Cer ADCs row 9,10 NC
+	BB.cer.a[8]  
+	BB.cer.a[18]  
+	BB.cer.a[9]  
+	BB.cer.a[19]  
+
+#newpage 2 2 logy
+#	title BB Cer ADCs row 1,2
+#	BB.cer.a[0]   (TRIG&&TC&&TS&&AS)
+#	BB.cer.a[10]  (TRIG&&TC&&TS&&AS)
+#	BB.cer.a[1]   (TRIG&&TC&&TS&&AS)
+#	BB.cer.a[11]  (TRIG&&TC&&TS&&AS)
+#
+#newpage 2 2 logy
+#	title BB Cer ADCs row 3,4
+#	BB.cer.a[2]  (TRIG&&TC&&TS&&AS)
+#	BB.cer.a[12]  (TRIG&&TC&&TS&&AS)
+#	BB.cer.a[3]  (TRIG&&TC&&TS&&AS)
+#	BB.cer.a[13]  (TRIG&&TC&&TS&&AS)
+#
+#newpage 2 2 logy
+#	title BB Cer ADCs row 5,6
+#	BB.cer.a[4]  (TRIG&&TC&&TS&&AS)
+#	BB.cer.a[14]  (TRIG&&TC&&TS&&AS)
+#	BB.cer.a[5]  (TRIG&&TC&&TS&&AS)
+#	BB.cer.a[15]  (TRIG&&TC&&TS&&AS)
+#
+#newpage 2 2 logy
+#	title BB Cer ADCs row 7.8
+#	BB.cer.a[6]  (TRIG&&TC&&TS&&AS)
+#	BB.cer.a[16]  (TRIG&&TC&&TS&&AS)
+#	BB.cer.a[7]  (TRIG&&TC&&TS&&AS)
+#	BB.cer.a[17]  (TRIG&&TC&&TS&&AS)
+#
+#newpage 2 2 logy
+#	title BB Cer ADCs row 9,10
+#	BB.cer.a[8]  (TRIG&&TC&&TS&&AS)
+#	BB.cer.a[18]  (TRIG&&TC&&TS&&AS)
+#	BB.cer.a[9]  (TRIG&&TC&&TS&&AS)
+#	BB.cer.a[19]  (TRIG&&TC&&TS&&AS)
+#
+
+######
+newpage 2 2 logy
+	title BB Cer ADCs Pedestals
+	multiplot 0 3 BB_cer_a_ped_XXXXX
+                   
+newpage 2 2 logy
+	title BB Cer ADCs Pedestals
+	multiplot 4 7 BB_cer_a_ped_XXXXX
+                   
+newpage 2 2 logy
+	title BB Cer ADCs Pedestals
+	multiplot 8 11 BB_cer_a_ped_XXXXX
+                   
+newpage 2 2 logy
+	title BB Cer ADCs Pedestals
+	multiplot 12 15 BB_cer_a_ped_XXXXX
+                   
+newpage 2 2 logy
+	title BB Cer ADCs Pedestals
+	multiplot 16 19 BB_cer_a_ped_XXXXX
+
+newpage 5 4 logy
+	title BB Cer ADCs
+	multiplot 0 19 BB_cer_a_ped_XXXXX 
+
+#BB Cerenkov histos
+newpage 1 2 logy
+	title BB Cer Trigger TDCs
+        BB_cer_TTcer
+        BB_cer_TTsg
+	
+newpage 3 3 logy
+	title BB Cer Group TDCs
+        BB_cer_Tg01
+        BB_cer_Tg02
+        BB_cer_Tg03
+        BB_cer_Tg04
+        BB_cer_Tg05
+        BB_cer_Tg06
+        BB_cer_Tg07
+        BB_cer_Tg08
+        BB_cer_Tg09
+
+## vim: set ft=sh : #

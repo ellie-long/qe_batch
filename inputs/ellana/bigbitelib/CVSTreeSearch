@@ -1,0 +1,17 @@
+
+echo "->> Cleaning old sign links..."
+rm -fr ./TreeSearch/*
+cleanlinks
+
+echo "->> Downloading TreeSearch from CVS.jlab.org, please enter your Jlab password:"
+export CVS_RSH=ssh
+cvs  -d :ext:jinhuang@cvs.jlab.org:/group/halla/analysis/cvs co TreeSearch
+ln -s ./TreeSearch/*.cxx ./TreeSearch/*.h ./
+ln -s ../../TreeSearch/db_B.mwdc.dat ./DB/20070711/db_BB.mwdc.dat
+ln -s ../../TreeSearch/db_B.mwdc.dat ./DB/20080302/db_BB.mwdc.dat
+
+echo "->> Now compile the whole lib..."
+make  realclean
+make -j2
+
+echo "->> Done!"

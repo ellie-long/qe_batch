@@ -1,0 +1,26 @@
+Decide in THaNeutronDetector::FineProcess which hits are neutrons and
+set those hits as "neutrons".
+
+Do I need to have a switch between "Tracks" and "Neutrons"?  Can I
+implement both simultaneously?
+
+Need to add "neutrons" to the THaNA class so that they can be compared.
+
+
+Neutron detectors are counted from the bottom in plane position files.
+Does analyzer use same counting?
+
+
+I am not actually using the list of hit objects.  How do I access that list?
+Presumably by calling GetHits.  I think the hits are sorted by plane.
+THaScintHit looks not to be called for the Veto array.  For the veto hits, I can
+assign ypos to be the center of whichever bar was hit.
+
+What is a hit.
+	Element #
+	ypos
+	TOF
+	energy
+
+Get other info from the element number and knowing which planes hit array
+is being used.

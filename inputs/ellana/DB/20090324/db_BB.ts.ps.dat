@@ -1,0 +1,44 @@
+############################## RIGHT PRESHOWER DETECTOR ######################
+Number of columns (x-stripes) and rows (y-stripes)
+      2      27
+Crate, Slot, First, Last ADC channels of blocks
+        8      01      32      47   -
+        8      01      48      58   -
+        8      02       0      15   -
+        8      02      16      26   -
+       -1       0       0       0   -
+Translation table from ADC hardware channel to logical channel number
+   1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  
+   17 18 19 20 21 22 23 24 25 26 27
+   28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43
+   44 45 46 47 48 49 50 51 52 53 54
+X,Y,Z coords (in cm) of Preshower front plane in spectrom cs
+    0.0     0.0    0.77                          - Meters
+Half of X, half of Y, full Z sizes (in Meters) of Preshower
+    1.1475  0.35   0.085                          - Meters
+Rotation angle of the Preshower plane
+    0.0                                           - Degrees
+x,y position of the center of block 1
+    1.105  -0.175                                 - Meters
+dx and dy block spacing
+   -0.085   0.35                                 - Meters
+Energy threshold for clusters to be considered
+    10.                                           - MeV
+Maximum number of clusters to be considered
+    16                                            - blocks
+[ config=okay ]
+ADC pedestals
+318.9  310.7  294.4  303.0  400.3  400.9  410.4  414.6  349.1  
+323.3  311.4  311.8  469.5  397.6  331.1  389.4  348.8  279.7  
+221.9  277.4  378.0  421.0  393.6  456.1  379.2  360.4  279.5  
+318.5  363.4  437.6  303.2  431.7  353.0  600.2  395.2  522.2  
+414.1  461.9  286.8  515.5  541.4  463.1  391.9  478.2  385.3  
+416.8  272.6  649.8  633.9  546.1  459.3  531.1  299.3  363.8 
+Energy calibration coefficients
+1.17034 1.19813 1.2845 1.30581 1.21647 1.14946 1.10006 1.10808
+1.31617 1.40853 1.35564 1.38749 1.35084 1.32908 1.24765 1.22526
+1.10653 1.08068 1.12516 1.11928 1.00664 0.988666 1.03898 1.10615
+1.02388 1.03283 1.03127 1.20189 1.22234 1.30361 1.33423 1.26948
+1.23211 1.15557 1.16636 1.37932 1.44809 1.40161 1.45431 1.43325
+1.3703 1.3015 1.27075 1.09672 1.06325 1.12245 1.12834 1.04299
+0.987857 1.05071 1.10097 1.07446 1.04899 1.02717

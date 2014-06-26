@@ -1,0 +1,37 @@
+######################### LEFT SCINTILLATOR PLANE 2 ############################
+Number of Left Scintillator 2 paddles ------------------------------------------
+      16
+Crate,Slot,1st,Last chans,Beg S2 chan - need equal # entries for ADC and TDC	
+       3      25      48      63       1      1881   - ADCs pads 1-16 (right)
+       3      25      16      31      17      1881   - ADCs pads 1-16 (left)
+       4      18      32      47       1      1875   - TDCs pads 1-16 (right)
+       4      18      16      31      17      1875   - TDCs pads 1-16 (left)
+      -1       0       0       0       0
+X,Y,Z coords (in cm) of S2 front plane in spectrom cs --------------------------
+   -0.11     0.0  3.1415                             - Meters
+Half of X, half of Y, full Z sizes of S2 ---------------------------------------
+   1.118     0.216     0.05                          - Meters
+Rotation angle of the S2 plane -------------------------------------------------
+     0.0                                             - Degrees
+TDC time offsets of S2 TDC channels --------------------------------------------
+   730.17 677.55 591.21 607.64 496.27 499.94 596.11 589.89 
+   578.01 572.48 480.76 430.55 656.56 592.88 541.80 568.06 - Left Paddles
+   636.53 464.75 474.31 517.04 666.71 697.90 711.65 674.15 
+   699.99 595.10 674.78 841.11 691.10 623.76 726.88 744.02 - Right Paddles
+Pedestal values of S2 ADC channels ---------------------------------------------
+    297 279 244 260 430 464 414 449 311 287 245 255 486 416 468 434  -Left Paddles
+    360 292 284 264 417 464 435 417 318 329 249 293 472 465 454 380  -Right Paddles
+Amplitude transformation coefficients of S2 ADC channels -----------------------
+  0.96   0.98   1.05   1.52   0.94   1.03   0.99   1.03 
+  1.15   1.05   0.99   1.05   0.94   0.98   1.01   1.06 
+  0.95   0.99   1.12   1.01   1.31   1.14   1.34   1.07 
+  1.16   1.10   1.19   1.07   1.13   1.06   0.98   1.09 
+TDC setting in sec/channel -----------------------------------------------------
+  0.050e-9
+Speed of light in the scintillator ---------------------------------------------
+     1.34281e+08
+Attenuation length in inverse meters (carried over) ----------------------------
+  0.7
+Timewalk parameters -- ADC above pedestal for MIP ------------------------------
+  70
+################################################################################

@@ -1,0 +1,26 @@
+Cut Summary for run 20487 completed Fri Feb 14 15:30:54 2014
+
+Name               Def                                                                                                                                                Called     Passed
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+BLOCK: Decode
+T1D                D.evtype==1                                                                                                                                        10000      10000 (100%)
+T2D                D.evtype==2                                                                                                                                        10000      0     (0%)
+T8D                D.evtype==8                                                                                                                                        10000      0     (0%)
+
+BLOCK: Physics
+SpinValid          he3R.IsSpinValid                                                                                                                                   10000      10000 (100%)
+SpinUp             he3R.Spin==1                                                                                                                                       10000      10000 (100%)
+SpinDown           he3R.Spin==-1                                                                                                                                      10000      0     (0%)
+eventtypeGood      D.evtypebits==2                                                                                                                                    10000      10000 (100%)
+kinematicsGood     PriKineR.Q2<10&&PriKineR.nu<10                                                                                                                     10000      9524  (95.2%)
+dpGood             ExTgtCor_R.dp>-0.04&&ExTgtCor_R.dp<0.06                                                                                                            10000      8911  (89.1%)
+targetGood         ReactPt_R.z>-0.15&&ReactPt_R.z<0.17                                                                                                                10000      7109  (71.1%)
+tracksGood         R.tr.n==1&&R.vdc.u1.nhit>3&&R.vdc.u1.nhit<7&&R.vdc.u2.nhit>3&&R.vdc.u2.nhit<7&&R.vdc.v1.nhit>3&&R.vdc.v1.nhit<7&&R.vdc.v2.nhit>3&&R.vdc.v2.nhit<7  10000      8175  (81.8%)
+thphGood           ExTgtCor_R.ph<0.025&&ExTgtCor_R.ph>-0.025&&ExTgtCor_R.th<0.055&&ExTgtCor_R.th>-0.055                                                               10000      7878  (78.8%)
+xbjGood            PriKineRHe3.x_bj<2.0                                                                                                                               10000      8927  (89.3%)
+cerenkovGood       R.cer.asum_c                                                                                                                                       10000      9669  (96.7%)
+psshGood           (R.ps.e+2*R.sh.e)>900&&R.ps.e>1&&R.sh.e>1                                                                                                          10000      9282  (92.8%)
+basicGood          kinematicsGood&&eventtypeGood&&tracksGood                                                                                                          10000      8175  (81.8%)
+isGoodForAllBasic  kinematicsGood&&eventtypeGood&&dpGood&&targetGood&&thphGood&&tracksGood&&xbjGood&&psshGood&&cerenkovGood                                           10000      4981  (49.8%)
+Physics_master     isGoodForAllBasic                                                                                                                                  10000      4981  (49.8%)
+

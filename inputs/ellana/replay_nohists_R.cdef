@@ -1,0 +1,37 @@
+
+
+Block: RawDecode
+
+#RawDecode_master  g.evtyp==1||g.evtyp==2||g.evtyp==8
+
+
+Block: Decode
+
+#Decode_master  true
+T1D  D.evtype==1
+T2D  D.evtype==2
+T8D  D.evtype==8
+
+
+Block: Physics
+
+SpinValid	he3R.IsSpinValid
+SpinUp	he3R.Spin==1
+SpinDown	he3R.Spin==-1
+
+#kinematicsGood	PriKineR.Q2<10 && GoodElectron==1 && PriKineR.nu<10
+eventtypeGood	D.evtypebits==2
+kinematicsGood	PriKineR.Q2<10 && PriKineR.nu<10
+dpGood	ExTgtCor_R.dp>-0.04 && ExTgtCor_R.dp<0.06
+targetGood	ReactPt_R.z>-0.15 && ReactPt_R.z<0.17
+tracksGood	R.tr.n==1 && R.vdc.u1.nhit>3 && R.vdc.u1.nhit<7 && R.vdc.u2.nhit>3 && R.vdc.u2.nhit<7 && R.vdc.v1.nhit>3 && R.vdc.v1.nhit<7 && R.vdc.v2.nhit>3 && R.vdc.v2.nhit<7
+thphGood	ExTgtCor_R.ph<0.025 && ExTgtCor_R.ph>-0.025 && ExTgtCor_R.th<0.055 && ExTgtCor_R.th>-0.055
+xbjGood	PriKineRHe3.x_bj<2.0
+cerenkovGood	R.cer.asum_c
+psshGood	(R.ps.e + 2*R.sh.e)>900 && R.ps.e>1 && R.sh.e>1
+basicGood	kinematicsGood && eventtypeGood && tracksGood
+isGoodForAllBasic	kinematicsGood && eventtypeGood && dpGood && targetGood && thphGood && tracksGood && xbjGood && psshGood && cerenkovGood
+
+Physics_master	isGoodForAllBasic
+
+

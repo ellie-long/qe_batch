@@ -1,0 +1,223 @@
+# Analyzer output definition file used by THaOutput class.
+# See  http://hallaweb.jlab.org/root/THaOutput.html
+# R. Michaels, June 2003
+# Comments start with '# '  (careful, need a space after #) 
+#
+# There are at present 3 places where output is defined
+# in the C++ analyzer, and this is one of them.
+# The other two are THaRun (run-dependent info) and
+# THaEvent (event-dependent info), which provide quantities 
+# like run number and event number that you always need.
+# In this place, the "outdef" file, one can define
+# global variables, formulas, and histograms, as well
+# as cuts on histograms.  The results of the formulas appear 
+# in the tree with the formula-name given.
+#
+# Syntax of file  -- by example:
+#
+# variable   L.vdc.u2.nclust
+# variable   R.s1.lt
+# formula    targetX  1.464*BB.bpm4b.x-0.464*BB.bpm4a.x
+# TH1F  rv1n  'R-arm vdc hits on V1'   R.vdc.v1.nhit 100 0 10
+# TH1F  rv1w  'R-arm vdc wiremap on V1'  R.vdc.v1.wire 100 0 500
+# TH1F  tgtx  'Target X position'  targetX 100 -2 2 
+# TH2F  t12  'Time stamps on roc1 vs roc2'  D.timeroc1  D.timeroc2
+#       100 0 1000 100 0 1000
+# TH1F  Rv1n 'R-arm VDC nhit (cut)' R.vdc.v1.nhit 100 0 10 R.vdc.v1.nhit>3
+# (note, the cut R.vdc.v1.nhit appears optionally at the end, also
+#  this variable cannot be a variable-sized array)
+#
+#
+# The lines are of the form
+#     keyword  rest-of-line
+#
+# where the keywords are as follows :
+# (the keywords are case-insensitive, the rest of the line is not)
+#
+#  VARIABLE  -- indicates that a global variable is to
+#              be added to the tree.  
+#              The next string is the name of the variable.  
+#              You can see a list of variables by typing 
+#              gHaVars->Print() at the analyzer's root shell prompt.
+#              A variable can also be an array, e.g. R.s1.lt  
+#              Then the values in the tree will be R.s1.lt.data[0], 
+#              R.s1.lt.data[1], etc, up to the array size which
+#              is Ndata.R.s1.lt
+# 
+#  BLOCK   --  An entire block of variables are written to the
+#              output.  E.g. "L.*" writes all Left HRS variables.
+#
+#  FORMULA -- indicates a THaFormula to add to the output.
+#             The next word will be the "name" of the formula result 
+#             in the tree. The 3rd string is the formula to evaluate.  
+#             Note, it cannot have spaces in it.
+#             Formulas can be vectors if the arrays are fixed size.
+#
+#  CUT --     Like a formula, but the data are 0 (false) or 1 (true)
+#
+#  TH1F, TH2F, TH1D, TH2D  -- defines histograms (1D or 2D).
+#              The next word is the name of the object.
+#              The following string (must be in single quotes) is  
+#              the title of the histogram.  Next, the variables
+#              or formulas names that are put into the histogram 
+#              are listed together with bin info: nbin, xlo, xhi and if 2D
+#              the same bin info for y.  Optional cuts can be specified 
+#              at the end of the line.  See examples below.  
+#
+# ------------------------------------
+
+
+
+# List of the variable blocks to be written out
+
+block BB.*
+block BB.tr*
+block L.tr.*
+block L.s1.*
+block L.s2.*
+block L.cer.*
+block adchel.L.*
+block adchel2.L.*
+block g0hel.L.*
+#block L.vdc.*
+#block L.prl*
+#block PriKine.*
+#block ReactPt_L.*
+#block ExTgtCor_L.*
+#block SecKine.*
+block DL.*
+block DBB.*
+#block rb.*
+#block urb.*
+block L.gold.*
+#block Norm.*
+#block Beam.HL.*
+
+
+
+# ----------------------------------------------------------------------------------
+# BigBite Wire Chamber: (Xin Qian)
+TH1F bbtrack 'BigBite Track Found' BB.tr.n 10 0 10 
+
+TH1F bbu1wire 'BigBite MWDC u1 hits per wire' BB.mwdc.u1.hit.wire 141 0 141
+TH1F bbu1pwire 'BigBite MWDC u1p hits per wire' BB.mwdc.u1p.hit.wire 141 0 141
+TH1F bbu2wire 'BigBite MWDC u2 hits per wire' BB.mwdc.u2.hit.wire 202 0 201
+TH1F bbu2pwire 'BigBite MWDC u2p hits per wire' BB.mwdc.u2p.hit.wire 202 0 201
+TH1F bbx1wire 'BigBite MWDC x1 hits per wire' BB.mwdc.x1.hit.wire 141 0 141
+TH1F bbx1pwire 'BigBite MWDC x1p hits per wire' BB.mwdc.x1p.hit.wire 141 0 141
+TH1F bbx2wire 'BigBite MWDC x2 hits per wire' BB.mwdc.x2.hit.wire 202 0 201
+TH1F bbx2pwire 'BigBite MWDC x2p hits per wire' BB.mwdc.x2p.hit.wire 202 0 201
+TH1F bbv1wire 'BigBite MWDC v1 hits per wire' BB.mwdc.v1.hit.wire 141 0 141
+TH1F bbv1pwire 'BigBite MWDC v1p hits per wire' BB.mwdc.v1p.hit.wire 141 0 141
+TH1F bbv2wire 'BigBite MWDC v2 hits per wire' BB.mwdc.v2.hit.wire 202 0 201
+TH1F bbv2pwire 'BigBite MWDC v2p hits per wire' BB.mwdc.v2p.hit.wire 202 0 201
+
+TH1F bbu1time 'BigBite MWDC u1 time' BB.mwdc.u1.hit.time 200 0 200e-9
+TH1F bbu1ptime 'BigBite MWDC u1p time' BB.mwdc.u1p.hit.time 200 0 200e-9
+TH1F bbu2time 'BigBite MWDC u2 time' BB.mwdc.u2.hit.time 200 0 200e-9
+TH1F bbu2ptime 'BigBite MWDC u2p time' BB.mwdc.u2p.hit.time 200 0 200e-9
+TH1F bbx1time 'BigBite MWDC x1 time' BB.mwdc.x1.hit.time 200 0 200e-9
+TH1F bbx1ptime 'BigBite MWDC x1p time' BB.mwdc.x1p.hit.time 200 0 200e-9
+TH1F bbx2time 'BigBite MWDC x2 time' BB.mwdc.x2.hit.time 200 0 200e-9
+TH1F bbx2ptime 'BigBite MWDC x2p time' BB.mwdc.x2p.hit.time 200 0 200e-9
+TH1F bbv1time 'BigBite MWDC v1 time' BB.mwdc.v1.hit.time 200 0 200e-9
+TH1F bbv1ptime 'BigBite MWDC v1p time' BB.mwdc.v1p.hit.time 200 0 200e-9
+TH1F bbv2time 'BigBite MWDC v2 time' BB.mwdc.v2.hit.time 200 0 200e-9
+TH1F bbv2ptime 'BigBite MWDC v2p time' BB.mwdc.v2p.hit.time 200 0 200e-9
+
+
+TH1F bbu1hit 'BigBite MWDC u1 hits' BB.mwdc.u1.nwhit 61 0 60
+TH1F bbu1phit 'BigBite MWDC u1p hits' BB.mwdc.u1p.nwhit 61 0 60
+TH1F bbu2hit 'BigBite MWDC u2 hits' BB.mwdc.u2.nwhit 61 0 60
+TH1F bbu2phit 'BigBite MWDC u2p hits' BB.mwdc.u2p.nwhit 61 0 60
+TH1F bbx1hit 'BigBite MWDC x1 hits' BB.mwdc.x1.nwhit 61 0 60
+TH1F bbx1phit 'BigBite MWDC x1p hits' BB.mwdc.x1p.nwhit 61 0 60
+TH1F bbx2hit 'BigBite MWDC x2 hits' BB.mwdc.x2.nwhit 61 0 60
+TH1F bbx2phit 'BigBite MWDC x2p hits' BB.mwdc.x2p.nwhit 61 0 60
+TH1F bbv1hit 'BigBite MWDC v1 hits' BB.mwdc.v1.nwhit 61 0 60
+TH1F bbv1phit 'BigBite MWDC v1p hits' BB.mwdc.v1p.nwhit 61 0 60
+TH1F bbv2hit 'BigBite MWDC v2 hits' BB.mwdc.v2.nwhit 61 0 60
+TH1F bbv2phit 'BigBite MWDC v2p hits' BB.mwdc.v2p.nwhit 61 0 60
+
+
+# ------------------------------------------------------------------
+# BigBite Hadron Package Scintillator planes
+TH1F E_L_adc_ 'E Plane Left Raw ADC' BB.tp.e.LA 100 0 4100 BB.tp.e.LA>0.
+TH1F E_R_adc_ 'E Plane Right Raw ADC' BB.tp.e.RA 100 0 4100 BB.tp.e.RA>0.
+
+TH1F E_L_adcpedsub_ 'E Plane Left ADCpedsub' BB.tp.e.LApedc 100 0 4100 BB.tp.e.LApedc>0.
+TH1F E_R_adcpedsub_ 'E Plane Right ADCpedsub' BB.tp.e.RApedc 100 0 4100 BB.tp.e.RApedc>0
+
+TH1F dE_L_adcpedsub_ 'dE Plane Left ADCpedsub' BB.tp.de.LApedc 100 0 4100 BB.tp.de.LApedc>0.
+TH1F dE_R_adcpedsub_ 'dE Plane Right ADCpedsub' BB.tp.de.RApedc 100 0 4100 BB.tp.de.RApedc>0.
+
+TH1F dE_L_adc_ 'dE Plane Left Raw ADC' BB.tp.de.LA 100 0 4100 BB.tp.de.LA>0.
+TH1F dE_R_adc_ 'dE Plane Right Raw ADC' BB.tp.de.RA 100 0 4100 BB.tp.de.RA>0.
+
+TH1F E_L_tdc_ 'E Plane Left Raw TDC' BB.tp.e.LT 200 -1500 -500 BB.tp.e.LT>-10000.
+TH1F E_R_tdc_ 'E Plane Right Raw TDC' BB.tp.e.RT 200 -1500 -500 BB.tp.e.RT>-10000.
+
+TH1F dE_L_tdc_ 'dE Plane Left Raw TDC' BB.tp.de.LT 200 -1500 -500 BB.tp.de.LT>-10000.
+TH1F dE_R_tdc_ 'dE Plane Right Raw TDC' BB.tp.de.RT 200 -1500 -500 BB.tp.de.RT>-10000.
+
+# ----------------------------------------------------------------------------------
+# Bigbite Track Reconstrcution check
+
+FORMULA ElectronTrack BB.tr.n>=1&&BB.ts.ps.e>500
+FORMULA ThDegree BB.gold.th*180/3.1415927
+FORMULA PhDegree BB.gold.ph*180/3.1415927
+
+TH1F bbtrn  'Track Number per Event' BB.tr.n 5 -0.5 4.5
+TH2F bbtrxy 'Hits on the first Chamber x vs y' BB.tr.y BB.tr.x 100 -.2 .2 100 -.8 .8 ElectronTrack
+TH2F bbtrthph 'Track angular distr. Vert vs Horizontal' BB.tr.ph BB.tr.th 100 -.2 .2 100 -.8 .8 ElectronTrack
+
+TH1F bbp    'Track Momentum'   BB.gold.p 100 0 3 ElectronTrack
+TH1F bbz    'Vertex Reconstruct'   BB.tr.vz 100 -.5 .5 ElectronTrack
+TH1F bbpx   'Momentum Lab X' BB.gold.px 100 -1.6 0 ElectronTrack
+TH1F bbpy   'Momentum Lab Y' BB.gold.py 100 -.6 .6 ElectronTrack
+TH1F bbpz   'Momentum Lab Z' BB.gold.pz 100 0 3 ElectronTrack
+TH1F bbth   'Out of Plane Angle' ThDegree 100 -30 30 ElectronTrack
+TH1F bbph   'In Plane Angle (Rel. to BB Center)' 100 -10 10 PhDegree
+
+#MPS and Helicity 792 vs. 1881 plots
+TH2F bbMPSCor 'DBB.bbMPS_792 vs. DBB.bbMPS_1881' DBB.bbMPS_1881 DBB.bbMPS_792 20 0 18500 20 0 5000
+TH2F bbHelCor 'DBB.bbHel_792 vs. DBB.bbHel_1881' DBB.bbHel_1881 DBB.bbHel_792 20 0 18500 20 0 5000 
+
+#Raster correlations
+TH2F bbRastCor 'DBB.rasterx_792 vs. DBB.rasterx' DBB.rasterx DBB.rasterx_792 50 2000 8000 50 600 2700
+
+
+
+# ------------------------------------------------
+# physics variables
+# ------------------------------------------------
+
+
+block PriKineBB.*
+block PriKineBBHe3.*
+
+# Kinematics Variables
+
+FORMULA InvMass sqrt(PriKineBB.W2)
+FORMULA ScaAngle PriKineBB.angle*180/3.1415927
+
+# Good Electron cut
+# add more you have better idea
+FORMULA GoodBBTrack  BB.ts.ps.e>500&&BB.gold.p>0.01&&BB.gold.p<10&&BB.tr.n>=1
+
+# -----------------------
+# Inclusive Events
+# -----------------------
+
+TH1F InclScatAngle 'Left HRS Scattering angle' ScaAngle 100 30 60 GoodBBTrack
+TH1F InclQ3m       'Magnitude of 3-momentum transfer' PriKineBB.q3m 100 2 6 GoodBBTrack
+TH1F InclNu        'Energy Transfer' PriKineBB.nu 100 2 6 GoodBBTrack
+
+TH1F InclQ2        'Q^2 (GeV)' PriKineBB.Q2  100 0. 7  GoodBBTrack
+TH1F InclInvMass   'W (GeV)' InvMass  100 0.5 5  GoodBBTrack
+TH1F InclX         'Bjorken x' PriKineBB.x_bj 100 0 1 GoodBBTrack
+
+TH2F InclXW        'Inclusive Phase Space : W vs x'   PriKineBB.x_bj InvMass 50 0 1 50 0.5 5 GoodBBTrack
+TH2F InclXQ2       'Inclusive Phase Space : Q2 vs x'  PriKineBB.x_bj PriKineBB.Q2 50 0 1 50 0 7 GoodBBTrack
+TH2F InclXNu       'Inclusive Phase Space : Nu vs x'  PriKineBB.x_bj PriKineBB.nu 50 0 1 50 3 6 GoodBBTrack
+

@@ -1,0 +1,22 @@
+#block BB.*
+#block DBB.*
+block g.*
+block adchel.BB.helicity
+block adchel2.BB.helicity
+#block adchel.L.helicity
+#block adchel2.L.helicity
+#block g0hel.L.helicity
+
+
+
+begin scalers bbite
+   clock 4 7
+   clockcnt 4 7 counts
+   L1A 4 8
+   bcm_u1 4 16
+   bcm_u3 4 17
+   bcm_u10 4 18
+   bcm_d1 4 19
+   bcm_d3 4 20
+   bcm_d10 4 21
+end scalers

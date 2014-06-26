@@ -1,0 +1,92 @@
+protorootfile  ROOTfiles/e06014_det_BB_XXXXX.root 
+goldenrootfile ./golden_det_BB.root
+
+## Define cuts
+#definecut evcut  (ev_num>1000)
+
+## Uncomment next line to update histos as data comes in
+#watchfile
+
+## Canvas definitions
+#newpage 3 2
+#  title Misc histos
+#  hitdistT01
+#  hitdistA01
+#  B.tdc01.t1[0] 
+#  B.tdc01.t1[16]-B.tdc01.t1[0]  (B.tdc01.t1[16]>0)
+
+newpage 5 4 logy
+        title BB Cer ADCs (DL)
+        BB_cer_A01
+        BB_cer_A02
+        BB_cer_A03
+        BB_cer_A04
+        BB_cer_A05
+        BB_cer_A06
+        BB_cer_A07
+        BB_cer_A08
+        BB_cer_A09
+        BB_cer_A10
+        BB_cer_A11
+        BB_cer_A12
+        BB_cer_A13
+        BB_cer_A14
+        BB_cer_A15
+        BB_cer_A16
+        BB_cer_A17
+        BB_cer_A18
+        BB_cer_A19
+        BB_cer_A20
+
+newpage 5 4 logy
+        title BB Cer ADCs
+        multiplot 0 19 BB_cer_a_ped_XXXXX
+
+newpage 5 4 logy
+        title BB Cer TDCs (DL)
+        DL.BBcerT01  (DL.BBcerT01<2000)
+        DL.BBcerT02  (DL.BBcerT02<2000)
+        DL.BBcerT03  (DL.BBcerT03<2000)
+        DL.BBcerT04  (DL.BBcerT04<2000)
+        DL.BBcerT05  (DL.BBcerT05<2000)
+        DL.BBcerT06  (DL.BBcerT06<2000)
+        DL.BBcerT07  (DL.BBcerT07<2000)
+        DL.BBcerT08  (DL.BBcerT08<2000)
+        DL.BBcerT09  (DL.BBcerT09<2000)
+        DL.BBcerT10  (DL.BBcerT10<2000)
+        DL.BBcerT11  (DL.BBcerT11<2000)
+        DL.BBcerT12  (DL.BBcerT12<2000)
+        DL.BBcerT13  (DL.BBcerT13<2000)
+        DL.BBcerT14  (DL.BBcerT14<2000)
+        DL.BBcerT15  (DL.BBcerT15<2000)
+        DL.BBcerT16  (DL.BBcerT16<2000)
+        DL.BBcerT17  (DL.BBcerT17<2000)
+        DL.BBcerT18  (DL.BBcerT18<2000)
+        DL.BBcerT19  (DL.BBcerT19<2000)
+        DL.BBcerT20  (DL.BBcerT20<2000)
+
+## BB cerenkov class database needs updating (BDS, Sun Feb  8 02:57:58 EST 2009)
+#newpage 5 4 logy
+#        title BB Cer TDCs
+#        multiplot 0 19 BB_cer_t_XXXXX
+
+newpage 3 3 logy
+        title BB Cer Group TDCs
+        DL.BBcerTg01       (DL.BBcerTg01<2000)
+        DL.BBcerTg02       (DL.BBcerTg02<2000)
+        DL.BBcerTg03       (DL.BBcerTg03<2000)
+        DL.BBcerTg04       (DL.BBcerTg04<2000)
+        DL.BBcerTg05       (DL.BBcerTg05<2000)
+        DL.BBcerTg06       (DL.BBcerTg06<2000)
+        DL.BBcerTg07       (DL.BBcerTg07<2000)
+        DL.BBcerTg08       (DL.BBcerTg08<2000)
+        DL.BBcerTg09       (DL.BBcerTg09<2000)
+
+newpage 1 2 logy
+        title BB Cer Trigger TDCs
+        DL.BBcerTTsg      (DL.BBcerTTsg<2000)
+        #BB_cer_TTcer      (BB_cer_TTcer<2000)
+        DL.BBcerTTcer     (DL.BBcerTTcer<2000)
+        #BB_cer_TTsg       (BB_cer_TTsg<2000)
+
+## vim: set ft=sh : #

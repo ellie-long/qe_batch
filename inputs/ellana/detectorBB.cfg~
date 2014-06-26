@@ -1,0 +1,230 @@
+protorootfile ROOTfiles/e05102_det_BB_XXXX.root
+goldenrootfile ./golden_det_BB.root
+
+# Wire Chamber (Xin Qian)
+newpage 5 4 logy
+        title BigBite MWDC hits per wire
+        bbu1wire
+        bbu1pwire
+        bbu2wire
+        bbu2pwire
+        bbu3wire
+        bbu3pwire
+	bbx1wire
+        bbx1pwire
+        bbx2wire 
+        bbx2pwire
+	bbx3wire 
+        bbx3pwire
+        bbv1wire
+        bbv1pwire
+        bbv2wire
+        bbv2pwire
+	bbv3wire
+        bbv3pwire
+        
+newpage 5 4 logy
+        title BigBite MWDC hits times
+        bbu1time
+        bbu1ptime
+        bbu2time
+        bbu2ptime
+	bbu3time
+        bbu3ptime
+        bbx1time 
+        bbx1ptime 
+        bbx2time 
+        bbx2ptime 
+	bbx3time 
+        bbx3ptime 
+        bbv1time 
+        bbv1ptime
+        bbv2time
+        bbv2ptime
+	bbv3time
+        bbv3ptime
+
+newpage 5 4 
+        title BigBite MWDC hits per plane
+        bbu1hit
+        bbu1phit
+        bbu2hit
+        bbu2phit
+	bbu3hit
+        bbu3phit
+        bbx1hit 
+        bbx1phit 
+        bbx2hit 
+        bbx2phit 
+	bbx3hit 
+        bbx3phit 
+        bbv1hit 
+        bbv1phit
+        bbv2hit
+        bbv2phit
+	bbv3hit
+        bbv3phit
+
+newpage 1 1 logy
+	    title Track Multiplicity 
+		bbtrn 
+		
+newpage 2 2 
+	    title Track Reconstruction 
+		bbtrxy -type colz -nostat -noshowgolden
+		bbtrthph -type colz -nostat -noshowgolden
+		bbp
+		bbz
+
+
+
+# -----------------------
+# Inclusive Events
+# -----------------------
+newpage 1 3
+	title Inclusive Scattering Kinematics
+	InclScatAngle
+	InclQ3m
+	InclNu
+
+newpage 1 3
+	title Inclusive DIS Kinematics
+	InclQ2
+	InclInvMass
+	InclX
+	
+newpage 1 3
+	title Inclusive DIS x Correlations
+	InclXW -type colz -nostat -noshowgolden
+	InclXQ2 -type colz -nostat -noshowgolden
+	InclXNu -type colz -nostat -noshowgolden
+
+
+
+
+newpage 1 1
+	title BB raster correlation
+	bbRastCor -type colz -nostat -noshowgolden
+
+#Shower ADC
+newpage 3 9 logy
+	title BB shower ped_sub ADCs(column1)
+	multiplot 0 26 BB_sh_a_p_XXXXX
+newpage 3 9 logy
+	title BB shower ped_sub ADCs(column2)
+	multiplot 27 53 BB_sh_a_p_XXXXX
+newpage 3 9 logy
+	title BB shower ped_sub ADCs(column3)
+	multiplot 54 80 BB_sh_a_p_XXXXX
+newpage 3 9 logy
+	title BB shower ped_sub ADCs(column4)
+	multiplot 81 107 BB_sh_a_p_XXXXX
+newpage 3 9 logy
+	title BB shower ped_sub ADCs(column5)
+	multiplot 108 134 BB_sh_a_p_XXXXX
+newpage 3 9 logy
+	title BB shower ped_sub ADCs(column6)
+	multiplot 135 161 BB_sh_a_p_XXXXX
+newpage 3 9 logy
+	title BB shower ped_sub ADCs(column7)
+	multiplot 162 188 BB_sh_a_p_XXXXX
+
+#Preshower ADC
+newpage 3 9 logy
+	title BB Preshower ped_sub ADCs(column1)
+	multiplot 0 26 BB_ps_a_p_XXXXX
+newpage 3 9 logy
+	title BB Preshower ped_sub ADCs(column2)
+	multiplot 27 53 BB_ps_a_p_XXXXX
+
+
+#Total Sum ADC
+newpage 3 9 logy
+	title BB Total Sum ped_sub ADCs
+	multiplot 0 25 BB_sum_a_p_XXXXX
+
+#PreSum ADC
+newpage 3 9 logy
+	title BB PSum ped_sub ADCs
+	multiplot 0 25 BB_psum_a_p_XXXXX
+
+#Scint ADC
+newpage 3 5 logy
+	title BB Scint Left ped_sub ADCs
+	multiplot 0 12 BB_sl_a_p_XXXXX
+newpage 3 5 logy
+	title BB Scint Right ped_sub ADCs
+	multiplot 0 12 BB_sr_a_p_XXXXX
+
+#Total Sum TDC
+newpage 3 9 logy
+	title BB Sum TDCs
+	multiplot 0 25 BB_sum_t_XXXXX
+	
+#PreSum TDC
+newpage 3 9 logy
+	title BB PreSum TDCs
+	multiplot 0 25 BB_psum_t_XXXXX
+
+#Scint TDC
+newpage 3 5 logy
+	title BB Scint Left TDCs
+	multiplot 0 12 BB_s_lt_XXXXX
+newpage 3 5 logy
+	title BB Scint Right TDCs
+	multiplot 0 12 BB_s_rt_XXXXX
+
+#Scint time - TSum time 
+newpage 2 7 
+	title BB Scint - TSum time
+	BB.s.RT[0]-BB.sum.RT[0]>>h1(100,-150,50) (BB.s.RT[0]>-800&&BB.sum.RT[0]>-800&&BB.sum.RT[1]>-800)
+	BB.s.RT[1]-BB.sum.RT[2]>>h2(100,-150,50) (BB.s.RT[1]>-800&&BB.sum.RT[2]>-800&&BB.sum.RT[3]>-800)
+	BB.s.RT[2]-BB.sum.RT[4]>>h3(100,-150,50) (BB.s.RT[2]>-800&&BB.sum.RT[4]>-800&&BB.sum.RT[5]>-800)
+	BB.s.RT[3]-BB.sum.RT[6]>>h4(100,-150,50) (BB.s.RT[3]>-800&&BB.sum.RT[6]>-800&&BB.sum.RT[7]>-800)
+	BB.s.RT[4]-BB.sum.RT[8]>>h5(100,-150,50) (BB.s.RT[4]>-800&&BB.sum.RT[8]>-800&&BB.sum.RT[9]>-800)
+	BB.s.RT[5]-BB.sum.RT[10]>>h6(100,-150,50) (BB.s.RT[5]>-800&&BB.sum.RT[10]>-800&&BB.sum.RT[11]>-800)
+	BB.s.RT[6]-BB.sum.RT[12]>>h7(100,-150,50) (BB.s.RT[6]>-800&&BB.sum.RT[12]>-800&&BB.sum.RT[13]>-800)
+	BB.s.RT[7]-BB.sum.RT[14]>>h8(100,-150,50) (BB.s.RT[7]>-800&&BB.sum.RT[14]>-800&&BB.sum.RT[15]>-800)
+	BB.s.RT[8]-BB.sum.RT[16]>>h9(100,-150,50) (BB.s.RT[8]>-800&&BB.sum.RT[16]>-800&&BB.sum.RT[17]>-800)
+	BB.s.RT[9]-BB.sum.RT[18]>>h10(100,-150,50) (BB.s.RT[9]>-800&&BB.sum.RT[18]>-800&&BB.sum.RT[19]>-800)
+	BB.s.RT[10]-BB.sum.RT[20]>>h11(100,-150,50) (BB.s.RT[10]>-800&&BB.sum.RT[20]>-800&&BB.sum.RT[21]>-800)
+	BB.s.RT[11]-BB.sum.RT[22]>>h12(100,-150,50) (BB.s.RT[11]>-800&&BB.sum.RT[22]>-800&&BB.sum.RT[23]>-800)
+	BB.s.RT[12]-BB.sum.RT[24]>>h13(100,-150,50) (BB.s.RT[12]>-800&&BB.sum.RT[24]>-800&&BB.sum.RT[25]>-800)
+
+#Shower Hits over Blocks
+newpage 2 2
+	title BB shower & Preshow block hits
+	#macro shower_hit.C("BB_sh_x_y")
+	BB_ps_x
+	BB_ps_y
+	BB_sh_x
+	BB_sh_y
+
+# Buffered mode/sync check
+newpage 1 2 
+	title Sync Check1
+	bbMPSCor -nostat -noshowgolden
+	bbHelCor -nostat -noshowgolden
+
+# 104KHZ pulser sync check
+newpage 2 3
+        title Sync Check1(straight lines)
+	DBB.syncroc5:DBB.syncroc8   -type cont -nostat
+	DBB.syncroc5:DBB.syncroc9   -type cont -nostat
+	DBB.syncroc5:DBB.syncroc12  -type cont -nostat
+	DBB.syncroc8:DBB.syncroc10  -type cont -nostat
+	DBB.syncroc8:DBB.syncroc12  -type cont -nostat
+	DBB.syncroc9:DBB.syncroc10  -type cont -nostat
+
+newpage 2 2
+	title F1 Clock Check
+	DBB.f1s11ref0[0]-DBB.f1s5ref0[0]>>h20(200,400,600)
+	DBB.f1s8ref0[0]-DBB.f1s5ref0[0]>>h21(200,200,400)
+	DBB.f1s9ref0[0]-DBB.f1s8ref0[0]>>h22(200,100,300)
+	DBB.f1s11ref0[0]-DBB.f1s9ref0[0]>>h23(200,-100,100)
+
+# Deadtime
+newpage 
+	title Deadtime
+	macro getDeadtime.C        
+        

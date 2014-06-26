@@ -1,0 +1,157 @@
+BigBite Spectrometer Database
+Seamus Riordan
+riordan@jlab.org
+February 21, 2006
+
+Updated May 23, 2006
+Updated coefficient descriptions and vertex reconstruction coefficients
+
+Updated January 25, 2006
+Added in proctime variables and chi^2 contributions
+
+This document covers the variables found in the database for the BigBite 
+spectrometer.  This document assumes the spectrometer is named B, making
+the database name db_B.dat.
+
+The formatting of the database goes as
+<spectrometer name>.<varname> = <float value>
+
+So, in our case, for the leading momentum calculation coefficient, this 
+may be:
+
+B.ciDef = 0.3
+
+The ordering of variables does not matter.
+
+There are three coordinate systems used:
+
+Lab Coordinates - Hall coordinate system where y goes against gravity,
+z is in the direction of the beam, and x is to the left when looking
+down the beam
+
+Target Coordinates - Origin at the center of the target.  x goes
+with gravity, z is parallel to the ground in the direction towards the
+center of the BigBite drift chambers.  y is to the left looking down z
+
+Detector Coordinates - Origin specified by center of the first
+plane of the drift chambers.  x is "down" in the dispersion direction,
+z is in the nominal direction of particles such that z = 0 is defined by
+the first plane of the chamber.  y is defined so we have a right handed
+coordinate system.
+
+The coordinate system offsets are described in this database.  They are:
+
+B.det_rot_x   How the detector system is rotated around x in target system (degrees)
+B.det_rot_y   How the detector system is rotated around y in target system (degrees)
+B.det_rot_z   How the detector system is rotated around z in target system (degrees)
+
+Rotations are done in the order of around x, then around the new y, then around
+the new z axes.
+
+B.det_x       X offset of target origin and detector origin (m)
+B.det_y       Y offset of target origin and detector origin (m)
+B.det_z       Z offset of target origin and detector origin (m)
+
+B.target_x    X offset of lab origin and target origin (m)
+B.target_y    Y offset of lab origin and target origin (m)
+B.target_z    Z offset of lab origin and target origin (m)
+
+Rotations from lab to target are defined by the central theta of BigBite described in
+db_run.dat
+
+Tracking Variables:
+
+These variables are relevant to the tracking code and it's performance
+
+B.maxgroups      Soft maximum number of hit groups to consider when doing tracking
+                 When the maximum is reached, the tracking code will stop and only use
+                 hit groups involving the number of planes it was finding groups for or
+                 more, but will not consider fewer planes.  For example, consider the case
+                 when we have a maximum of 500.
+
+                 If we have 20 groups of 15 plane combinations, 150 groups of 14 plane 
+                 combinations, 700 groups of 13 planes, and 1000 groups of 12 planes, etc.
+                 the tracking code will only consider the groups created by 15 planes, 14 planes
+                 and 13 planes.
+
+B.hardmaxgroups  Absolute maximum number groups to consider in tracking.  When this limit is
+                 reached, no more groups will be considered
+
+B.maxgroupthreshold
+                 The code will try and estimate the number of groups that will be found using
+                 a maximum allowed plane configuration.  If this number is greater than 
+                 maxgroupthreshold, tracking is basically skipped over.  This is a sanity check
+                 to prevent the code from grinding on ridiculous number of groups and stalling.
+
+B.minimumplanes  Minimum number of planes to consider when doing tracking.  Warning: The
+                 minimum number of planes is 4, however, reducing the number greatly 
+                 increases the number of hit groups must be considered to the point where
+                 performance may be crippled.  Increasing this number will improve performance.
+
+
+These variables are relevant to finding vertices and momentum in the tracking code:
+
+B.target_length  The absolute length of the target (m)
+
+B.effbendx       The x position of the center of the effective bending plane in 
+		 target coords (m)
+
+B.effbendy       The y position of the center of the effective bending plane in 
+		 target coords (m)
+
+B.effbendz       The z position of the center of the effective bending plane in 
+		 target coords (m)
+
+B.effbendplanetheta
+                 The orientation of the bending plane (degrees)  This is nominally
+                 +10 degrees
+
+The formula for the momentum is given by:
+    p = ciDef/(deflection angle) + ciDefXbend*bend_x/(deflection_angle) + cThetaTarg * atan(theta_target) +
+        + cY * detector_y + cPhi * detector_yp
+
+B.ciDef             Coefficient for inverse deflection angle (GeV*rad/c)
+B.ciDefXbend        Coefficient for bend plane x intercept (m, detector coords)/ deflection angle (GeV*rad/(m*c))
+B.cThetaTarg        Coefficient for theta in target coordiante system in radians (GeV/(rad*c))
+B.cY                Coefficient for y (m, detector coords, z_detector = 0) (GeV/(m*c))
+B.cPhi              Coefficient for y' (tangent, detector coords) (GeV/c)
+
+The formula for the vertex reconstruction is done by creating a leading term, which
+is done by assuming that there is no deflection in the non-dispersive (horizontal) direction,
+finding the intercept with the beam, and defining that as a point.  The vertex is
+described in the HALL coordinate system.  We let x_hall and y_hall be defined by this point.
+For z_hall, we allow for first order corrections.  The formula is:
+
+vertex_z_hall = cV*z0 + cVX*track_x + cVXp*track_xp + cVY*track_y + cVyp*track_yp
+
+B.cV		 Coefficient for leading term, z0 (m), found as described above
+B.cVX		 Coefficient for first order correction in track x intercept at z = 0, all in m and detector coordinate system
+B.cVXp		 Coefficient for first order correction in track x', in tangents and detector coordinate system
+B.cVY		 Coefficient for first order correction in track y intercept at z = 0, all in m and detector coordinate system
+B.cVYp		 Coefficient for first order correction in track y', in tangetns and detector coordinate system
+
+These variables are relevant to shower cuts:
+
+B.useshowercuts  Set to 1 to use shower cuts.  0 to not
+
+B.targetxext     Target window x extension (m).  This is the size of the window that will
+                 be above and below the two extreme x points of the target
+
+B.targetyext     Target window y extension (m).  This is the size of the window that will
+                 be above and below the two extreme y points of the target
+
+B.targetwindowxoffset
+                 X offset for target window (m).  This will raise or lower the absolute
+                 position of the target shower cut window
+
+B.showerxext     The half width of the shower window in the x direction (m)
+
+B.showeryext     The half width of the shower window in the y direction (m)
+
+B.3rdchamxext    The half width of the third chamber window in the x direction (m)
+
+B.3rdchamyext    The half width of the third chamber window in the y direction (m)
+
+B.thirdchamminz  The minimum z value the center of a plane can have to be considered
+                 a part of the third chamber
+

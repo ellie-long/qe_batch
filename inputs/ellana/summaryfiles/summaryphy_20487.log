@@ -1,0 +1,14 @@
+Cut Summary for run 20487 completed Fri Feb 14 13:24:04 2014
+
+Name       Def               Called     Passed
+------------------------------------------------------
+BLOCK: Decode
+T1D        D.evtype==1       10000      10000 (100%)
+T2D        D.evtype==2       10000      0     (0%)
+T8D        D.evtype==8       10000      0     (0%)
+
+BLOCK: Physics
+SpinValid  he3R.IsSpinValid  10000      10000 (100%)
+SpinUp     he3R.Spin==1      10000      10000 (100%)
+SpinDown   he3R.Spin==-1     10000      0     (0%)
+

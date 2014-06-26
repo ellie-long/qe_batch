@@ -1,0 +1,127 @@
+# ----------------------------------------------------------------
+# Transversity Physics Replay On Line Display Configuration File
+# Author : Jin Huang <jinhuang@jlab.org> 
+# ----------------------------------------------------------------
+#
+# Configuration file for the online GUI 
+# This file is for detectors on L-arm.
+# This file uses histograms, best for analyzer version >= 1.1
+#
+#  All lines containing "#" are treated as comments (ignored)
+#  Last line MUST be blank.
+#  Multiple spaces are treated as one space.
+#  More details in README
+
+goldenrootfile ./golden_L.root
+# D:2747
+#goldenrootfile ROOTfiles/e04007_det_2747.root
+# C: 2683
+protorootfile  ROOTfiles/e06014_L_XXXXX.root
+
+# newpage 2 2 logy
+#	title L-arm S0 (only for ep XS)
+#	Ls0a1
+#	Ls0a2
+#	Ls0t1
+#	Ls0t2
+
+
+# -----------------------
+# Event Flag
+# -----------------------
+newpage 1 1 logy
+	title Event type distribution
+	HEvType
+
+# -----------------------
+# Momentum/Vertex
+# -----------------------
+
+newpage 1 2 
+	title Momentum and Vertex
+        ExTgtCor_L.dp>>htemp(500,-0.07,0.07) GoodLTrack  -tree T -title "Deviation from Central Momentum"
+	ReactPt_L.z>>hVzL(200,-0.2,0.2)  GoodLTrack -tree T -title "LHRS React Z"
+	
+	
+# ---------------------------------
+# Left HRS GC and Pion Rejector
+# ---------------------------------
+newpage 1 2 
+	title  Pion Rejector L1 vs L2 (w/o and w/ Gas Cerenkov Cut)
+	L.prl1.e:L.prl2.e>>hVzPsvsShT1(100,0,600,100,0,400)  GoodLTrack&&InclusiveEvt&&L.prl2.e>0&&L.prl1.e>0 -tree T -type colz
+	L.prl1.e:L.prl2.e>>hVzPsvsShT1Tr(100,0,600,100,0,400)  InclCut&&L.prl2.e>0&&L.prl1.e>0 -tree T -type colz
+
+newpage 1 2 logy
+      	title  PID Detectors (Loose Cuts)
+	L.cer.asum_c>>hGasCer(200,1,3500) GoodLTrack&&InclusiveEvt&&L.cer.asum_c>0. -tree T -title "Left HRS Gas Cerenkov"
+        prl_E_P>>hprlep(500,0,1.5) GoodLTrack&&InclusiveEvt&&L.prl1.e>0.&&L.prl2.e>0. -tree T -title "Energy Over Momentum"
+
+
+newpage 1 2 logy
+      	title  PID Detectors (Good Electrons)
+	L.cer.asum_c>>hGasCer(200,1,3500)  InclCut -tree T -title "Left HRS Gas Cerenkov"
+        prl_E_P>>hprlep(500,0,1.5) InclCut&&L.prl1.e>0.&&L.prl2.e>0.&&prl_E_P>0.2 -tree T -title "Energy Over Momentum"
+
+	
+# -----------------------
+# Spin Heli
+# -----------------------
+newpage 1 3 logy
+	title Helicity
+	g0hel -stat
+	adchel -stat
+        heldiff
+
+
+# newpage 2 3 logy
+#	title Spin Signal Validity
+#	he3SpinValid -nostat
+#	he3SpinLADC1Valid -nostat
+#	he3SpinLADC2Valid -nostat
+#	he3SpinBBBitValid -nostat
+#	he3SpinBBADCValid -nostat
+
+# newpage 2 3 logy
+#	title Spin State(+-1 or 0), Ask Target Operator!
+#	he3Spin -nostat -noshowgolden
+#	he3SpinLADC1 -nostat -noshowgolden
+#	he3SpinLADC2 -nostat -noshowgolden
+#	he3SpinBBBit -nostat -noshowgolden
+#	he3SpinBBADC -nostat -noshowgolden
+
+# newpage 2 2 
+#	title Scattering Kinematics
+#	physScatAngle
+#	physQ3m
+#	physNu
+#	physQ2
+
+#newpage 2 2 
+#	title DIS Kinematics
+#	physInvMass
+#	physX
+#	physY
+#	physZ
+	
+
+# -----------------------
+# Inclusive Events
+# -----------------------
+newpage 1 3
+	title Inclusive Scattering Kinematics
+	InclScatAngle
+	InclQ3m
+	InclNu
+
+newpage 1 3
+	title Inclusive DIS Kinematics
+	InclQ2
+	InclInvMass
+	InclX
+	
+newpage 1 3
+	title Inclusive DIS x Correlations
+	InclXW -type colz -nostat -noshowgolden
+	InclXQ2 -type colz -nostat -noshowgolden
+	InclXNu -type colz -nostat -noshowgolden
+

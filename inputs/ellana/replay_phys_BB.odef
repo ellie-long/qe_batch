@@ -1,0 +1,125 @@
+# List of the variable blocks to be written out
+
+block BB.tr.*
+block L.tr.*
+block BB.gold.*
+
+# keep this block for TDC calibration and ADC cuts
+block BB.tp.*
+
+# block L.s1.*
+# block L.s2.*
+# block L.cer.*
+# block adchel.L.*
+# block adchel2.L.*
+# block g0hel.L.*
+# block L.vdc.*
+# block L.prl*
+# block PriKine.*
+# block ReactPt_L.*
+# block ExTgtCor_L.*
+# block SecKine.*
+# block DL.*
+#block rb.*
+#block urb.*
+block L.gold.*
+#block Norm.*
+block DL.*
+#block Ndata.DL.*
+
+
+
+# ----------------------------------------------------------------------------------
+# Bigbite Track Reconstrcution check
+
+FORMULA HadronTrack BB.tr.n>=1&&BB.ts.ps.e>500
+FORMULA ThDegree BB.gold.th*180/3.1415927
+FORMULA PhDegree BB.gold.ph*180/3.1415927
+
+TH1F bbtrn  'Track Number per Event' BB.tr.n 5 -0.5 4.5
+TH2F bbtrxy 'Hits on the first Chamber x vs y' BB.tr.y BB.tr.x 100 -.2 .2 100 -.8 .8 HadronTrack
+TH2F bbtrthph 'Track angular distr. Vert vs Horizontal' BB.tr.ph BB.tr.th 100 -.2 .2 100 -.8 .8 HadronTrack
+
+TH1F bbp    'Track Momentum'   BB.gold.p 100 0 3 HadronTrack
+TH1F bbz    'Vertex Reconstruct'   BB.tr.vz 100 -.5 .5 HadronTrack
+TH1F bbpx   'Momentum Lab X' BB.gold.px 100 -1.6 0 HadronTrack
+TH1F bbpy   'Momentum Lab Y' BB.gold.py 100 -.6 .6 HadronTrack
+TH1F bbpz   'Momentum Lab Z' BB.gold.pz 100 0 3 HadronTrack
+TH1F bbth   'Out of Plane Angle' ThDegree 100 -30 30 HadronTrack
+TH1F bbph   'In Plane Angle (Rel. to BB Center)' 100 -10 10 PhDegree
+
+#Cerenkov ADCs
+TH1F BB_cer_a_ped_   'BB Cerenkov ADC'           BB.cer.a   300 0  900 BB.cer.a>0
+TH1F BB_cer_a_       'BB Cerenkov ADC'           BB.cer.a   400 0 4000 BB.cer.a>0
+TH1F BB_cer_a_p_     'BB Cerenkov ADC (ped sub)' BB.cer.a_p 400 0 4000 BB.cer.a_p>0
+
+TH1F BB_cer_t_       'BB Cerenkov TDC'           BB.cer.t   400 0 4000 BB.cer.t>0
+
+#Cerenkov ADCs (DBB class)
+TH1F BB_cer_A01 'BB Cerenkov ADC 01' DBB.BBcerA01 400 0 8000
+TH1F BB_cer_A02 'BB Cerenkov ADC 02' DBB.BBcerA02 400 0 8000
+TH1F BB_cer_A03 'BB Cerenkov ADC 03' DBB.BBcerA03 400 0 8000
+TH1F BB_cer_A04 'BB Cerenkov ADC 04' DBB.BBcerA04 400 0 8000
+TH1F BB_cer_A05 'BB Cerenkov ADC 05' DBB.BBcerA05 400 0 8000
+TH1F BB_cer_A06 'BB Cerenkov ADC 06' DBB.BBcerA06 400 0 8000
+TH1F BB_cer_A07 'BB Cerenkov ADC 07' DBB.BBcerA07 400 0 8000
+TH1F BB_cer_A08 'BB Cerenkov ADC 08' DBB.BBcerA08 400 0 8000
+TH1F BB_cer_A09 'BB Cerenkov ADC 09' DBB.BBcerA09 400 0 8000
+TH1F BB_cer_A10 'BB Cerenkov ADC 10' DBB.BBcerA10 400 0 8000
+TH1F BB_cer_A11 'BB Cerenkov ADC 11' DBB.BBcerA11 400 0 8000
+TH1F BB_cer_A12 'BB Cerenkov ADC 12' DBB.BBcerA12 400 0 8000
+TH1F BB_cer_A13 'BB Cerenkov ADC 13' DBB.BBcerA13 400 0 8000
+TH1F BB_cer_A14 'BB Cerenkov ADC 14' DBB.BBcerA14 400 0 8000
+TH1F BB_cer_A15 'BB Cerenkov ADC 15' DBB.BBcerA15 400 0 8000
+TH1F BB_cer_A16 'BB Cerenkov ADC 16' DBB.BBcerA16 400 0 8000
+TH1F BB_cer_A17 'BB Cerenkov ADC 17' DBB.BBcerA17 400 0 8000
+TH1F BB_cer_A18 'BB Cerenkov ADC 18' DBB.BBcerA18 400 0 8000
+TH1F BB_cer_A19 'BB Cerenkov ADC 19' DBB.BBcerA19 400 0 8000
+TH1F BB_cer_A20 'BB Cerenkov ADC 20' DBB.BBcerA20 400 0 8000
+
+#Cerenkov TDCs
+TH1F BB_cer_T01 'BB Cerenkov TDC 01' DBB.BBcerT01 400 0 2000
+TH1F BB_cer_T02 'BB Cerenkov TDC 02' DBB.BBcerT02 400 0 2000
+TH1F BB_cer_T03 'BB Cerenkov TDC 03' DBB.BBcerT03 400 0 2000
+TH1F BB_cer_T04 'BB Cerenkov TDC 04' DBB.BBcerT04 400 0 2000
+TH1F BB_cer_T05 'BB Cerenkov TDC 05' DBB.BBcerT05 400 0 2000
+TH1F BB_cer_T06 'BB Cerenkov TDC 06' DBB.BBcerT06 400 0 2000
+TH1F BB_cer_T07 'BB Cerenkov TDC 07' DBB.BBcerT07 400 0 2000
+TH1F BB_cer_T08 'BB Cerenkov TDC 08' DBB.BBcerT08 400 0 2000
+TH1F BB_cer_T09 'BB Cerenkov TDC 09' DBB.BBcerT09 400 0 2000
+TH1F BB_cer_T10 'BB Cerenkov TDC 10' DBB.BBcerT10 400 0 2000
+TH1F BB_cer_T11 'BB Cerenkov TDC 11' DBB.BBcerT11 400 0 2000
+TH1F BB_cer_T12 'BB Cerenkov TDC 12' DBB.BBcerT12 400 0 2000
+TH1F BB_cer_T13 'BB Cerenkov TDC 13' DBB.BBcerT13 400 0 2000
+TH1F BB_cer_T14 'BB Cerenkov TDC 14' DBB.BBcerT14 400 0 2000
+TH1F BB_cer_T15 'BB Cerenkov TDC 15' DBB.BBcerT15 400 0 2000
+TH1F BB_cer_T16 'BB Cerenkov TDC 16' DBB.BBcerT16 400 0 2000
+TH1F BB_cer_T17 'BB Cerenkov TDC 17' DBB.BBcerT17 400 0 2000
+TH1F BB_cer_T18 'BB Cerenkov TDC 18' DBB.BBcerT18 400 0 2000
+TH1F BB_cer_T19 'BB Cerenkov TDC 19' DBB.BBcerT19 400 0 2000
+TH1F BB_cer_T20 'BB Cerenkov TDC 20' DBB.BBcerT20 400 0 2000
+
+#Cerenkov Group TDCs
+TH1F BB_cer_Tg01 'BB Cerenkov TDC Group 01' DBB.BBcerTg01 400 0 4000
+TH1F BB_cer_Tg02 'BB Cerenkov TDC Group 02' DBB.BBcerTg02 400 0 4000
+TH1F BB_cer_Tg03 'BB Cerenkov TDC Group 03' DBB.BBcerTg03 400 0 4000
+TH1F BB_cer_Tg04 'BB Cerenkov TDC Group 04' DBB.BBcerTg04 400 0 4000
+TH1F BB_cer_Tg05 'BB Cerenkov TDC Group 05' DBB.BBcerTg05 400 0 4000
+TH1F BB_cer_Tg06 'BB Cerenkov TDC Group 06' DBB.BBcerTg06 400 0 4000
+TH1F BB_cer_Tg07 'BB Cerenkov TDC Group 07' DBB.BBcerTg07 400 0 4000
+TH1F BB_cer_Tg08 'BB Cerenkov TDC Group 08' DBB.BBcerTg08 400 0 4000
+TH1F BB_cer_Tg09 'BB Cerenkov TDC Group 09' DBB.BBcerTg09 400 0 4000
+
+TH1F BB_cer_TTsg  'BB Cerenkov Trig Shower+Cer'    DBB.BBcerTTsg   400 0 4000
+TH1F BB_cer_TTcer 'BB Cerenkov Trig Cer'           DBB.BBcerTTcer  400 0 4000
+
+#MPS and Helicity 792 vs. 1881 plots
+TH2F bbMPSCor 'DBB.bbMPS_792 vs. DBB.bbMPS_1881' DBB.bbMPS_1881 DBB.bbMPS_792 20 0 18500 20 0 5000
+TH2F bbHelCor 'DBB.bbHel_792 vs. DBB.bbHel_1881' DBB.bbHel_1881 DBB.bbHel_792 20 0 18500 20 0 5000 
+
+#Raster correlations
+TH2F bbRastCor 'DBB.rasterx_792 vs. DBB.rasterx' DBB.rasterx DBB.rasterx_792 50 2000 8000 50 600 2700
+
+
+
+

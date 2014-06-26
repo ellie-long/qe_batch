@@ -1,0 +1,473 @@
+###############################################################
+#
+# Data Base for Bigbite Trigger plane
+#
+# units: m & ns
+#
+# Author: Jin Huang <mailto:jinhuang@jlab.org>    July 2007
+#
+###############################################################
+
+
+###############################################################
+# Example
+###############################################################
+# comment line start with '#' or empty line
+# WARNING: "empty line" means completely empty, even with out 
+#   space or tab
+#
+# example section for Bigbite trigger plane dE subdetector TDC cratemap
+#
+[ BB.tp.de.cratemap.tdc.example ]
+#
+# reference channel goes first
+# crate	slot	lo	hi	model	refindex
+25      13      32     32     6401    -1
+# crate=-1 end to this subsection
+-1       0       0      0        0     0
+#
+# subsection for the left PMTs
+# crate	slot	lo	hi	model	refindex
+25       1       0      0     6401     0
+25       1       0      0     6401     0
+25      12      32     32     6401     0
+# lines ignored here	
+-1       0       0      0        0     0
+#
+# subsection for the right PMTs
+# crate	slot	lo	hi	model	refindex
+25       1       0      0     6401     0
+25       1       0      0     6401     0
+25       4      31     31     6401     0
+# lines ignored here
+-1       0       0      0        0     0
+
+[ BB.tp.e.left_pedestals.example ]
+# first and last index in array
+0 30
+# no comment in table
+# Table start here
+  0   0 397 423 464 
+487 496 576 522 335 
+361 433 347 648 512 
+609 529 451 537 540 
+496 554 385 382 294 
+376 403 331 335 230 
+288 
+
+
+###############################################################
+# Bigbite trigger plane detector
+###############################################################
+# TERMINOLOGY follows conventions of Hall A Tech Notes JLAB-TN-02-012:  
+# http://hallaweb.jlab.org/publications/Technotes/files/2002/02-012.pdf
+
+[ BB.tp.geometry ]
+# origin of trigger plane
+# relative to Transport Coordinate System 
+#   x   y   z
+    0   0   .5
+
+# x and y axis of trigger plane
+# relative to Transport Coordinate System
+# z axis will be calculated by z=x cross y
+# x axis
+#   x   y   z
+    1   0   0
+# y axis
+#   x   y   z
+    0   1   0
+
+[ BB.tp.hit_acceptance ]
+# when x y z distance between 2 hits in E and dE plane is smaller
+# than the number below, they will be combined as hit in Triggerplane
+#	dx	dy	dz
+	.05	.20	.05
+
+#limits of accepatble time difference between 2 hits in E and dE plane
+#time difference=TOF(dE)-TOF(E)
+# Min	Max
+-100	100
+
+# limits of accepatble x and y diffence between hit 
+# and track projection on trigger plane
+#	dx	    dy
+	.086    .30
+
+###############################################################
+# Bigbite trigger plane E subdetector
+###############################################################
+
+[ BB.tp.e.cratemap.tdc ]
+# Ref Idx:index for reference channel
+# crate	slot	Lo	Hi	Model	Ref Idx.
+11	5	32	32	6401	-1
+-1	0	0	0	0	0
+# left PMTs					
+11	5	0	0	6401	0
+11	5	1	1	6401	0
+11	5	2	2	6401	0
+11	5	3	3	6401	0
+11	5	4	4	6401	0
+11	5	5	5	6401	0
+11	5	6	6	6401	0
+11	5	7	7	6401	0
+11	5	8	8	6401	0
+11	5	9	9	6401	0
+11	5	10	10	6401	0
+11	5	11	11	6401	0
+11	5	12	12	6401	0
+11	5	13	13	6401	0
+11	5	14	14	6401	0
+11	5	15	15	6401	0
+11	8	0	0	6401	0
+11	8	1	1	6401	0
+11	8	2	2	6401	0
+11	8	3	3	6401	0
+11	8	4	4	6401	0
+11	8	5	5	6401	0
+11	8	6	6	6401	0
+11	8	7	7	6401	0
+-1	0	0	0	0	0
+# right PMTs					
+11	6	0	0	6401	0
+11	6	1	1	6401	0
+11	6	2	2	6401	0
+11	6	3	3	6401	0
+11	6	4	4	6401	0
+11	6	5	5	6401	0
+11	6	6	6	6401	0
+11	6	7	7	6401	0
+11	6	8	8	6401	0
+11	6	9	9	6401	0
+11	6	10	10	6401	0
+11	6	11	11	6401	0
+11	6	12	12	6401	0
+11	6	13	13	6401	0
+11	6	14	14	6401	0
+11	6	15	15	6401	0
+11	8	8	8	6401	0
+11	8	9	9	6401	0
+11	8	10	10	6401	0
+11	8	11	11	6401	0
+11	8	12	12	6401	0
+11	8	13	13	6401	0
+11	8	14	14	6401	0
+11	8	15	15	6401	0
+-1	0	0	0	0	0
+
+
+
+[ BB.tp.e.cratemap.adc ]
+# crate	slot	Lo	Hi	Model
+# left 24 PMT
+11	17	0	15	792	
+11	18	0	7	792
+-1	0	0	0	0
+# right 24 PMT
+11	17	16	31	792
+11	18	8	15	792
+-1	0	0	0	0
+ 
+[ BB.tp.e.calib ]
+# -----------------------------------------------------------------------
+# first and last index of reference channel with same time resorlution
+# ex. 0 1 stand for 2 reference channel with index 0 & 1
+0 0
+# TDC resorlution of above reference channels
+0.1183
+# if necessary, continue this list untill reach nRefCh-1
+# -----------------------------------------------------------------------
+# first and last index of bars with same specification
+0 23
+
+# middle of the bar, relative to the center of the detector it belongs to
+# x,y,z,of first bar and dx,dy,dz between bars
+.043   0.0   .025   .086   0.   0. 
+# fix me: what'z z for E plane?
+
+# full width (from end to end)
+# xw,yw,zw
+.086   .50   .03   
+
+# effective speed of light(m/ns) and attenuation in scintillator
+# attenuation: Y_ADC = TMath::Log(L_ADC/R_ADC)*attenuation/2.0;
+.07   1.e8
+# n=1.58, taking reflection into consideration, I just set c=1^8 m/s temporarily 
+# I do not know attenuation, probably it's not useful
+
+# (default value of) gain, ped, res, toff, walk, lowtdclim, uptdclim, wrapa
+#
+# gain, ped: fAmplPedCor = fRawAmpl - pmt->GetPed();
+#            fAmpl = fAmplPedCor * pmt->GetGain();
+# res, toff: fTime = fRawTime * res - toff
+# walk:      time-walk correction, t=t-walk*pow(adc,-0.5)
+# lowtdclim, uptdclim: Lower and upper boundary for an acceptable hit
+# wrapa:     F1TDC wrap-round time (in Rawtime format)
+#
+# left PMT
+# gain, ped, res, toff, walk, lowtdclim, uptdclim, wrapa
+1.	0	0.1183	0.0	0.0	-500	200	65536
+# right PMT
+# gain, ped, res, toff, walk, lowtdclim, uptdclim, wrapa
+1.	0	0.1183	0.0	0.0	-500	200	65536
+# -----------------------------------------------------------------------
+
+[ BB.tp.e.left_gain ]
+# first and last index in array
+0 23
+# Table start here
+1	1	1	1
+1	1	1	1
+1	1	1	1
+1	1	1	1
+1	1	1	1
+1	1	1	1
+
+[ BB.tp.e.left_pedestals ]
+# first and last index in array
+0 23
+# Table start here
+0	0	0	0
+0	0	0	0
+0	0	0	0
+0	0	0	0
+0	0	0	0
+0	0	0	0
+
+[ BB.tp.e.left_toff ]
+# toff should contain correction for 
+# the time of light traveling through bars
+#
+# first and last index in array
+0 23
+# Table start here
+0	0	0	0
+0	0	0	0
+0	0	0	0
+0	0	0	0
+0	0	0	0
+0	0	0	0
+
+[ BB.tp.e.right_gain ]
+# first and last index in array
+0 23
+# Table start here
+1	1	1	1
+1	1	1	1
+1	1	1	1
+1	1	1	1
+1	1	1	1
+1	1	1	1
+
+[ BB.tp.e.right_pedestals ]
+# first and last index in array
+0 23
+# Table start here
+0	0	0	0
+0	0	0	0
+0	0	0	0
+0	0	0	0
+0	0	0	0
+0	0	0	0
+
+[ BB.tp.e.right_toff ]
+# first and last index in array
+0 23
+# Table start here
+0	0	0	0
+0	0	0	0
+0	0	0	0
+0	0	0	0
+0	0	0	0
+0	0	0	0
+
+
+
+###############################################################
+# Bigbite trigger plane dE subdetector
+###############################################################
+
+[ BB.tp.de.cratemap.tdc ]
+# crate	slot	Lo	Hi	Model	Ref Idx.
+# Reference channel					
+11	5	32	32	6401	-1
+-1	0	0	0	0	0
+# left PMTs					
+11	9	0	0	6401	0
+11	9	1	1	6401	0
+11	9	2	2	6401	0
+11	9	3	3	6401	0
+11	9	4	4	6401	0
+11	9	5	5	6401	0
+11	9	6	6	6401	0
+11	9	7	7	6401	0
+11	9	8	8	6401	0
+11	9	9	9	6401	0
+11	9	10	10	6401	0
+11	9	11	11	6401	0
+11	9	12	12	6401	0
+11	9	13	13	6401	0
+11	9	14	14	6401	0
+11	9	15	15	6401	0
+11	12	0	0	6401	0
+11	12	1	1	6401	0
+11	12	2	2	6401	0
+11	12	3	3	6401	0
+11	12	4	4	6401	0
+11	12	5	5	6401	0
+11	12	6	6	6401	0
+11	12	7	7	6401	0
+-1	0	0	0	0	0
+# right PMTs					
+11	11	0	0	6401	0
+11	11	1	1	6401	0
+11	11	2	2	6401	0
+11	11	3	3	6401	0
+11	11	4	4	6401	0
+11	11	5	5	6401	0
+11	11	6	6	6401	0
+11	11	7	7	6401	0
+11	11	8	8	6401	0
+11	11	9	9	6401	0
+11	11	10	10	6401	0
+11	11	11	11	6401	0
+11	11	12	12	6401	0
+11	11	13	13	6401	0
+11	11	14	14	6401	0
+11	11	15	15	6401	0
+11	12	8	8	6401	0
+11	12	9	9	6401	0
+11	12	10	10	6401	0
+11	12	11	11	6401	0
+11	12	12	12	6401	0
+11	12	13	13	6401	0
+11	12	14	14	6401	0
+11	12	15	15	6401	0
+-1	0	0	0	0	0
+
+
+[ BB.tp.de.cratemap.adc ]
+# left 24 PMTs	
+11	18	16	31	792
+11	19	16	23	792
+-1	0	0	0	0
+# right 24 PMTs	
+11	19	0	15	792
+11	19	24	31	792
+-1	0	0	0	0
+
+
+
+[ BB.tp.de.calib ]
+# -----------------------------------------------------------------------
+# units: m & ns
+#
+# first and last index of reference channel with same time resorlution
+# ex. 0 1 stand for 2 reference channel with index 0 & 1
+0 0
+# TDC resorlution of above reference channels
+0.1183
+# if necessary, continue this list untill reach nRefCh-1
+# -----------------------------------------------------------------------
+# first and last index of bars with same specification
+0 23
+
+# middle of the bar, relative to the center of the detector it belongs too
+# x,y,z,of first bar and dx,dy,dz
+0.0   0.0   0.0   .086   0.   0. 
+
+# full width (from end to end)
+# xw,yw,zw
+.086   .50   .003   
+# I do not know zw yet
+
+# effective speed of light(m/ns) and attenuation
+# attenuation: Y_ADC = TMath::Log(L_ADC/R_ADC)*attenuation/2.0;
+.07   1.e8
+# n=1.58, taking reflection into consideration, I just set c=1^8 m/s temporarily 
+# I do not know attenuation, probably it's not useful
+
+# gain, ped, res, toff, walk, lowtdclim, uptdclim, wrapa
+# gain, ped: fAmplPedCor = fRawAmpl - pmt->GetPed();
+#            fAmpl = fAmplPedCor * pmt->GetGain();
+# res, toff(ns): fTime = fRawTime * res - toff
+# walk: time-walk correction, t=t-walk*pow(adc,-0.5)
+# lowtdclim, uptdclim (ns): Lower and upper boundary for an acceptable hit
+# wrapa (raw time): F1TDC wrap-round time (in Rawtime format)
+#
+# left PMT
+# gain, ped, res, toff, walk, lowtdclim, uptdclim, wrapa
+1.	0	0.1183	0.0	0.0	-500	200	65536
+# right PMT
+1.	0	0.1183	0.0	0.0	-500	200	65536
+# -----------------------------------------------------------------------
+
+[ BB.tp.de.left_gain ]
+# first and last index in array
+0 23
+# Table start here
+1	1	1	1
+1	1	1	1
+1	1	1	1
+1	1	1	1
+1	1	1	1
+1	1	1	1
+
+[ BB.tp.de.left_pedestals ]
+# first and last index in array
+0 23
+# Table start here
+0	0	0	0
+0	0	0	0
+0	0	0	0
+0	0	0	0
+0	0	0	0
+0	0	0	0
+
+[ BB.tp.de.left_toff ]
+# toff should contain correction for 
+# the time of light traveling through bars
+#
+# first and last index in array
+0 23
+# Table start here
+0	0	0	0
+0	0	0	0
+0	0	0	0
+0	0	0	0
+0	0	0	0
+0	0	0	0
+
+[ BB.tp.de.right_gain ]
+# first and last index in array
+0 23
+# Table start here
+1	1	1	1
+1	1	1	1
+1	1	1	1
+1	1	1	1
+1	1	1	1
+1	1	1	1
+
+[ BB.tp.de.right_pedestals ]
+# first and last index in array
+0 23
+# Table start here
+0	0	0	0
+0	0	0	0
+0	0	0	0
+0	0	0	0
+0	0	0	0
+0	0	0	0
+
+[ BB.tp.de.right_toff ]
+# first and last index in array
+0 23
+# Table start here
+0	0	0	0
+0	0	0	0
+0	0	0	0
+0	0	0	0
+0	0	0	0
+0	0	0	0

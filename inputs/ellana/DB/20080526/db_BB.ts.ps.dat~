@@ -1,0 +1,44 @@
+############################## RIGHT PRESHOWER DETECTOR ######################
+Number of columns (x-stripes) and rows (y-stripes)
+      2      27
+Crate, Slot, First, Last ADC channels of blocks
+        8      01      32      47   -
+        8      01      48      58   -
+        8      02       0      15   -
+        8      02      16      26   -
+       -1       0       0       0   -
+Translation table from ADC hardware channel to logical channel number
+   1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  
+   17 18 19 20 21 22 23 24 25 26 27
+   28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43
+   44 45 46 47 48 49 50 51 52 53 54
+X,Y,Z coords (in cm) of Preshower front plane in spectrom cs
+    0.0     0.0    0.77                          - Meters
+Half of X, half of Y, full Z sizes (in Meters) of Preshower
+    1.1475  0.35   0.085                          - Meters
+Rotation angle of the Preshower plane
+    0.0                                           - Degrees
+x,y position of the center of block 1
+    1.105   0.175                                 - Meters
+dx and dy block spacing
+   -0.085   -0.35                                 - Meters
+Energy threshold for clusters to be considered
+    10.                                           - MeV
+Maximum number of clusters to be considered
+    16                                            - blocks
+[ config=okay ]
+ADC pedestals
+ 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0
+Energy calibration coefficients
+  1.000  1.000  1.000  1.000  1.000  1.000 1.000  1.000 
+  1.000  1.000  1.000  1.000  1.000  1.000 1.000  1.000 
+  1.000  1.000  1.000  1.000  1.000  1.000 1.000  1.000 	
+  1.000  1.000  1.000  1.000  1.000  1.000 1.000  1.000 
+  1.000  1.000  1.000  1.000  1.000  1.000 1.000  1.000 
+  1.000  1.000  1.000  1.000  1.000  1.000 1.000  1.000 
+  1.000  1.000  1.000  1.000  1.000  1.000

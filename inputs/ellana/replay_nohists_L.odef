@@ -1,0 +1,669 @@
+# Analyzer output definition file used by THaOutput class.
+# See  http://hallaweb.jlab.org/root/THaOutput.html
+# R. Michaels, June 2003
+# Comments start with '# '  (careful, need a space after #) 
+#
+# There are at present 3 places where output is defined
+# in the C++ analyzer, and this is one of them.
+# The other two are THaRun (run-dependent info) and
+# THaEvent (event-dependent info), which provide quantities 
+# like run number and event number that you always need.
+# In this place, the "outdef" file, one can define
+# global variables, formulas, and histograms, as well
+# as cuts on histograms.  The results of the formulas appear 
+# in the tree with the formula-name given.
+#
+# Syntax of file  -- by example:
+#
+# variable   L.vdc.u2.nclust
+# variable   R.s1.lt
+# formula    targetX  1.464*BB.bpm4b.x-0.464*BB.bpm4a.x
+# TH1F  rv1n  'R-arm vdc hits on V1'   R.vdc.v1.nhit 100 0 10
+# TH1F  rv1w  'R-arm vdc wiremap on V1'  R.vdc.v1.wire 100 0 500
+# TH1F  tgtx  'Target X position'  targetX 100 -2 2 
+# TH2F  t12  'Time stamps on roc1 vs roc2'  D.timeroc1  D.timeroc2
+#       100 0 1000 100 0 1000
+# TH1F  Rv1n 'R-arm VDC nhit (cut)' R.vdc.v1.nhit 100 0 10 R.vdc.v1.nhit>3
+# (note, the cut R.vdc.v1.nhit appears optionally at the end, also
+#  this variable cannot be a variable-sized array)
+#
+#
+# The lines are of the form
+#     keyword  rest-of-line
+#
+# where the keywords are as follows :
+# (the keywords are case-insensitive, the rest of the line is not)
+#
+#  VARIABLE  -- indicates that a global variable is to
+#              be added to the tree.  
+#              The next string is the name of the variable.  
+#              You can see a list of variables by typing 
+#              gHaVars->Print() at the analyzer's root shell prompt.
+#              A variable can also be an array, e.g. R.s1.lt  
+#              Then the values in the tree will be R.s1.lt.data[0], 
+#              R.s1.lt.data[1], etc, up to the array size which
+#              is Ndata.R.s1.lt
+# 
+#  BLOCK   --  An entire block of variables are written to the
+#              output.  E.g. "L.*" writes all Left HRS variables.
+#
+#  FORMULA -- indicates a THaFormula to add to the output.
+#             The next word will be the "name" of the formula result 
+#             in the tree. The 3rd string is the formula to evaluate.  
+#             Note, it cannot have spaces in it.
+#             Formulas can be vectors if the arrays are fixed size.
+#
+#  CUT --     Like a formula, but the data are 0 (false) or 1 (true)
+#
+#  TH1F, TH2F, TH1D, TH2D  -- defines histograms (1D or 2D).
+#              The next word is the name of the object.
+#              The following string (must be in single quotes) is  
+#              the title of the histogram.  Next, the variables
+#              or formulas names that are put into the histogram 
+#              are listed together with bin info: nbin, xlo, xhi and if 2D
+#              the same bin info for y.  Optional cuts can be specified 
+#              at the end of the line.  See examples below.  
+#
+# ------------------------------------
+
+# List of the variable blocks to be written out
+
+# block BB.*
+# block L.tr.*
+variable L.tr.n
+variable L.tr.ph
+variable L.tr.th
+variable L.tr.x
+variable L.tr.y
+variable L.tr.beta
+variable g.runnum
+block L.s1.*
+block L.s2.*
+block L.prl1.*
+block L.prl2.*
+# block L.cer.*
+variable L.cer.asum_c
+block adchel.L.*
+# block adchel2.L.*
+block g0hel.L.*
+# block L.vdc.*
+variable L.vdc.u1.nclust
+variable L.vdc.u1.nhit
+variable L.vdc.u2.nclust
+variable L.vdc.u2.nhit
+variable L.vdc.v1.nclust
+variable L.vdc.v1.nhit
+variable L.vdc.v2.nclust
+variable L.vdc.v2.nhit
+# block PriKineL.*
+variable PriKineL.Q2
+variable PriKineL.W2
+variable PriKineL.angle
+variable PriKineL.nu
+variable PriKineL.x_bj
+# block PriKineLHe3.*
+# block ReactPt_L.*
+variable ReactPt_L.z
+# block ExTgtCor_L.*
+variable ExTgtCor_L.dp
+variable ExTgtCor_L.ph
+variable ExTgtCor_L.th
+variable ExTgtCor_L.x
+variable ExTgtCor_L.y
+# block SecKine.*
+# block DL.*
+variable DL.evtypebits
+# block rb.*
+# block urb.*
+# block L.gold.*
+variable L.gold.dp
+variable L.gold.ph
+variable L.gold.th
+variable L.gold.y
+# block Norm.*
+# block Beam.HL.*
+block he3.*
+# block adchel2.L.helicity
+# block g0hel.L.helicity
+
+
+# Spin Signal Reading Check
+
+# TH1F he3SpinValid 'General Spin Signal Validity' he3.IsSpinValid 6 -.5 1.5
+# TH1F he3SpinLADC1Valid 'Spin Signal Validity on LHRS ADC1' he3.ladc1.IsSpinValid 6 -.5 1.5
+# TH1F he3SpinLADC2Valid 'Spin Signal Validity on LHRS ADC2' he3.ladc2.IsSpinValid 6 -.5 1.5
+
+# Spin State Check
+
+# TH1F he3Spin  'Spin state of He3 target, Check with TO' he3.Spin 9 -1.5 1.5 he3.IsSpinValid
+# TH1F he3SpinLADC1 'Spin state reading on LHRS ADC1' he3.ladc1.Spin 9 -1.5 1.5 he3.ladc1.IsSpinValid
+# TH1F he3SpinLADC2 'Spin state reading on LHRS ADC2' he3.ladc2.Spin 9 -1.5 1.5 he3.ladc2.IsSpinValid
+
+
+# Here are variables and formulas that appear in the tree.
+
+# Beam position and Raster
+# FORMULA urbax 1000.*urb.BPMA.x
+# FORMULA urbay 1000.*urb.BPMA.y
+# FORMULA urbbx 1000.*urb.BPMB.x
+# FORMULA urbby 1000.*urb.BPMB.y
+# FORMULA urbx 1000.*urb.x
+# FORMULA urby 1000.*urb.y
+# FORMULA rawcurx 1000.*rb.Raster.rawcur.x
+# FORMULA rawcury 1000.*rb.Raster.rawcur.y
+# FORMULA urby 1000.*urb.y
+# FORMULA urby 1000.*urb.y
+
+# TH1F bpma_x 'BPMA x [mm]' urbax 4000 -7. 7.
+# TH1F bpma_y 'BPMA y [mm]' urbay 4000 -7. 7.
+
+# TH1F bpmb_x 'BPMB x [mm]' urbbx 4000 -7. 7.
+# TH1F bpmb_y 'BPMB y [mm]' urbby 4000 -7. 7.
+
+# TH1F beam_x 'x at target [mm]' urbx 4000  -7. 8.
+# TH1F beam_y 'y at target [mm]' urby 4000  -7. 8.
+
+# TH2F bpma_xy 'BPMA y vs x'  urbax urbay 200 -7.  7. 200 -7. 7.
+# TH2F bpmb_xy 'BPMB y vs y'  urbbx  urbby 200 -7.  7. 200 -7.  7.
+# TH2F beam_xy 'beam at target y vs x'  urbx urby 200 -7. 8. 200 -7. 8.
+# Added by Bob M. Fri Mar 23, 2007
+# TH2F rastxy 'Raster X vs Y (current)' rb.Raster.rawcur.y rb.Raster.rawcur.x 200 100 7000 200 100 7000
+
+# TH1F bpmaraw1 'BPMA Antenna 1' urb.BPMA.rawcur.1 2000 0 16500
+# TH1F bpmaraw2 'BPMA Antenna 2' urb.BPMA.rawcur.2 2000 0 16500
+# TH1F bpmaraw3 'BPMA Antenna 3' urb.BPMA.rawcur.3 2000 0 16500
+# TH1F bpmaraw4 'BPMA Antenna 4' urb.BPMA.rawcur.4 2000 0 16500
+# TH1F bpmbraw1 'BPMB Antenna 1' urb.BPMB.rawcur.1 2000 0 16500
+# TH1F bpmbraw2 'BPMB Antenna 2' urb.BPMB.rawcur.2 2000 0 16500
+# TH1F bpmbraw3 'BPMB Antenna 3' urb.BPMB.rawcur.3 2000 0 16500
+# TH1F bpmbraw4 'BPMB Antenna 4' urb.BPMB.rawcur.4 2000 0 16500
+# 
+# TH1F rastraw1 'Raster Current 1' rb.Raster.rawcur.x 2000 0 16500
+# TH1F rastraw2 'Raster Current 2' rb.Raster.rawcur.y 2000 0 16500
+
+# TH1F adchel 'Helicity (ADC)' adchel.L.helicity 10 -2 2
+# TH1F g0hel 'Helicity (G0/TIR)' g0hel.L.helicity 10 -2 2
+# TH1F heldiff 'Helicity Diff (G0 - ADC)' (g0hel.L.helicity-adchel.L.helicity) 10 -2 2
+
+
+# Target and Sieve
+formula    L_sv_x  ExTgtCor_L.x+ExTgtCor_L.th*1.16539
+formula    L_sv_y  ExTgtCor_L.y+ExTgtCor_L.ph*1.16539
+# TH2F sieve 'Sieve Slit' L_sv_x L_sv_y  200 -0.1 0.1 200 -0.1 0.1
+# TH1F dp 'Deviation from Central Momentum' L.tr.tg_dp 200 -0.1 0.1
+# TH1F tgth 'Target Theta' L.tr.tg_th 200 -0.2 0.2
+# TH1F tgph 'Target Phi' L.tr.tg_ph 200 -0.2 0.2
+# TH1F tgy 'Target Y' L.tr.tg_y 200 -0.2 0.2
+# TH1F zreact 'React Z' ReactPt_L.z 200 -0.4 0.4
+
+# ------------------------------------------------------------------
+# LEFT ARM DETECTORS 
+# ------------------------------------------------------------------
+
+ # Trigger
+
+# TH1F HEvType  'Trigger type' DL.evtype  15 1 10
+
+ # Helicity
+
+#TH1F hel 'Helicity States' Beam.HL.helicity 10 -2 2 
+#TH1F adchel 'Helicity (ADC)' adchel.L.helicity 10 -2 2
+#TH1F g0hel 'Helicity (G0/TIR)' g0hel.L.helicity 10 -2 2
+#TH1F heldiff 'Helicity Diff (G0 - ADC)' (g0hel.L.helicity-adchel.L.helicity) 10 -2 2
+
+ # LEFT ARM S1 and S2  ADC and TDC :
+
+# TH1F Ls1lt 'Left arm S1 L-PMT TDCs' L.s1.lt 750 1001 2000 L.s1.lt>0&&(DL.evtype==3||DL.evtype==4||DL.evtype==8)&&DL.edtpl==0
+# TH1F Ls1rt 'Left arm S1 R-PMT TDCs' L.s1.rt 750 1001 2000 L.s1.rt>0&&(DL.evtype==3||DL.evtype==4||DL.evtype==8)&&DL.edtpl==0
+# TH1F Ls2lt 'Left arm S2 L-PMT TDCs' L.s2.lt 750 1000 2000 L.s2.lt>0&&(DL.evtype==3||DL.evtype==4||DL.evtype==8)&&DL.edtpl==0
+# TH1F Ls2rt 'Left arm S2 R-PMT TDCs' L.s2.rt 750 1000 2000 L.s2.rt>0&&(DL.evtype==3||DL.evtype==4||DL.evtype==8)&&DL.edtpl==0
+
+# TH1F Ls1la 'Left arm S1 L-PMT ADCs' L.s1.la 1000 1 4000 L.s1.la>0&&(DL.evtype==3||DL.evtype==4||DL.evtype==8)&&DL.edtpl==0
+# TH1F Ls1ra 'Left arm S1 R-PMT ADCs' L.s1.ra 1000 1 4000 L.s1.ra>0&&(DL.evtype==3||DL.evtype==4||DL.evtype==8)&&DL.edtpl==0
+# TH1F Ls2la 'Left arm S2 L-PMT ADCs' L.s2.la 1000 1 1000 L.s2.la>0&&(DL.evtype==3||DL.evtype==4||DL.evtype==8)&&DL.edtpl==0
+# TH1F Ls2ra 'Left arm S2 R-PMT ADCs' L.s2.ra 1000 1 1000 L.s2.ra>0&&(DL.evtype==3||DL.evtype==4||DL.evtype==8)&&DL.edtpl==0
+
+# TH1F Ls1la_p 'Left arm S1 L-PMT ADCs (PedSub)' L.s1.la_p 200 -200 3999 L.s1.la_p>0&&(DL.evtype==3||DL.evtype==4||DL.evtype==8)&&DL.edtpl==0
+# TH1F Ls1ra_p 'Left arm S1 R-PMT ADCs (PedSub)' L.s1.ra_p 200 -200 3999 L.s1.ra_p>0&&(DL.evtype==3||DL.evtype==4||DL.evtype==8)&&DL.edtpl==0
+# TH1F Ls2la_p 'Left arm S2 L-PMT ADCs (PedSub)' L.s2.la_p 200 -200 999 L.s2.la_p>0&&(DL.evtype==3||DL.evtype==4||DL.evtype==8)&&DL.edtpl==0
+# TH1F Ls2ra_p 'Left arm S2 R-PMT ADCs (PedSub)' L.s2.ra_p 200 -200 999 L.s2.ra_p>0&&(DL.evtype==3||DL.evtype==4||DL.evtype==8)&&DL.edtpl==0
+
+
+# ------------------------------------------------------------------
+# LEFT ARM VDC wires and timing  :
+#CUT leftOnly 1
+
+# TH1F Lvu1t 'L-arm VDC u1 time' L.vdc.u1.rawtime 200 401 2400  (DL.evtype==3||DL.evtype==4||DL.evtype==8) #leftOnly
+# TH1F Lvu2t 'L-arm VDC u2 time' L.vdc.u2.rawtime 200 401 2400  (DL.evtype==3||DL.evtype==4||DL.evtype==8) #leftOnly
+# TH1F Lvv1t 'L-arm VDC v1 time' L.vdc.v1.rawtime 200 401 2400  (DL.evtype==3||DL.evtype==4||DL.evtype==8) #leftOnly
+# TH1F Lvv2t 'L-arm VDC v2 time' L.vdc.v2.rawtime 200 401 2400  (DL.evtype==3||DL.evtype==4||DL.evtype==8) #leftOnly
+
+# TH1F Lvu1w 'L-arm VDC u1 wires' L.vdc.u1.wire 400 1 400  (DL.evtype==3||DL.evtype==4||DL.evtype==8) #leftOnly
+# TH1F Lvu2w 'L-arm VDC u2 wires' L.vdc.u2.wire 400 1 400  (DL.evtype==3||DL.evtype==4||DL.evtype==8) #leftOnly
+# TH1F Lvv1w 'L-arm VDC v1 wires' L.vdc.v1.wire 400 1 400  (DL.evtype==3||DL.evtype==4||DL.evtype==8) #leftOnly
+# TH1F Lvv2w 'L-arm VDC v2 wires' L.vdc.v2.wire 400 1 400  (DL.evtype==3||DL.evtype==4||DL.evtype==8) #leftOnly
+
+#TH1F Lv1nhit 'L-arm VDC v1 hits' L.vdc.v1.nhit 20 1 20  (DL.evtype==3||DL.evtype==4||DL.evtype==8) #leftOnly
+#TH1F Lv2nhit 'L-arm VDC v2 hits' L.vdc.v2.nhit 20 1 20  (DL.evtype==3||DL.evtype==4||DL.evtype==8) #leftOnly
+#TH1F Lu1nhit 'L-arm VDC u1 hits' L.vdc.u1.nhit 20 1 20  (DL.evtype==3||DL.evtype==4||DL.evtype==8) #leftOnly
+#TH1F Lu2nhit 'L-arm VDC u2 hits' L.vdc.u2.nhit 20 1 20  (DL.evtype==3||DL.evtype==4||DL.evtype==8)  #leftOnly
+
+# ------------------------------------------------------------------
+# LEFT ARM GAS CHERENKOV  ADC and TDC :
+
+# TH1F Lcera 'L-arm Cerenkov ADCs' L.cer.a 250 1 4000 L.cer.a>10&&(DL.evtype==3||DL.evtype==4||DL.evtype==8)
+# TH1F Lcert 'L-arm Cerenkov TDCs' L.cer.t 250 0 2500 L.cer.t>0&&(DL.evtype==3||DL.evtype==4||DL.evtype==8)
+# TH1F Lcera_p 'L-arm Cerenkov ADCs (PedSub)' L.cer.a_p 250 -10 3999 L.cer.a_p>0&&(DL.evtype==3||DL.evtype==4||DL.evtype==8)
+
+# TH1F Lcer_sum  'L-arm Cerenkov sum (corrected)' L.cer.asum_c 200 1 3500  L.cer.asum_c>0&&(DL.evtype==3||DL.evtype==4||DL.evtype==8)
+# TH2F Lcer_x  'L-arm Cerenkov sum (corrected) vs. X' L.cer.trx L.cer.asum_c 60 -1.2 1.2 200 200 3500 L.cer.asum_c>0&&L.tr.n>0&&(DL.evtype==3||DL.evtype==4||DL.evtype==8)
+# TH2F Lcer_y  'L-arm Cerenkov sum (corrected) vs. Y' L.cer.try L.cer.asum_c 60 -0.12 0.12 200 200 3500 L.cer.asum_c>0&&L.tr.n>0&&(DL.evtype==3||DL.evtype==4||DL.evtype==8)
+
+
+# ------------------------------------------------------------------
+# LEFT ARM Pion Rejector 1/2 (Preshower/Shower):
+
+# TH1F Lpsa   'PionRejector1 ADCs' L.prl1.a 1100 1 4100 L.prl1.a>0.&&(DL.evtype==3||DL.evtype==4||DL.evtype==8) 
+
+# TH1F Lpsa_p 'PionRejector1 ADCs (PedSub)' L.prl1.a_p 500 -10 3100 L.prl1.a_p>0.&&(DL.evtype==3||DL.evtype==4||DL.evtype==8)
+# TH1F Lpsa_c 'PionRejector1 ADCs (Corrected)' L.prl1.a_c 200 -100 4000 L.prl1.a_c>0.&&(DL.evtype==3||DL.evtype==4||DL.evtype==8)
+# TH1F Lpssum  'PionRejector1 sum' L.prl1.asum_c 200 1 1000 
+
+# TH1F Lsha   'PionRejector2 ADCs' L.prl2.a 1100 1 4100 L.prl2.a>0.&&(DL.evtype==3||DL.evtype==4||DL.evtype==8) 
+# TH1F Lsha_p 'PionRejector2 ADCs (PedSub)' L.prl2.a_p 500 -10 3100 L.prl2.a_p>0.&&(DL.evtype==3||DL.evtype==4||DL.evtype==8)
+# TH1F Lsha_c 'PionRejector2 ADCs (Corrected)' L.prl2.a_c 200 -100 4000 L.prl2.a_c>0.&&(DL.evtype==3||DL.evtype==4||DL.evtype==8)
+# TH1F Lshsum  'PionRejector2 sum' L.prl2.asum_c 200 1 1000
+
+
+# TH2F Lpr1_2 'Pion Rejector_1 sum vs. PR_2 sum' L.prl2.asum_c L.prl1.asum_c 200 1 10000 200 1 10000 
+# TH2F Lpr1sumx 'Pion Rejector_1 sum vs. x' L.prl1.x L.prl1.asum_c 200 -1.2 1.2 200 1 10000 
+# TH2F Lpr1sumy 'Pion Rejector_1 sum vs. y' L.prl1.y L.prl1.asum_c 200 -1.2 1.2 200 1 10000 
+# TH2F Lpr2sumx 'Pion Rejector_2 sum vs. x' L.prl2.x L.prl2.asum_c 200 -1.2 1.2 200 1 10000 
+# TH2F Lpr2sumy 'Pion Rejector_2 sum vs. y' L.prl2.y L.prl2.asum_c 200 -1.2 1.2 200 1 10000 
+
+# TH2F Lshe_pse  	'L-arm Pion Rej.2 energy vs. Pion Rej.1 energy' L.prl2.e L.prl1.e 200 1 4000 200 1 2400 L.prl2.asum_c>0&&L.prl1.asum_c>0&&(DL.evtype==3||DL.evtype==4||DL.evtype==8)
+
+# formula    prl_E_P  (L.prl1.e+L.prl2.e)/(1000*ExTgtCor_L.p)
+# TH1F prlep 'Pion Rejector Total Energy Divided by Momentum' prl_E_P 500 0.0 1.5 L.tr.n==1&&L.prl1.e>0.&&L.prl2.e>0.
+
+
+begin scalers left
+   default
+#   default_helicity
+# triggers
+   T1cnt 4 0 counts
+   T2cnt 4 1 counts
+   T3cnt 4 2 counts
+   T4cnt 4 3 counts
+   T5cnt 4 4 counts	
+   T6cnt 4 5 counts
+   T7cnt 4 6 counts
+   Tacc_cnt 4 12 counts
+# triggers gated by helicity
+   P_T1cnt 3 0 counts
+   P_T2cnt 3 1 counts
+   P_T3cnt 3 2 counts
+   P_T4cnt 3 3 counts
+   P_T5cnt 3 4 counts	
+   P_T6cnt 3 5 counts
+   P_T7cnt 3 6 counts
+   P_Tacc_cnt 3 12 counts
+   M_T1cnt 5 0 counts
+   M_T2cnt 5 1 counts
+   M_T3cnt 5 2 counts
+   M_T4cnt 5 3 counts
+   M_T5cnt 5 4 counts	
+   M_T6cnt 5 5 counts
+   M_T7cnt 5 6 counts
+   M_Tacc_cnt 5 12 counts
+# 1024 Hz clock
+   clkcount 4 7 counts
+   P_clkcount 3 7 counts
+   M_clkcount 5 7 counts
+# counts in BCM scaler
+   bcmu1cnt 4 13 counts
+   bcmu3cnt 4 16 counts
+   bcmu10cnt 4 8 counts
+   bcmd1cnt 4 15 counts
+   bcmd3cnt 4 10 counts
+   bcmd10cnt 4 11 counts
+# counts in BCM scaler gated by helicity
+   P_bcmu1cnt 3 13 counts
+   P_bcmu3cnt 3 16 counts
+   P_bcmu10cnt 3 8 counts
+   P_bcmd1cnt 3 15 counts
+   P_bcmd3cnt 3 10 counts
+   P_bcmd10cnt 3 11 counts
+   M_bcmu1cnt 5 13 counts
+   M_bcmu3cnt 5 16 counts
+   M_bcmu10cnt 5 8 counts
+   M_bcmd1cnt 5 15 counts
+   M_bcmd3cnt 5 10 counts
+   M_bcmd10cnt 5 11 counts
+
+# Rates
+# triggers
+   T1 4 0 
+   T2  4 1 
+   T3  4 2 
+   T4  4 3 
+   T5  4 4  
+   T6  4 5  
+   T7  4 6 
+   Tacc  4 12  
+# triggers gated by helicity
+   P_T1  3 0  
+   P_T2  3 1  
+   P_T3  3 2  
+   P_T4  3 3  
+   P_T5  3 4  	
+   P_T6  3 5  
+   P_T7  3 6  
+   P_Tacc  3 12  
+   M_T1  5 0  
+   M_T2  5 1  
+   M_T3  5 2  
+   M_T4  5 3  
+   M_T5  5 4  	
+   M_T6  5 5  
+   M_T7  5 6  
+   M_Tacc  5 12  
+# 1024 Hz clock
+   clk 4 7  
+   P_clk 3 7  
+   M_clk 5 7  
+# counts in BCM scaler
+   bcmu1  4 13  
+   bcmu3  4 16  
+   bcmu10  4 8  
+   bcmd1  4 15  
+   bcmd3  4 10  
+   bcmd10  4 11  
+# counts in BCM scaler gated by helicity
+   P_bcmu1  3 13  
+   P_bcmu3  3 16  
+   P_bcmu10  3 8  
+   P_bcmd1  3 15  
+   P_bcmd3  3 10  
+   P_bcmd10  3 11  
+   M_bcmu1  5 13  
+   M_bcmu3  5 16  
+   M_bcmu10  5 8  
+   M_bcmd1  5 15  
+   M_bcmd3  5 10  
+   M_bcmd10  5 11  
+end scalers
+ 
+# -----------------------
+# Spin And Helicity Flag
+# -----------------------
+
+FORMULA IsLeftHelicity adchel.L.helicity==-1
+FORMULA IsRightHelicity adchel.L.helicity==1
+
+
+# -----------------------
+# Trigger Flag
+# -----------------------
+
+# FORMULA InclusiveEvt ((DL.evtypebits&(1<<3))==(1<<3))||((DL.evtypebits&(1<<4))==(1<<4))
+FORMULA InclusiveEvt 1
+
+
+# -----------------------
+# Particle Flag
+# -----------------------
+
+# Good Electron cut
+# add more you have better idea
+# formula prl_E_P  (L.prl1.e+L.prl2.e)/(1000.*ExTgtCor_L.p)
+FORMULA GoodLTrack   abs(ExTgtCor_L.dp)<0.05&&L.tr.n>=1&&abs(ReactPt_L.z)<0.25
+FORMULA GoodElectron  L.cer.asum_c>300
+
+# -----------------------
+# Event Flag
+# -----------------------
+
+FORMULA InclCut GoodLTrack&&InclusiveEvt&&GoodElectron
+
+
+# ------------------------------------------------
+# physics variables
+# ------------------------------------------------
+
+
+# Kinematics Variables
+
+FORMULA InvMass sqrt(PriKineL.W2)
+FORMULA ScaAngle PriKineL.angle*180/3.1415927
+
+
+# -----------------------
+# Inclusive Events
+# -----------------------
+
+# TH1F InclScatAngle 'Left HRS Scattering angle' ScaAngle 100 10 20 InclCut
+# TH1F InclQ3m       'Magnitude of 3-momentum transfer' PriKineL.q3m 100 0 1 InclCut
+# TH1F InclNu        'Energy Transfer' PriKineL.nu 100 0.0 0.5 InclCut
+
+# TH1F InclQ2        'Q^2 (GeV)' PriKineL.Q2  100 0. 0.7  InclCut
+# TH1F InclInvMass   'W (GeV)' InvMass  100 0.5 1.5  InclCut
+# TH1F InclX         'Bjorken x' PriKineL.x_bj 100 0 3 InclCut
+
+# TH2F InclXW        'Inclusive Phase Space : W vs x'   PriKineL.x_bj InvMass 50 0 3 50 0.5 1.5 InclCut
+# TH2F InclXQ2       'Inclusive Phase Space : Q2 vs x'  PriKineL.x_bj PriKineL.Q2 50 0 3 50 0 0.7 InclCut
+# TH2F InclXNu       'Inclusive Phase Space : Nu vs x'  PriKineL.x_bj PriKineL.nu 50 0 3 50 0.0 0.5 InclCut
+
+
+
+# ----------------------------------------------------------------------------------
+# BigBite Wire Chamber: (Xin Qian)
+# TH1F bbtrack 'BigBite Track Found' BB.tr.n 10 0 10 
+
+# TH1F bbu1wire 'BigBite MWDC u1 hits per wire' BB.mwdc.u1.hit.wire 141 0 141
+# TH1F bbu1pwire 'BigBite MWDC u1p hits per wire' BB.mwdc.u1p.hit.wire 141 0 141
+# TH1F bbu2wire 'BigBite MWDC u2 hits per wire' BB.mwdc.u2.hit.wire 202 0 201
+# TH1F bbu2pwire 'BigBite MWDC u2p hits per wire' BB.mwdc.u2p.hit.wire 202 0 201
+# TH1F bbx1wire 'BigBite MWDC x1 hits per wire' BB.mwdc.x1.hit.wire 141 0 141
+# TH1F bbx1pwire 'BigBite MWDC x1p hits per wire' BB.mwdc.x1p.hit.wire 141 0 141
+# TH1F bbx2wire 'BigBite MWDC x2 hits per wire' BB.mwdc.x2.hit.wire 202 0 201
+# TH1F bbx2pwire 'BigBite MWDC x2p hits per wire' BB.mwdc.x2p.hit.wire 202 0 201
+# TH1F bbv1wire 'BigBite MWDC v1 hits per wire' BB.mwdc.v1.hit.wire 141 0 141
+# TH1F bbv1pwire 'BigBite MWDC v1p hits per wire' BB.mwdc.v1p.hit.wire 141 0 141
+# TH1F bbv2wire 'BigBite MWDC v2 hits per wire' BB.mwdc.v2.hit.wire 202 0 201
+# TH1F bbv2pwire 'BigBite MWDC v2p hits per wire' BB.mwdc.v2p.hit.wire 202 0 201
+
+# TH1F bbu1time 'BigBite MWDC u1 time' BB.mwdc.u1.hit.time 200 0 200e-9
+# TH1F bbu1ptime 'BigBite MWDC u1p time' BB.mwdc.u1p.hit.time 200 0 200e-9
+# TH1F bbu2time 'BigBite MWDC u2 time' BB.mwdc.u2.hit.time 200 0 200e-9
+# TH1F bbu2ptime 'BigBite MWDC u2p time' BB.mwdc.u2p.hit.time 200 0 200e-9
+# TH1F bbx1time 'BigBite MWDC x1 time' BB.mwdc.x1.hit.time 200 0 200e-9
+# TH1F bbx1ptime 'BigBite MWDC x1p time' BB.mwdc.x1p.hit.time 200 0 200e-9
+# TH1F bbx2time 'BigBite MWDC x2 time' BB.mwdc.x2.hit.time 200 0 200e-9
+# TH1F bbx2ptime 'BigBite MWDC x2p time' BB.mwdc.x2p.hit.time 200 0 200e-9
+# TH1F bbv1time 'BigBite MWDC v1 time' BB.mwdc.v1.hit.time 200 0 200e-9
+# TH1F bbv1ptime 'BigBite MWDC v1p time' BB.mwdc.v1p.hit.time 200 0 200e-9
+# TH1F bbv2time 'BigBite MWDC v2 time' BB.mwdc.v2.hit.time 200 0 200e-9
+# TH1F bbv2ptime 'BigBite MWDC v2p time' BB.mwdc.v2p.hit.time 200 0 200e-9
+
+
+# TH1F bbu1hit 'BigBite MWDC u1 hits' BB.mwdc.u1.nwhit 61 0 60
+# TH1F bbu1phit 'BigBite MWDC u1p hits' BB.mwdc.u1p.nwhit 61 0 60
+# TH1F bbu2hit 'BigBite MWDC u2 hits' BB.mwdc.u2.nwhit 61 0 60
+# TH1F bbu2phit 'BigBite MWDC u2p hits' BB.mwdc.u2p.nwhit 61 0 60
+# TH1F bbx1hit 'BigBite MWDC x1 hits' BB.mwdc.x1.nwhit 61 0 60
+# TH1F bbx1phit 'BigBite MWDC x1p hits' BB.mwdc.x1p.nwhit 61 0 60
+# TH1F bbx2hit 'BigBite MWDC x2 hits' BB.mwdc.x2.nwhit 61 0 60
+# TH1F bbx2phit 'BigBite MWDC x2p hits' BB.mwdc.x2p.nwhit 61 0 60
+# TH1F bbv1hit 'BigBite MWDC v1 hits' BB.mwdc.v1.nwhit 61 0 60
+# TH1F bbv1phit 'BigBite MWDC v1p hits' BB.mwdc.v1p.nwhit 61 0 60
+# TH1F bbv2hit 'BigBite MWDC v2 hits' BB.mwdc.v2.nwhit 61 0 60
+# TH1F bbv2phit 'BigBite MWDC v2p hits' BB.mwdc.v2p.nwhit 61 0 60
+
+
+# ------------------------------------------------------------------
+# BigBite Hadron Package Scintillator planes
+# TH1F E_L_adc_ 'E Plane Left Raw ADC' BB.tp.e.LA 100 0 4100 BB.tp.e.LA>0.
+# TH1F E_R_adc_ 'E Plane Right Raw ADC' BB.tp.e.RA 100 0 4100 BB.tp.e.RA>0.
+
+# TH1F E_L_adcpedsub_ 'E Plane Left ADCpedsub' BB.tp.e.LApedc 100 0 4100 BB.tp.e.LApedc>0.
+# TH1F E_R_adcpedsub_ 'E Plane Right ADCpedsub' BB.tp.e.RApedc 100 0 4100 BB.tp.e.RApedc>0
+
+# TH1F dE_L_adcpedsub_ 'dE Plane Left ADCpedsub' BB.tp.de.LApedc 100 0 4100 BB.tp.de.LApedc>0.
+# TH1F dE_R_adcpedsub_ 'dE Plane Right ADCpedsub' BB.tp.de.RApedc 100 0 4100 BB.tp.de.RApedc>0.
+
+# TH1F dE_L_adc_ 'dE Plane Left Raw ADC' BB.tp.de.LA 100 0 4100 BB.tp.de.LA>0.
+# TH1F dE_R_adc_ 'dE Plane Right Raw ADC' BB.tp.de.RA 100 0 4100 BB.tp.de.RA>0.
+
+# TH1F E_L_tdc_ 'E Plane Left Raw TDC' BB.tp.e.LT 100 -400 -325 BB.tp.e.LT>-10000.
+# TH1F E_R_tdc_ 'E Plane Right Raw TDC' BB.tp.e.RT 100 -400 -325 BB.tp.e.RT>-10000.
+
+# TH1F dE_L_tdc_ 'dE Plane Left Raw TDC' BB.tp.de.LT 100 -400 -325 BB.tp.de.LT>-10000.
+# TH1F dE_R_tdc_ 'dE Plane Right Raw TDC' BB.tp.de.RT 100 -400 -325 BB.tp.de.RT>-10000.
+
+# ----------------------------------------------------------------------------------
+# Bigbite Track Reconstrcution check
+
+# FORMULA ElectronTrack BB.tr.n>=1&&BB.ts.ps.e>500
+# FORMULA ThDegree BB.gold.th*180/3.1415927
+# FORMULA PhDegree BB.gold.ph*180/3.1415927
+
+# TH1F bbtrn  'Track Number per Event' BB.tr.n 5 -0.5 4.5
+# TH2F bbtrxy 'Hits on the first Chamber x vs y' BB.tr.y BB.tr.x 100 -.2 .2 100 -.8 .8 ElectronTrack
+# TH2F bbtrthph 'Track angular distr. Vert vs Horizontal' BB.tr.ph BB.tr.th 100 -.2 .2 100 -.8 .8 ElectronTrack
+
+# TH1F bbp    'Track Momentum'   BB.gold.p 100 0 3 ElectronTrack
+# TH1F bbz    'Vertex Reconstruct'   BB.tr.vz 100 -.5 .5 ElectronTrack
+# TH1F bbpx   'Momentum Lab X' BB.gold.px 100 -1.6 0 ElectronTrack
+# TH1F bbpy   'Momentum Lab Y' BB.gold.py 100 -.6 .6 ElectronTrack
+# TH1F bbpz   'Momentum Lab Z' BB.gold.pz 100 0 3 ElectronTrack
+# TH1F bbth   'Out of Plane Angle' ThDegree 100 -30 30 ElectronTrack
+# TH1F bbph   'In Plane Angle (Rel. to BB Center)' 100 -10 10 PhDegree
+
+begin epics
+   HALLA:p
+   HALLA:dpp
+   IPM1H04A.XPOS
+   IPM1H04A.YPOS
+   IPM1H04B.XPOS
+   IPM1H04B.YPOS
+   hac_bcm_average
+end epics
+
+
+
+
+# ------------------------------------------------
+# Scalars
+# ------------------------------------------------
+
+
+# "evleft" = ROC11 data
+# Do not use "default" for transversity
+
+begin scalers evleft
+# counts in triggers, BCM, etc
+  t1c 1 22 counts
+  t2c 1 23 counts
+  t3c 1 2 counts
+  t4c 1 3 counts
+  clkc 1 7 counts
+  l1ac 1 12 counts
+  u1cnt 1 13 counts
+  u3cnt 1 16 counts
+  u10cnt 1 8 counts
+  d1cnt 1 15 counts
+  d3cnt 1 10 counts
+  d10cnt 1 11 counts
+  fclkc 1 28 counts
+  u1c 1 13 counts
+  u3c 1 16 counts
+  u10c 1 8 counts
+  d1c 1 15 counts
+  d3c 1 10 counts
+  d10c 1 11 counts
+# rates
+  t1r  1 22  
+  t2r  1 23  
+  t3r  1 2  
+  t4r  1 3  
+  clkr 1 7
+  u1r  1 13  
+  u3r  1 16  
+  u10r 1 8  
+  d1r  1 15  
+  d3r  1 10  
+  d10r 1 11  
+  l1ar 1 12 
+  fclk 1 28 
+# target and helicity combinations (other slots ...)
+  l1app 5 12 counts
+  l1apm 4 12 counts
+  l1amp 3 12 counts
+  l1amm 2 12 counts
+  
+  clkpp 5 7 counts
+  clkpm 4 7 counts
+  clkmp 3 7 counts
+  clkmm 2 7 counts
+
+  fclkpp 5 28 counts
+  fclkpm 4 28 counts
+  fclkmp 3 28 counts
+  fclkmm 2 28 counts
+  
+  u1pp 5 13 counts
+  u1pm 4 13 counts
+  u1mp 3 13 counts
+  u1mm 2 13 counts
+
+  u3pp 5 16 counts
+  u3pm 4 16 counts
+  u3mp 3 16 counts
+  u3mm 2 16 counts
+
+  u10pp 5 8 counts
+  u10pm 4 8 counts
+  u10mp 3 8 counts
+  u10mm 2 8 counts
+  
+  d1pp 5 15 counts
+  d1pm 4 15 counts
+  d1mp 3 15 counts
+  d1mm 2 15 counts
+  
+  d3pp 5 10 counts
+  d3pm 4 10 counts
+  d3mp 3 10 counts
+  d3mm 2 10 counts
+  
+  d10pp 5 11 counts
+  d10pm 4 11 counts
+  d10mp 3 11 counts
+  d10mm 2 11 counts
+  
+  
+  t1pp 5 22 counts
+  t1pm 4 22 counts
+  t1mp 3 22 counts
+  t1mm 2 22 counts
+  
+  t2pp 5 23 counts
+  t2pm 4 23 counts
+  t2mp 3 23 counts
+  t2mm 2 23 counts
+  
+  t3pp 5 2 counts
+  t3pm 4 2 counts
+  t3mp 3 2 counts
+  t3mm 2 2 counts
+  
+  t4pp 5 3 counts
+  t4pm 4 3 counts
+  t4mp 3 3 counts
+  t4mm 2 3 counts
+
+end scalers
+
+
+

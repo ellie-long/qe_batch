@@ -1,0 +1,22 @@
+# Run database
+
+--------[ 2007-07-25 00:00:00 ]
+
+# A1
+ebeam      = 1.2
+
+BB.theta    = -51.59
+BB.pcentral = 1.72
+BB.phi      = 0
+BB.colldist = 1.5
+BB.off_x    = 0
+BB.off_y    = 0
+BB.off_z    = 0
+
+NA.distance = 4.
+NA.theta    = 50.
+
+L.theta = 17.0
+R.theta = -12.5
+L.pcentral = 1.1377
+R.pcentral = 0.

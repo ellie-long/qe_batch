@@ -1,0 +1,8045 @@
+# Run database for E04-007 (Pi0) 31 mar 2008 - VS
+#
+# time stamp of run 2094->2553 is shifted 15s to the 
+# past to solve problem in hall A log #230641 - jinhuang
+
+--------[ 2007-07-24 23:59:45 ]
+
+ebeam      = 1.2
+
+BB.theta    = -51.59
+BB.pcentral = -1
+BB.current = 1.72
+BB.phi      = 0
+BB.colldist = 1.1
+BB.off_x    = 0
+BB.off_y    = 0
+BB.off_z    = 0
+
+L.theta = 17.0
+R.theta = -12.5
+L.pcentral = 1.1377
+R.pcentral = 0.
+
+--------[ 2008-02-31 23:59:45 ]
+
+ebeam      = 1.2
+
+BB.theta    = -54.0
+BB.pcentral = -1
+BB.current = 1.72
+BB.phi      = 0
+BB.colldist = 1.1
+BB.off_x    = 0
+BB.off_y    = 0
+BB.off_z    = 0
+
+L.theta = 35.5
+R.theta = -101.5
+L.pcentral = 0.
+R.pcentral = 0.
+
+--------[ 2008-04-01 02:21:04 ]
+# parameters from EPICS run 2094
+# target Empty
+ebeam = 1.19357
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969299
+MA = 0
+
+--------[ 2008-04-01 02:23:31 ]
+# parameters from EPICS run 2095
+# target Empty
+ebeam = 1.19358
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969298
+MA = 0
+
+--------[ 2008-04-01 02:56:36 ]
+# parameters from EPICS run 2096
+# target BeO
+ebeam = 1.19357
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969298
+MA = 23.298
+
+--------[ 2008-04-01 03:31:16 ]
+# parameters from EPICS run 2097
+# target Carbon
+ebeam = 1.19361
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969297
+MA = 11.1879
+
+--------[ 2008-04-01 03:42:05 ]
+# parameters from EPICS run 2098
+# target Empty
+ebeam = 1.19358
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969298
+MA = 0
+
+--------[ 2008-04-01 03:58:29 ]
+# parameters from EPICS run 2099
+# target BeO
+ebeam = 1.19397
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969298
+MA = 23.298
+
+--------[ 2008-04-01 04:00:06 ]
+# parameters from EPICS run 2100
+# target BeO
+ebeam = 1.19354
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969298
+MA = 23.298
+
+--------[ 2008-04-01 04:43:34 ]
+# parameters from EPICS run 2101
+# target Carbon
+ebeam = 1.19355
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969297
+MA = 11.1879
+
+--------[ 2008-04-01 05:35:11 ]
+# parameters from EPICS run 2102
+# target Carbon
+ebeam = 1.19376
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969298
+MA = 11.1879
+
+--------[ 2008-04-01 06:45:30 ]
+# parameters from EPICS run 2103
+# target Carbon
+ebeam = 1.19384
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969297
+MA = 11.1879
+
+--------[ 2008-04-01 06:53:18 ]
+# parameters from EPICS run 2104
+# target Carbon
+ebeam = 1.1938
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969298
+MA = 11.1879
+
+--------[ 2008-04-01 07:12:35 ]
+# parameters from EPICS run 2105
+# target Carbon
+ebeam = 1.19366
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969299
+MA = 11.1879
+
+--------[ 2008-04-01 08:29:10 ]
+# parameters from EPICS run 2106
+# target Loop 1 6 cm
+ebeam = 1.19371
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969299
+MA = 0.93827
+
+--------[ 2008-04-01 08:32:37 ]
+# parameters from EPICS run 2107
+# target Loop 1 6 cm
+ebeam = 1.19369
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969298
+MA = 0.93827
+
+--------[ 2008-04-01 08:37:19 ]
+# parameters from EPICS run 2108
+# target Loop 1 6 cm
+ebeam = 1.19371
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.9693
+MA = 0.93827
+
+--------[ 2008-04-01 08:55:30 ]
+# parameters from EPICS run 2109
+# target Loop 1 6 cm
+ebeam = 1.19374
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969299
+MA = 0.93827
+
+--------[ 2008-04-01 09:19:00 ]
+# parameters from EPICS run 2110
+# target Loop 1 6 cm
+ebeam = 1.19397
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969296
+MA = 0.93827
+
+--------[ 2008-04-01 09:38:16 ]
+# parameters from EPICS run 2111
+# target Loop 1 6 cm
+ebeam = 1.19397
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969298
+MA = 0.93827
+
+--------[ 2008-04-01 10:49:11 ]
+# parameters from EPICS run 2112
+# target Loop 1 6 cm
+ebeam = 1.19397
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969298
+MA = 0.93827
+
+--------[ 2008-04-01 10:56:04 ]
+# parameters from EPICS run 2113
+# target Loop 1 6 cm
+ebeam = 1.19397
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969298
+MA = 0.93827
+
+--------[ 2008-04-01 10:58:15 ]
+# parameters from EPICS run 2114
+# target Loop 1 6 cm
+ebeam = 1.19397
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969298
+MA = 0.93827
+
+--------[ 2008-04-01 11:04:10 ]
+# parameters from EPICS run 2115
+# target Loop 1 6 cm
+ebeam = 1.19397
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969299
+MA = 0.93827
+
+--------[ 2008-04-01 11:57:05 ]
+# parameters from EPICS run 2116
+# target Empty
+ebeam = 1.19397
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969297
+MA = 0
+
+--------[ 2008-04-01 12:32:00 ]
+# parameters from EPICS run 2117
+# target Empty
+ebeam = 1.19397
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969299
+MA = 0
+
+--------[ 2008-04-01 13:00:31 ]
+# parameters from EPICS run 2118
+# target Empty
+ebeam = 1.19397
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969299
+MA = 0
+
+--------[ 2008-04-01 13:12:02 ]
+# parameters from EPICS run 2119
+# target Empty
+ebeam = 1.19397
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969299
+MA = 0
+
+--------[ 2008-04-01 14:02:02 ]
+# parameters from EPICS run 2120
+# target Empty
+ebeam = 1.19397
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.9693
+MA = 0
+
+--------[ 2008-04-01 14:37:00 ]
+# parameters from EPICS run 2121
+# target Empty
+ebeam = 1.19397
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969298
+MA = 0
+
+--------[ 2008-04-01 14:50:00 ]
+# parameters from EPICS run 2122
+# target Empty
+ebeam = 1.19397
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969296
+MA = 0
+
+--------[ 2008-04-01 14:57:00 ]
+# parameters from EPICS run 2123
+# target Empty
+ebeam = 1.19397
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969297
+MA = 0
+
+--------[ 2008-04-01 16:11:45 ]
+# parameters from EPICS run 2124
+# target Empty
+ebeam = 1.19397
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969298
+MA = 0
+
+--------[ 2008-04-01 20:56:05 ]
+# parameters from EPICS run 2125
+# target BeO
+ebeam = 1.19333
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.116
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969304
+MA = 23.298
+
+--------[ 2008-04-01 20:57:27 ]
+# parameters from EPICS run 2126
+# target BeO
+ebeam = 1.19333
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.116
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969303
+MA = 23.298
+
+--------[ 2008-04-01 21:01:44 ]
+# parameters from EPICS run 2127
+# target BeO
+ebeam = 1.19332
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.116
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969304
+MA = 23.298
+
+--------[ 2008-04-01 21:04:47 ]
+# parameters from EPICS run 2128
+# target BeO
+ebeam = 1.19329
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969305
+MA = 23.298
+
+--------[ 2008-04-01 21:14:05 ]
+# parameters from EPICS run 2129
+# target Carbon w/ Hole
+ebeam = 1.19331
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969304
+MA = 11.1879
+
+--------[ 2008-04-01 21:15:11 ]
+# parameters from EPICS run 2130
+# target Carbon w/ Hole
+ebeam = 1.19394
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969303
+MA = 11.1879
+
+--------[ 2008-04-01 21:26:36 ]
+# parameters from EPICS run 2131
+# target Carbon w/ Hole
+ebeam = 1.19397
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969302
+MA = 11.1879
+
+--------[ 2008-04-01 21:38:08 ]
+# parameters from EPICS run 2132
+# target Carbon w/ Hole
+ebeam = 1.19333
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.9693
+MA = 11.1879
+
+--------[ 2008-04-01 21:42:33 ]
+# parameters from EPICS run 2133
+# target Carbon w/ Hole
+ebeam = 1.19337
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969301
+MA = 11.1879
+
+--------[ 2008-04-01 21:52:03 ]
+# parameters from EPICS run 2134
+# target Carbon w/ Hole
+ebeam = 1.19331
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969302
+MA = 11.1879
+
+--------[ 2008-04-01 22:18:28 ]
+# parameters from EPICS run 2135
+# target Carbon
+ebeam = 1.1933
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969305
+MA = 11.1879
+
+--------[ 2008-04-01 22:21:21 ]
+# parameters from EPICS run 2136
+# target Carbon
+ebeam = 1.1933
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969305
+MA = 11.1879
+
+--------[ 2008-04-01 22:36:51 ]
+# parameters from EPICS run 2137
+# target Carbon
+ebeam = 1.19328
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.116
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969302
+MA = 11.1879
+
+--------[ 2008-04-01 22:43:32 ]
+# parameters from EPICS run 2138
+# target Carbon
+ebeam = 1.19331
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.116
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969302
+MA = 11.1879
+
+--------[ 2008-04-01 22:48:45 ]
+# parameters from EPICS run 2139
+# target Carbon
+ebeam = 1.1933
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969302
+MA = 11.1879
+
+--------[ 2008-04-01 22:51:45 ]
+# parameters from EPICS run 2140
+# target Carbon
+ebeam = 1.1933
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.116
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969301
+MA = 11.1879
+
+--------[ 2008-04-01 23:09:30 ]
+# parameters from EPICS run 2141
+# target L1 6cm
+ebeam = 1.19337
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.9693
+MA = 0.93827
+
+--------[ 2008-04-01 23:15:02 ]
+# parameters from EPICS run 2142
+# target L1 6cm
+ebeam = 1.19329
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969301
+MA = 0.93827
+
+--------[ 2008-04-01 23:17:20 ]
+# parameters from EPICS run 2143
+# target L1 6cm
+ebeam = 1.19326
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969302
+MA = 0.93827
+
+--------[ 2008-04-01 23:21:11 ]
+# parameters from EPICS run 2144
+# target L1 6cm
+ebeam = 1.19333
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969302
+MA = 0.93827
+
+--------[ 2008-04-01 23:23:52 ]
+# parameters from EPICS run 2145
+# target L1 6cm
+ebeam = 1.19324
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969302
+MA = 0.93827
+
+--------[ 2008-04-01 23:28:43 ]
+# parameters from EPICS run 2146
+# target L1 6cm
+ebeam = 1.19329
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969302
+MA = 0.93827
+
+--------[ 2008-04-01 23:43:40 ]
+# parameters from EPICS run 2147
+# target L1 6cm
+ebeam = 1.19412
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969303
+MA = 0.93827
+
+--------[ 2008-04-02 00:41:48 ]
+# parameters from EPICS run 2148
+# target L1 6cm
+ebeam = 1.1933
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969302
+MA = 0.93827
+
+--------[ 2008-04-02 01:29:30 ]
+# parameters from EPICS run 2149
+# target L1 6cm
+ebeam = 1.19335
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.116
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.9693
+MA = 0.93827
+
+--------[ 2008-04-02 01:49:55 ]
+# parameters from EPICS run 2150
+# target L1 6cm
+ebeam = 1.19328
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.116
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969301
+MA = 0.93827
+
+--------[ 2008-04-02 02:14:43 ]
+# parameters from EPICS run 2151
+# target L1 6cm
+ebeam = 1.19329
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969302
+MA = 0.93827
+
+--------[ 2008-04-02 02:25:32 ]
+# parameters from EPICS run 2152
+# target L1 6cm
+ebeam = 1.19326
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969304
+MA = 0.93827
+
+--------[ 2008-04-02 02:33:12 ]
+# parameters from EPICS run 2153
+# target L1 6cm
+ebeam = 1.19326
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969305
+MA = 0.93827
+
+--------[ 2008-04-02 02:39:51 ]
+# parameters from EPICS run 2154
+# target L1 6cm
+ebeam = 1.19331
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969304
+MA = 0.93827
+
+--------[ 2008-04-02 02:52:43 ]
+# parameters from EPICS run 2155
+# target L1 6cm
+ebeam = 1.19331
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969303
+MA = 0.93827
+
+--------[ 2008-04-02 03:02:29 ]
+# parameters from EPICS run 2156
+# target L1 6cm
+ebeam = 1.19332
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969302
+MA = 0.93827
+
+--------[ 2008-04-02 03:33:54 ]
+# parameters from EPICS run 2157
+# target L1 6cm
+ebeam = 1.19332
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969303
+MA = 0.93827
+
+--------[ 2008-04-02 04:03:16 ]
+# parameters from EPICS run 2158
+# target L1 6cm
+ebeam = 1.19397
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969305
+MA = 0.93827
+
+--------[ 2008-04-02 04:27:01 ]
+# parameters from EPICS run 2159
+# target L1 6cm
+ebeam = 1.19326
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.116
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969303
+MA = 0.93827
+
+--------[ 2008-04-02 04:42:04 ]
+# parameters from EPICS run 2160
+# target L1 6cm
+ebeam = 1.19318
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969301
+MA = 0.93827
+
+--------[ 2008-04-02 05:10:20 ]
+# parameters from EPICS run 2161
+# target L1 6cm
+ebeam = 1.19308
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969303
+MA = 0.93827
+
+--------[ 2008-04-02 05:19:30 ]
+# parameters from EPICS run 2162
+# target L1 6cm
+ebeam = 1.19315
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.116
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969303
+MA = 0.93827
+
+--------[ 2008-04-02 05:32:00 ]
+# parameters from EPICS run 2163
+# target L1 6cm
+ebeam = 1.19318
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969303
+MA = 0.93827
+
+--------[ 2008-04-02 06:04:31 ]
+# parameters from EPICS run 2165
+# target L1 6cm
+ebeam = 1.19321
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969305
+MA = 0.93827
+
+--------[ 2008-04-02 06:19:14 ]
+# parameters from EPICS run 2166
+# target L1 6cm
+ebeam = 1.19324
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.116
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969303
+MA = 0.93827
+
+--------[ 2008-04-02 06:27:38 ]
+# parameters from EPICS run 2167
+# target L1 6cm
+ebeam = 1.19397
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969301
+MA = 0.93827
+
+--------[ 2008-04-02 06:49:53 ]
+# parameters from EPICS run 2168
+# target L1 6cm
+ebeam = 1.19304
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969301
+MA = 0.93827
+
+--------[ 2008-04-02 07:09:19 ]
+# parameters from EPICS run 2169
+# target L1 6cm
+ebeam = 1.19317
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969301
+MA = 0.93827
+
+--------[ 2008-04-02 07:26:16 ]
+# parameters from EPICS run 2170
+# target L1 6cm
+ebeam = 1.1932
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969303
+MA = 0.93827
+
+--------[ 2008-04-02 07:30:07 ]
+# parameters from EPICS run 2171
+# target L1 6cm
+ebeam = 1.19397
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969303
+MA = 0.93827
+
+--------[ 2008-04-02 07:33:39 ]
+# parameters from EPICS run 2172
+# target L1 6cm
+ebeam = 1.1932
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969303
+MA = 0.93827
+
+--------[ 2008-04-02 07:39:55 ]
+# parameters from EPICS run 2173
+# target L1 6cm
+ebeam = 1.19321
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.116
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969303
+MA = 0.93827
+
+--------[ 2008-04-02 07:55:36 ]
+# parameters from EPICS run 2174
+# target L1 6cm
+ebeam = 1.19317
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.116
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969303
+MA = 0.93827
+
+--------[ 2008-04-02 08:29:34 ]
+# parameters from EPICS run 2175
+# target L1 6cm
+ebeam = 1.19397
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969302
+MA = 0.93827
+
+--------[ 2008-04-02 15:52:05 ]
+# parameters from EPICS run 2185
+# target Clear
+ebeam = 1.19397
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969301
+MA = 0
+
+--------[ 2008-04-02 16:02:56 ]
+# parameters from EPICS run 20043
+# target L1 6cm
+ebeam = 1.19397
+
+R.theta = -101.114
+R.pcentral = 0.473615
+MA = 0.93827
+
+--------[ 2008-04-02 16:14:49 ]
+# parameters from EPICS run 2186
+# target L1 6cm
+ebeam = 1.19397
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.9693
+MA = 0.93827
+
+--------[ 2008-04-02 16:28:01 ]
+# parameters from EPICS run 2187
+# target L1 6cm
+ebeam = 1.19397
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969301
+MA = 0.93827
+
+--------[ 2008-04-02 16:34:11 ]
+# parameters from EPICS run 2188
+# target L1 6cm
+ebeam = 1.19397
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969301
+MA = 0.93827
+
+--------[ 2008-04-02 17:47:03 ]
+# parameters from EPICS run 2189
+# target Empty
+ebeam = 1.19397
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.9693
+MA = 0
+
+--------[ 2008-04-02 18:07:07 ]
+# parameters from EPICS run 2190
+# target Empty
+ebeam = 1.19397
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969299
+MA = 0
+
+--------[ 2008-04-02 18:15:15 ]
+# parameters from EPICS run 2191
+# target Empty
+ebeam = 1.19397
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.9693
+MA = 0
+
+--------[ 2008-04-02 18:53:43 ]
+# parameters from EPICS run 2192
+# target Empty
+ebeam = 1.19397
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969301
+MA = 0
+
+--------[ 2008-04-02 19:01:05 ]
+# parameters from EPICS run 2193
+# target Empty
+ebeam = 1.19397
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969302
+MA = 0
+
+--------[ 2008-04-02 20:09:37 ]
+# parameters from EPICS run 20045
+# target Empty
+ebeam = 1.19379
+
+R.theta = -101.514
+R.pcentral = 0.473616
+MA = 0
+
+--------[ 2008-04-02 20:10:47 ]
+# parameters from EPICS run 2194
+# target Empty
+ebeam = 1.19397
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969298
+MA = 0
+
+--------[ 2008-04-02 21:03:57 ]
+# parameters from EPICS run 20046
+# target Empty
+ebeam = 1.19388
+
+R.theta = -101.514
+R.pcentral = 0.473617
+MA = 0
+
+--------[ 2008-04-02 21:04:07 ]
+# parameters from EPICS run 2195
+# target Empty
+ebeam = 1.19388
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969299
+MA = 0
+
+--------[ 2008-04-02 21:27:52 ]
+# parameters from EPICS run 20047
+# target Carbon w/ Hole
+ebeam = 1.19324
+
+R.theta = -101.514
+R.pcentral = 0.473616
+MA = 11.1879
+
+--------[ 2008-04-02 21:28:02 ]
+# parameters from EPICS run 2196
+# target Carbon w/ Hole
+ebeam = 1.19325
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969299
+MA = 11.1879
+
+--------[ 2008-04-02 21:32:38 ]
+# parameters from EPICS run 2197
+# target Carbon w/ Hole
+ebeam = 1.19324
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969299
+MA = 11.1879
+
+--------[ 2008-04-02 22:38:25 ]
+# parameters from EPICS run 20048
+# target Carbon w/ Hole
+ebeam = 1.19319
+
+R.theta = -101.514
+R.pcentral = 0.473617
+MA = 11.1879
+
+--------[ 2008-04-02 22:39:43 ]
+# parameters from EPICS run 2198
+# target Carbon w/ Hole
+ebeam = 1.19319
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969299
+MA = 11.1879
+
+--------[ 2008-04-02 22:41:41 ]
+# parameters from EPICS run 2199
+# target Carbon w/ Hole
+ebeam = 1.19319
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.9693
+MA = 11.1879
+
+--------[ 2008-04-02 22:55:58 ]
+# parameters from EPICS run 2200
+# target Carbon w/ Hole
+ebeam = 1.19326
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969298
+MA = 11.1879
+
+--------[ 2008-04-02 23:10:53 ]
+# parameters from EPICS run 2201
+# target Carbon w/ Hole
+ebeam = 1.19385
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969298
+MA = 11.1879
+
+--------[ 2008-04-02 23:11:11 ]
+# parameters from EPICS run 20049
+# target Carbon w/ Hole
+ebeam = 1.19386
+
+R.theta = -101.514
+R.pcentral = 0.473617
+MA = 11.1879
+
+--------[ 2008-04-02 23:12:13 ]
+# parameters from EPICS run 2202
+# target Carbon w/ Hole
+ebeam = 1.19386
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969298
+MA = 11.1879
+
+--------[ 2008-04-02 23:16:38 ]
+# parameters from EPICS run 2203
+# target Carbon w/ Hole
+ebeam = 1.19397
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969298
+MA = 11.1879
+
+--------[ 2008-04-02 23:23:46 ]
+# parameters from EPICS run 2204
+# target Carbon w/ Hole
+ebeam = 1.19387
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969298
+MA = 11.1879
+
+--------[ 2008-04-03 00:23:11 ]
+# parameters from EPICS run 2205
+# target L1 6cm
+ebeam = 1.19353
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969299
+MA = 0.93827
+
+--------[ 2008-04-03 00:57:03 ]
+# parameters from EPICS run 2206
+# target Carbon 
+ebeam = 1.19402
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.116
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969296
+MA = 11.1879
+
+--------[ 2008-04-03 01:14:06 ]
+# parameters from EPICS run 2207
+# target Carbon 
+ebeam = 1.19397
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969297
+MA = 11.1879
+
+--------[ 2008-04-03 01:25:57 ]
+# parameters from EPICS run 2208
+# target Carbon 
+ebeam = 1.1935
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969298
+MA = 11.1879
+
+--------[ 2008-04-03 01:28:42 ]
+# parameters from EPICS run 2209
+# target Carbon 
+ebeam = 1.1935
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.116
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969298
+MA = 11.1879
+
+--------[ 2008-04-03 01:40:10 ]
+# parameters from EPICS run 2210
+# target Carbon 
+ebeam = 1.1935
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969298
+MA = 11.1879
+
+--------[ 2008-04-03 01:43:36 ]
+# parameters from EPICS run 2211
+# target Carbon 
+ebeam = 1.19348
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969298
+MA = 11.1879
+
+--------[ 2008-04-03 02:01:33 ]
+# parameters from EPICS run 2212
+# target Carbon 
+ebeam = 1.19345
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.116
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969298
+MA = 11.1879
+
+--------[ 2008-04-03 02:22:44 ]
+# parameters from EPICS run 2213
+# target Carbon 
+ebeam = 1.19348
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969295
+MA = 11.1879
+
+--------[ 2008-04-03 02:48:21 ]
+# parameters from EPICS run 2214
+# target Carbon 
+ebeam = 1.19397
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.116
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969296
+MA = 11.1879
+
+--------[ 2008-04-03 03:07:30 ]
+# parameters from EPICS run 2215
+# target Carbon 
+ebeam = 1.19397
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.116
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969298
+MA = 11.1879
+
+--------[ 2008-04-03 03:24:32 ]
+# parameters from EPICS run 2216
+# target Carbon 
+ebeam = 1.19397
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969297
+MA = 11.1879
+
+--------[ 2008-04-03 04:16:52 ]
+# parameters from EPICS run 2224
+# target Carbon 
+ebeam = 1.19397
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969294
+MA = 11.1879
+
+--------[ 2008-04-03 04:24:17 ]
+# parameters from EPICS run 2225
+# target Carbon 
+ebeam = 1.19397
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969293
+MA = 11.1879
+
+--------[ 2008-04-03 04:43:17 ]
+# parameters from EPICS run 2226
+# target Carbon 
+ebeam = 1.19366
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969295
+MA = 11.1879
+
+--------[ 2008-04-03 04:54:36 ]
+# parameters from EPICS run 2227
+# target Carbon 
+ebeam = 1.19397
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969296
+MA = 11.1879
+
+--------[ 2008-04-03 05:11:28 ]
+# parameters from EPICS run 2228
+# target Carbon 
+ebeam = 1.19397
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969296
+MA = 11.1879
+
+--------[ 2008-04-03 05:18:10 ]
+# parameters from EPICS run 2229
+# target Carbon 
+ebeam = 1.19397
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969296
+MA = 11.1879
+
+--------[ 2008-04-03 05:25:11 ]
+# parameters from EPICS run 2230
+# target Carbon 
+ebeam = 1.1936
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969296
+MA = 11.1879
+
+--------[ 2008-04-03 05:30:14 ]
+# parameters from EPICS run 2231
+# target Carbon 
+ebeam = 1.19358
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.116
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969296
+MA = 11.1879
+
+--------[ 2008-04-03 05:35:16 ]
+# parameters from EPICS run 2232
+# target Carbon 
+ebeam = 1.19357
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.116
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969296
+MA = 11.1879
+
+--------[ 2008-04-03 05:40:58 ]
+# parameters from EPICS run 2233
+# target Carbon 
+ebeam = 1.19356
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.116
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969296
+MA = 11.1879
+
+--------[ 2008-04-03 05:46:57 ]
+# parameters from EPICS run 2234
+# target Carbon 
+ebeam = 1.19397
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.116
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969296
+MA = 11.1879
+
+--------[ 2008-04-03 05:55:04 ]
+# parameters from EPICS run 2235
+# target Carbon 
+ebeam = 1.19397
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.116
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969295
+MA = 11.1879
+
+--------[ 2008-04-03 06:44:24 ]
+# parameters from EPICS run 2236
+# target Carbon 
+ebeam = 1.1936
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969293
+MA = 11.1879
+
+--------[ 2008-04-03 06:49:06 ]
+# parameters from EPICS run 2237
+# target Carbon 
+ebeam = 1.19362
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969295
+MA = 11.1879
+
+--------[ 2008-04-03 06:53:46 ]
+# parameters from EPICS run 2238
+# target Carbon 
+ebeam = 1.19361
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969294
+MA = 11.1879
+
+--------[ 2008-04-03 06:58:03 ]
+# parameters from EPICS run 2239
+# target Carbon 
+ebeam = 1.1936
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.116
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969294
+MA = 11.1879
+
+--------[ 2008-04-03 07:02:17 ]
+# parameters from EPICS run 2240
+# target Carbon 
+ebeam = 1.19397
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969295
+MA = 11.1879
+
+--------[ 2008-04-03 07:10:06 ]
+# parameters from EPICS run 2241
+# target Carbon 
+ebeam = 1.1936
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.116
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969295
+MA = 11.1879
+
+--------[ 2008-04-03 07:14:22 ]
+# parameters from EPICS run 2242
+# target Carbon 
+ebeam = 1.19361
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969295
+MA = 11.1879
+
+--------[ 2008-04-03 07:21:10 ]
+# parameters from EPICS run 2243
+# target Carbon 
+ebeam = 1.19397
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.116
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969296
+MA = 11.1879
+
+--------[ 2008-04-03 07:26:03 ]
+# parameters from EPICS run 2244
+# target Carbon 
+ebeam = 1.19361
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969296
+MA = 11.1879
+
+--------[ 2008-04-03 07:37:43 ]
+# parameters from EPICS run 2245
+# target Carbon 
+ebeam = 1.19362
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969296
+MA = 11.1879
+
+--------[ 2008-04-03 07:57:10 ]
+# parameters from EPICS run 2246
+# target L1 6cm
+ebeam = 1.19364
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.116
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969297
+MA = 0.93827
+
+--------[ 2008-04-03 08:23:22 ]
+# parameters from EPICS run 2247
+# target L1 6cm
+ebeam = 1.19369
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969292
+MA = 0.93827
+
+--------[ 2008-04-03 09:13:30 ]
+# parameters from EPICS run 2248
+# target L1 6cm
+ebeam = 1.19397
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.116
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969292
+MA = 0.93827
+
+--------[ 2008-04-03 09:16:46 ]
+# parameters from EPICS run 2249
+# target L1 6cm
+ebeam = 1.19397
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969292
+MA = 0.93827
+
+--------[ 2008-04-03 09:24:46 ]
+# parameters from EPICS run 2250
+# target L1 6cm
+ebeam = 1.19397
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969294
+MA = 0.93827
+
+--------[ 2008-04-03 11:00:02 ]
+# parameters from EPICS run 2251
+# target L1 6cm
+ebeam = 1.19397
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969292
+MA = 0.93827
+
+--------[ 2008-04-03 11:29:29 ]
+# parameters from EPICS run 2252
+# target L1 6cm
+ebeam = 1.19397
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969293
+MA = 0.93827
+
+--------[ 2008-04-03 12:03:17 ]
+# parameters from EPICS run 2253
+# target L1 6cm
+ebeam = 1.19397
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.96929
+MA = 0.93827
+
+--------[ 2008-04-03 12:17:30 ]
+# parameters from EPICS run 2254
+# target L1 6cm
+ebeam = 1.19397
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969289
+MA = 0.93827
+
+--------[ 2008-04-03 12:38:39 ]
+# parameters from EPICS run 2255
+# target Empty
+ebeam = 1.19397
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.96929
+MA = 0
+
+--------[ 2008-04-03 13:52:41 ]
+# parameters from EPICS run 2256
+# target Empty
+ebeam = 1.19397
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.116
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969289
+MA = 0
+
+--------[ 2008-04-03 17:16:13 ]
+# parameters from EPICS run 2257
+# target L1 6cm
+ebeam = 1.19303
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.116
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969288
+MA = 0.93827
+
+--------[ 2008-04-03 17:29:55 ]
+# parameters from EPICS run 2258
+# target L1 6cm
+ebeam = 1.19337
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.116
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969289
+MA = 0.93827
+
+--------[ 2008-04-03 17:37:04 ]
+# parameters from EPICS run 20050
+# target L1 6cm
+ebeam = 1.19303
+
+R.theta = -104.998
+R.pcentral = 0
+MA = 0.93827
+
+--------[ 2008-04-03 17:38:30 ]
+# parameters from EPICS run 2259
+# target L1 6cm
+ebeam = 1.19304
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.96929
+MA = 0.93827
+
+--------[ 2008-04-03 17:44:23 ]
+# parameters from EPICS run 2260
+# target L1 6cm
+ebeam = 1.19299
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.96929
+MA = 0.93827
+
+--------[ 2008-04-03 17:49:54 ]
+# parameters from EPICS run 2261
+# target L1 6cm
+ebeam = 1.19297
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969289
+MA = 0.93827
+
+--------[ 2008-04-03 17:57:49 ]
+# parameters from EPICS run 2262
+# target L1 6cm
+ebeam = 1.19293
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969287
+MA = 0.93827
+
+--------[ 2008-04-03 18:05:20 ]
+# parameters from EPICS run 2263
+# target L1 6cm
+ebeam = 1.19291
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969287
+MA = 0.93827
+
+--------[ 2008-04-03 18:20:04 ]
+# parameters from EPICS run 2264
+# target L1 6cm
+ebeam = 1.19301
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969285
+MA = 0.93827
+
+--------[ 2008-04-03 18:28:09 ]
+# parameters from EPICS run 2265
+# target L1 6cm
+ebeam = 1.19302
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969286
+MA = 0.93827
+
+--------[ 2008-04-03 18:45:35 ]
+# parameters from EPICS run 2266
+# target L1 6cm
+ebeam = 1.19307
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969288
+MA = 0.93827
+
+--------[ 2008-04-03 20:21:42 ]
+# parameters from EPICS run 2267
+# target L1 6cm
+ebeam = 1.19337
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969288
+MA = 0.93827
+
+--------[ 2008-04-03 20:24:13 ]
+# parameters from EPICS run 2268
+# target L1 6cm
+ebeam = 1.19337
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969288
+MA = 0.93827
+
+--------[ 2008-04-03 21:11:26 ]
+# parameters from EPICS run 2269
+# target L1 6cm
+ebeam = 1.19354
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.116
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969288
+MA = 0.93827
+
+--------[ 2008-04-03 21:12:28 ]
+# parameters from EPICS run 2270
+# target L1 6cm
+ebeam = 1.19354
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969288
+MA = 0.93827
+
+--------[ 2008-04-03 22:01:22 ]
+# parameters from EPICS run 2271
+# target L1 6cm
+ebeam = 1.19353
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969286
+MA = 0.93827
+
+--------[ 2008-04-03 22:08:29 ]
+# parameters from EPICS run 2272
+# target L1 6cm
+ebeam = 1.19353
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969286
+MA = 0.93827
+
+--------[ 2008-04-03 22:15:05 ]
+# parameters from EPICS run 2273
+# target L1 6cm
+ebeam = 1.19353
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969286
+MA = 0.93827
+
+--------[ 2008-04-03 23:46:51 ]
+# parameters from EPICS run 2274
+# target L1 6cm
+ebeam = 1.19353
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.116
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969286
+MA = 0.93827
+
+--------[ 2008-04-03 23:54:57 ]
+# parameters from EPICS run 2275
+# target L1 6cm
+ebeam = 1.19314
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969287
+MA = 0.93827
+
+--------[ 2008-04-04 00:01:48 ]
+# parameters from EPICS run 2276
+# target L1 6cm
+ebeam = 1.19302
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969288
+MA = 0.93827
+
+--------[ 2008-04-04 00:09:57 ]
+# parameters from EPICS run 2277
+# target L1 6cm
+ebeam = 1.19301
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969286
+MA = 0.93827
+
+--------[ 2008-04-04 00:32:18 ]
+# parameters from EPICS run 2278
+# target L1 6cm
+ebeam = 1.19337
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969288
+MA = 0.93827
+
+--------[ 2008-04-04 05:32:50 ]
+# parameters from EPICS run 2279
+# target L1 6cm
+ebeam = 1.19338
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969287
+MA = 0.93827
+
+--------[ 2008-04-04 05:46:04 ]
+# parameters from EPICS run 2280
+# target L1 6cm
+ebeam = 1.19338
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969285
+MA = 0.93827
+
+--------[ 2008-04-04 07:03:32 ]
+# parameters from EPICS run 2281
+# target L1 6cm
+ebeam = 1.19355
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.116
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969286
+MA = 0.93827
+
+--------[ 2008-04-04 09:48:43 ]
+# parameters from EPICS run 20051
+# target L1 6cm
+ebeam = 1.19337
+
+R.theta = -0.197
+R.pcentral = 0
+MA = 0.93827
+
+--------[ 2008-04-04 09:49:30 ]
+# parameters from EPICS run 2282
+# target L1 6cm
+ebeam = 1.19337
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969286
+MA = 0.93827
+
+--------[ 2008-04-04 14:08:53 ]
+# parameters from EPICS run 20052
+# target L1 6cm
+ebeam = 1.19339
+
+R.theta = -0.197
+R.pcentral = 0.473484
+MA = 0.93827
+
+--------[ 2008-04-04 14:08:53 ]
+# parameters from EPICS run 2284
+# target L1 6cm
+ebeam = 1.19339
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969289
+MA = 0.93827
+
+--------[ 2008-04-04 14:17:00 ]
+# parameters from EPICS run 2285
+# target L1 6cm
+ebeam = 1.19337
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969288
+MA = 0.93827
+
+--------[ 2008-04-04 14:17:05 ]
+# parameters from EPICS run 20053
+# target L1 6cm
+ebeam = 1.19337
+
+R.theta = -0.197
+R.pcentral = 0.473485
+MA = 0.93827
+
+--------[ 2008-04-04 14:32:54 ]
+# parameters from EPICS run 2286
+# target L1 6cm
+ebeam = 1.19337
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969289
+MA = 0.93827
+
+--------[ 2008-04-04 14:34:15 ]
+# parameters from EPICS run 20054
+# target L1 6cm
+ebeam = 1.19337
+
+R.theta = -0.197
+R.pcentral = 0.473484
+MA = 0.93827
+
+--------[ 2008-04-04 14:41:39 ]
+# parameters from EPICS run 2287
+# target L1 6cm
+ebeam = 1.19328
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.96929
+MA = 0.93827
+
+--------[ 2008-04-04 14:46:55 ]
+# parameters from EPICS run 2288
+# target L1 6cm
+ebeam = 1.19329
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5026
+L.pcentral = 0.96929
+MA = 0.93827
+
+--------[ 2008-04-04 15:17:35 ]
+# parameters from EPICS run 2289
+# target L1 6cm
+ebeam = 1.19337
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.96929
+MA = 0.93827
+
+--------[ 2008-04-04 16:48:07 ]
+# parameters from EPICS run 2291
+# target L1 6cm
+ebeam = 1.19345
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 95.5026
+L.pcentral = 0.969289
+MA = 0.93827
+
+--------[ 2008-04-04 16:55:35 ]
+# parameters from EPICS run 2292
+# target L1 6cm
+ebeam = 1.19343
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.969289
+MA = 0.93827
+
+--------[ 2008-04-04 17:13:25 ]
+# parameters from EPICS run 2293
+# target L1 6cm
+ebeam = 1.19336
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.96929
+MA = 0.93827
+
+--------[ 2008-04-04 17:20:35 ]
+# parameters from EPICS run 2294
+# target L1 6cm
+ebeam = 1.19335
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5008
+L.pcentral = 0.96929
+MA = 0.93827
+
+--------[ 2008-04-04 17:54:54 ]
+# parameters from EPICS run 2295
+# target L1 6cm
+ebeam = 1.19335
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5026
+L.pcentral = 0.969289
+MA = 0.93827
+
+--------[ 2008-04-04 18:02:38 ]
+# parameters from EPICS run 2296
+# target L1 6cm
+ebeam = 1.19339
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5026
+L.pcentral = 0.969289
+MA = 0.93827
+
+--------[ 2008-04-04 22:03:29 ]
+# parameters from EPICS run 2298
+# target L1 6cm
+ebeam = 1.19348
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5026
+L.pcentral = 0.96929
+MA = 0.93827
+
+--------[ 2008-04-04 22:24:22 ]
+# parameters from EPICS run 2299
+# target L1 6cm
+ebeam = 1.19347
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5026
+L.pcentral = 0.96929
+MA = 0.93827
+
+--------[ 2008-04-04 22:39:44 ]
+# parameters from EPICS run 2301
+# target L1 6cm
+ebeam = 1.19346
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.116
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5026
+L.pcentral = 0.96929
+MA = 0.93827
+
+--------[ 2008-04-04 23:22:36 ]
+# parameters from EPICS run 2302
+# target L1 6cm
+ebeam = 1.19343
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5026
+L.pcentral = 0.96929
+MA = 0.93827
+
+--------[ 2008-04-04 23:38:33 ]
+# parameters from EPICS run 2303
+# target L1 6cm
+ebeam = 1.19337
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5026
+L.pcentral = 0.969291
+MA = 0.93827
+
+--------[ 2008-04-04 23:53:36 ]
+# parameters from EPICS run 2304
+# target L1 6cm
+ebeam = 1.1935
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5026
+L.pcentral = 0.969289
+MA = 0.93827
+
+--------[ 2008-04-05 00:49:39 ]
+# parameters from EPICS run 2305
+# target L1 6cm
+ebeam = 1.19347
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5026
+L.pcentral = 0.969293
+MA = 0.93827
+
+--------[ 2008-04-05 00:55:58 ]
+# parameters from EPICS run 2306
+# target L1 6cm
+ebeam = 1.19346
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5026
+L.pcentral = 0.969293
+MA = 0.93827
+
+--------[ 2008-04-05 00:56:43 ]
+# parameters from EPICS run 20055
+# target L1 6cm
+ebeam = 1.19343
+
+R.theta = -105.001
+R.pcentral = 0.473487
+MA = 0.93827
+
+--------[ 2008-04-05 01:39:52 ]
+# parameters from EPICS run 2307
+# target L2 6cm
+ebeam = 1.19337
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5026
+L.pcentral = 0.96929
+MA = 1.87561
+
+--------[ 2008-04-05 01:42:05 ]
+# parameters from EPICS run 20056
+# target L2 6cm
+ebeam = 1.19344
+
+R.theta = -105.001
+R.pcentral = 0.473489
+MA = 1.87561
+
+--------[ 2008-04-05 01:49:33 ]
+# parameters from EPICS run 2308
+# target L2 6cm
+ebeam = 1.19345
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5026
+L.pcentral = 0.96929
+MA = 1.87561
+
+--------[ 2008-04-05 02:04:02 ]
+# parameters from EPICS run 2309
+# target L2 6cm
+ebeam = 1.19341
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5026
+L.pcentral = 0.969292
+MA = 1.87561
+
+--------[ 2008-04-05 03:11:33 ]
+# parameters from EPICS run 2310
+# target L2 6cm
+ebeam = 1.19339
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5026
+L.pcentral = 0.96929
+MA = 1.87561
+
+--------[ 2008-04-05 03:25:20 ]
+# parameters from EPICS run 2311
+# target L2 6cm
+ebeam = 1.19332
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5026
+L.pcentral = 0.969288
+MA = 1.87561
+
+--------[ 2008-04-05 04:07:26 ]
+# parameters from EPICS run 2312
+# target L2 6cm
+ebeam = 1.19334
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5026
+L.pcentral = 0.969291
+MA = 1.87561
+
+--------[ 2008-04-05 04:32:50 ]
+# parameters from EPICS run 2314
+# target L2 6cm
+ebeam = 1.19337
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5026
+L.pcentral = 0.969289
+MA = 1.87561
+
+--------[ 2008-04-05 04:48:25 ]
+# parameters from EPICS run 2315
+# target L2 6cm
+ebeam = 1.19337
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5026
+L.pcentral = 0.969291
+MA = 1.87561
+
+--------[ 2008-04-05 04:53:37 ]
+# parameters from EPICS run 2316
+# target L2 6cm
+ebeam = 1.19337
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5026
+L.pcentral = 0.96929
+MA = 1.87561
+
+--------[ 2008-04-05 05:44:29 ]
+# parameters from EPICS run 2317
+# target L2 6cm
+ebeam = 1.19338
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5026
+L.pcentral = 0.969289
+MA = 1.87561
+
+--------[ 2008-04-05 06:05:08 ]
+# parameters from EPICS run 2318
+# target L2 6cm
+ebeam = 1.19335
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5026
+L.pcentral = 0.969289
+MA = 1.87561
+
+--------[ 2008-04-05 06:19:58 ]
+# parameters from EPICS run 2319
+# target L2 6cm
+ebeam = 1.19336
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5026
+L.pcentral = 0.96929
+MA = 1.87561
+
+--------[ 2008-04-05 06:54:30 ]
+# parameters from EPICS run 20057
+# target L2 6cm
+ebeam = 1.19339
+
+R.theta = -105.001
+R.pcentral = 0.473494
+MA = 1.87561
+
+--------[ 2008-04-05 07:04:33 ]
+# parameters from EPICS run 2321
+# target L2 6cm
+ebeam = 1.19329
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5026
+L.pcentral = 0.96929
+MA = 1.87561
+
+--------[ 2008-04-05 07:04:36 ]
+# parameters from EPICS run 20058
+# target L2 6cm
+ebeam = 1.19329
+
+R.theta = -105.001
+R.pcentral = 0.473494
+MA = 1.87561
+
+--------[ 2008-04-05 07:08:21 ]
+# parameters from EPICS run 2322
+# target L2 6cm
+ebeam = 1.19334
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5026
+L.pcentral = 0.969291
+MA = 1.87561
+
+--------[ 2008-04-05 07:16:45 ]
+# parameters from EPICS run 2323
+# target L2 6cm
+ebeam = 1.19325
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5026
+L.pcentral = 0.969289
+MA = 1.87561
+
+--------[ 2008-04-05 07:16:45 ]
+# parameters from EPICS run 20059
+# target L2 6cm
+ebeam = 1.19326
+
+R.theta = -105.001
+R.pcentral = 0.473496
+MA = 1.87561
+
+--------[ 2008-04-05 07:31:51 ]
+# parameters from EPICS run 2324
+# target Carbon
+ebeam = 1.19333
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.5026
+L.pcentral = 0.969289
+MA = 11.1879
+
+--------[ 2008-04-05 07:31:51 ]
+# parameters from EPICS run 20060
+# target Carbon
+ebeam = 1.19333
+
+R.theta = -105.001
+R.pcentral = 0.473496
+MA = 11.1879
+
+--------[ 2008-04-05 08:08:59 ]
+# parameters from EPICS run 2325
+# target Carbon
+ebeam = 1.19335
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.5043
+L.pcentral = 0.960012
+MA = 11.1879
+
+--------[ 2008-04-05 08:10:39 ]
+# parameters from EPICS run 20061
+# target Carbon
+ebeam = 1.19337
+
+R.theta = -105.001
+R.pcentral = 0.473495
+MA = 11.1879
+
+--------[ 2008-04-05 08:25:34 ]
+# parameters from EPICS run 2326
+# target L1 6cm
+ebeam = 1.19337
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.116
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.5043
+L.pcentral = 0.959981
+MA = 0.93827
+
+--------[ 2008-04-05 08:25:42 ]
+# parameters from EPICS run 20326
+# target L1 6cm
+ebeam = 1.19331
+
+R.theta = -105.001
+R.pcentral = 0.473497
+MA = 0.93827
+
+--------[ 2008-04-05 08:32:48 ]
+# parameters from EPICS run 2327
+# target L1 6cm
+ebeam = 1.19334
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.5043
+L.pcentral = 0.959971
+MA = 0.93827
+
+--------[ 2008-04-05 08:32:50 ]
+# parameters from EPICS run 20327
+# target L1 6cm
+ebeam = 1.19334
+
+R.theta = -105.001
+R.pcentral = 0.473496
+MA = 0.93827
+
+--------[ 2008-04-05 08:37:51 ]
+# parameters from EPICS run 2328
+# target L1 6cm
+ebeam = 1.19337
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.5043
+L.pcentral = 0.959984
+MA = 0.93827
+
+--------[ 2008-04-05 08:37:54 ]
+# parameters from EPICS run 20328
+# target L1 6cm
+ebeam = 1.19338
+
+R.theta = -105.001
+R.pcentral = 0.473495
+MA = 0.93827
+
+--------[ 2008-04-05 08:41:24 ]
+# parameters from EPICS run 2329
+# target L1 6cm
+ebeam = 1.19336
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.5043
+L.pcentral = 0.95998
+MA = 0.93827
+
+--------[ 2008-04-05 08:41:26 ]
+# parameters from EPICS run 20329
+# target L1 6cm
+ebeam = 1.19337
+
+R.theta = -105.001
+R.pcentral = 0.473496
+MA = 0.93827
+
+--------[ 2008-04-05 08:43:58 ]
+# parameters from EPICS run 2330
+# target L1 6cm
+ebeam = 1.19335
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.5043
+L.pcentral = 0.959977
+MA = 0.93827
+
+--------[ 2008-04-05 08:43:58 ]
+# parameters from EPICS run 20330
+# target L1 6cm
+ebeam = 1.19336
+
+R.theta = -105.001
+R.pcentral = 0.473495
+MA = 0.93827
+
+--------[ 2008-04-05 09:23:30 ]
+# parameters from EPICS run 2331
+# target L1 6cm
+ebeam = 1.19355
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.5043
+L.pcentral = 0.959975
+MA = 0.93827
+
+--------[ 2008-04-05 09:23:41 ]
+# parameters from EPICS run 20331
+# target L1 6cm
+ebeam = 1.19355
+
+R.theta = -105.001
+R.pcentral = 0.473497
+MA = 0.93827
+
+--------[ 2008-04-05 09:43:29 ]
+# parameters from EPICS run 2332
+# target L1 6cm
+ebeam = 1.19337
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.5043
+L.pcentral = 0.959974
+MA = 0.93827
+
+--------[ 2008-04-05 09:43:32 ]
+# parameters from EPICS run 20332
+# target L1 6cm
+ebeam = 1.19337
+
+R.theta = -105.001
+R.pcentral = 0.473497
+MA = 0.93827
+
+--------[ 2008-04-05 12:36:35 ]
+# parameters from EPICS run 2333
+# target L1 6cm
+ebeam = 1.19337
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.4985
+L.pcentral = 0.965914
+MA = 0.93827
+
+--------[ 2008-04-05 12:36:48 ]
+# parameters from EPICS run 20333
+# target L1 6cm
+ebeam = 1.19337
+
+R.theta = -105.001
+R.pcentral = 0.473498
+MA = 0.93827
+
+--------[ 2008-04-05 12:43:01 ]
+# parameters from EPICS run 2334
+# target L1 6cm
+ebeam = 1.19337
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.4985
+L.pcentral = 0.965914
+MA = 0.93827
+
+--------[ 2008-04-05 13:00:41 ]
+# parameters from EPICS run 2335
+# target L1 6cm
+ebeam = 1.19337
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.116
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.4985
+L.pcentral = 0.965914
+MA = 0.93827
+
+--------[ 2008-04-05 13:12:13 ]
+# parameters from EPICS run 2336
+# target L1 6cm
+ebeam = 1.19337
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.4985
+L.pcentral = 0.965914
+MA = 0.93827
+
+--------[ 2008-04-05 13:58:10 ]
+# parameters from EPICS run 2337
+# target Carbon w/ Hole
+ebeam = 1.19321
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.4985
+L.pcentral = 0.965912
+MA = 11.1879
+
+--------[ 2008-04-05 13:58:13 ]
+# parameters from EPICS run 20334
+# target Carbon w/ Hole
+ebeam = 1.19321
+
+R.theta = -105.001
+R.pcentral = 0.473499
+MA = 11.1879
+
+--------[ 2008-04-05 14:02:09 ]
+# parameters from EPICS run 2338
+# target Carbon w/ Hole
+ebeam = 1.19323
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.4985
+L.pcentral = 0.965912
+MA = 11.1879
+
+--------[ 2008-04-05 14:02:12 ]
+# parameters from EPICS run 20335
+# target Carbon w/ Hole
+ebeam = 1.19323
+
+R.theta = -105.001
+R.pcentral = 0.473499
+MA = 11.1879
+
+--------[ 2008-04-05 14:19:04 ]
+# parameters from EPICS run 2339
+# target L1 6cm
+ebeam = 1.19331
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.4985
+L.pcentral = 0.965912
+MA = 0.93827
+
+--------[ 2008-04-05 14:19:08 ]
+# parameters from EPICS run 20336
+# target L1 6cm
+ebeam = 1.19331
+
+R.theta = -105.001
+R.pcentral = 0.473499
+MA = 0.93827
+
+--------[ 2008-04-05 14:26:02 ]
+# parameters from EPICS run 2340
+# target L1 6cm
+ebeam = 1.19317
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.4985
+L.pcentral = 0.965912
+MA = 0.93827
+
+--------[ 2008-04-05 14:26:03 ]
+# parameters from EPICS run 20337
+# target L1 6cm
+ebeam = 1.19317
+
+R.theta = -105.001
+R.pcentral = 0.473499
+MA = 0.93827
+
+--------[ 2008-04-05 15:25:42 ]
+# parameters from EPICS run 20338
+# target L1 6cm
+ebeam = 1.19316
+
+R.theta = -105.001
+R.pcentral = 0.4735
+MA = 0.93827
+
+--------[ 2008-04-05 15:25:47 ]
+# parameters from EPICS run 2341
+# target L1 6cm
+ebeam = 1.19317
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.4985
+L.pcentral = 0.965914
+MA = 0.93827
+
+--------[ 2008-04-05 15:49:15 ]
+# parameters from EPICS run 2342
+# target L2 6cm
+ebeam = 1.19337
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.4985
+L.pcentral = 0.965913
+MA = 1.87561
+
+--------[ 2008-04-05 16:04:38 ]
+# parameters from EPICS run 2343
+# target L2 6cm
+ebeam = 1.19315
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.4985
+L.pcentral = 0.965911
+MA = 1.87561
+
+--------[ 2008-04-05 16:06:19 ]
+# parameters from EPICS run 20339
+# target L2 6cm
+ebeam = 1.19337
+
+R.theta = -105.001
+R.pcentral = 0.4735
+MA = 1.87561
+
+--------[ 2008-04-05 16:07:07 ]
+# parameters from EPICS run 20340
+# target L2 6cm
+ebeam = 1.19337
+
+R.theta = -105.001
+R.pcentral = 0.473499
+MA = 1.87561
+
+--------[ 2008-04-05 16:07:44 ]
+# parameters from EPICS run 20341
+# target L2 6cm
+ebeam = 1.19337
+
+R.theta = -105.001
+R.pcentral = 0.473499
+MA = 1.87561
+
+--------[ 2008-04-05 16:08:21 ]
+# parameters from EPICS run 20342
+# target L2 6cm
+ebeam = 1.19337
+
+R.theta = -105.001
+R.pcentral = 0.473501
+MA = 1.87561
+
+--------[ 2008-04-05 16:09:11 ]
+# parameters from EPICS run 20343
+# target L2 6cm
+ebeam = 1.19305
+
+R.theta = -105.001
+R.pcentral = 0.473499
+MA = 1.87561
+
+--------[ 2008-04-05 16:14:41 ]
+# parameters from EPICS run 2344
+# target L2 6cm
+ebeam = 1.19304
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.4985
+L.pcentral = 0.965911
+MA = 1.87561
+
+--------[ 2008-04-05 16:15:03 ]
+# parameters from EPICS run 20344
+# target L2 6cm
+ebeam = 1.19337
+
+R.theta = -105.001
+R.pcentral = 0.473499
+MA = 1.87561
+
+--------[ 2008-04-05 16:21:15 ]
+# parameters from EPICS run 20345
+# target L2 6cm
+ebeam = 1.19315
+
+R.theta = -105.001
+R.pcentral = 0.4735
+MA = 1.87561
+
+--------[ 2008-04-05 16:21:18 ]
+# parameters from EPICS run 2345
+# target L2 6cm
+ebeam = 1.19315
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.4985
+L.pcentral = 0.965912
+MA = 1.87561
+
+--------[ 2008-04-05 16:27:06 ]
+# parameters from EPICS run 20346
+# target L2 6cm
+ebeam = 1.19313
+
+R.theta = -105.001
+R.pcentral = 0.4735
+MA = 1.87561
+
+--------[ 2008-04-05 16:27:09 ]
+# parameters from EPICS run 2346
+# target L2 6cm
+ebeam = 1.19314
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.4985
+L.pcentral = 0.965912
+MA = 1.87561
+
+--------[ 2008-04-05 16:51:37 ]
+# parameters from EPICS run 2347
+# target L1 6cm
+ebeam = 1.19337
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.4985
+L.pcentral = 0.965915
+MA = 0.93827
+
+--------[ 2008-04-05 16:55:59 ]
+# parameters from EPICS run 2348
+# target L1 6cm
+ebeam = 1.19337
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.4985
+L.pcentral = 0.965915
+MA = 0.93827
+
+--------[ 2008-04-05 17:00:17 ]
+# parameters from EPICS run 2349
+# target L1 6cm
+ebeam = 1.19337
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.116
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.4985
+L.pcentral = 0.965915
+MA = 0.93827
+
+--------[ 2008-04-05 17:09:32 ]
+# parameters from EPICS run 2350
+# target L1 6cm
+ebeam = 1.19314
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.4985
+L.pcentral = 0.965916
+MA = 0.93827
+
+--------[ 2008-04-05 17:10:10 ]
+# parameters from EPICS run 20350
+# target L1 6cm
+ebeam = 1.19315
+
+R.theta = -105.001
+R.pcentral = 0.4735
+MA = 0.93827
+
+--------[ 2008-04-05 18:43:58 ]
+# parameters from EPICS run 2351
+# target L1 6cm
+ebeam = 1.19316
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.084
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.4985
+L.pcentral = 0.95998
+MA = 0.93827
+
+--------[ 2008-04-05 18:43:52 ]
+# parameters from EPICS run 20351
+# target L1 6cm
+ebeam = 1.19318
+
+R.theta = -105.001
+R.pcentral = 0.473501
+MA = 0.93827
+
+--------[ 2008-04-05 18:49:15 ]
+# parameters from EPICS run 20352
+# target L1 6cm
+ebeam = 1.19316
+
+R.theta = -105.001
+R.pcentral = 0.473501
+MA = 0.93827
+
+--------[ 2008-04-05 18:49:36 ]
+# parameters from EPICS run 2352
+# target L1 6cm
+ebeam = 1.19316
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.4985
+L.pcentral = 0.959979
+MA = 0.93827
+
+--------[ 2008-04-05 19:16:32 ]
+# parameters from EPICS run 2353
+# target L1 6cm
+ebeam = 1.19337
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.4985
+L.pcentral = 0.959979
+MA = 0.93827
+
+--------[ 2008-04-05 19:17:42 ]
+# parameters from EPICS run 20353
+# target L1 6cm
+ebeam = 1.19337
+
+R.theta = -105.001
+R.pcentral = 0.473501
+MA = 0.93827
+
+--------[ 2008-04-05 19:27:17 ]
+# parameters from EPICS run 2354
+# target L1 6cm
+ebeam = 1.19337
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959981
+MA = 0.93827
+
+--------[ 2008-04-05 19:33:34 ]
+# parameters from EPICS run 20354
+# target Tantalum
+ebeam = 1.19337
+
+R.theta = -105.001
+R.pcentral = 0.473501
+MA = 168.552
+
+--------[ 2008-04-05 19:36:56 ]
+# parameters from EPICS run 20355
+# target Tantalum
+ebeam = 1.19337
+
+R.theta = -105.001
+R.pcentral = 0.473501
+MA = 168.552
+
+--------[ 2008-04-05 19:37:01 ]
+# parameters from EPICS run 2355
+# target Tantalum
+ebeam = 1.19337
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.95998
+MA = 168.552
+
+--------[ 2008-04-05 19:59:54 ]
+# parameters from EPICS run 20356
+# target Tantalum
+ebeam = 1.19317
+
+R.theta = -105.001
+R.pcentral = 0.473501
+MA = 168.552
+
+--------[ 2008-04-05 20:00:03 ]
+# parameters from EPICS run 2356
+# target Tantalum
+ebeam = 1.19317
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 1.19403
+MA = 168.552
+
+--------[ 2008-04-05 20:31:22 ]
+# parameters from EPICS run 20357
+# target Carbon
+ebeam = 1.19322
+
+R.theta = -105.001
+R.pcentral = 0.473501
+MA = 11.1879
+
+--------[ 2008-04-05 20:31:26 ]
+# parameters from EPICS run 2357
+# target Carbon
+ebeam = 1.19315
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 1.19404
+MA = 11.1879
+
+--------[ 2008-04-05 20:58:54 ]
+# parameters from EPICS run 20358
+# target L1 6cm
+ebeam = 1.19317
+
+R.theta = -105.001
+R.pcentral = 0.473501
+MA = 0.93827
+
+--------[ 2008-04-05 20:59:01 ]
+# parameters from EPICS run 2358
+# target L1 6cm
+ebeam = 1.19317
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 1.10489
+MA = 0.93827
+
+--------[ 2008-04-05 21:01:52 ]
+# parameters from EPICS run 20359
+# target L1 6cm
+ebeam = 1.19313
+
+R.theta = -105.001
+R.pcentral = 0.4735
+MA = 0.93827
+
+--------[ 2008-04-05 21:01:57 ]
+# parameters from EPICS run 2359
+# target L1 6cm
+ebeam = 1.19315
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 1.10489
+MA = 0.93827
+
+--------[ 2008-04-05 21:04:33 ]
+# parameters from EPICS run 20360
+# target L1 6cm
+ebeam = 1.19316
+
+R.theta = -105.001
+R.pcentral = 0.473501
+MA = 0.93827
+
+--------[ 2008-04-05 21:04:36 ]
+# parameters from EPICS run 2360
+# target L1 6cm
+ebeam = 1.19316
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 1.10488
+MA = 0.93827
+
+--------[ 2008-04-05 21:11:13 ]
+# parameters from EPICS run 20361
+# target L1 6cm
+ebeam = 1.19318
+
+R.theta = -105.001
+R.pcentral = 0.4735
+MA = 0.93827
+
+--------[ 2008-04-05 21:11:17 ]
+# parameters from EPICS run 2361
+# target L1 6cm
+ebeam = 1.19317
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 1.10487
+MA = 0.93827
+
+--------[ 2008-04-05 21:34:07 ]
+# parameters from EPICS run 20362
+# target L1 6cm
+ebeam = 1.19318
+
+R.theta = -105.001
+R.pcentral = 0.473501
+MA = 0.93827
+
+--------[ 2008-04-05 21:34:13 ]
+# parameters from EPICS run 2362
+# target L1 6cm
+ebeam = 1.19317
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.960006
+MA = 0.93827
+
+--------[ 2008-04-05 22:07:22 ]
+# parameters from EPICS run 2363
+# target L1 6cm
+ebeam = 1.19317
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959969
+MA = 0.93827
+
+--------[ 2008-04-05 22:07:32 ]
+# parameters from EPICS run 20363
+# target L1 6cm
+ebeam = 1.19318
+
+R.theta = -105.001
+R.pcentral = 0.473501
+MA = 0.93827
+
+--------[ 2008-04-05 22:35:58 ]
+# parameters from EPICS run 2364
+# target L1 6cm
+ebeam = 1.1932
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959972
+MA = 0.93827
+
+--------[ 2008-04-05 22:46:57 ]
+# parameters from EPICS run 2365
+# target L1 6cm
+ebeam = 1.1932
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959972
+MA = 0.93827
+
+--------[ 2008-04-05 23:01:21 ]
+# parameters from EPICS run 2366
+# target L1 6cm
+ebeam = 1.19318
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959972
+MA = 0.93827
+
+--------[ 2008-04-05 23:09:51 ]
+# parameters from EPICS run 2367
+# target L1 6cm
+ebeam = 1.19318
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959972
+MA = 0.93827
+
+--------[ 2008-04-05 23:18:31 ]
+# parameters from EPICS run 2368
+# target L1 6cm
+ebeam = 1.19318
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959972
+MA = 0.93827
+
+--------[ 2008-04-05 23:28:04 ]
+# parameters from EPICS run 2369
+# target L1 6cm
+ebeam = 1.19316
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959972
+MA = 0.93827
+
+--------[ 2008-04-05 23:37:59 ]
+# parameters from EPICS run 2370
+# target L1 6cm
+ebeam = 1.19325
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959972
+MA = 0.93827
+
+--------[ 2008-04-06 00:00:25 ]
+# parameters from EPICS run 2371
+# target L1 6cm
+ebeam = 1.1934
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959971
+MA = 0.93827
+
+--------[ 2008-04-06 00:13:30 ]
+# parameters from EPICS run 2372
+# target L1 6cm
+ebeam = 1.19339
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959968
+MA = 0.93827
+
+--------[ 2008-04-06 00:24:10 ]
+# parameters from EPICS run 2373
+# target L1 6cm
+ebeam = 1.19341
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959989
+MA = 0.93827
+
+--------[ 2008-04-06 00:26:24 ]
+# parameters from EPICS run 2374
+# target L1 6cm
+ebeam = 1.1934
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.95999
+MA = 0.93827
+
+--------[ 2008-04-06 00:37:33 ]
+# parameters from EPICS run 2375
+# target L1 6cm
+ebeam = 1.19342
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959991
+MA = 0.93827
+
+--------[ 2008-04-06 00:47:46 ]
+# parameters from EPICS run 2376
+# target L1 6cm
+ebeam = 1.19341
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959992
+MA = 0.93827
+
+--------[ 2008-04-06 00:57:11 ]
+# parameters from EPICS run 2377
+# target L1 6cm
+ebeam = 1.19341
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959992
+MA = 0.93827
+
+--------[ 2008-04-06 01:06:34 ]
+# parameters from EPICS run 2378
+# target L1 6cm
+ebeam = 1.19339
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959992
+MA = 0.93827
+
+--------[ 2008-04-06 01:15:57 ]
+# parameters from EPICS run 2379
+# target L1 6cm
+ebeam = 1.19341
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959992
+MA = 0.93827
+
+--------[ 2008-04-06 01:26:05 ]
+# parameters from EPICS run 2380
+# target L1 6cm
+ebeam = 1.1934
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959993
+MA = 0.93827
+
+--------[ 2008-04-06 01:35:55 ]
+# parameters from EPICS run 2381
+# target L1 6cm
+ebeam = 1.1934
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.084
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959993
+MA = 0.93827
+
+--------[ 2008-04-06 01:45:54 ]
+# parameters from EPICS run 2382
+# target L1 6cm
+ebeam = 1.19342
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959991
+MA = 0.93827
+
+--------[ 2008-04-06 01:55:40 ]
+# parameters from EPICS run 2383
+# target L1 6cm
+ebeam = 1.1934
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959989
+MA = 0.93827
+
+--------[ 2008-04-06 02:05:27 ]
+# parameters from EPICS run 2384
+# target L1 6cm
+ebeam = 1.19339
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959989
+MA = 0.93827
+
+--------[ 2008-04-06 02:14:55 ]
+# parameters from EPICS run 2385
+# target L1 6cm
+ebeam = 1.19339
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.95999
+MA = 0.93827
+
+--------[ 2008-04-06 02:24:52 ]
+# parameters from EPICS run 2386
+# target L1 6cm
+ebeam = 1.19341
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959992
+MA = 0.93827
+
+--------[ 2008-04-06 02:35:14 ]
+# parameters from EPICS run 2387
+# target L1 6cm
+ebeam = 1.19341
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959992
+MA = 0.93827
+
+--------[ 2008-04-06 02:44:45 ]
+# parameters from EPICS run 2388
+# target L1 6cm
+ebeam = 1.19341
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959992
+MA = 0.93827
+
+--------[ 2008-04-06 02:55:19 ]
+# parameters from EPICS run 2389
+# target L1 6cm
+ebeam = 1.1934
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.116
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959992
+MA = 0.93827
+
+--------[ 2008-04-06 02:58:56 ]
+# parameters from EPICS run 2390
+# target L1 6cm
+ebeam = 1.19339
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959992
+MA = 0.93827
+
+--------[ 2008-04-06 03:02:38 ]
+# parameters from EPICS run 2391
+# target L1 6cm
+ebeam = 1.19338
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959992
+MA = 0.93827
+
+--------[ 2008-04-06 03:18:10 ]
+# parameters from EPICS run 2392
+# target L1 6cm
+ebeam = 1.19336
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959993
+MA = 0.93827
+
+--------[ 2008-04-06 03:27:42 ]
+# parameters from EPICS run 2393
+# target L1 6cm
+ebeam = 1.19338
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959994
+MA = 0.93827
+
+--------[ 2008-04-06 03:37:32 ]
+# parameters from EPICS run 2394
+# target L1 6cm
+ebeam = 1.19339
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959993
+MA = 0.93827
+
+--------[ 2008-04-06 03:47:42 ]
+# parameters from EPICS run 2395
+# target L1 6cm
+ebeam = 1.19341
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959991
+MA = 0.93827
+
+--------[ 2008-04-06 03:58:04 ]
+# parameters from EPICS run 2396
+# target L1 6cm
+ebeam = 1.19342
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959989
+MA = 0.93827
+
+--------[ 2008-04-06 04:08:14 ]
+# parameters from EPICS run 2397
+# target L1 6cm
+ebeam = 1.1934
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959991
+MA = 0.93827
+
+--------[ 2008-04-06 04:18:14 ]
+# parameters from EPICS run 2398
+# target L1 6cm
+ebeam = 1.19337
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959991
+MA = 0.93827
+
+--------[ 2008-04-06 04:28:53 ]
+# parameters from EPICS run 2399
+# target L1 6cm
+ebeam = 1.1934
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959993
+MA = 0.93827
+
+--------[ 2008-04-06 04:39:08 ]
+# parameters from EPICS run 2400
+# target L1 6cm
+ebeam = 1.19337
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959993
+MA = 0.93827
+
+--------[ 2008-04-06 04:50:31 ]
+# parameters from EPICS run 2401
+# target L1 6cm
+ebeam = 1.19343
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959993
+MA = 0.93827
+
+--------[ 2008-04-06 05:04:44 ]
+# parameters from EPICS run 2402
+# target L1 6cm
+ebeam = 1.19339
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959993
+MA = 0.93827
+
+--------[ 2008-04-06 05:31:45 ]
+# parameters from EPICS run 2403
+# target L1 6cm
+ebeam = 1.19342
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959993
+MA = 0.93827
+
+--------[ 2008-04-06 05:54:24 ]
+# parameters from EPICS run 2404
+# target L1 6cm
+ebeam = 1.19343
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959991
+MA = 0.93827
+
+--------[ 2008-04-06 06:19:54 ]
+# parameters from EPICS run 2405
+# target L1 6cm
+ebeam = 1.19342
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959992
+MA = 0.93827
+
+--------[ 2008-04-06 06:37:35 ]
+# parameters from EPICS run 2406
+# target L1 6cm
+ebeam = 1.19346
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959993
+MA = 0.93827
+
+--------[ 2008-04-06 07:11:13 ]
+# parameters from EPICS run 2407
+# target L1 6cm
+ebeam = 1.19343
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959995
+MA = 0.93827
+
+--------[ 2008-04-06 07:21:21 ]
+# parameters from EPICS run 2408
+# target L1 6cm
+ebeam = 1.19346
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959994
+MA = 0.93827
+
+--------[ 2008-04-06 07:31:36 ]
+# parameters from EPICS run 2409
+# target L1 6cm
+ebeam = 1.19344
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959991
+MA = 0.93827
+
+--------[ 2008-04-06 07:42:52 ]
+# parameters from EPICS run 2410
+# target L1 6cm
+ebeam = 1.19337
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959991
+MA = 0.93827
+
+--------[ 2008-04-06 07:54:05 ]
+# parameters from EPICS run 2411
+# target L1 6cm
+ebeam = 1.19354
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959991
+MA = 0.93827
+
+--------[ 2008-04-06 08:04:57 ]
+# parameters from EPICS run 2412
+# target L1 6cm
+ebeam = 1.19352
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959991
+MA = 0.93827
+
+--------[ 2008-04-06 08:16:34 ]
+# parameters from EPICS run 2413
+# target L1 6cm
+ebeam = 1.19356
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959992
+MA = 0.93827
+
+--------[ 2008-04-06 09:01:37 ]
+# parameters from EPICS run 2414
+# target L1 6cm
+ebeam = 1.19352
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959993
+MA = 0.93827
+
+--------[ 2008-04-06 09:14:32 ]
+# parameters from EPICS run 2415
+# target L1 6cm
+ebeam = 1.19353
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959992
+MA = 0.93827
+
+--------[ 2008-04-06 09:30:59 ]
+# parameters from EPICS run 2416
+# target L1 6cm
+ebeam = 1.19356
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959991
+MA = 0.93827
+
+--------[ 2008-04-06 09:36:24 ]
+# parameters from EPICS run 2417
+# target L1 6cm
+ebeam = 1.19337
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959991
+MA = 0.93827
+
+--------[ 2008-04-06 09:41:04 ]
+# parameters from EPICS run 2418
+# target L1 6cm
+ebeam = 1.19356
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959991
+MA = 0.93827
+
+--------[ 2008-04-06 09:52:16 ]
+# parameters from EPICS run 2419
+# target L1 6cm
+ebeam = 1.19353
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.084
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959991
+MA = 0.93827
+
+--------[ 2008-04-06 10:15:40 ]
+# parameters from EPICS run 2420
+# target L1 6cm
+ebeam = 1.19355
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959993
+MA = 0.93827
+
+--------[ 2008-04-06 10:26:54 ]
+# parameters from EPICS run 2421
+# target L1 6cm
+ebeam = 1.19354
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959993
+MA = 0.93827
+
+--------[ 2008-04-06 10:36:57 ]
+# parameters from EPICS run 2422
+# target L1 6cm
+ebeam = 1.19355
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959993
+MA = 0.93827
+
+--------[ 2008-04-06 10:46:43 ]
+# parameters from EPICS run 2423
+# target L1 6cm
+ebeam = 1.19355
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959994
+MA = 0.93827
+
+--------[ 2008-04-06 10:57:35 ]
+# parameters from EPICS run 2424
+# target L1 6cm
+ebeam = 1.19356
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959993
+MA = 0.93827
+
+--------[ 2008-04-06 11:08:08 ]
+# parameters from EPICS run 2425
+# target L1 6cm
+ebeam = 1.19355
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959994
+MA = 0.93827
+
+--------[ 2008-04-06 11:19:46 ]
+# parameters from EPICS run 2426
+# target L1 6cm
+ebeam = 1.19354
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959991
+MA = 0.93827
+
+--------[ 2008-04-06 11:31:29 ]
+# parameters from EPICS run 2427
+# target L1 6cm
+ebeam = 1.19355
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959991
+MA = 0.93827
+
+--------[ 2008-04-06 11:41:37 ]
+# parameters from EPICS run 2428
+# target L1 6cm
+ebeam = 1.19353
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959991
+MA = 0.93827
+
+--------[ 2008-04-06 11:52:18 ]
+# parameters from EPICS run 2429
+# target L1 6cm
+ebeam = 1.19354
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959991
+MA = 0.93827
+
+--------[ 2008-04-06 12:02:58 ]
+# parameters from EPICS run 2430
+# target L1 6cm
+ebeam = 1.19357
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959992
+MA = 0.93827
+
+--------[ 2008-04-06 12:15:51 ]
+# parameters from EPICS run 2431
+# target L1 6cm
+ebeam = 1.19359
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959992
+MA = 0.93827
+
+--------[ 2008-04-06 12:33:13 ]
+# parameters from EPICS run 2432
+# target L1 6cm
+ebeam = 1.19357
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959993
+MA = 0.93827
+
+--------[ 2008-04-06 13:09:44 ]
+# parameters from EPICS run 2433
+# target L1 6cm
+ebeam = 1.19342
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959993
+MA = 0.93827
+
+--------[ 2008-04-06 13:20:14 ]
+# parameters from EPICS run 2434
+# target L1 6cm
+ebeam = 1.19333
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959992
+MA = 0.93827
+
+--------[ 2008-04-06 13:32:12 ]
+# parameters from EPICS run 2435
+# target L1 6cm
+ebeam = 1.1933
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959991
+MA = 0.93827
+
+--------[ 2008-04-06 13:43:23 ]
+# parameters from EPICS run 2436
+# target L1 6cm
+ebeam = 1.19327
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959992
+MA = 0.93827
+
+--------[ 2008-04-06 13:54:23 ]
+# parameters from EPICS run 2437
+# target L1 6cm
+ebeam = 1.19325
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959993
+MA = 0.93827
+
+--------[ 2008-04-06 14:05:51 ]
+# parameters from EPICS run 2438
+# target L1 6cm
+ebeam = 1.19325
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959993
+MA = 0.93827
+
+--------[ 2008-04-06 14:15:44 ]
+# parameters from EPICS run 2439
+# target L1 6cm
+ebeam = 1.19326
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959993
+MA = 0.93827
+
+--------[ 2008-04-06 14:27:24 ]
+# parameters from EPICS run 2440
+# target L1 6cm
+ebeam = 1.19329
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959994
+MA = 0.93827
+
+--------[ 2008-04-06 14:39:39 ]
+# parameters from EPICS run 2441
+# target L1 6cm
+ebeam = 1.19335
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959995
+MA = 0.93827
+
+--------[ 2008-04-06 14:50:41 ]
+# parameters from EPICS run 2442
+# target L1 6cm
+ebeam = 1.19335
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959995
+MA = 0.93827
+
+--------[ 2008-04-06 15:02:06 ]
+# parameters from EPICS run 2443
+# target L1 6cm
+ebeam = 1.19356
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959995
+MA = 0.93827
+
+--------[ 2008-04-06 15:13:39 ]
+# parameters from EPICS run 2444
+# target L1 6cm
+ebeam = 1.19354
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959993
+MA = 0.93827
+
+--------[ 2008-04-06 15:24:28 ]
+# parameters from EPICS run 2445
+# target L1 6cm
+ebeam = 1.19353
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959992
+MA = 0.93827
+
+--------[ 2008-04-06 15:35:26 ]
+# parameters from EPICS run 2446
+# target L1 6cm
+ebeam = 1.19352
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959992
+MA = 0.93827
+
+--------[ 2008-04-06 15:45:21 ]
+# parameters from EPICS run 2447
+# target L1 6cm
+ebeam = 1.19349
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959993
+MA = 0.93827
+
+--------[ 2008-04-06 15:56:09 ]
+# parameters from EPICS run 2448
+# target L1 6cm
+ebeam = 1.19349
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959994
+MA = 0.93827
+
+--------[ 2008-04-06 16:07:55 ]
+# parameters from EPICS run 2449
+# target L1 6cm
+ebeam = 1.19351
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959994
+MA = 0.93827
+
+--------[ 2008-04-06 16:33:48 ]
+# parameters from EPICS run 2450
+# target L1 6cm
+ebeam = 1.19351
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959996
+MA = 0.93827
+
+--------[ 2008-04-06 16:44:17 ]
+# parameters from EPICS run 2451
+# target L1 6cm
+ebeam = 1.1935
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959995
+MA = 0.93827
+
+--------[ 2008-04-06 16:54:34 ]
+# parameters from EPICS run 2452
+# target L1 6cm
+ebeam = 1.19348
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959993
+MA = 0.93827
+
+--------[ 2008-04-06 17:06:15 ]
+# parameters from EPICS run 2453
+# target L1 6cm
+ebeam = 1.19348
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959992
+MA = 0.93827
+
+--------[ 2008-04-06 17:16:58 ]
+# parameters from EPICS run 2454
+# target L1 6cm
+ebeam = 1.1935
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959993
+MA = 0.93827
+
+--------[ 2008-04-06 17:37:25 ]
+# parameters from EPICS run 2455
+# target L1 6cm
+ebeam = 1.19352
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959994
+MA = 0.93827
+
+--------[ 2008-04-06 17:46:34 ]
+# parameters from EPICS run 2456
+# target L1 6cm
+ebeam = 1.19349
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.084
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959994
+MA = 0.93827
+
+--------[ 2008-04-06 17:55:47 ]
+# parameters from EPICS run 2457
+# target L1 6cm
+ebeam = 1.19352
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959994
+MA = 0.93827
+
+--------[ 2008-04-06 18:25:37 ]
+# parameters from EPICS run 2458
+# target L1 6cm
+ebeam = 1.19352
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959993
+MA = 0.93827
+
+--------[ 2008-04-06 18:47:26 ]
+# parameters from EPICS run 2459
+# target L1 6cm
+ebeam = 1.1935
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.084
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959995
+MA = 0.93827
+
+--------[ 2008-04-06 19:10:24 ]
+# parameters from EPICS run 2460
+# target L1 6cm
+ebeam = 1.19344
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959991
+MA = 0.93827
+
+--------[ 2008-04-06 19:56:27 ]
+# parameters from EPICS run 2461
+# target L1 6cm
+ebeam = 1.19327
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959993
+MA = 0.93827
+
+--------[ 2008-04-06 20:43:31 ]
+# parameters from EPICS run 2462
+# target L1 6cm
+ebeam = 1.19343
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959995
+MA = 0.93827
+
+--------[ 2008-04-06 21:07:14 ]
+# parameters from EPICS run 2463
+# target L1 6cm
+ebeam = 1.1935
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959995
+MA = 0.93827
+
+--------[ 2008-04-06 23:08:07 ]
+# parameters from EPICS run 2464
+# target L1 6cm
+ebeam = 1.19337
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 1.19401
+MA = 0.93827
+
+--------[ 2008-04-06 23:10:06 ]
+# parameters from EPICS run 2465
+# target L1 6cm
+ebeam = 1.19337
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 1.19401
+MA = 0.93827
+
+--------[ 2008-04-06 23:11:47 ]
+# parameters from EPICS run 2466
+# target L1 6cm
+ebeam = 1.19337
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 1.19401
+MA = 0.93827
+
+--------[ 2008-04-06 23:17:51 ]
+# parameters from EPICS run 2467
+# target L1 6cm
+ebeam = 1.19337
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 1.19401
+MA = 0.93827
+
+--------[ 2008-04-06 23:22:17 ]
+# parameters from EPICS run 2468
+# target L1 6cm
+ebeam = 1.19337
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 1.19401
+MA = 0.93827
+
+--------[ 2008-04-06 23:44:16 ]
+# parameters from EPICS run 2469
+# target L1 6cm
+ebeam = 1.19337
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 1.194
+MA = 0.93827
+
+--------[ 2008-04-06 23:49:15 ]
+# parameters from EPICS run 2470
+# target L1 6cm
+ebeam = 1.19337
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 1.194
+MA = 0.93827
+
+--------[ 2008-04-07 00:06:03 ]
+# parameters from EPICS run 2471
+# target L1 6cm
+ebeam = 1.19337
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0
+MA = 0.93827
+
+--------[ 2008-04-07 00:39:09 ]
+# parameters from EPICS run 2472
+# target L1 6cm
+ebeam = 1.19354
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959979
+MA = 0.93827
+
+--------[ 2008-04-07 00:44:43 ]
+# parameters from EPICS run 20364
+# target L1 6cm
+ebeam = 1.19337
+
+R.theta = -105.001
+R.pcentral = 0.473504
+MA = 0.93827
+
+--------[ 2008-04-07 01:05:42 ]
+# parameters from EPICS run 2473
+# target L1 6cm
+ebeam = 1.19358
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.960005
+MA = 0.93827
+
+--------[ 2008-04-07 01:31:02 ]
+# parameters from EPICS run 2474
+# target L1 6cm
+ebeam = 1.19346
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.084
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.960006
+MA = 0.93827
+
+--------[ 2008-04-07 01:56:06 ]
+# parameters from EPICS run 2475
+# target L1 6cm
+ebeam = 1.19348
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.960002
+MA = 0.93827
+
+--------[ 2008-04-07 02:21:50 ]
+# parameters from EPICS run 2476
+# target L1 6cm
+ebeam = 1.1935
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.960002
+MA = 0.93827
+
+--------[ 2008-04-07 02:30:35 ]
+# parameters from EPICS run 2477
+# target L1 6cm
+ebeam = 1.1935
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.960003
+MA = 0.93827
+
+--------[ 2008-04-07 02:39:36 ]
+# parameters from EPICS run 2478
+# target L1 6cm
+ebeam = 1.19347
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.960003
+MA = 0.93827
+
+--------[ 2008-04-07 02:49:46 ]
+# parameters from EPICS run 2479
+# target L1 6cm
+ebeam = 1.19339
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.960004
+MA = 0.93827
+
+--------[ 2008-04-07 03:00:24 ]
+# parameters from EPICS run 2480
+# target L1 6cm
+ebeam = 1.19346
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.960004
+MA = 0.93827
+
+--------[ 2008-04-07 03:36:02 ]
+# parameters from EPICS run 2481
+# target L1 6cm
+ebeam = 1.19348
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.960005
+MA = 0.93827
+
+--------[ 2008-04-07 04:08:47 ]
+# parameters from EPICS run 2482
+# target L1 6cm
+ebeam = 1.19348
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.960004
+MA = 0.93827
+
+--------[ 2008-04-07 04:33:22 ]
+# parameters from EPICS run 2483
+# target L1 6cm
+ebeam = 1.19348
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.960004
+MA = 0.93827
+
+--------[ 2008-04-07 04:56:38 ]
+# parameters from EPICS run 2484
+# target L1 6cm
+ebeam = 1.19346
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.960004
+MA = 0.93827
+
+--------[ 2008-04-07 05:17:11 ]
+# parameters from EPICS run 2485
+# target L1 6cm
+ebeam = 1.19345
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.960005
+MA = 0.93827
+
+--------[ 2008-04-07 05:56:39 ]
+# parameters from EPICS run 2486
+# target L1 6cm
+ebeam = 1.19346
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.960005
+MA = 0.93827
+
+--------[ 2008-04-07 06:21:36 ]
+# parameters from EPICS run 2487
+# target L1 6cm
+ebeam = 1.19347
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.960002
+MA = 0.93827
+
+--------[ 2008-04-07 06:46:19 ]
+# parameters from EPICS run 2488
+# target L1 6cm
+ebeam = 1.19343
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.960002
+MA = 0.93827
+
+--------[ 2008-04-07 07:24:30 ]
+# parameters from EPICS run 2489
+# target L1 6cm
+ebeam = 1.19345
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.960003
+MA = 0.93827
+
+--------[ 2008-04-07 07:48:12 ]
+# parameters from EPICS run 2490
+# target L1 6cm
+ebeam = 1.19343
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.960004
+MA = 0.93827
+
+--------[ 2008-04-07 08:16:47 ]
+# parameters from EPICS run 2491
+# target L1 6cm
+ebeam = 1.19347
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.96
+MA = 0.93827
+
+--------[ 2008-04-07 08:33:14 ]
+# parameters from EPICS run 2492
+# target L1 6cm
+ebeam = 1.19349
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 20.4997
+L.pcentral = 0.959986
+MA = 0.93827
+
+--------[ 2008-04-07 08:53:47 ]
+# parameters from EPICS run 20365
+# target L1 6cm
+ebeam = 1.19337
+
+R.theta = -105.001
+R.pcentral = 0.473504
+MA = 0.93827
+
+--------[ 2008-04-07 11:11:26 ]
+# parameters from EPICS run 2493
+# target Empty
+ebeam = 1.19337
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 16.4997
+L.pcentral = 1.19401
+MA = 0
+
+--------[ 2008-04-07 11:17:34 ]
+# parameters from EPICS run 2494
+# target Empty
+ebeam = 1.19337
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0.89723
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 16.4997
+L.pcentral = 1.19401
+MA = 0
+
+--------[ 2008-04-07 12:08:29 ]
+# parameters from EPICS run 2495
+# target Empty
+ebeam = 1.19337
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0.89723
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 16.4997
+L.pcentral = 1.19401
+MA = 0
+
+--------[ 2008-04-07 17:01:04 ]
+# parameters from EPICS run 2496
+# target Empty
+ebeam = 1.19337
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 16.4997
+L.pcentral = 1.19401
+MA = 0
+
+--------[ 2008-04-07 19:06:39 ]
+# parameters from EPICS run 2497
+# target L1 6cm
+ebeam = 1.19311
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.4997
+L.pcentral = 0.969309
+MA = 0.93827
+
+--------[ 2008-04-07 19:10:14 ]
+# parameters from EPICS run 2498
+# target L1 6cm
+ebeam = 1.19309
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.4997
+L.pcentral = 0.969308
+MA = 0.93827
+
+--------[ 2008-04-07 19:22:25 ]
+# parameters from EPICS run 2499
+# target L1 6cm
+ebeam = 1.19337
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.4997
+L.pcentral = 0.969308
+MA = 0.93827
+
+--------[ 2008-04-07 19:25:38 ]
+# parameters from EPICS run 2500
+# target L1 6cm
+ebeam = 1.19308
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.4997
+L.pcentral = 0.969307
+MA = 0.93827
+
+--------[ 2008-04-07 19:32:29 ]
+# parameters from EPICS run 2501
+# target L1 6cm
+ebeam = 1.19309
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.4997
+L.pcentral = 0.969308
+MA = 0.93827
+
+--------[ 2008-04-07 19:42:07 ]
+# parameters from EPICS run 2502
+# target L1 6cm
+ebeam = 1.19305
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.4997
+L.pcentral = 0.969309
+MA = 0.93827
+
+--------[ 2008-04-07 19:50:00 ]
+# parameters from EPICS run 2503
+# target L1 6cm
+ebeam = 1.19307
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.4997
+L.pcentral = 0.969308
+MA = 0.93827
+
+--------[ 2008-04-07 19:55:52 ]
+# parameters from EPICS run 2504
+# target L1 6cm
+ebeam = 1.1931
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.4997
+L.pcentral = 0.969309
+MA = 0.93827
+
+--------[ 2008-04-07 20:02:16 ]
+# parameters from EPICS run 2505
+# target L1 6cm
+ebeam = 1.19308
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.4997
+L.pcentral = 0.969308
+MA = 0.93827
+
+--------[ 2008-04-07 20:08:08 ]
+# parameters from EPICS run 2506
+# target L1 6cm
+ebeam = 1.1931
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.4997
+L.pcentral = 0.969309
+MA = 0.93827
+
+--------[ 2008-04-07 20:13:27 ]
+# parameters from EPICS run 2507
+# target L1 6cm
+ebeam = 1.19309
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.4997
+L.pcentral = 0.969309
+MA = 0.93827
+
+--------[ 2008-04-07 20:19:07 ]
+# parameters from EPICS run 2508
+# target L1 6cm
+ebeam = 1.1931
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.4997
+L.pcentral = 0.969309
+MA = 0.93827
+
+--------[ 2008-04-07 20:25:36 ]
+# parameters from EPICS run 2509
+# target L1 6cm
+ebeam = 1.19309
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.4997
+L.pcentral = 0.969309
+MA = 0.93827
+
+--------[ 2008-04-07 20:31:47 ]
+# parameters from EPICS run 2510
+# target L1 6cm
+ebeam = 1.19305
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.4997
+L.pcentral = 0.969308
+MA = 0.93827
+
+--------[ 2008-04-07 20:40:14 ]
+# parameters from EPICS run 2511
+# target L1 6cm
+ebeam = 4.130
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.4997
+L.pcentral = 0.969308
+MA = 0.93827
+
+--------[ 2008-04-07 20:46:45 ]
+# parameters from EPICS run 2512
+# target L1 6cm
+ebeam = 1.1931
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.4997
+L.pcentral = 0.969309
+MA = 0.93827
+
+--------[ 2008-04-07 20:52:28 ]
+# parameters from EPICS run 2513
+# target L1 6cm
+ebeam = 1.19309
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.084
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.4997
+L.pcentral = 0.969309
+MA = 0.93827
+
+--------[ 2008-04-07 20:58:44 ]
+# parameters from EPICS run 2514
+# target L1 6cm
+ebeam = 1.19307
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.4997
+L.pcentral = 0.969309
+MA = 0.93827
+
+--------[ 2008-04-07 21:09:37 ]
+# parameters from EPICS run 2515
+# target L1 6cm
+ebeam = 1.19308
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.4997
+L.pcentral = 0.969308
+MA = 0.93827
+
+--------[ 2008-04-07 21:15:01 ]
+# parameters from EPICS run 2516
+# target L1 6cm
+ebeam = 1.19302
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.4997
+L.pcentral = 0.969306
+MA = 0.93827
+
+--------[ 2008-04-07 21:22:07 ]
+# parameters from EPICS run 2517
+# target L1 6cm
+ebeam = 1.19302
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.4997
+L.pcentral = 0.969306
+MA = 0.93827
+
+--------[ 2008-04-07 21:35:02 ]
+# parameters from EPICS run 2518
+# target L1 6cm
+ebeam = 1.19305
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.4997
+L.pcentral = 0.969305
+MA = 0.93827
+
+--------[ 2008-04-07 21:43:17 ]
+# parameters from EPICS run 2519
+# target L1 6cm
+ebeam = 1.19308
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.4997
+L.pcentral = 0.969307
+MA = 0.93827
+
+--------[ 2008-04-07 21:47:30 ]
+# parameters from EPICS run 2520
+# target L1 6cm
+ebeam = 1.19287
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.4997
+L.pcentral = 0.969307
+MA = 0.93827
+
+--------[ 2008-04-07 21:56:39 ]
+# parameters from EPICS run 2521
+# target L1 6cm
+ebeam = 1.19337
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 0
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.4997
+L.pcentral = 0.969306
+MA = 0.93827
+
+--------[ 2008-04-07 22:00:42 ]
+# parameters from EPICS run 2522
+# target L1 6cm
+ebeam = 1.19305
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.084
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.4997
+L.pcentral = 0.969306
+MA = 0.93827
+
+--------[ 2008-04-07 22:03:02 ]
+# parameters from EPICS run 2523
+# target L1 6cm
+ebeam = 1.19307
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.084
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.4997
+L.pcentral = 0.969309
+MA = 0.93827
+
+--------[ 2008-04-07 22:06:11 ]
+# parameters from EPICS run 2524
+# target L1 6cm
+ebeam = 1.19308
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.4997
+L.pcentral = 0.969308
+MA = 0.93827
+
+--------[ 2008-04-07 22:13:24 ]
+# parameters from EPICS run 2525
+# target L1 6cm
+ebeam = 1.19305
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.084
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.4997
+L.pcentral = 0.969308
+MA = 0.93827
+
+--------[ 2008-04-07 22:21:32 ]
+# parameters from EPICS run 2526
+# target L1 6cm
+ebeam = 1.19305
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.4997
+L.pcentral = 0.969308
+MA = 0.93827
+
+--------[ 2008-04-07 22:24:49 ]
+# parameters from EPICS run 2527
+# target L1 6cm
+ebeam = 1.19305
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.4997
+L.pcentral = 0.969308
+MA = 0.93827
+
+--------[ 2008-04-07 22:31:34 ]
+# parameters from EPICS run 2528
+# target L1 6cm
+ebeam = 1.1932
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.4997
+L.pcentral = 0.969308
+MA = 0.93827
+
+--------[ 2008-04-07 22:42:22 ]
+# parameters from EPICS run 2529
+# target L1 6cm
+ebeam = 1.19303
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.4997
+L.pcentral = 0.969307
+MA = 0.93827
+
+--------[ 2008-04-07 22:49:51 ]
+# parameters from EPICS run 2530
+# target L1 6cm
+ebeam = 1.19307
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.4997
+L.pcentral = 0.969308
+MA = 0.93827
+
+--------[ 2008-04-07 22:53:15 ]
+# parameters from EPICS run 2531
+# target L1 6cm
+ebeam = 1.19314
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 388.1
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.4997
+L.pcentral = 0.969308
+MA = 0.93827
+
+--------[ 2008-04-07 23:02:58 ]
+# parameters from EPICS run 2532
+# target L1 6cm
+ebeam = 1.19339
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 198.961
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.4997
+L.pcentral = 0.969308
+MA = 0.93827
+
+--------[ 2008-04-07 23:16:31 ]
+# parameters from EPICS run 2533
+# target L1 6cm
+ebeam = 1.19305
+
+BB.theta = -54
+BB.pcentral = -1
+BB.current = 597.091
+BB.phi = 0
+BB.colldist = 1.1
+BB.off_x = 0
+BB.off_y = 0
+BB.off_z = 0
+
+L.theta = 35.4997
+L.pcentral = 0.969307
+MA = 0.93827
+
+
+
+
