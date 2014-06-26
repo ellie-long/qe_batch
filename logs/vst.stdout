@@ -1,0 +1,20 @@
+start
+  ************************************************
+  *                                              *
+  *            W E L C O M E  to  the            *
+  *       H A L L A   C++  A N A L Y Z E R       *
+  *                                              *
+  *        Release  1.4.0-cvs        May 12 2006 *
+  *  Based on ROOT  4.00/08          Oct 11 2004 *
+  *                                              *
+  *            For information visit             *
+  *        http://hallaweb.jlab.org/root/        *
+  *                                              *
+  ************************************************
+
+CINT/ROOT C/C++ Interpreter version 5.15.138, May 23 2004
+Type ? for help. Commands must be C++ statements.
+Enclose multiple statements between { }.
+
+
+end

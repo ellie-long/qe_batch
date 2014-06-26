@@ -1,0 +1,22 @@
+Mon Oct 17 15:33:58 EDT 2011
+/home/ellie/analyzer-1.5.22
+/apps/mysql/lib/mysql:/u/apps/root/5.30-02/root/lib:/home/ellie/analyzer-1.5.22/
+  ************************************************
+  *                                              *
+  *            W E L C O M E  to  the            *
+  *       H A L L A   C++  A N A L Y Z E R       *
+  *                                              *
+  *        Release     1.5.22        Oct 17 2011 *
+  *  Based on ROOT  5.30/02          Sep 21 2011 *
+  *                                              *
+  *            For information visit             *
+  *        http://hallaweb.jlab.org/root/        *
+  *                                              *
+  ************************************************
+
+CINT/ROOT C/C++ Interpreter version 5.18.00, July 2, 2010
+Type ? for help. Commands must be C++ statements.
+Enclose multiple statements between { }.
+
+
+Mon Oct 17 15:34:05 EDT 2011
