@@ -1,0 +1,56 @@
+  ************************************************
+  *                                              *
+  *            W E L C O M E  to  the            *
+  *       H A L L A   C++  A N A L Y Z E R       *
+  *                                              *
+  *        Release     1.5.22        Oct 17 2011 *
+  *  Based on ROOT  5.30/02          Sep 21 2011 *
+  *                                              *
+  *            For information visit             *
+  *        http://hallaweb.jlab.org/root/        *
+  *                                              *
+  ************************************************
+
+CINT/ROOT C/C++ Interpreter version 5.18.00, July 2, 2010
+Type ? for help. Commands must be C++ statements.
+Enclose multiple statements between { }.
+
+Processing make_target_asymmetry_class_files.C...
+Running hand_target_asymmetry_vs_nu...
+HeRunNumber: 20487
+Adding file to chainHe: ./e05102_R_20487.root
+Adding file to chainHe: ./e05102_R_20487_1.root
+Adding file to chainHe: ./e05102_R_20487_2.root
+File ./e05102_R_20487_3.root does not exist. Ending here.
+vvvvvvvvvvvvvvvv target_asymmetry_analysis_class.C vvvvvvvvvvvvvvvvvv
+Vetos are INCLUDED
+HeRunNumber: 20487
+Adding files to chain...
+Adding file to chainHe: ./e05102_R_20487.root
+Adding file to chainHe: ./e05102_R_20487_1.root
+Adding file to chainHe: ./e05102_R_20487_2.root
+File ./e05102_R_20487_3.root does not exist. Ending here.
+Processing Vertically polarized, Q2=0.1 dataset...
+Defining Bar-by-Bar Histograms...
+Processing cuts event-by-event...
+Processing Event 0...
+allEvents: 10000
+goodEvents: 938
+vvvvvvvvvvvvvvvvvvvvvvv hand_class_draw_basic.h vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+Drawing dp Cut, Run 20487...
+Drawing Target Cut...
+Drawing Theta and Phi Cut...
+Drawing Preshower/Shower, No Cut...
+Drawing Q2 and Nu...
+Drawing Cerenkov Cut...
+Drawing Preshower/Shower with All Cut...
+Drawing Bjorken x ...
+^^^^^^^^^^^^^^^^^^^^^^^ hand_class_draw_basic.h ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+vvvvvvvvvvvvvvvvvvvvvvv hand_class_draw_tof_nu.h vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+^^^^^^^^^^^^^^^^^^^^^^^ hand_class_draw_tof_nu.h ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Used veto cuts with ''switch'' statements
+This program has run for 132 seconds (0 Days, 0 Hours, 2 Minutes, and 12 Seconds)
+
+All done!
+
+^^^^^^^^^^^^^^^^ target_asymmetry_analysis_class.C ^^^^^^^^^^^^^^^^^^
