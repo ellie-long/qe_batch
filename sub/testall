@@ -1,0 +1,5 @@
+#!/bin/tcsh
+jsub -xml setbash
+jsub -xml settcsh
+jsub -xml sourcebash
+jsub -xml sourcetcsh

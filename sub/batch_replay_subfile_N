@@ -1,0 +1,26 @@
+<Request>
+	<Project name="gdh"/>
+	<Track name="reconstruction"/>
+	<Name name="batch_replay_1_3287"/>
+	<Command><![CDATA[
+date
+source /w/halla/gdh/vasulk/batch/inputs/set_environment_variables_for_vanalyzer.tcsh
+printenv
+ls -ltr
+analyzer -b -q -l '/w/halla/gdh/vasulk/batch/inputs/replay.C(3287,0,"replay_outvars.def","replay_cuts.def","replay")'
+ls -ltr
+date
+	]]></Command>
+
+	<Input src="/w/halla/gdh/vasulk/batch/inputs/replay_outvars.def" dest="replay_outvars.def"/>
+	<Input src="/w/halla/gdh/vasulk/batch/inputs/replay_cuts.def" dest="replay_cuts.def"/>
+
+	<Job>
+		<Input src="mss:/mss/halla/gdh/raw/gdh_3287.dat.0" dest="gdh_3287.dat.0"/>
+		<Output src="gdh_3287_replay.root" dest="/w/halla/gdh/vasulk/batch/results/output_110426_18:22:21/gdh_3287_replay.root"/>
+		<Output src="gdh_3287_replay.log" dest="/w/halla/gdh/vasulk/batch/logs/job_on_110426_18:22:21/gdh_3287_replay.log"/>
+		<Stdout dest="/w/halla/gdh/vasulk/batch/logs/job_on_110426_18:22:21/gdh_3287_replay.stdout"/>
+		<Stderr dest="/w/halla/gdh/vasulk/batch/logs/job_on_110426_18:22:21/gdh_3287_replay.stderr"/>
+	</Job>
+
+</Request>

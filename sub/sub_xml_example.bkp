@@ -1,0 +1,25 @@
+<Request>
+	<Project name="gdh"/>
+	<Track name="reconstruction"/>
+	<Name name="batch_replay_2_4020"/>
+	<Command><![CDATA[
+source /work/halla/e05102/disk1/ellie/batch/inputs/set_environment_variables_for_vanalyzer.sh
+printenv
+ls -ltr
+analyzer -b -q -l '/p/halla-volume6/gdh/singhj/batch/inputs/jtest.C(4020,1)'
+ls -ltr
+	]]></Command>
+
+	<Input src="/work/halla/e05102/disk1/ellie/batch/inputs/jtest_outvars.def" dest="jtest_outvars.def"/>
+	<Input src="/work/halla/e05102/disk1/ellie/batch/inputs/jtest_cuts.def" dest="jtest_cuts.def"/>
+
+	<Job>
+		<Input src="mss:/mss/halla/gdh/raw/gdh_4020.dat.0" dest="gdh_4020.dat.0"/>
+		<Input src="mss:/mss/halla/gdh/raw/gdh_4020.dat.1" dest="gdh_4020.dat.1"/>
+		<Output src="gdh_4020_jtest.root" dest="/work/halla/gdh-3/gdh_rootfiles/gdh_4020_jtest.root"/>
+		<Output src="gdh_4020_jtest.log" dest="/p/halla-volume6/gdh/singhj/batch/logs/job_on_060729_20:21:31/gdh_4020_jtest.log"/>
+		<Stdout dest="/p/halla-volume6/gdh/singhj/batch/logs/job_on_060729_20:21:31/gdh_4020_jtest.stdout"/>
+		<Stderr dest="/p/halla-volume6/gdh/singhj/batch/logs/job_on_060729_20:21:31/gdh_4020_jtest.stderr"/>
+	</Job>
+
+</Request>

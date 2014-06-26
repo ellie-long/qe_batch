@@ -1,0 +1,17 @@
+<Request>
+	<Project name="gdh"/>
+	<Track name="debug"/>
+	<Name name="very_simple_test"/>
+	<Command><![CDATA[
+echo "start"
+source /work/halla/e05102/disk1/ellie/batch/inputs/set_environment_variables_for_vanalyzer.sh
+analyzer -b -q
+echo "end"
+	]]></Command>
+
+	<Job>
+		<Stdout dest="/work/halla/e05102/disk1/ellie/batch/logs/vst.stdout"/>
+		<Stderr dest="/work/halla/e05102/disk1/ellie/batch/logs/vst.stderr"/>
+	</Job>
+
+</Request>

@@ -1,0 +1,19 @@
+<Request>
+	<Project name="gdh"/>
+	<Track name="debug"/>
+	<Name name="setbash"/>
+	<Command><![CDATA[
+date
+/work/halla/e05102/disk1/ellie/batch/inputs/set_environment_variables_for_vanalyzer.bash
+echo $ANALYZER
+echo $LD_LIBRARY_PATH
+analyzer -b -q
+date
+	]]></Command>
+
+	<Job>
+		<Stdout dest="/work/halla/e05102/disk1/ellie/batch/logs/setbash.stdout"/>
+		<Stderr dest="/work/halla/e05102/disk1/ellie/batch/logs/setbash.stderr"/>
+	</Job>
+
+</Request>

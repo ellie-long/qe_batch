@@ -1,0 +1,19 @@
+<Request>
+	<Project name="gdh"/>
+	<Track name="debug"/>
+	<Name name="sourcetcsh"/>
+	<Command><![CDATA[
+date
+source /work/halla/e05102/disk1/ellie/batch/inputs/environment_variables_for_vanalyzer.tcsh
+echo $ANALYZER
+echo $LD_LIBRARY_PATH
+analyzer -b -q
+date
+	]]></Command>
+
+	<Job>
+		<Stdout dest="/work/halla/e05102/disk1/ellie/batch/logs/sourcetcsh.stdout"/>
+		<Stderr dest="/work/halla/e05102/disk1/ellie/batch/logs/sourcetcsh.stderr"/>
+	</Job>
+
+</Request>
