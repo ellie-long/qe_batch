@@ -1,0 +1,392 @@
+#!/usr/bin/perl -w
+#
+#	usage: batch_replay [macro info file] [run list file]
+#
+#	date: 07/29/06
+#
+#	by: Jaideep Singh
+#	
+#	Modified on 2011-05-20 by Elena Long
+#		Changes:
+#			Adjusted to work with the Quasi-Elastic family of experiments (E05-102, E05-015, E08-005)
+#
+#	description: (1) checks to make sure that all files needed for the job exist in the correct place
+#		     (2) creates the job in xml format (using xml format allow more features, such as email suppression)
+#		     (3) submits jobs to replay possibly split runs
+#
+#	The script assumes that the directory where you are launching it froms contains the following subdir:
+#
+#		./inputs/	for root/analyzer macros and def files AND the "set_environment_variables_for_vanalyzer.sh" bash script
+#		./sub/		for (sub config files)
+#		./results/ 	default dir for output
+#		./logs/		dir for job, submit, and root/analyzer log files
+#
+#
+#	The format for the [macro info file] should be:
+#
+#		# comments and blank lines are skipped over
+#		# mss path of raw data file
+#		path_mss = /mss/halla/e05102/raw/
+#		# base of raw data file name -> [expbase]_[run num].dat.[split num]
+#		expbase = e05102
+#		# list of output/cut definition files , assumed to be in "inputs" dir
+#		outvarsdef = replay_outvars.def
+#		cutsdef = replay_cuts.def
+#		# macro name without options, assumed to be in "inputs" dir
+#		# macro is assumed to have optiocs: (Int_t run_number , split_number , TString outvars_filename , cuts_filename , output_basename , raw_data_path , which_ones)
+#		macro = replay.C
+#		# base of output files
+#		outbase = replay
+#		# output directory , directory where root and other non-log info will be copied
+#		# if none is given then, files are copied to [pwd]/results/output_[timestamp]/
+#		path_output = /work/halla/gdh-3/gdh_rootfiles/
+#
+#	The format for the [run list file] should be (where split number is the maximum number of file splits, so usually 0)
+#	
+# 		# comments and blank lines are skipped over
+#		# anything after the split number preceded by whitespace is ignored
+#		# [run number][whitespace][split number][whitespace][whatever is ignores]
+#		4000	0
+#		4001	2
+#		4002	1
+#
+#
+use strict "subs";
+
+# outputs error message if options are wrong or needed file does not exist
+sub print_usage
+{
+	if ($_[0] =~ /does not exist/)
+	{
+		print "$_[0]\n\nYou must launch this command from the directory that has the following subdirectories:\n";
+		print "\tinputs (macros and def files), sub (sub config files), results (default dir for output), logs (dir for job/submit logfiles)\n\n";
+		return "You launched from:\t".qx(pwd);
+	}
+	else 
+	{ return "improper usage: $_[0]\n correct usage: batch_replay [macro info file] [run list file]\n"; }
+}
+
+# if the file exists, return the output of the "file" command, otherwise "does not exist"
+sub check_exist
+{
+	my $result = qx( file $_[0] );
+	chomp($result);
+	my @parts = split /: / , $result;
+	if ( ($parts[1] =~ /ERROR/) || ($parts[1] =~ /No such file/) )
+	{ return "does not exist" }
+	else
+	{ return $parts[1]; }
+}
+
+# creates a general xml tag
+sub xml_tag
+{ 
+	my $tag   = $_[0];
+	my $value = $_[1];
+	return "<$tag name=\"$value\"/>"; 
+}
+
+# creates a Input or Output xml tag
+sub xml_io
+{
+	my $tag  = $_[0];
+	my $src  = $_[1];
+	my $dest = $_[2];
+	return "<$tag src=\"$src\" dest=\"$dest\"/>";
+}
+
+# makes an xml sub file and returns the file name
+sub make_xml_sub_file
+{
+	my ($outbase , $path_subs , $path_logs , $path_inputs , $subinfo , $macro , $outvars_def , $cuts_def , $commands , $path_mss , $input_files , $outputs , $path_output , $base , $run_num , $split_num) = @_;
+	$path_mss = "mss:".$path_mss;
+	if ($outbase =~ /_(.+)/)
+	{ $outbase_macro = $1; }
+	else
+	{ $outbase_macro = ""; }
+	my $subfile = $path_subs."batch_replay_subfile_N";
+	open(SUBFILE,">$subfile");
+	print SUBFILE "<Request>\n";
+	print SUBFILE "\t".xml_tag("Project" , $subinfo{"project"})."\n";
+	print SUBFILE "\t".xml_tag("Track"   , $subinfo{"track"})."\n";
+	print SUBFILE "\t".xml_tag("Name"    , $subinfo{"jobname"})."\n";
+	print SUBFILE "\t<Command><![CDATA[\n";
+	print SUBFILE join "\n" , @{$commands};
+	print SUBFILE "\nanalyzer -b -q -l \'".$path_inputs.$macro."\'\n";
+#	print SUBFILE "\nanalyzer -b -q -l \'".$path_inputs.$macro."(".$run_num.",".$split_num.",\"".$outvars_def."\",\"".$cuts_def."\",\"".$outbase_macro."\")\'\n";
+# input options for replay.C(2358 , 0 , "replay_outvars.def" , "replay_cuts.def" , "replay" , "/cache/mss/halla/gdh/raw/" , "all")
+	print SUBFILE "ls -ltr\n";
+	print SUBFILE "date\n";
+	print SUBFILE "\t]]></Command>\n\n";
+	print SUBFILE "\t".xml_io("Input" , $path_inputs.$outvars_def , $outvars_def)."\n";
+	print SUBFILE "\t".xml_io("Input" , $path_inputs.$cuts_def , $cuts_def)."\n";
+	print SUBFILE "\n\t<Job>\n";
+	foreach $infile (@{$input_files})
+	{ print SUBFILE "\t\t".xml_io("Input" , $path_mss.$infile , $infile)."\n"; }
+	foreach $outfile (@{$outputs})
+	{ 
+# now set such the the log file from the analyzer will be dumped into the logs directory
+#		print SUBFILE "\t\t".xml_io("Output" , $outfile , $path_output.$outfile)."\n";
+		if ($outfile =~ /log/)
+		{ print SUBFILE "\t\t".xml_io("Output" , $outfile , $path_logs.$outfile)."\n"; }
+		else
+		{ print SUBFILE "\t\t".xml_io("Output" , $outfile , $path_output.$outfile)."\n"; }
+	}
+#	print SUBFILE "\t\t".xml_io("Output" , "*\.log"  , $path_logs."*\.log")."\n";
+#	print SUBFILE "\t\t".xml_io("Output" , "*\.root" , $path_output."*\.root")."\n";
+	print SUBFILE "\t\t<Stdout dest=\"".$path_logs.$base."_".$run_num.$outbase."\.stdout\"/>\n";
+	print SUBFILE "\t\t<Stderr dest=\"".$path_logs.$base."_".$run_num.$outbase."\.stderr\"/>\n";
+	print SUBFILE "\t</Job>\n\n";
+	print SUBFILE "</Request>\n";
+	close(SUBFILE);
+	return $subfile;
+}
+
+# getting the current timestamp in YR:MO:DA_HR:MI:SE format
+($sec,$min,$hour,$mday,$mon,$year) = localtime;
+$mon = $mon + 1;
+$sec = "0"."$sec" unless ($sec > 9);
+$min = "0"."$min" unless ($min > 9);
+$hour = "0"."$hour" unless ($hour > 9);
+$mday = "0"."$mday" unless ($mday > 9);
+$mon = "0"."$mon" unless ($mon > 9);
+$year = $year - 100;
+$year = "0"."$year" unless ($year > 9);
+$timestamp = $year.$mon.$mday."_".$hour.":".$min.":".$sec;
+
+# setting up default paths based on where the command was launched from
+$pwd = qx(pwd);
+chomp($pwd);
+$path_subs    = $pwd."/sub/";
+$path_logs    = $pwd."/logs/job_on_".$timestamp."/";
+$path_inputs  = $pwd."/inputs/";
+#$path_lists   = $pwd."/info_lists/";
+$path_lists   = $pwd."/";
+$path_results = $pwd."/results/output_".$timestamp."/";
+
+# checking the existence of macro info file and run file list
+$macro_info = $ARGV[0];
+$run_list = $ARGV[1];
+
+if (!defined($macro_info))
+{ die print_usage("no [macro info file]"); }
+if (!defined($run_list))
+{ die print_usage("no [run list file]"); }
+
+die print_usage($path_lists.$macro_info."\t -> does not exist") if ( check_exist( $path_lists.$macro_info ) eq "does not exist" );
+die print_usage($path_lists.$run_list."\t -> does not exist") if ( check_exist( $path_lists.$run_list )  eq "does not exist" );
+
+#setting some defaults
+$path_mss    =  "/mss/halla/e05102/raw/";
+$expbase     =  "e05102_";
+$macro       =  "not set";
+$outvars_def =  "not set";
+$cuts_def    =  "not set";
+$path_output = $path_results;
+$outbase     = "none";
+
+# opening macro info and reading in info
+open(MACROINFO , "<".$path_lists.$macro_info);
+LINE: while (<MACROINFO>)
+{
+	chomp;
+	if (/^\s*\#.*$/ || /^\s*$/)	#skipping over comment lines "#" and blank lines
+	{ next LINE; }
+	else
+	{
+	 	if    (/^(path_mss)\s*=\s*(.*)/i)
+		{ $path_mss = $2; }
+		elsif (/^(expbase)\s*=\s*(.+)/i)
+		{ $expbase = $2; }
+		elsif (/^(macro)\s*=\s*(.+)/i)
+		{ $macro = $2; }
+		elsif (/^(outvarsdef)\s*=\s*(.+)/i)
+		{ $outvars_def = $2; }
+		elsif (/^(cutsdef)\s*=\s*(.+)/i)
+		{ $cuts_def = $2; }
+		elsif (/^(path_output)\s*=\s*(.+)/i)
+		{ $path_output = $2; }
+		elsif (/^(outbase)\s*=\s*(.*)/i)
+		{ 
+			$outbase = $2; 
+			$outbase =~ s/^\s*//;
+			$outbase =~ s/\s*$//;
+		}
+	}
+}
+close(MACROINFO);
+
+#fixing the form of the output base name
+if ($outbase eq "none")
+{ $outbase = ""; }
+else
+{ $outbase = "_".$outbase; }
+
+# making sure mss path , macro & def files are set and exist
+if    ($path_mss eq "not set")
+{ die "mss path for raw data file was not set\n"; }
+elsif ($expbase eq "not set")
+{ die "base for raw data file name was not set\n"; }
+elsif ($macro eq "not set")
+{	
+	$inputs_ls = qx(ls $path_inputs*.C $path_inputs*.macro);
+	die "no macro was chosen, you can try one of these:\n$inputs_ls"; 
+}
+elsif ( ($outvars_def eq "not set") || ($cuts_def eq "not set") )
+{ 
+	$inputs_ls = qx(ls $path_inputs*.def);
+	die "you need to have atleast two \.def files, one for cuts and one for defining outputs\nmaybe you can try some of these:\n$inputs_ls"; 
+}
+
+die "$path_mss\t -> does not exist\n" if ( check_exist( $path_mss ) eq "does not exist" );
+die print_usage($macro."\t -> does not exist") if ( check_exist( $path_inputs.$macro ) eq "does not exist" );
+
+die print_usage("$outvars_def\t -> does not exist") if ( check_exist( $path_inputs.$outvars_def ) eq "does not exist" ); 
+die print_usage("$cuts_def\t -> does not exist") if ( check_exist( $path_inputs.$cuts_def ) eq "does not exist" ); 
+
+# creating output directory if it does not exist
+# otherwise creates the default directory
+# otherwise fails
+if ( check_exist($path_output) ne "directory" )
+{ 
+	$try_mkdir = qx(mkdir $path_output); 
+	if ( check_exist($path_output) ne "directory" )
+	{
+		print "ok, i will just make and fill the default directory = $path_results\n";
+		$path_output = $path_results;
+		$try_mkdir = qx(mkdir $path_output);
+		die print_usage($path_output."\t -> does not exist and can not be created") if ( check_exist( $path_output ) eq "does not exist" ); 	
+	}
+} 
+
+#making log dir
+if ( check_exist($path_logs) ne "directory" )
+{ 
+	$try_mkdir = qx(mkdir $path_logs); 
+	die print_usage($path_logs."\t -> does not exist and can not be created") if ( check_exist( $path_logs ) eq "does not exist" ); 
+}
+
+# setting up info for sub file in xml format
+# defaults:
+#$timelimit    = "none";
+#$disk_space   = "none";
+#$memory       = "none";
+#@email        = ();
+#@other_inputs = ();
+%subinfo            = ();
+$subinfo{"project"} = $expbase;
+$subinfo{"track"}   = "reconstruction";
+$subinfo{"os"}      = "linux";
+$jobname = "batch_replay";
+@commands = ("date" , "source ".$path_inputs."set_environment_variables_for_vanalyzer\.tcsh" , "printenv" , "ls -ltr");
+
+# opening submission log file
+$submit_logfile = $path_logs."submit_".$timestamp."\.log";
+open(SUBMITLOG,">$submit_logfile");
+print SUBMITLOG "batch_replay $macro_info $run_list \t started at $timestamp\n";
+print SUBMITLOG "----- START contents of $macro_info ---------------------------------------------------------------------------------------\n";
+print SUBMITLOG qx(cat $path_lists$macro_info);
+print SUBMITLOG "----- END contents of $macro_info ---------------------------------------------------------------------------------------\n\n";
+# opening run list file => creating xml based subs and submitting them in order of the file
+$line_num = 0;
+$job_count = 0;
+%no_repeats = ();
+@failed_run = ();
+$fail_count = 0;
+print SUBMITLOG "opening run list and noting any problems by line number: \n";
+open(RUNLIST , "<".$path_lists.$run_list);
+RUN: while (<RUNLIST>)
+{
+	$line_num++;
+	if (/^\s*\#.*$/ || /^\s*$/)
+	{ next RUN; }
+	else
+	{
+		chomp;
+		@parts = split /\s+/;
+		$run_num   = $parts[0];
+		$split_num = $parts[1];
+#		checking to make sure that the run number is defined and not repeated AND that the split number is defined AND both are nonnegative integers
+		if (!defined($run_num))
+		{ 
+			print SUBMITLOG "$line_num : skipping line\n"; 
+			next RUN;
+		}
+		if (!defined($split_num))
+		{ 
+			$split_num = 0;
+			print SUBMITLOG "$line_num : for run $run_num, split number was not defined so autosetting to 0\n";
+		}
+		unless ( ($run_num =~ /^[0123456789]{3,4}$/) && ($split_num =~ /^[0123456789]{1,2}$/) )
+		{
+			print SUBMITLOG "$line_num : skipping because run number = $run_num and/or split number = $split_num are not nonnegative integers\n";
+			next RUN;
+		}
+		if (defined($no_repeats{"$run_num"}))
+		{
+			$no_repeats{"$run_num"}++;
+			print SUBMITLOG "$line_num : already submitted run $run_num\n";
+			next RUN;
+		}
+		else
+		{ $no_repeats{"$run_num"} = 1; }
+		@input_files = ();
+		@outputs = ();
+		for ($count = 0 ; $count <= $split_num ; $count++)
+		{
+			$this_file = $expbase."_".$run_num."\.dat\.".$count;
+#			making sure all raw data files exist
+			if ( check_exist($path_mss.$this_file) eq "does not exist" )
+			{
+				print SUBMITLOG "$line_num : $run_num does not exist, skipping\n";
+				next RUN;
+			}
+			$input_files[$count] = $this_file;
+			$outputs[0] = $expbase."_".$run_num."$outbase\.root";
+			$outputs[1] = $expbase."_".$run_num."$outbase\.log";
+		}
+		$job_count++;
+		$subinfo{"jobname"} = $jobname."_".$job_count."_".$run_num;
+#		generating the xml sub file
+		$sub_file_name = make_xml_sub_file($outbase , $path_subs , $path_logs , $path_inputs , $subinfo , $macro , $outvars_def , $cuts_def , \@commands , $path_mss , \@input_files , \@outputs , $path_output , $expbase , $run_num , $split_num);
+		# outputting the first sub file to make sure it looks okay
+		if ($job_count == 1)
+		{
+			print SUBMITLOG "\n----- START sample sub file from first good line of $run_list ---------------------------------------------------------------------------------------\n";
+			print SUBMITLOG qx(cat $sub_file_name);
+			print SUBMITLOG  "----- END   sample sub file from first good line of $run_list  --------------------------------------------------------------------------------------\n\n";
+			print qx(cat $sub_file_name);
+			print "Does this look ok?(y or n): ";
+			$user_check = getc;
+			chomp $user_check;
+			unless ($user_check eq "y")
+			{
+				print SUBMITLOG "you said [$user_check], so i assumed that the sample jsub did not look good, terminated at ".qx(date);
+				close(SUBMITLOG);
+				die "user terminated at ".qx(date);
+			}
+		}
+		$submit_this_job = qx(jsub -xml $sub_file_name);
+		if ( (!defined($submit_this_job)) || (($submit_this_job =~ /fail/i) || ($submit_this_job =~ /error/i)) )
+		{
+			$failed_run[$fail_count] = $run_num;
+			$fail_count++;
+			$job_status = "failed";
+		}
+		else
+		{ $job_status = "succeeded"; }
+		if (defined($submit_this_job))
+		{
+			if ($job_count == 1)
+			{ print $submit_this_job; }
+			print SUBMITLOG $submit_this_job;
+			print SUBMITLOG "--------------------------------------------------------------------------------------------\n";
+		}
+		print "job number $job_count, run number = $run_num, split number = $split_num, job submission probably $job_status at ".qx(date);
+		print SUBMITLOG "job number $job_count\t run number = $run_num \t split number = $split_num \t job submission probably $job_status at ".qx(date);
+	}
+}
+close(RUNLIST);
+print "finished submitting $job_count jobs (with $fail_count possible failures) at ".qx(date);
+print SUBMITLOG "finished submitting $job_count jobs (with $fail_count possible failures) at ".qx(date);
+close(SUBMITLOG);
