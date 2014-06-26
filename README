@@ -1,0 +1,33 @@
+ beacuse of the way that script is written, it takes your pwd (present working dir) 
+ to be the dir where all the important sub dir are:
+ inputs , logs, sub , results
+
+ so to execute the script, you may want to run it like this:
+
+ ./scripts/beam_ssa_analysis ./inputs/neutron_hunt/hand_beam_asymmetry_vs_nu.C ./info_lists/q2_1_transverse.txt
+ ./scripts/targ_ssa_analysis ./inputs/neutron_hunt/hand_target_asymmetry_vs_nu.C ./info_lists/q2_1_vertical.txt
+
+
+ ./scripts/beam_ssa_analysis ./inputs/neutron_hunt/hand_beam_asymmetry_vs_nu.C ./info_lists/q2_
+ ./scripts/targ_ssa_analysis ./inputs/neutron_hunt/hand_target_asymmetry_vs_nu.C ./info_lists/q2_
+
+ ./scripts/class_targ_ssa_analysis ./inputs/neutron_hunt/make_target_asymmetry_class_files.C ./info_lists/q2_
+
+ ./scripts/class_targ_ssa_analysis_no_protons  ./inputs/neutron_hunt/make_target_asymmetry_class_files.C ./info_lists/q2_
+
+ ./scripts/class_targ_ssa_analysis_no_vetos  ./inputs/neutron_hunt/make_target_asymmetry_class_files.C ./info_lists/q2_
+
+ ./scripts/class_targ_ssa_analysis_neutrons_only  ./inputs/neutron_hunt/make_target_asymmetry_class_files.C ./info_lists/q2_
+
+ ./scripts/charge_analysis ./inputs/neutron_hunt/make_target_asymmetry_class_files.C ./info_lists/q2_
+
+ ./scripts/replay ./inputs/ellana/run_replay.C ./info_lists/q2_
+
+
+
+
+
+
+
+
+
