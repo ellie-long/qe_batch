@@ -4,20 +4,15 @@
 	<Name name="batch_analysis_2_20499"/>
 	<Command><![CDATA[
 date
-source /w/halla-1/e05102/ellie/batch/inputs/set_environment_variables_for_vanalyzer.tcsh
+source /w/halla-1/e05102/ellie/batch/inputs/ellana/set_environment_variables_for_vanalyzer.tcsh
 printenv
 ls -ltr
 rm input.file
 ls -ltr
-mkdir src
-mv THaEvent.h src/.
 echo 20499 > input.file
-echo 'ifarmBatch1> ls -ltr' > /w/halla-1/e05102/ellie/batch/results/output_140226_16:51:03/text_for_run_20499.out
-ls -ltr >> /w/halla-1/e05102/ellie/batch/results/output_140226_16:51:03/text_for_run_20499.out
-echo 'ifarmBatch2> analyzer  ./make_target_asymmetry_class_files.C >>& /w/halla-1/e05102/ellie/batch/results/output_140226_16:51:03/text_for_run_20499.out' >> /w/halla-1/e05102/ellie/batch/results/output_140226_16:51:03/text_for_run_20499.out
-analyzer  ./make_target_asymmetry_class_files.C >>& /w/halla-1/e05102/ellie/batch/results/output_140226_16:51:03/text_for_run_20499.out
-echo 'ifarmBatch3> ls -ltr' >> /w/halla-1/e05102/ellie/batch/results/output_140226_16:51:03/text_for_run_20499.out
-ls -ltr >> /w/halla-1/e05102/ellie/batch/results/output_140226_16:51:03/text_for_run_20499.out
+analyzer  /w/halla-1/e05102/ellie/batch/inputs/ellana/run_replay.C > /w/halla-1/e05102/ellie/batch/results/output_140627_16:23:01/text_for_run_20499.out
+cp *.root /w/halla-1/e05102/ellie/batch/results/output_140627_16:23:01/.
+ls -ltr
 date
 	]]></Command>
 
@@ -27,31 +22,17 @@ date
 
 	<TimeLimit unit="hours" time="72"/>
 
-	<Input src="/w/halla-1/e05102/ellie/batch/inputs/neutron_hunt/make_target_asymmetry_class_files.C" dest="make_target_asymmetry_class_files.C"/>
-	<Input src="/w/halla-1/e05102/ellie/batch/inputs/neutron_hunt/neutron_analysis_class.cxx" dest="neutron_analysis_class.cxx"/>
-	<Input src="/w/halla-1/e05102/ellie/batch/inputs/neutron_hunt/THaEvent.h" dest="THaEvent.h"/>
-	<Input src="/w/halla-1/e05102/ellie/batch/inputs/neutron_hunt/hand_class_basic_cuts.h" dest="hand_class_basic_cuts.h"/>
-	<Input src="/w/halla-1/e05102/ellie/batch/inputs/neutron_hunt/hand_draw.h" dest="hand_draw.h"/>
-	<Input src="/w/halla-1/e05102/ellie/batch/inputs/neutron_hunt/hand_class_veto_cuts.h" dest="hand_class_veto_cuts.h"/>
-	<Input src="/w/halla-1/e05102/ellie/batch/inputs/neutron_hunt/hand_class_veto_cuts2.h" dest="hand_class_veto_cuts2.h"/>
-	<Input src="/w/halla-1/e05102/ellie/batch/inputs/neutron_hunt/hand_class_bar_th_cuts.h" dest="hand_class_bar_th_cuts.h"/>
-	<Input src="/w/halla-1/e05102/ellie/batch/inputs/neutron_hunt/hand_class_draw_basic.h" dest="hand_class_draw_basic.h"/>
-	<Input src="/w/halla-1/e05102/ellie/batch/inputs/neutron_hunt/hand_class_fill_bar_by_bar_cuts.h" dest="hand_class_fill_bar_by_bar_cuts.h"/>
-	<Input src="/w/halla-1/e05102/ellie/batch/inputs/neutron_hunt/hand_class_draw_bar_by_bar_cuts.h" dest="hand_class_draw_bar_by_bar_cuts.h"/>
-	<Input src="/w/halla-1/e05102/ellie/batch/inputs/neutron_hunt/hand_class_fill_good_events.h" dest="hand_class_fill_good_events.h"/>
-	<Input src="/w/halla-1/e05102/ellie/batch/inputs/neutron_hunt/hand_class_draw_tof_nu.h" dest="hand_class_draw_tof_nu.h"/>
+	<Input src="/w/halla-1/e05102/ellie/batch/inputs/ellana/run_replay.C" dest="run_replay.C"/>
 
 	<Job>
-		<Input src="/work/halla/e05102/disk1/ellie/batch/inputs/ROOTfiles/e05102_R_20499.root" dest="e05102_R_20499.root"/>
-		<Input src="/work/halla/e05102/disk1/ellie/batch/inputs/ROOTfiles/e05102_R_20499_1.root" dest="e05102_R_20499_1.root"/>
-		<Input src="/work/halla/e05102/disk1/ellie/batch/inputs/ROOTfiles/e05102_R_20499_2.root" dest="e05102_R_20499_2.root"/>
-		<Output src="./neutron_cuts-hand_target_asym_vs_nu_for_run_20499.root" dest="/w/halla-1/e05102/ellie/batch/results/output_140226_16:51:03/neutron_cuts-hand_target_asym_vs_nu_for_run_20499.root"/>
-		<Output src="./neutron_cuts-target_asymmetry_for_run_20499.txt" dest="/w/halla-1/e05102/ellie/batch/results/output_140226_16:51:03/neutron_cuts-target_asymmetry_for_run_20499.txt"/>
-		<Output src="./no_vetos-hand_target_asym_vs_nu_for_run_20499.root" dest="/w/halla-1/e05102/ellie/batch/results/output_140226_16:51:03/no_vetos-hand_target_asym_vs_nu_for_run_20499.root"/>
-		<Output src="./no_vetos-target_asymmetry_for_run_20499.txt" dest="/w/halla-1/e05102/ellie/batch/results/output_140226_16:51:03/no_vetos-target_asymmetry_for_run_20499.txt"/>
-		<Output src="./charge_lt_for_run_20499.txt" dest="/w/halla-1/e05102/ellie/batch/results/output_140226_16:51:03/charge_lt_for_run_20499.txt"/>
-		<Stdout dest="/w/halla-1/e05102/ellie/batch/logs/job_on_140226_16:51:03/e05102_R_20499.stdout"/>
-		<Stderr dest="/w/halla-1/e05102/ellie/batch/logs/job_on_140226_16:51:03/e05102_R_20499.stderr"/>
+		<Input src="/work/halla/e05102/disk1/ellie/batch/inputs/ellana/rootlogon.C" dest="rootlogon.C"/>
+		<Input src="mss:/mss/halla/e05102/raw/e05102_20499.dat.0" dest="./e05102_20499.dat.0"/>
+		<Input src="mss:/mss/halla/e05102/raw/e05102_20499.dat.1" dest="./e05102_20499.dat.1"/>
+		<Input src="mss:/mss/halla/e05102/raw/e05102_20499.dat.2" dest="./e05102_20499.dat.2"/>
+		<Output src="./e05102_R_20499.root" dest="/w/halla-1/e05102/ellie/batch/results/output_140627_16:23:01/e05102_R_20499.root"/>
+		<Output src="./summaryphy_20499.log" dest="/w/halla-1/e05102/ellie/batch/results/output_140627_16:23:01/summaryphy_20499.log"/>
+		<Stdout dest="/w/halla-1/e05102/ellie/batch/logs/job_on_140627_16:23:01/e05102_R_20499.stdout"/>
+		<Stderr dest="/w/halla-1/e05102/ellie/batch/logs/job_on_140627_16:23:01/e05102_R_20499.stderr"/>
 	</Job>
 
 </Request>
