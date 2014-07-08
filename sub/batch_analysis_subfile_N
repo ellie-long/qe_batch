@@ -1,31 +1,31 @@
 <Request>
 	<Project name="e05102"/>
 	<Track name="analysis"/>
-	<Name name="batch_analysis_22_20511"/>
+	<Name name="batch_analysis_7_20493"/>
 	<Command><![CDATA[
-echo '\nellie@ifarm> date' > /w/halla-1/e05102/ellie/batch/results/output_140702_11:58:08/text_for_run_20511.out
-date >> /w/halla-1/e05102/ellie/batch/results/output_140702_11:58:08/text_for_run_20511.out
-echo '\nellie@ifarm> source /w/halla-1/e05102/ellie/batch/inputs/ellana/set_environment_variables_for_vanalyzer.tcsh' >> /w/halla-1/e05102/ellie/batch/results/output_140702_11:58:08/text_for_run_20511.out
-source /w/halla-1/e05102/ellie/batch/inputs/ellana/set_environment_variables_for_vanalyzer.tcsh >> /w/halla-1/e05102/ellie/batch/results/output_140702_11:58:08/text_for_run_20511.out
-echo '\nellie@ifarm> printenv' >> /w/halla-1/e05102/ellie/batch/results/output_140702_11:58:08/text_for_run_20511.out
-printenv >> /w/halla-1/e05102/ellie/batch/results/output_140702_11:58:08/text_for_run_20511.out
-echo '\nellie@ifarm> ls -ltr' >> /w/halla-1/e05102/ellie/batch/results/output_140702_11:58:08/text_for_run_20511.out
-ls -ltr >> /w/halla-1/e05102/ellie/batch/results/output_140702_11:58:08/text_for_run_20511.out
-echo '\nellie@ifarm> rm input.file' >> /w/halla-1/e05102/ellie/batch/results/output_140702_11:58:08/text_for_run_20511.out
-rm input.file >> /w/halla-1/e05102/ellie/batch/results/output_140702_11:58:08/text_for_run_20511.out
-echo '\nellie@ifarm> ls -ltr' >> /w/halla-1/e05102/ellie/batch/results/output_140702_11:58:08/text_for_run_20511.out
-ls -ltr >> /w/halla-1/e05102/ellie/batch/results/output_140702_11:58:08/text_for_run_20511.out
-echo 20511 > input.file
-echo '\nellie@ifarm> echo 20511' >> /w/halla-1/e05102/ellie/batch/results/output_140702_11:58:08/text_for_run_20511.out
-echo 20511 >> /w/halla-1/e05102/ellie/batch/results/output_140702_11:58:08/text_for_run_20511.out
-echo '\nellie@ifarm> analyzer  /w/halla-1/e05102/ellie/batch/inputs/ellana/run_replay.C' >> /w/halla-1/e05102/ellie/batch/results/output_140702_11:58:08/text_for_run_20511.out
-analyzer  /w/halla-1/e05102/ellie/batch/inputs/ellana/run_replay.C >> /w/halla-1/e05102/ellie/batch/results/output_140702_11:58:08/text_for_run_20511.out
-echo '\nellie@ifarm> analyzer  ./make_target_asymmetry_class_files.C' >> /w/halla-1/e05102/ellie/batch/results/output_140702_11:58:08/text_for_run_20511.out
-analyzer  ./make_target_asymmetry_class_files.C >> /w/halla-1/e05102/ellie/batch/results/output_140702_11:58:08/text_for_run_20511.out
-echo '\nellie@ifarm> ls -ltr' >> /w/halla-1/e05102/ellie/batch/results/output_140702_11:58:08/text_for_run_20511.out
-ls -ltr >> /w/halla-1/e05102/ellie/batch/results/output_140702_11:58:08/text_for_run_20511.out
-echo '\nellie@ifarm> date' >> /w/halla-1/e05102/ellie/batch/results/output_140702_11:58:08/text_for_run_20511.out
-date >> /w/halla-1/e05102/ellie/batch/results/output_140702_11:58:08/text_for_run_20511.out
+echo '\nellie@ifarm> date' > /w/halla-1/e05102/ellie/batch/results/output_140708_16:56:45/text_for_run_20493.out
+date >> /w/halla-1/e05102/ellie/batch/results/output_140708_16:56:45/text_for_run_20493.out
+echo '\nellie@ifarm> source /w/halla-1/e05102/ellie/batch/inputs/ellana/set_environment_variables_for_vanalyzer.tcsh' >> /w/halla-1/e05102/ellie/batch/results/output_140708_16:56:45/text_for_run_20493.out
+source /w/halla-1/e05102/ellie/batch/inputs/ellana/set_environment_variables_for_vanalyzer.tcsh >> /w/halla-1/e05102/ellie/batch/results/output_140708_16:56:45/text_for_run_20493.out
+echo '\nellie@ifarm> printenv' >> /w/halla-1/e05102/ellie/batch/results/output_140708_16:56:45/text_for_run_20493.out
+printenv >> /w/halla-1/e05102/ellie/batch/results/output_140708_16:56:45/text_for_run_20493.out
+echo '\nellie@ifarm> ls -ltr' >> /w/halla-1/e05102/ellie/batch/results/output_140708_16:56:45/text_for_run_20493.out
+ls -ltr >> /w/halla-1/e05102/ellie/batch/results/output_140708_16:56:45/text_for_run_20493.out
+echo '\nellie@ifarm> rm input.file' >> /w/halla-1/e05102/ellie/batch/results/output_140708_16:56:45/text_for_run_20493.out
+rm input.file >> /w/halla-1/e05102/ellie/batch/results/output_140708_16:56:45/text_for_run_20493.out
+echo '\nellie@ifarm> ls -ltr' >> /w/halla-1/e05102/ellie/batch/results/output_140708_16:56:45/text_for_run_20493.out
+ls -ltr >> /w/halla-1/e05102/ellie/batch/results/output_140708_16:56:45/text_for_run_20493.out
+echo 20493 > input.file
+echo '\nellie@ifarm> echo 20493' >> /w/halla-1/e05102/ellie/batch/results/output_140708_16:56:45/text_for_run_20493.out
+echo 20493 >> /w/halla-1/e05102/ellie/batch/results/output_140708_16:56:45/text_for_run_20493.out
+echo '\nellie@ifarm> analyzer  /w/halla-1/e05102/ellie/batch/inputs/ellana/run_replay.C' >> /w/halla-1/e05102/ellie/batch/results/output_140708_16:56:45/text_for_run_20493.out
+analyzer  /w/halla-1/e05102/ellie/batch/inputs/ellana/run_replay.C >> /w/halla-1/e05102/ellie/batch/results/output_140708_16:56:45/text_for_run_20493.out
+echo '\nellie@ifarm> analyzer  ./make_target_asymmetry_class_files.C' >> /w/halla-1/e05102/ellie/batch/results/output_140708_16:56:45/text_for_run_20493.out
+analyzer  ./make_target_asymmetry_class_files.C >> /w/halla-1/e05102/ellie/batch/results/output_140708_16:56:45/text_for_run_20493.out
+echo '\nellie@ifarm> ls -ltr' >> /w/halla-1/e05102/ellie/batch/results/output_140708_16:56:45/text_for_run_20493.out
+ls -ltr >> /w/halla-1/e05102/ellie/batch/results/output_140708_16:56:45/text_for_run_20493.out
+echo '\nellie@ifarm> date' >> /w/halla-1/e05102/ellie/batch/results/output_140708_16:56:45/text_for_run_20493.out
+date >> /w/halla-1/e05102/ellie/batch/results/output_140708_16:56:45/text_for_run_20493.out
 	]]></Command>
 
 	<DiskSpace space="15" unit="GB"/>
@@ -53,13 +53,15 @@ date >> /w/halla-1/e05102/ellie/batch/results/output_140702_11:58:08/text_for_ru
 
 	<Job>
 		<Input src="/work/halla/e05102/disk1/ellie/batch/inputs/ellana/rootlogon.C" dest="rootlogon.C"/>
-		<Input src="mss:/mss/halla/e05102/raw/e05102_20511.dat.0" dest="./e05102_20511.dat.0"/>
-		<Input src="mss:/mss/halla/e05102/raw/e05102_20511.dat.1" dest="./e05102_20511.dat.1"/>
-		<Output src="./summaryphy_20511.log" dest="/w/halla-1/e05102/ellie/batch/results/output_140702_11:58:08/summaryphy_20511.log"/>
-		<Output src="no_vetos-hand_target_asym_vs_nu_for_run_20511.root" dest="/w/halla-1/e05102/ellie/batch/results/output_140702_11:58:08/no_vetos-hand_target_asym_vs_nu_for_run_20511.root"/>
-		<Output src="no_vetos-target_asymmetry_for_run_20511.txt" dest="/w/halla-1/e05102/ellie/batch/results/output_140702_11:58:08/no_vetos-target_asymmetry_for_run_20511.txt"/>
-		<Stdout dest="/w/halla-1/e05102/ellie/batch/logs/job_on_140702_11:58:08/e05102_R_20511.stdout"/>
-		<Stderr dest="/w/halla-1/e05102/ellie/batch/logs/job_on_140702_11:58:08/e05102_R_20511.stderr"/>
+		<Input src="mss:/mss/halla/e05102/raw/e05102_20493.dat.0" dest="./e05102_20493.dat.0"/>
+		<Input src="mss:/mss/halla/e05102/raw/e05102_20493.dat.1" dest="./e05102_20493.dat.1"/>
+		<Input src="mss:/mss/halla/e05102/raw/e05102_20493.dat.2" dest="./e05102_20493.dat.2"/>
+		<Output src="./summaryphy_20493.log" dest="/w/halla-1/e05102/ellie/batch/results/output_140708_16:56:45/summaryphy_20493.log"/>
+		<Output src="no_vetos-hand_target_asym_vs_nu_for_run_20493.root" dest="/w/halla-1/e05102/ellie/batch/results/output_140708_16:56:45/no_vetos-hand_target_asym_vs_nu_for_run_20493.root"/>
+		<Output src="no_vetos-target_asymmetry_for_run_20493.txt" dest="/w/halla-1/e05102/ellie/batch/results/output_140708_16:56:45/no_vetos-target_asymmetry_for_run_20493.txt"/>
+		<Output src="charge_lt_for_run_20493.txt" dest="/w/halla-1/e05102/ellie/batch/results/output_140708_16:56:45/charge_lt_for_run_20493.txt"/>
+		<Stdout dest="/w/halla-1/e05102/ellie/batch/logs/job_on_140708_16:56:45/e05102_R_20493.stdout"/>
+		<Stderr dest="/w/halla-1/e05102/ellie/batch/logs/job_on_140708_16:56:45/e05102_R_20493.stderr"/>
 	</Job>
 
 </Request>

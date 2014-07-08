@@ -163,7 +163,7 @@ sub make_xml_sub_file
 #	print SUBFILE "\t<TimeLimit unit=\"hours\" time=\"24\"/>\n\n";
 #	print SUBFILE "\t<TimeLimit unit=\"minutes\" time=\"10\"/>\n\n";
 	print SUBFILE "\t<Input src=\"".$ellana_path_inputs."run_replay.C\" dest=\"run_replay.C\"/>\n";
-	print SUBFILE "\t<Input src=\"".$neutron_path_inputs."make_target_asymmetry_class_files-no_vetos.C\" dest=\"make_target_asymmetry_class_files.C\"/>\n";
+	print SUBFILE "\t<Input src=\"".$neutron_path_inputs."make_target_asymmetry_class_files-neutrons_only.C\" dest=\"make_target_asymmetry_class_files.C\"/>\n";
 	print SUBFILE "\t<Input src=\"".$neutron_path_inputs."neutron_analysis_class.cxx\" dest=\"neutron_analysis_class.cxx\"/>\n";
 	print SUBFILE "\t<Input src=\"".$neutron_path_inputs."neutron_analysis_class.h\" dest=\"neutron_analysis_class.h\"/>\n";
 	print SUBFILE "\t<Input src=\"".$neutron_path_inputs."neutron_analysis_class.C\" dest=\"neutron_analysis_class.C\"/>\n";
@@ -210,8 +210,8 @@ sub make_xml_sub_file
 #	print SUBFILE "\t\t".xml_io("Output" , "./".$output , $path_output.$output)."\n";
 	print SUBFILE "\t\t".xml_io("Output" , "./summaryphy_".$run_num.".log" , $path_output."summaryphy_".$run_num.".log")."\n";
 	print SUBFILE "\t\t".xml_io("Output" ,            $output2 , $path_output.$output2)."\n";
-	print SUBFILE "\t\t".xml_io("Output" , "no_vetos-target_asymmetry_for_run_".$run_num.".txt" , $path_output."no_vetos-target_asymmetry_for_run_".$run_num.".txt")."\n";
-	print SUBFILE "\t\t".xml_io("Output" , "charge_lt_for_run_".$run_num.".txt" , $path_output."charge_lt_for_run_".$run_num.".txt")."\n";
+	print SUBFILE "\t\t".xml_io("Output" , "neutron_cuts-target_asymmetry_for_run_".$run_num.".txt" , $path_output."no_vetos-target_asymmetry_for_run_".$run_num.".txt")."\n";
+#	print SUBFILE "\t\t".xml_io("Output" , "charge_lt_for_run_".$run_num.".txt" , $path_output."charge_lt_for_run_".$run_num.".txt")."\n";
 #	print SUBFILE "\t\t".xml_io("Output" , "target_asymmetry_for_run_".$run_num.".txt" , $path_output."target_asymmetry_for_run_".$run_num.".txt")."\n";
 #	print SUBFILE "\t\t".xml_io("Output" ,            $output , $output)."\n";
 #	print SUBFILE "\t\t".xml_io("Output" , "text_for_run_".$run_num.".out" , $path_output."text_for_run_".$run_num.".out")."\n";
@@ -444,7 +444,7 @@ RUN: while (<RUNLIST>)
 #		$output = $expbase."_".$run_num."$outbase\.root";
 #		$output = "hand_target_asym_vs_nu_for_runs_22450-22450.root";
 		$output = "e05102_R_".$run_num.".root";
-		$output2 = "no_vetos-hand_target_asym_vs_nu_for_run_".$run_num.".root";
+		$output2 = "neutron_cuts-hand_target_asym_vs_nu_for_run_".$run_num.".root";
 #		$sec_file = "e05102_R_".$run_num."_1.root";
 #		$thrd_file = "e05102_R_".$run_num."_2.root";
 #		$frth_file = "e05102_R_".$run_num."_3.root";
