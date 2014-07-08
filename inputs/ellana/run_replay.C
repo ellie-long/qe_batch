@@ -10,11 +10,11 @@
 
 void run_replay()
 {
-	cout << "Running make_target_asymmetry_class_files..." << endl;
+	cout << "Running run_replay..." << endl;
 
 //	gROOT->SetStyle("classic");
 
-	TString otherSpecs = ", No thetacuts on ToF";
+//	TString otherSpecs = ", No thetacuts on ToF";
 
 	string line = "";
 //	ifstream runNumberInputFile ("/w/halla-1/e05102/ellie/batch/inputs/ellana/input.file");
