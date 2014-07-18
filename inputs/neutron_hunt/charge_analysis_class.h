@@ -1,6 +1,6 @@
 //////////////////////////////////////////////////////////
 // This class has been automatically generated on
-// Tue Aug  6 16:03:48 2013 by ROOT version 5.26/00
+// Fri Jul 18 09:37:47 2014 by ROOT version 5.34/13
 // from TChain T/
 //////////////////////////////////////////////////////////
 
@@ -10,6 +10,12 @@
 #include <TROOT.h>
 #include <TChain.h>
 #include <TFile.h>
+
+// Header file for the classes stored in the TTree if any.
+#include "./src/THaEvent.h"
+#include "./src/THaEvent.h"
+
+// Fixed size dimensions of array or collections stored in the TTree if any.
 
 class charge_analysis_class {
 public :
@@ -32,11 +38,11 @@ public :
    Int_t           Ndata_D_edtmNDadc;
    Double_t        D_edtmNDadc[1];   //[Ndata.D.edtmNDadc]
    Int_t           Ndata_NA_n_pad;
-   Double_t        NA_n_pad[52];   //[Ndata.NA.n.pad]
+   Double_t        NA_n_pad[42];   //[Ndata.NA.n.pad]
    Int_t           Ndata_NA_n_plane;
-   Double_t        NA_n_plane[52];   //[Ndata.NA.n.plane]
+   Double_t        NA_n_plane[42];   //[Ndata.NA.n.plane]
    Int_t           Ndata_NA_n_tof;
-   Double_t        NA_n_tof[52];   //[Ndata.NA.n.tof]
+   Double_t        NA_n_tof[42];   //[Ndata.NA.n.tof]
    Int_t           Ndata_NA_nd_p1_la;
    Double_t        NA_nd_p1_la[30];   //[Ndata.NA.nd.p1.la]
    Int_t           Ndata_NA_nd_p1_la_c;
@@ -102,9 +108,9 @@ public :
    Int_t           Ndata_NA_nd_p4_rt_c;
    Double_t        NA_nd_p4_rt_c[12];   //[Ndata.NA.nd.p4.rt_c]
    Int_t           Ndata_NA_tr_firstpad;
-   Double_t        NA_tr_firstpad[10];   //[Ndata.NA.tr.firstpad]
+   Double_t        NA_tr_firstpad[9];   //[Ndata.NA.tr.firstpad]
    Int_t           Ndata_NA_tr_firstplane;
-   Double_t        NA_tr_firstplane[10];   //[Ndata.NA.tr.firstplane]
+   Double_t        NA_tr_firstplane[9];   //[Ndata.NA.tr.firstplane]
    Int_t           Ndata_NA_veto_ishit;
    Double_t        NA_veto_ishit[32];   //[Ndata.NA.veto.ishit]
    Int_t           Ndata_NA_veto_la;
@@ -124,15 +130,15 @@ public :
    Int_t           Ndata_NA_veto_rt_c;
    Double_t        NA_veto_rt_c[32];   //[Ndata.NA.veto.rt_c]
    Int_t           Ndata_R_tr_beta;
-   Double_t        R_tr_beta[12];   //[Ndata.R.tr.beta]
+   Double_t        R_tr_beta[1];   //[Ndata.R.tr.beta]
    Int_t           Ndata_R_tr_ph;
-   Double_t        R_tr_ph[12];   //[Ndata.R.tr.ph]
+   Double_t        R_tr_ph[1];   //[Ndata.R.tr.ph]
    Int_t           Ndata_R_tr_th;
-   Double_t        R_tr_th[12];   //[Ndata.R.tr.th]
+   Double_t        R_tr_th[1];   //[Ndata.R.tr.th]
    Int_t           Ndata_R_tr_x;
-   Double_t        R_tr_x[12];   //[Ndata.R.tr.x]
+   Double_t        R_tr_x[1];   //[Ndata.R.tr.x]
    Int_t           Ndata_R_tr_y;
-   Double_t        R_tr_y[12];   //[Ndata.R.tr.y]
+   Double_t        R_tr_y[1];   //[Ndata.R.tr.y]
    Double_t        D_evtypebits;
    Double_t        ExTgtCor_R_dp;
    Double_t        ExTgtCor_R_p;
@@ -849,7 +855,7 @@ public :
 #endif
 
 #ifdef charge_analysis_class_cxx
-charge_analysis_class::charge_analysis_class(TTree *tree)
+charge_analysis_class::charge_analysis_class(TTree *tree) : fChain(0) 
 {
 // if parameter tree is not specified (or zero), connect the file
 // used to generate this class and read the Tree.
@@ -859,18 +865,17 @@ charge_analysis_class::charge_analysis_class(TTree *tree)
       // The following code should be used if you want this class to access
       // a single tree instead of a chain
       TFile *f = (TFile*)gROOT->GetListOfFiles()->FindObject("Memory Directory");
-      if (!f) {
+      if (!f || !f->IsOpen()) {
          f = new TFile("Memory Directory");
-         f->cd("The Hall A analyzer:/");
       }
-      tree = (TTree*)gDirectory->Get("T");
+      f->GetObject("T",tree);
 
 #else // SINGLE_TREE
 
       // The following code should be used if you want this class to access a chain
       // of trees.
       TChain * chain = new TChain("T","");
-      chain->Add("./e05102_R_20500.root/T");
+      chain->Add("./e05102_R_20494.root/T");
       tree = chain;
 #endif // SINGLE_TREE
 
@@ -896,10 +901,8 @@ Long64_t charge_analysis_class::LoadTree(Long64_t entry)
    if (!fChain) return -5;
    Long64_t centry = fChain->LoadTree(entry);
    if (centry < 0) return centry;
-   if (!fChain->InheritsFrom(TChain::Class()))  return centry;
-   TChain *chain = (TChain*)fChain;
-   if (chain->GetTreeNumber() != fCurrent) {
-      fCurrent = chain->GetTreeNumber();
+   if (fChain->GetTreeNumber() != fCurrent) {
+      fCurrent = fChain->GetTreeNumber();
       Notify();
    }
    return centry;
@@ -1311,16 +1314,16 @@ void charge_analysis_class::Init(TTree *tree)
    fChain->SetBranchAddress("evright_t4pm", &evright_t4pm, &b_evright_t4pm);
    fChain->SetBranchAddress("evright_t4mp", &evright_t4mp, &b_evright_t4mp);
    fChain->SetBranchAddress("evright_t4mm", &evright_t4mm, &b_evright_t4mm);
-   fChain->SetBranchAddress("R_sv_x", &R_sv_x, &b_R_sv_x);
-   fChain->SetBranchAddress("R_sv_y", &R_sv_y, &b_R_sv_y);
-   fChain->SetBranchAddress("IsReftHelicity", &IsReftHelicity, &b_IsReftHelicity);
-   fChain->SetBranchAddress("IsRightHelicity", &IsRightHelicity, &b_IsRightHelicity);
-   fChain->SetBranchAddress("InclusiveEvt", &InclusiveEvt, &b_InclusiveEvt);
-   fChain->SetBranchAddress("GoodRTrack", &GoodRTrack, &b_GoodRTrack);
-   fChain->SetBranchAddress("GoodElectron", &GoodElectron, &b_GoodElectron);
-   fChain->SetBranchAddress("InclCut", &InclCut, &b_InclCut);
-   fChain->SetBranchAddress("InvMass", &InvMass, &b_InvMass);
-   fChain->SetBranchAddress("ScaAngle", &ScaAngle, &b_ScaAngle);
+//    fChain->SetBranchAddress("R_sv_x", &R_sv_x, &b_R_sv_x);
+//    fChain->SetBranchAddress("R_sv_y", &R_sv_y, &b_R_sv_y);
+//    fChain->SetBranchAddress("IsReftHelicity", &IsReftHelicity, &b_IsReftHelicity);
+//    fChain->SetBranchAddress("IsRightHelicity", &IsRightHelicity, &b_IsRightHelicity);
+//    fChain->SetBranchAddress("InclusiveEvt", &InclusiveEvt, &b_InclusiveEvt);
+//    fChain->SetBranchAddress("GoodRTrack", &GoodRTrack, &b_GoodRTrack);
+//    fChain->SetBranchAddress("GoodElectron", &GoodElectron, &b_GoodElectron);
+//    fChain->SetBranchAddress("InclCut", &InclCut, &b_InclCut);
+//    fChain->SetBranchAddress("InvMass", &InvMass, &b_InvMass);
+//    fChain->SetBranchAddress("ScaAngle", &ScaAngle, &b_ScaAngle);
    fChain->SetBranchAddress("fEvtHdr.fEvtTime", &fEvtHdr_fEvtTime, &b_Event_Branch_fEvtHdr_fEvtTime);
    fChain->SetBranchAddress("fEvtHdr.fEvtNum", &fEvtHdr_fEvtNum, &b_Event_Branch_fEvtHdr_fEvtNum);
    fChain->SetBranchAddress("fEvtHdr.fEvtType", &fEvtHdr_fEvtType, &b_Event_Branch_fEvtHdr_fEvtType);

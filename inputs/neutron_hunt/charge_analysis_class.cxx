@@ -17,17 +17,18 @@
 */
 void charge_analysis_class::AsymLoop(int dataType)
 {
-	cout << "vvvvvvvvvvvvvvvvvvvvv neutron_analysis_class.C vvvvvvvvvvvvvvvvvvvvvv" << endl;
+	cout << "vvvvvvvvvvvvvvvvvvvvv charge_analysis_class.cxx vvvvvvvvvvvvvvvvvvvvvv" << endl;
 
 //      If includeVetos = false, then only good bars will be displayed. If 
 //      includeVetos = true, then veto bars will be shown along with the good bars.
 
 	bool includeVetos;
 	bool findProtons;
+	TString eventType;
 
-	if (dataType==1) {includeVetos = false; findProtons = false;}
-	if (dataType==2) {includeVetos = true; findProtons = false;}
-	if (dataType==3) {includeVetos = true; findProtons = true;}
+	if (dataType==1) {includeVetos = false;	findProtons = false;	eventType = "No Vetos - ";}
+	if (dataType==2) {includeVetos = true;	findProtons = false;	eventType = "Neutrons - ";}
+	if (dataType==3) {includeVetos = true;	findProtons = true;	eventType = "Protons - ";}
 
 //	bool includeVetos = true;
 //	bool includeVetos = false;
@@ -1015,11 +1016,11 @@ void charge_analysis_class::AsymLoop(int dataType)
 	cout << "maxentries = " << maxentries << endl;
 	for (Int_t jentry=0; jentry<maxentries;jentry++) 
 	{
-		if (dataType==1) {TString eventType = "No Vetos - ";}
-		if (dataType==2) {TString eventType = "Neutrons - ";}
-		if (dataType==3) {TString eventType = "Protons - ";}
-		if (!test && ((jentry%10000)==0)) {cout << eventType << "Processing Event " << jentry << "..." << endl;}
+//		if (dataType==1) {TString eventType = "No Vetos - ";}
+//		if (dataType==2) {TString eventType = "Neutrons - ";}
+//		if (dataType==3) {TString eventType = "Protons - ";}
 		if (test && (jentry%100)==0) {cout << eventType << "Processing Event " << jentry << "..." << endl;}
+		if (!test && ((jentry%10000)==0)) {cout << eventType << "Processing Event " << jentry << "..." << endl;}
 		Int_t ientry = LoadTree(jentry);
 		goodEvent = true;
 		allEvents = allEvents+1;

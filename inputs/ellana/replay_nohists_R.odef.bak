@@ -639,8 +639,6 @@ begin scalers evright
   d1c 0 15 counts
   d3c 0 9 counts
   d10c 0 10 counts
-  unserc 0 22 counts
-  edtmc 0 16 counts
 # rates
   t1r  0 0  
   t2r  0 1  
@@ -655,7 +653,6 @@ begin scalers evright
   clkr 0 7
   l1ar 0 12
   fclkr 0 21
-  edtmr 0 16
 
  # target and helicity combinations (other slots ...)
   l1app 3 12 counts
@@ -722,10 +719,5 @@ begin scalers evright
   t4pm 4 25 counts
   t4mp 1 25 counts
   t4mm 2 25 counts
-
-  edtmpp 4 16 counts
-  edtmpm 3 16 counts
-  edtmmp 2 16 counts
-  edtmmm 1 16 counts
 
 end scalers

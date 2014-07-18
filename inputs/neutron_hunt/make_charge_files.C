@@ -8,7 +8,8 @@
 //
 // *****************************************************
 
-void make_target_asymmetry_class_files()
+//void make_target_asymmetry_class_files()
+void make_charge_files()
 {
 	cout << "Running make_target_asymmetry_class_files..." << endl;
 
