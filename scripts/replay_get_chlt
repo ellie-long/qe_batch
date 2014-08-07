@@ -213,8 +213,8 @@ sub make_xml_sub_file
 #	print SUBFILE "\t\t".xml_io("Input"  , $path_root.$input  ,              $destfile )."\n";
 #	print SUBFILE "\t\t".xml_io("Output" , "./".$output , $path_output.$output)."\n";
 	print SUBFILE "\t\t".xml_io("Output" , "./summaryphy_".$run_num.".log" , $path_output."summaryphy_".$run_num.".log")."\n";
-	print SUBFILE "\t\t".xml_io("Output" ,            $output2 , $path_output.$output2)."\n";
-	print SUBFILE "\t\t".xml_io("Output" , "no_vetos-target_asymmetry_for_run_".$run_num.".txt" , $path_output."no_vetos-target_asymmetry_for_run_".$run_num.".txt")."\n";
+#	print SUBFILE "\t\t".xml_io("Output" ,            $output2 , $path_output.$output2)."\n";
+#	print SUBFILE "\t\t".xml_io("Output" , "no_vetos-target_asymmetry_for_run_".$run_num.".txt" , $path_output."no_vetos-target_asymmetry_for_run_".$run_num.".txt")."\n";
 	print SUBFILE "\t\t".xml_io("Output" , "charge_lt_for_run_".$run_num.".txt" , $path_output."charge_lt_for_run_".$run_num.".txt")."\n";
 #	print SUBFILE "\t\t".xml_io("Output" , "target_asymmetry_for_run_".$run_num.".txt" , $path_output."target_asymmetry_for_run_".$run_num.".txt")."\n";
 #	print SUBFILE "\t\t".xml_io("Output" ,            $output , $output)."\n";
