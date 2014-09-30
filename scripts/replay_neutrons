@@ -114,7 +114,7 @@ sub make_xml_sub_file
 	my ($inbase , $outbase , $path_subs , $path_logs , $path_inputs , $subinfo , $macro , $commands , $path_root , $this_file , $output , $path_output , $expbase , $run_num, $this_file_1, $this_file_2, $this_file_3, $macro1, $output2) = @_;
 #	my ($inbase , $outbase , $path_subs , $path_logs , $path_inputs , $subinfo , $macro , $commands , $path_root , $input , $output , $path_output , $expbase , $run_num ,$this_file_1, $this_file_2, $this_file_3, $macro2) = @_;
 	my $subfile = $path_subs."batch_analysis_subfile_N";
-	$textout = $path_output."text_for_run_".$run_num.".out\n";
+	$textout = $path_output."neutron_cuts_text_for_run_".$run_num.".out\n";
 #	my $destfile = "e05102_R_".$run_num.".root";
 #	my $destfile1 = "neutron_cuts-hand_target_asym_vs_nu_for_run_".$run_num.".root";
 # appending "mss:" to the front of the path if the file is located in the mss
@@ -208,7 +208,7 @@ sub make_xml_sub_file
 
 #	print SUBFILE "\t\t".xml_io("Input"  , $path_root.$input  ,              $destfile )."\n";
 #	print SUBFILE "\t\t".xml_io("Output" , "./".$output , $path_output.$output)."\n";
-	print SUBFILE "\t\t".xml_io("Output" , "./summaryphy_".$run_num.".log" , $path_output."summaryphy_".$run_num.".log")."\n";
+	print SUBFILE "\t\t".xml_io("Output" , "./summaryphy_".$run_num.".log" , $path_output."neutron_cuts_summaryphy_".$run_num.".log")."\n";
 	print SUBFILE "\t\t".xml_io("Output" ,            $output2 , $path_output.$output2)."\n";
 	print SUBFILE "\t\t".xml_io("Output" , "neutron_cuts-target_asymmetry_for_run_".$run_num.".txt" , $path_output."no_vetos-target_asymmetry_for_run_".$run_num.".txt")."\n";
 #	print SUBFILE "\t\t".xml_io("Output" , "charge_lt_for_run_".$run_num.".txt" , $path_output."charge_lt_for_run_".$run_num.".txt")."\n";
