@@ -145,8 +145,8 @@ sub make_xml_sub_file
 #	print SUBFILE "analyzer  ".$neutron_path_inputs.$macro." > /work/halla/e05102/disk1/ellie/batch/input/neutron/text/text_for_run_".$run_num.".out\n";
 	print SUBFILE "echo '\\nellie\@ifarm> analyzer  ".$ellana_path_inputs.$macro."' >> ".$textout;
 	print SUBFILE "analyzer  ".$ellana_path_inputs.$macro." >> ".$path_results."text_for_run_".$run_num.".out\n";
-	print SUBFILE "echo '\\nellie\@ifarm> cp -v *.root ".$path_results.".' >> ".$textout;
-	print SUBFILE "cp -v *.root ".$path_results.". >> ".$textout;
+#	print SUBFILE "echo '\\nellie\@ifarm> cp -v *.root ".$path_results.".' >> ".$textout;
+#	print SUBFILE "cp -v *.root ".$path_results.". >> ".$textout;
 	print SUBFILE "echo '\\nellie\@ifarm> analyzer  ./".$macro1."' >> ".$textout;
 	print SUBFILE "analyzer  ./".$macro1." >> ".$textout;
 #	print SUBFILE "analyzer  ".$neutron_path_inputs.$macro." > /w/halla-1/e05102/ellie/batch/inputs/neutron_hunt/text/text_for_run_".$run_num.".out\n";
@@ -158,7 +158,7 @@ sub make_xml_sub_file
 	print SUBFILE "date >> ".$textout;
 	print SUBFILE "\t]]></Command>\n\n";
 	print SUBFILE "\t<DiskSpace space=\"15\" unit=\"GB\"/>\n\n";
-	print SUBFILE "\t<Memory space=\"2\" unit=\"GB\"/>\n\n";
+	print SUBFILE "\t<Memory space=\"4\" unit=\"GB\"/>\n\n";
 	print SUBFILE "\t<TimeLimit unit=\"hours\" time=\"72\"/>\n\n";
 #	print SUBFILE "\t<TimeLimit unit=\"hours\" time=\"24\"/>\n\n";
 #	print SUBFILE "\t<TimeLimit unit=\"minutes\" time=\"10\"/>\n\n";
@@ -437,12 +437,11 @@ RUN: while (<RUNLIST>)
 		$this_file_2 = $expbase."_".$run_num."_2.root";
 		$this_file_3 = $expbase."_".$run_num."_3.root";
 #		making sure root file exists
-		if ( check_exist($path_root.$this_file) eq "does not exist" )
-
-		{
-			print SUBMITLOG "$line_num : $run_num does not exist, skipping\n";
-			next RUN;
-		}
+#		if ( check_exist($path_root.$this_file) eq "does not exist" )
+#		{
+#			print SUBMITLOG "$line_num : $run_num does not exist, skipping\n";
+#			next RUN;
+#		}
 #		$outputs[0] = $expbase."_".$run_num."$outbase\.root";
 #		$outputs[1] = $expbase."_".$run_num."$outbase\.log";
 #		$output = $expbase."_".$run_num."$outbase\.root";

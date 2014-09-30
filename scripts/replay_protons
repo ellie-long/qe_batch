@@ -433,12 +433,11 @@ RUN: while (<RUNLIST>)
 		$this_file_2 = $expbase."_".$run_num."_2.root";
 		$this_file_3 = $expbase."_".$run_num."_3.root";
 #		making sure root file exists
-		if ( check_exist($path_root.$this_file) eq "does not exist" )
-
-		{
-			print SUBMITLOG "$line_num : $run_num does not exist, skipping\n";
-			next RUN;
-		}
+#		if ( check_exist($path_root.$this_file) eq "does not exist" )
+#		{
+#			print SUBMITLOG "$line_num : $run_num does not exist, skipping\n";
+#			next RUN;
+#		}
 #		$outputs[0] = $expbase."_".$run_num."$outbase\.root";
 #		$outputs[1] = $expbase."_".$run_num."$outbase\.log";
 #		$output = $expbase."_".$run_num."$outbase\.root";
