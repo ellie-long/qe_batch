@@ -139,16 +139,18 @@ sub make_xml_sub_file
 	print SUBFILE "rm input.file >> ".$textout;
 	print SUBFILE "echo '\\nellie\@ifarm> ls -ltr' >> ".$textout;
 	print SUBFILE "ls -ltr >> ".$textout;
+	print SUBFILE `echo '\\nellie\@ifarm> echo ".$run_num." > input.file' >> `.$textout;
 	print SUBFILE "echo ".$run_num." > input.file\n";
-	print SUBFILE "echo '\\nellie\@ifarm> echo ".$run_num."' >> ".$textout;
-	print SUBFILE "echo ".$run_num." >> ".$textout;
+	print SUBFILE "echo '\\nellie\@ifarm> cat input.file' >> ".$textout;
+	print SUBFILE "cat input.file >> ".$textout;
 #	print SUBFILE "analyzer  ".$neutron_path_inputs.$macro." > /work/halla/e05102/disk1/ellie/batch/input/neutron/text/text_for_run_".$run_num.".out\n";
-	print SUBFILE "echo '\\nellie\@ifarm> analyzer  ".$ellana_path_inputs.$macro."' >> ".$textout;
-	print SUBFILE "analyzer  ".$ellana_path_inputs.$macro." >> ".$path_results."text_for_run_".$run_num.".out\n";
+	print SUBFILE "echo '\\nellie\@ifarm> analyzer ".$ellana_path_inputs.$macro."' >> ".$textout;
+#	print SUBFILE "analyzer ".$ellana_path_inputs.$macro." >> ".$path_results."text_for_run_".$run_num.".out";
+	print SUBFILE "analyzer ".$ellana_path_inputs.$macro." >> ".$textout;
 #	print SUBFILE "echo '\\nellie\@ifarm> cp -v *.root ".$path_results.".' >> ".$textout;
 #	print SUBFILE "cp -v *.root ".$path_results.". >> ".$textout;
-	print SUBFILE "echo '\\nellie\@ifarm> analyzer  ./".$macro1."' >> ".$textout;
-	print SUBFILE "analyzer  ./".$macro1." >> ".$textout;
+	print SUBFILE "echo '\\nellie\@ifarm> analyzer ./".$macro1."' >> ".$textout;
+	print SUBFILE "analyzer ./".$macro1." >> ".$textout;
 #	print SUBFILE "analyzer  ".$neutron_path_inputs.$macro." > /w/halla-1/e05102/ellie/batch/inputs/neutron_hunt/text/text_for_run_".$run_num.".out\n";
 
 # input options
@@ -210,7 +212,7 @@ sub make_xml_sub_file
 #	print SUBFILE "\t\t".xml_io("Output" , "./".$output , $path_output.$output)."\n";
 	print SUBFILE "\t\t".xml_io("Output" , "./summaryphy_".$run_num.".log" , $path_output."neutron_cuts_summaryphy_".$run_num.".log")."\n";
 	print SUBFILE "\t\t".xml_io("Output" ,            $output2 , $path_output.$output2)."\n";
-	print SUBFILE "\t\t".xml_io("Output" , "neutron_cuts-target_asymmetry_for_run_".$run_num.".txt" , $path_output."no_vetos-target_asymmetry_for_run_".$run_num.".txt")."\n";
+	print SUBFILE "\t\t".xml_io("Output" , "neutron_cuts-target_asymmetry_for_run_".$run_num.".txt" , $path_output."neutron_cuts-target_asymmetry_for_run_".$run_num.".txt")."\n";
 #	print SUBFILE "\t\t".xml_io("Output" , "charge_lt_for_run_".$run_num.".txt" , $path_output."charge_lt_for_run_".$run_num.".txt")."\n";
 #	print SUBFILE "\t\t".xml_io("Output" , "target_asymmetry_for_run_".$run_num.".txt" , $path_output."target_asymmetry_for_run_".$run_num.".txt")."\n";
 #	print SUBFILE "\t\t".xml_io("Output" ,            $output , $output)."\n";

@@ -47,11 +47,12 @@ void neutron_analysis_class::hand_class_veto_cuts(int nplane, int thisbar, bool&
 	int antiveto3bar;
 */	allVetos = "";
 	TString allAntivetos = "";
+	int maxBar;
 
-	if (nplane==1) {vetoplane = "veto"; antiveto="nd.p2";}
-	if (nplane==2) {vetoplane = "nd.p1"; antiveto="nd.p3";}
-	if (nplane==3) {vetoplane = "nd.p2"; antiveto="nd.p4";}
-	if (nplane==5) {vetoplane = "nd.p3"; antiveto="";}
+	if (nplane==1) {vetoplane = "veto"; antivetoplane="nd.p2";}
+	if (nplane==2) {vetoplane = "nd.p1"; antivetoplane="nd.p3";}
+	if (nplane==3) {vetoplane = "nd.p2"; antivetoplane="nd.p4";}
+	if (nplane==5) {vetoplane = "nd.p3"; antivetoplane="";}
 
 /*	switch (nplane)
 	{
@@ -1035,26 +1036,28 @@ void neutron_analysis_class::hand_class_veto_cuts(int nplane, int thisbar, bool&
 	// out if any particular bar is a veto bar or not.
 	// Similarly with goodBar and allAntivetos;
 	// **************************************************
-	if (vetoplane==0) {maxBar=32;}
-	if (vetoplane==1) {maxBar=30;}
-	if (vetoplane==2) {maxBar=24;}
-	if (vetoplane==3) {maxBar=22;}
-	if (vetoplane==4) {maxBar=12;}
+	if (vetoplane=="") {maxBar=0;}
+	if (vetoplane=="veto") {maxBar=32;}
+	if (vetoplane=="nd.p1") {maxBar=30;}
+	if (vetoplane=="nd.p2") {maxBar=24;}
+	if (vetoplane=="nd.p3") {maxBar=22;}
+	if (vetoplane=="nd.p4") {maxBar=12;}
 
-	allVetoes = "";
+	allVetos = "";
 	for (int i=0; i<maxBar; i++)
 	{
-		allVetoes += vetoplane;
+		allVetos += vetoplane;
 		allVetos += ".";
 		allVetos += i;
 		allVetos += " ";
 	}
 
-	if (antivetoplane==0) {maxBar=32;}
-	if (antivetoplane==1) {maxBar=30;}
-	if (antivetoplane==2) {maxBar=24;}
-	if (antivetoplane==3) {maxBar=22;}
-	if (antivetoplane==4) {maxBar=12;}
+	if (antivetoplane=="") {maxBar=0;}
+	if (antivetoplane=="veto") {maxBar=32;}
+	if (antivetoplane=="nd.p1") {maxBar=30;}
+	if (antivetoplane=="nd.p2") {maxBar=24;}
+	if (antivetoplane=="nd.p3") {maxBar=22;}
+	if (antivetoplane=="nd.p4") {maxBar=12;}
 
 
 	allAntivetos = "";

@@ -12,6 +12,8 @@ void run_replay()
 {
 	cout << "Running run_replay..." << endl;
 
+	gROOT->ProcessLine(".x /w/halla-1/e05102/ellie/batch/inputs/ellana/rootlogon.C");
+
 //	gROOT->SetStyle("classic");
 
 //	TString otherSpecs = ", No thetacuts on ToF";

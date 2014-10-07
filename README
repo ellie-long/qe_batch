@@ -29,7 +29,7 @@
 
  ./scripts/replay_neutrons ./info_lists/q2_
 
-
+ ./scripts/replay_neutrons_debug ./info_lists/test.txt
 
 
 
