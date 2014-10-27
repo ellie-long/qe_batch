@@ -555,7 +555,7 @@ FORMULA InclusiveEvt ((D.evtypebits&(1<<1))==(1<<1))||((D.evtypebits&(1<<2))==(1
 # Good Electron cut
 # add more you have better idea
 # formula prl_E_P  (R.ps.e+R.sh.e)/(1000.*ExTgtCor_R.p)
-FORMULA GoodRTrack   abs(ExTgtCor_R.dp)<0.05&&R.tr.n>=1&&abs(ReactPt_R.z)<0.25
+FORMULA GoodRTrack   abs(ExTgtCor_R.dp)<0.06&&R.tr.n>=1&&abs(ReactPt_R.z)<0.25
 FORMULA GoodElectron  R.cer.asum_c>300
 
 # -----------------------

@@ -124,9 +124,9 @@ sub make_xml_sub_file
 	print SUBFILE "<Request>\n";
 	print SUBFILE "\t".xml_tag("Project" , $subinfo{"project"})."\n";
 	print SUBFILE "\t".xml_tag("Track"   , $subinfo{"track"})."\n";
-	print SUBFILE "\t".xml_tag("Name"    , $subinfo{"jobname"})."\n";
+	print SUBFILE "\t".xml_tag("Name"	, $subinfo{"jobname"})."\n";
 	print SUBFILE "\t<Command><![CDATA[\n";
-#	print SUBFILE join "\n" , @{$commands};
+#       print SUBFILE join "\n" , @{$commands};
 	print SUBFILE "echo '\\nellie\@ifarm> date' > ".$textout;
 	print SUBFILE "date >> ".$textout;
 	print SUBFILE "echo '\\nellie\@ifarm> source ".$path_inputs."set_environment_variables_for_vanalyzer\.tcsh' >> ".$textout;
@@ -139,17 +139,19 @@ sub make_xml_sub_file
 	print SUBFILE "rm input.file >> ".$textout;
 	print SUBFILE "echo '\\nellie\@ifarm> ls -ltr' >> ".$textout;
 	print SUBFILE "ls -ltr >> ".$textout;
+	print SUBFILE "echo '\\nellie\@ifarm> echo ".$run_num." > input.file' >> ".$textout;
 	print SUBFILE "echo ".$run_num." > input.file\n";
-	print SUBFILE "echo '\\nellie\@ifarm> echo ".$run_num."' >> ".$textout;
-	print SUBFILE "echo ".$run_num." >> ".$textout;
-#	print SUBFILE "analyzer  ".$neutron_path_inputs.$macro." > /work/halla/e05102/disk1/ellie/batch/input/neutron/text/text_for_run_".$run_num.".out\n";
-	print SUBFILE "echo '\\nellie\@ifarm> analyzer  ".$ellana_path_inputs.$macro."' >> ".$textout;
-	print SUBFILE "analyzer  ".$ellana_path_inputs.$macro." >> ".$path_results."text_for_run_".$run_num.".out\n";
-#	print SUBFILE "echo '\\nellie\@ifarm> cp -v *.root ".$path_results.".' >> ".$textout;
-#	print SUBFILE "cp -v *.root ".$path_results.". >> ".$textout;
-	print SUBFILE "echo '\\nellie\@ifarm> analyzer  ./".$macro1."' >> ".$textout;
-	print SUBFILE "analyzer  ./".$macro1." >> ".$textout;
-#	print SUBFILE "analyzer  ".$neutron_path_inputs.$macro." > /w/halla-1/e05102/ellie/batch/inputs/neutron_hunt/text/text_for_run_".$run_num.".out\n";
+	print SUBFILE "echo '\\nellie\@ifarm> cat input.file' >> ".$textout;
+	print SUBFILE "cat input.file >> ".$textout;
+#       print SUBFILE "analyzer  ".$neutron_path_inputs.$macro." > /work/halla/e05102/disk1/ellie/batch/input/neutron/text/text_for_run_".$run_num.".out\n";
+	print SUBFILE "echo '\\nellie\@ifarm> analyzer ".$ellana_path_inputs.$macro."' >> ".$textout;
+#       print SUBFILE "analyzer ".$ellana_path_inputs.$macro." >> ".$path_results."text_for_run_".$run_num.".out";
+	print SUBFILE "analyzer ".$ellana_path_inputs.$macro." >> ".$textout;
+#       print SUBFILE "echo '\\nellie\@ifarm> cp -v *.root ".$path_results.".' >> ".$textout;
+#       print SUBFILE "cp -v *.root ".$path_results.". >> ".$textout;
+	print SUBFILE "echo '\\nellie\@ifarm> analyzer ./".$macro1."' >> ".$textout;
+	print SUBFILE "analyzer ./".$macro1." >> ".$textout;
+#       print SUBFILE "analyzer  ".$neutron_path_inputs.$macro." > /w/halla-1/e05102/ellie/batch/inputs/neutron_hunt/text/text_for_run_".$run_num.".out\n";
 
 # input options
 	print SUBFILE "echo '\\nellie\@ifarm> ls -ltr' >> ".$textout;

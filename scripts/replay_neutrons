@@ -139,7 +139,7 @@ sub make_xml_sub_file
 	print SUBFILE "rm input.file >> ".$textout;
 	print SUBFILE "echo '\\nellie\@ifarm> ls -ltr' >> ".$textout;
 	print SUBFILE "ls -ltr >> ".$textout;
-	print SUBFILE `echo '\\nellie\@ifarm> echo ".$run_num." > input.file' >> `.$textout;
+	print SUBFILE "echo '\\nellie\@ifarm> echo ".$run_num." > input.file' >> ".$textout;
 	print SUBFILE "echo ".$run_num." > input.file\n";
 	print SUBFILE "echo '\\nellie\@ifarm> cat input.file' >> ".$textout;
 	print SUBFILE "cat input.file >> ".$textout;
