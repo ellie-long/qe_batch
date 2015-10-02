@@ -20,7 +20,7 @@ SpinUp	he3R.Spin==1
 SpinDown	he3R.Spin==-1
 
 #kinematicsGood	PriKineR.Q2<10 && GoodElectron==1 && PriKineR.nu<10
-eventtypeGood	D.evtypebits==2
+#eventtypeGood	D.evtypebits==2
 kinematicsGood	PriKineR.Q2<10 && PriKineR.nu<10
 dpGood	ExTgtCor_R.dp>-0.04 && ExTgtCor_R.dp<0.06
 targetGood	ReactPt_R.z>-0.15 && ReactPt_R.z<0.17

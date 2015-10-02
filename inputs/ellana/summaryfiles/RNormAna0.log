@@ -1,31 +1,31 @@
 #Trigger      Prescale      Num evt        Num in        Livetime
 #---           Factor       CODA file      Scalers
-   1                7         10000             0         0.000
-   2         16777215             0             0         0.000
-   3         16777215             0             0         0.000
-   4         16777215             0             0         0.000
-   5            65535             0             0         0.000
-   6            65535             0             0         0.000
+   1                7         99997        265042        -1.000
+   2         16777215             0         12362        -1.000
+   3         16777215             0         75806        -1.000
+   4         16777215             0         38859        -1.000
+   5            65535             3         84168        -1.000
+   6            65535             1         57953        -1.000
    7            65535             0             0         0.000
-   8            65535             0             0         0.000
+   8            65535             0         14748        -1.000
 
-Weighted averaged livetime  =  0.000 +-  0.000
-Number of events = 10000
+Weighted averaged livetime  = -1.000 +-  0.000
+Number of events = 100000
 
-#Correction for non-synch of scalers =  0.000
-   1                7          4860             0         0.000
-   2         16777215             0             0         0.000
-   3         16777215             0             0         0.000
-   4         16777215             0             0         0.000
-   5            65535             0             0         0.000
-   6            65535             0             0         0.000
+#Correction for non-synch of scalers =  2.665
+   1                7         48916        130384        -1.000
+   2         16777215             0          6149        -1.000
+   3         16777215             0         37327        -1.000
+   4         16777215             0         19098        -1.000
+   5            65535             0         41475        -1.000
+   6            65535             0         28638        -1.000
    7            65535             0             0         0.000
-   8            65535             0             0         0.000
+   8            65535             0          7254        -1.000
 
-Weighted averaged livetime  =  0.000 +-  0.000
-Number of events = 4860
+Weighted averaged livetime  = -1.000 +-  0.000
+Number of events = 48916
 
-#Correction for non-synch of scalers =  0.000
+#Correction for non-synch of scalers =  2.645
    1                7             0             0         0.000
    2         16777215             0             0         0.000
    3         16777215             0             0         0.000
@@ -39,19 +39,19 @@ Weighted averaged livetime  =   -nan +-   -nan
 Number of events = 0
 
 #Correction for non-synch of scalers =  0.000
-   1                7          4942             0         0.000
-   2         16777215             0             0         0.000
-   3         16777215             0             0         0.000
-   4         16777215             0             0         0.000
-   5            65535             0             0         0.000
-   6            65535             0             0         0.000
+   1                7         48971        130617        -1.000
+   2         16777215             0          6130        -1.000
+   3         16777215             0         37387        -1.000
+   4         16777215             0         19234        -1.000
+   5            65535             3         41487        -1.000
+   6            65535             1         28472        -1.000
    7            65535             0             0         0.000
-   8            65535             0             0         0.000
+   8            65535             0          7282        -1.000
 
-Weighted averaged livetime  =  0.000 +-  0.000
-Number of events = 4942
+Weighted averaged livetime  = -1.000 +-  0.000
+Number of events = 48974
 
-#Correction for non-synch of scalers =  0.000
+#Correction for non-synch of scalers =  2.648
    1                7             0             0         0.000
    2         16777215             0             0         0.000
    3         16777215             0             0         0.000

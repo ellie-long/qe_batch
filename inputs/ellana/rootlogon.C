@@ -20,6 +20,7 @@
 	gInterpreter->AddIncludePath("$ANALYZER/hana_decode");
 	gInterpreter->AddIncludePath("$ANALYZER/hana_scaler");
 	gInterpreter->AddIncludePath("$ANALYZER/src");
+	gROOT->SetMacroPath(".:/work/halla/e05102/disk1/ellie/batch/inputs/ellana:/u/apps/root/5.34.13/root/macros");
 //	gInterpreter->AddIncludePath("$ROOTSYS/");
 
 	// Line below added by Ellie to fix an error thrown
@@ -81,29 +82,29 @@
 
 	char* macros[] =
 	{   //list of scripts to load, end with "\0"
-		".L /w/halla-1/e05102/ellie/batch/inputs/ellana/def.h",
-		".L /w/halla-1/e05102/ellie/batch/inputs/ellana/HallA_style.cxx",
-		".L /w/halla-1/e05102/ellie/batch/inputs/ellana/AnaShowRun.C",
-		".L /w/halla-1/e05102/ellie/batch/inputs/ellana/online_C.so",
+		".L def.h",
+		".L HallA_style.cxx",
+		".L AnaShowRun.C",
+		".L online_C.so",
 // 	If there is a problem, uncomment the ReplayCore_C.so and comment out ReplayCore.C
 //		"ReplayCore_C.so",
-		".L /w/halla-1/e05102/ellie/batch/inputs/ellana/ReplayCore.C",
-		".L /w/halla-1/e05102/ellie/batch/inputs/ellana/replay_L.C",
-		".L /w/halla-1/e05102/ellie/batch/inputs/ellana/replay_R.C",
+		".L ReplayCore.C",
+		".L replay_L.C",
+		".L replay_R.C",
 // 		"replay_det_L.C",
-		".L /w/halla-1/e05102/ellie/batch/inputs/ellana/replay_det_R.C",
-		".L /w/halla-1/e05102/ellie/batch/inputs/ellana/replay_det_BB.C",
+		".L replay_det_R.C",
+		".L replay_det_BB.C",
 //  		"replay_phys_L.C",
-		".L /w/halla-1/e05102/ellie/batch/inputs/ellana/replay_scalar.C",
-		".L /w/halla-1/e05102/ellie/batch/inputs/ellana/ScalarStat.C",
-		".L /w/halla-1/e05102/ellie/batch/inputs/ellana/replay_scalar_BB.C",
+		".L replay_scalar.C",
+		".L ScalarStat.C",
+		".L replay_scalar_BB.C",
 //		"lumi_plotsAuto.C",
-		".L /w/halla-1/e05102/ellie/batch/inputs/ellana/replay_R_src.C",
-		".L /w/halla-1/e05102/ellie/batch/inputs/ellana/replay_nohists_R.C",
-		".L /w/halla-1/e05102/ellie/batch/inputs/ellana/replay_nohists_L.C",
-		".L /w/halla-1/e05102/ellie/batch/inputs/ellana/replay_noHAND_R.C",
-		".L /w/halla-1/e05102/ellie/batch/inputs/ellana/replay_cosmics.C",
-		".L /w/halla-1/e05102/ellie/batch/inputs/ellana/replay_neutrons.C",
+		".L replay_R_src.C",
+		".L replay_nohists_R.C",
+		".L replay_nohists_L.C",
+		".L replay_noHAND_R.C",
+		".L replay_cosmics.C",
+		".L replay_neutrons.C",
 		"\0"
 	};
 

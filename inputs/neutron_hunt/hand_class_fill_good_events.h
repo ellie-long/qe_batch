@@ -109,6 +109,8 @@ void neutron_analysis_class::hand_class_fill_good_events(TH1F* ToFgoodEvent, TH1
 		// ********* The bit below sets the nu bins to be the same as Yawei's cuts *********************
 		if (asymType=="ssa")
 		{
+
+         // Q^2=0.1 GeV^2
 			if (i==1 && g_runnum<20541)
 			{
 				nuBinCutMin = 0;
@@ -130,6 +132,7 @@ void neutron_analysis_class::hand_class_fill_good_events(TH1F* ToFgoodEvent, TH1
 				nuBinCutMax = 0.125;
 			}
 
+			// Q^2=0.5 GeV^2
 			if (i==1 && g_runnum>20881 && g_runnum<21010)
 			{
 				nuBinCutMin = 0.12;
@@ -151,6 +154,7 @@ void neutron_analysis_class::hand_class_fill_good_events(TH1F* ToFgoodEvent, TH1
 				nuBinCutMax = 0.36;
 			}
 
+			// Q^2=1.0 GeV^2
 			if (i==1 && g_runnum>20541 && g_runnum<20880)
 			{
 				nuBinCutMin = 0.36;
@@ -172,12 +176,55 @@ void neutron_analysis_class::hand_class_fill_good_events(TH1F* ToFgoodEvent, TH1
 				nuBinCutMax = 0.68;
 			}
 
-
-
-
-
 		}
 
+		if (asymType=="dsa")
+		{
+			// Q^2=0.4 GeV^2
+			if (i==1 && g_runnum>21690 && g_runnum<22313)
+			{
+				nuBinCutMin = 0.12;
+				nuBinCutMax = 0.18;
+			}
+			if (i==2 && g_runnum>21690 && g_runnum<22313)
+			{
+				nuBinCutMin = 0.18;
+				nuBinCutMax = 0.24;
+			}
+			if (i==3 && g_runnum>21690 && g_runnum<22313)
+			{
+				nuBinCutMin = 0.24;
+				nuBinCutMax = 0.30;
+			}
+			if (i==4 && g_runnum>21690 && g_runnum<22313)
+			{
+				nuBinCutMin = 0.30;
+				nuBinCutMax = 0.36;
+			}
+
+			// Q^2=1.0 GeV^2
+			if (i==1 && g_runnum>22390 && g_runnum<22490)
+			{
+				nuBinCutMin = 0.36;
+				nuBinCutMax = 0.44;
+			}
+			if (i==2 && g_runnum>22390 && g_runnum<22490)
+			{
+				nuBinCutMin = 0.44;
+				nuBinCutMax = 0.52;
+			}
+			if (i==3 && g_runnum>22390 && g_runnum<22490)
+			{
+				nuBinCutMin = 0.52;
+				nuBinCutMax = 0.60;
+			}
+			if (i==4 && g_runnum>22390 && g_runnum<22490)
+			{
+				nuBinCutMin = 0.60;
+				nuBinCutMax = 0.68;
+			}
+
+		}
 
 //		cout << "nuBinSize: " << nuBinSize << ", nuBinCutMin: " << nuBinCutMin << ", nuBinCutMax: " << nuBinCutMax << ", nuBins: " << nuBins << ", numin: " << numin << ", numax: " << numax << endl;
 		nuBinCut = ((PriKineR_nu>nuBinCutMin) && (PriKineR_nu<nuBinCutMax));

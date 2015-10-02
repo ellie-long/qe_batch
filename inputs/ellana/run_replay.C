@@ -12,7 +12,9 @@ void run_replay()
 {
 	cout << "Running run_replay..." << endl;
 
-	gROOT->ProcessLine(".x /w/halla-1/e05102/ellie/batch/inputs/ellana/rootlogon.C");
+	gROOT->SetMacroPath(".:/work/halla/e05102/disk1/ellie/batch/inputs/ellana:/u/apps/root/5.34.13/root/macros");
+//	gROOT->ProcessLine(".x /w/halla-1/e05102/ellie/batch/inputs/ellana/rootlogon.C");
+	gROOT->ProcessLine(".x rootlogon.C");
 
 //	gROOT->SetStyle("classic");
 
@@ -28,6 +30,7 @@ void run_replay()
 	TString toRun = "replay_nohists_R(";
 	toRun += HeRunNumber;
 	toRun += ",-1)";
+//	toRun += ",20000)";
 //	gROOT->ProcessLine(".x /w/halla-1/e05102/ellie/batch/inputs/ellana/rootlogin.C");
 //	gROOT->ProcessLine(".x rootlogin.C");
 	gROOT->ProcessLine(toRun);

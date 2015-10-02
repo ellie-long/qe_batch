@@ -136,7 +136,7 @@ sub make_xml_sub_file
 	print SUBFILE "mkdir src\n"; 
 #	print SUBFILE "cp THaEvent.h src/.\n";
 	print SUBFILE "analyzer  ./".$macro." > ".$path_output."text_for_run_".$run_num.".out\n";
-#	print SUBFILE "analyzer  ".$neutron_path_inputs.$macro." > /w/halla-1/e05102/ellie/batch/inputs/neutron_hunt/text/text_for_run_".$run_num.".out\n";
+#	print SUBFILE "analyzer  ".$neutron_path_inputs.$macro." > /work/halla/e05102/disk1/ellie/batch/inputs/neutron_hunt/text/text_for_run_".$run_num.".out\n";
 
 # input options
 	print SUBFILE "ls -ltr\n";
