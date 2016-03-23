@@ -1101,53 +1101,28 @@ void neutron_analysis_class::hand_class_veto_cuts(int nplane, int thisbar, bool&
 // Define First Veto
 	if (vetoplane=="veto") 
 	{
-		for (int i=0; i<maxBar; i++)
-		{
-			pastVetoL = (NA_veto_lt_c[i]<vetoTDCcutmin || NA_veto_lt_c[i]>vetoTDCcutmax) && pastVetoL;
-			pastVetoR = (NA_veto_rt_c[i]<vetoTDCcutmin || NA_veto_rt_c[i]>vetoTDCcutmax) && pastVetoR;
-			if (!pastVetoL) {i = maxBar;}
-			if (!pastVetoR) {i = maxBar;}
-		}
+		pastVetoL = (NA_veto_lt_c<vetoTDCcutmin || NA_veto_lt_c>vetoTDCcutmax);
+		pastVetoR = (NA_veto_rt_c<vetoTDCcutmin || NA_veto_rt_c>vetoTDCcutmax);
 	}
 	else if (vetoplane=="nd.p1")
 	{ 
-		for (int i=0; i<maxBar; i++)
-		{
-			pastVetoL = ((NA_nd_p1_lt_c[i]<vetoTDCcutmin || NA_nd_p1_lt_c[i]>vetoTDCcutmax) && (NA_veto_lt_c[i]<vetoTDCcutmin || NA_veto_lt_c[i]>vetoTDCcutmax) && pastVetoL);
-			pastVetoR = ((NA_nd_p1_rt_c[i]<vetoTDCcutmin || NA_nd_p1_lt_c[i]>vetoTDCcutmax) && (NA_veto_rt_c[i]<vetoTDCcutmin || NA_veto_rt_c[i]>vetoTDCcutmax) && pastVetoR);
-			if (!pastVetoL) {i = maxBar;}
-			if (!pastVetoR) {i = maxBar;}
-		}
+		pastVetoL = ((NA_nd_p1_lt_c<vetoTDCcutmin || NA_nd_p1_lt_c>vetoTDCcutmax) && (NA_veto_lt_c<vetoTDCcutmin || NA_veto_lt_c>vetoTDCcutmax));
+		pastVetoR = ((NA_nd_p1_rt_c<vetoTDCcutmin || NA_nd_p1_lt_c>vetoTDCcutmax) && (NA_veto_rt_c<vetoTDCcutmin || NA_veto_rt_c>vetoTDCcutmax));
 	}
 	else if (vetoplane=="nd.p2")
 	{ 
-		for (int i=0; i<maxBar; i++)
-		{
-			pastVetoL = ((NA_nd_p2_lt_c[i]<vetoTDCcutmin || NA_nd_p2_lt_c[i]>vetoTDCcutmax) && (NA_nd_p1_lt_c[i]<vetoTDCcutmin || NA_nd_p1_lt_c[i]>vetoTDCcutmax) && (NA_veto_lt_c[i]<vetoTDCcutmin || NA_veto_lt_c[i]>vetoTDCcutmax) && pastVetoL);
-			pastVetoR = ((NA_nd_p2_rt_c[i]<vetoTDCcutmin || NA_nd_p2_rt_c[i]>vetoTDCcutmax) && (NA_nd_p1_rt_c[i]<vetoTDCcutmin || NA_nd_p1_lt_c[i]>vetoTDCcutmax) && (NA_veto_rt_c[i]<vetoTDCcutmin || NA_veto_rt_c[i]>vetoTDCcutmax) && pastVetoR);
-			if (!pastVetoL) {i = maxBar;}
-			if (!pastVetoR) {i = maxBar;}
-		}
+		pastVetoL = ((NA_nd_p2_lt_c<vetoTDCcutmin || NA_nd_p2_lt_c>vetoTDCcutmax) && (NA_nd_p1_lt_c<vetoTDCcutmin || NA_nd_p1_lt_c>vetoTDCcutmax) && (NA_veto_lt_c<vetoTDCcutmin || NA_veto_lt_c>vetoTDCcutmax));
+		pastVetoR = ((NA_nd_p2_rt_c<vetoTDCcutmin || NA_nd_p2_rt_c>vetoTDCcutmax) && (NA_nd_p1_rt_c<vetoTDCcutmin || NA_nd_p1_lt_c>vetoTDCcutmax) && (NA_veto_rt_c<vetoTDCcutmin || NA_veto_rt_c>vetoTDCcutmax));
 	}
 	else if (vetoplane=="nd.p3")
 	{ 
-		for (int i=0; i<maxBar; i++)
-		{
-			pastVetoL = ((NA_nd_p3_lt_c[i]<vetoTDCcutmin || NA_nd_p3_lt_c[i]>vetoTDCcutmax) && (NA_nd_p2_lt_c[i]<vetoTDCcutmin || NA_nd_p2_lt_c[i]>vetoTDCcutmax) && (NA_nd_p1_lt_c[i]<vetoTDCcutmin || NA_nd_p1_lt_c[i]>vetoTDCcutmax) && (NA_veto_lt_c[i]<vetoTDCcutmin || NA_veto_lt_c[i]>vetoTDCcutmax) && pastVetoL);
-			pastVetoR = ((NA_nd_p3_rt_c[i]<vetoTDCcutmin || NA_nd_p3_rt_c[i]>vetoTDCcutmax) && (NA_nd_p2_rt_c[i]<vetoTDCcutmin || NA_nd_p2_rt_c[i]>vetoTDCcutmax) && (NA_nd_p1_rt_c[i]<vetoTDCcutmin || NA_nd_p1_lt_c[i]>vetoTDCcutmax) && (NA_veto_rt_c[i]<vetoTDCcutmin || NA_veto_rt_c[i]>vetoTDCcutmax) && pastVetoR);
-			if (!pastVetoL) {i = maxBar;}
-			if (!pastVetoR) {i = maxBar;}
-		}
+		pastVetoL = ((NA_nd_p3_lt_c<vetoTDCcutmin || NA_nd_p3_lt_c>vetoTDCcutmax) && (NA_nd_p2_lt_c<vetoTDCcutmin || NA_nd_p2_lt_c>vetoTDCcutmax) && (NA_nd_p1_lt_c<vetoTDCcutmin || NA_nd_p1_lt_c>vetoTDCcutmax) && (NA_veto_lt_c<vetoTDCcutmin || NA_veto_lt_c>vetoTDCcutmax));
+		pastVetoR = ((NA_nd_p3_rt_c<vetoTDCcutmin || NA_nd_p3_rt_c>vetoTDCcutmax) && (NA_nd_p2_rt_c<vetoTDCcutmin || NA_nd_p2_rt_c>vetoTDCcutmax) && (NA_nd_p1_rt_c<vetoTDCcutmin || NA_nd_p1_lt_c>vetoTDCcutmax) && (NA_veto_rt_c<vetoTDCcutmin || NA_veto_rt_c>vetoTDCcutmax));
 	}
 	else if (vetoplane=="nd.p4")
 	{ 
-		for (int i=0; i<maxBar; i++)
-		{
-			pastVetoL = ((NA_nd_p4_lt_c[i]<vetoTDCcutmin || NA_nd_p4_lt_c[i]>vetoTDCcutmax) && (NA_nd_p3_lt_c[i]<vetoTDCcutmin || NA_nd_p3_lt_c[i]>vetoTDCcutmax) && (NA_nd_p2_lt_c[i]<vetoTDCcutmin || NA_nd_p2_lt_c[i]>vetoTDCcutmax) && (NA_nd_p1_lt_c[i]<vetoTDCcutmin || NA_nd_p1_lt_c[i]>vetoTDCcutmax) && (NA_veto_lt_c[i]<vetoTDCcutmin || NA_veto_lt_c[i]>vetoTDCcutmax) && pastVetoL);
-			pastVetoR = ((NA_nd_p4_rt_c[i]<vetoTDCcutmin || NA_nd_p4_rt_c[i]>vetoTDCcutmax) && (NA_nd_p3_rt_c[i]<vetoTDCcutmin || NA_nd_p3_rt_c[i]>vetoTDCcutmax) && (NA_nd_p2_rt_c[i]<vetoTDCcutmin || NA_nd_p2_rt_c[i]>vetoTDCcutmax) && (NA_nd_p1_rt_c[i]<vetoTDCcutmin || NA_nd_p1_lt_c[i]>vetoTDCcutmax) && (NA_veto_rt_c[i]<vetoTDCcutmin || NA_veto_rt_c[i]>vetoTDCcutmax) && pastVetoR);
-			if (!pastVetoL) {i = maxBar;}
-			if (!pastVetoR) {i = maxBar;}
-		}
+		pastVetoL = ((NA_nd_p4_lt_c<vetoTDCcutmin || NA_nd_p4_lt_c>vetoTDCcutmax) && (NA_nd_p3_lt_c<vetoTDCcutmin || NA_nd_p3_lt_c>vetoTDCcutmax) && (NA_nd_p2_lt_c<vetoTDCcutmin || NA_nd_p2_lt_c>vetoTDCcutmax) && (NA_nd_p1_lt_c<vetoTDCcutmin || NA_nd_p1_lt_c>vetoTDCcutmax) && (NA_veto_lt_c<vetoTDCcutmin || NA_veto_lt_c>vetoTDCcutmax));
+		pastVetoR = ((NA_nd_p4_rt_c<vetoTDCcutmin || NA_nd_p4_rt_c>vetoTDCcutmax) && (NA_nd_p3_rt_c<vetoTDCcutmin || NA_nd_p3_rt_c>vetoTDCcutmax) && (NA_nd_p2_rt_c<vetoTDCcutmin || NA_nd_p2_rt_c>vetoTDCcutmax) && (NA_nd_p1_rt_c<vetoTDCcutmin || NA_nd_p1_lt_c>vetoTDCcutmax) && (NA_veto_rt_c<vetoTDCcutmin || NA_veto_rt_c>vetoTDCcutmax));
 	}
 //	if (!pastVeto1L || !pastVeto1R) {return;}
 // Define Second Veto

@@ -10,19 +10,14 @@
 
 
 //void MyClass::hand_class_veto_cuts(int nplane, int thisbar, bool& madePastLVetoCuts, bool& madePastRVetoCuts, bool& madePastVetoCuts, double vetoTDCcutmin, double vetoTDCcutmax, Int_t jentry, TString& allVetos, bool& useIf, bool& useIfElse, bool& useSwitch) 
-void neutron_analysis_class::hand_class_veto_cuts(int nplane, int thisbar, bool& madePastLVetoCuts, bool& madePastRVetoCuts, bool& madePastVetoCuts, double vetoTDCcutmin, double vetoTDCcutmax, Int_t jentry, TString& allVetos, bool& useIf, bool& useIfElse, bool& useSwitch, bool includeVetos, bool& notEdge) 
+void neutron_analysis_class::hand_class_veto_cuts(int nplane, int thisbar, bool& madePastLVetoCuts, bool& madePastRVetoCuts, bool& madePastVetoCuts, double vetoTDCcutmin, double vetoTDCcutmax, Int_t jentry, TString& allVetos, bool& useIf, bool& useIfElse, bool& useSwitch, bool includeVetos, bool notEdge) 
 {
 
 	if (includeVetos) {useSwitch = true;}
 //	bool includeVetos = true;
 	bool includeAntivetos = false;
 	bool antivetosAsVetos = false;
-	notEdge = true;
-	if (thisbar == 0) {notEdge = false;}
-	if (nplane == 1 && thisbar == 29) {notEdge = false;}
-	if (nplane == 2 && thisbar == 23) {notEdge = false;}
-	if (nplane == 3 && thisbar == 21) {notEdge = false;}
-	if (nplane == 4 && thisbar == 11) {notEdge = false;}
+
 //	cout << "vvvvvvvvvvvvvvvvvvvvvvvvv hand_define_vetos.h vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv" << endl;
 //	cout << "Plane: " << nplane << ", Bar: " << thisbar << ", jentry: " << jentry << endl;
 //	cout << "Running hand_define_vetos.h for p" << nplane << "b" << thisbar << " where includeVetos=" << includeVetos <<  " where includeAntivetos=" << includeAntivetos << " and antivetosAsVetos=" << antivetosAsVetos << endl;
@@ -32,8 +27,8 @@ void neutron_analysis_class::hand_class_veto_cuts(int nplane, int thisbar, bool&
 	// in the remaining veto spaves so that extra bars aren't counted.
 	// It should only turn on if includeVetos is set to TRUE.
 	// Hopefully this works.
-	TString vetoplane = "";
-/*	int veto1bar;
+	TString veto1plane = "";
+	int veto1bar;
 	TString veto2plane = "";
 	int veto2bar;
 	TString veto3plane = "";
@@ -44,22 +39,16 @@ void neutron_analysis_class::hand_class_veto_cuts(int nplane, int thisbar, bool&
 	int veto5bar;
 	TString veto6plane = "";
 	int veto6bar;
-*/	TString antivetoplane = "";
-/*	int antiveto1bar;
+	TString antiveto1plane = "";
+	int antiveto1bar;
 	TString antiveto2plane = "";
 	int antiveto2bar;
 	TString antiveto3plane = "";
 	int antiveto3bar;
-*/	allVetos = "";
+	allVetos = "";
 	TString allAntivetos = "";
-	int maxBar;
 
-	if (nplane==1) {vetoplane = "veto"; antivetoplane="nd.p2";}
-	if (nplane==2) {vetoplane = "nd.p1"; antivetoplane="nd.p3";}
-	if (nplane==3) {vetoplane = "nd.p2"; antivetoplane="nd.p4";}
-	if (nplane==5) {vetoplane = "nd.p3"; antivetoplane="";}
-
-/*	switch (nplane)
+	switch (nplane)
 	{
 
 		case 1:
@@ -1035,44 +1024,49 @@ void neutron_analysis_class::hand_class_veto_cuts(int nplane, int thisbar, bool&
 			antiveto2plane = ""; antiveto2bar = 0;
 			antiveto3plane = ""; antiveto3bar = 0;
 	}
-*/
+
 	// This allVetos is going to be used when drawing the
 	// image of the HAND as a searchable string to find
 	// out if any particular bar is a veto bar or not.
 	// Similarly with goodBar and allAntivetos;
 	// **************************************************
-	if (vetoplane=="") {maxBar=0;}
-	if (vetoplane=="veto") {maxBar=32;}
-	if (vetoplane=="nd.p1") {maxBar=30;}
-	if (vetoplane=="nd.p2") {maxBar=24;}
-	if (vetoplane=="nd.p3") {maxBar=22;}
-	if (vetoplane=="nd.p4") {maxBar=12;}
+	allVetos = veto1plane;
+	allVetos += ".";
+	allVetos += veto1bar;
+	allVetos += " ";
+	allVetos += veto2plane;
+	allVetos += ".";
+	allVetos += veto2bar;
+	allVetos += " ";
+	allVetos += veto3plane;
+	allVetos += ".";
+	allVetos += veto3bar;
+	allVetos += " ";
+	allVetos += veto4plane;
+	allVetos += ".";
+	allVetos += veto4bar;
+	allVetos += " ";
+	allVetos += veto5plane;
+	allVetos += ".";
+	allVetos += veto5bar;
+	allVetos += " ";
+	allVetos += veto6plane;
+	allVetos += ".";
+	allVetos += veto6bar;
+	allVetos += " ";
 
-	allVetos = "";
-	for (int i=0; i<maxBar; i++)
-	{
-		allVetos += vetoplane;
-		allVetos += ".";
-		allVetos += i;
-		allVetos += " ";
-	}
-
-	if (antivetoplane=="") {maxBar=0;}
-	if (antivetoplane=="veto") {maxBar=32;}
-	if (antivetoplane=="nd.p1") {maxBar=30;}
-	if (antivetoplane=="nd.p2") {maxBar=24;}
-	if (antivetoplane=="nd.p3") {maxBar=22;}
-	if (antivetoplane=="nd.p4") {maxBar=12;}
-
-
-	allAntivetos = "";
-	for (int i=0; i<maxBar; i++)
-	{
-		allAntivetos += antivetoplane;
-		allAntivetos += ".";
-		allAntivetos += i;
-		allAntivetos += " ";
-	}
+	allAntivetos = antiveto1plane;
+	allAntivetos += ".";
+	allAntivetos += antiveto1bar;
+	allAntivetos += " ";
+	allAntivetos += antiveto2plane;
+	allAntivetos += ".";
+	allAntivetos += antiveto2bar;
+	allAntivetos += " ";
+	allAntivetos += antiveto3plane;
+	allAntivetos += ".";
+	allAntivetos += antiveto3bar;
+	allAntivetos += " ";
 
 	if (nplane==0) {allVetos = "";}
 	if (nplane==0) {allAntivetos = "";}
@@ -1084,74 +1078,49 @@ void neutron_analysis_class::hand_class_veto_cuts(int nplane, int thisbar, bool&
 	// Below are the  veto cuts. They're split apart because I want
 	// to be able to put this in a loop eventually to automize
 	// the flow of data to histograms
-	bool pastVetoL=true;
-	bool pastVetoR=true;
-/*	bool pastVeto2L=true;
+	bool pastVeto1L=true;
+	bool pastVeto2L=true;
 	bool pastVeto3L=true;
 	bool pastVeto4L=true;
 	bool pastVeto5L=true;
 	bool pastVeto6L=true;
+	bool pastVeto1R=true;
 	bool pastVeto2R=true;
 	bool pastVeto3R=true;
 	bool pastVeto4R=true;
 	bool pastVeto5R=true;
 	bool pastVeto6R=true;
-*/
+
 
 // Define First Veto
-	if (vetoplane=="veto") 
+	if (veto1plane=="veto") 
 	{
-		for (int i=0; i<maxBar; i++)
-		{
-			pastVetoL = (NA_veto_lt_c[i]<vetoTDCcutmin || NA_veto_lt_c[i]>vetoTDCcutmax) && pastVetoL;
-			pastVetoR = (NA_veto_rt_c[i]<vetoTDCcutmin || NA_veto_rt_c[i]>vetoTDCcutmax) && pastVetoR;
-			if (!pastVetoL) {i = maxBar;}
-			if (!pastVetoR) {i = maxBar;}
-		}
+		pastVeto1L = (NA_veto_lt_c[veto1bar]<vetoTDCcutmin || NA_veto_lt_c[veto1bar]>vetoTDCcutmax);
+		pastVeto1R = (NA_veto_rt_c[veto1bar]<vetoTDCcutmin || NA_veto_rt_c[veto1bar]>vetoTDCcutmax);
 	}
-	else if (vetoplane=="nd.p1")
+	else if (veto1plane=="nd.p1")
 	{ 
-		for (int i=0; i<maxBar; i++)
-		{
-			pastVetoL = ((NA_nd_p1_lt_c[i]<vetoTDCcutmin || NA_nd_p1_lt_c[i]>vetoTDCcutmax) && (NA_veto_lt_c[i]<vetoTDCcutmin || NA_veto_lt_c[i]>vetoTDCcutmax) && pastVetoL);
-			pastVetoR = ((NA_nd_p1_rt_c[i]<vetoTDCcutmin || NA_nd_p1_lt_c[i]>vetoTDCcutmax) && (NA_veto_rt_c[i]<vetoTDCcutmin || NA_veto_rt_c[i]>vetoTDCcutmax) && pastVetoR);
-			if (!pastVetoL) {i = maxBar;}
-			if (!pastVetoR) {i = maxBar;}
-		}
+		pastVeto1L = (NA_nd_p1_lt_c[veto1bar]<vetoTDCcutmin || NA_nd_p1_lt_c[veto1bar]>vetoTDCcutmax);
+		pastVeto1R = (NA_nd_p1_rt_c[veto1bar]<vetoTDCcutmin || NA_nd_p1_lt_c[veto1bar]>vetoTDCcutmax);
 	}
-	else if (vetoplane=="nd.p2")
+	else if (veto1plane=="nd.p2")
 	{ 
-		for (int i=0; i<maxBar; i++)
-		{
-			pastVetoL = ((NA_nd_p2_lt_c[i]<vetoTDCcutmin || NA_nd_p2_lt_c[i]>vetoTDCcutmax) && (NA_nd_p1_lt_c[i]<vetoTDCcutmin || NA_nd_p1_lt_c[i]>vetoTDCcutmax) && (NA_veto_lt_c[i]<vetoTDCcutmin || NA_veto_lt_c[i]>vetoTDCcutmax) && pastVetoL);
-			pastVetoR = ((NA_nd_p2_rt_c[i]<vetoTDCcutmin || NA_nd_p2_rt_c[i]>vetoTDCcutmax) && (NA_nd_p1_rt_c[i]<vetoTDCcutmin || NA_nd_p1_lt_c[i]>vetoTDCcutmax) && (NA_veto_rt_c[i]<vetoTDCcutmin || NA_veto_rt_c[i]>vetoTDCcutmax) && pastVetoR);
-			if (!pastVetoL) {i = maxBar;}
-			if (!pastVetoR) {i = maxBar;}
-		}
+		pastVeto1L = (NA_nd_p2_lt_c[veto1bar]<vetoTDCcutmin || NA_nd_p2_lt_c[veto1bar]>vetoTDCcutmax);
+		pastVeto1R = (NA_nd_p2_rt_c[veto1bar]<vetoTDCcutmin || NA_nd_p2_rt_c[veto1bar]>vetoTDCcutmax);
 	}
-	else if (vetoplane=="nd.p3")
+	else if (veto1plane=="nd.p3")
 	{ 
-		for (int i=0; i<maxBar; i++)
-		{
-			pastVetoL = ((NA_nd_p3_lt_c[i]<vetoTDCcutmin || NA_nd_p3_lt_c[i]>vetoTDCcutmax) && (NA_nd_p2_lt_c[i]<vetoTDCcutmin || NA_nd_p2_lt_c[i]>vetoTDCcutmax) && (NA_nd_p1_lt_c[i]<vetoTDCcutmin || NA_nd_p1_lt_c[i]>vetoTDCcutmax) && (NA_veto_lt_c[i]<vetoTDCcutmin || NA_veto_lt_c[i]>vetoTDCcutmax) && pastVetoL);
-			pastVetoR = ((NA_nd_p3_rt_c[i]<vetoTDCcutmin || NA_nd_p3_rt_c[i]>vetoTDCcutmax) && (NA_nd_p2_rt_c[i]<vetoTDCcutmin || NA_nd_p2_rt_c[i]>vetoTDCcutmax) && (NA_nd_p1_rt_c[i]<vetoTDCcutmin || NA_nd_p1_lt_c[i]>vetoTDCcutmax) && (NA_veto_rt_c[i]<vetoTDCcutmin || NA_veto_rt_c[i]>vetoTDCcutmax) && pastVetoR);
-			if (!pastVetoL) {i = maxBar;}
-			if (!pastVetoR) {i = maxBar;}
-		}
+		pastVeto1L = (NA_nd_p3_lt_c[veto1bar]<vetoTDCcutmin || NA_nd_p3_lt_c[veto1bar]>vetoTDCcutmax);
+		pastVeto1R = (NA_nd_p3_rt_c[veto1bar]<vetoTDCcutmin || NA_nd_p3_rt_c[veto1bar]>vetoTDCcutmax);
 	}
-	else if (vetoplane=="nd.p4")
+	else if (veto1plane=="nd.p4")
 	{ 
-		for (int i=0; i<maxBar; i++)
-		{
-			pastVetoL = ((NA_nd_p4_lt_c[i]<vetoTDCcutmin || NA_nd_p4_lt_c[i]>vetoTDCcutmax) && (NA_nd_p3_lt_c[i]<vetoTDCcutmin || NA_nd_p3_lt_c[i]>vetoTDCcutmax) && (NA_nd_p2_lt_c[i]<vetoTDCcutmin || NA_nd_p2_lt_c[i]>vetoTDCcutmax) && (NA_nd_p1_lt_c[i]<vetoTDCcutmin || NA_nd_p1_lt_c[i]>vetoTDCcutmax) && (NA_veto_lt_c[i]<vetoTDCcutmin || NA_veto_lt_c[i]>vetoTDCcutmax) && pastVetoL);
-			pastVetoR = ((NA_nd_p4_rt_c[i]<vetoTDCcutmin || NA_nd_p4_rt_c[i]>vetoTDCcutmax) && (NA_nd_p3_rt_c[i]<vetoTDCcutmin || NA_nd_p3_rt_c[i]>vetoTDCcutmax) && (NA_nd_p2_rt_c[i]<vetoTDCcutmin || NA_nd_p2_rt_c[i]>vetoTDCcutmax) && (NA_nd_p1_rt_c[i]<vetoTDCcutmin || NA_nd_p1_lt_c[i]>vetoTDCcutmax) && (NA_veto_rt_c[i]<vetoTDCcutmin || NA_veto_rt_c[i]>vetoTDCcutmax) && pastVetoR);
-			if (!pastVetoL) {i = maxBar;}
-			if (!pastVetoR) {i = maxBar;}
-		}
+		pastVeto1L = (NA_nd_p4_lt_c[veto1bar]<vetoTDCcutmin || NA_nd_p4_lt_c[veto1bar]>vetoTDCcutmax);
+		pastVeto1R = (NA_nd_p4_rt_c[veto1bar]<vetoTDCcutmin || NA_nd_p4_rt_c[veto1bar]>vetoTDCcutmax);
 	}
 //	if (!pastVeto1L || !pastVeto1R) {return;}
 // Define Second Veto
-/*	if (veto2plane=="veto") 
+	if (veto2plane=="veto") 
 	{
 		pastVeto2L = (NA_veto_lt_c[veto2bar]<vetoTDCcutmin || NA_veto_lt_c[veto2bar]>vetoTDCcutmax);
 		pastVeto2R = (NA_veto_rt_c[veto2bar]<vetoTDCcutmin || NA_veto_rt_c[veto2bar]>vetoTDCcutmax);
@@ -1285,7 +1254,7 @@ void neutron_analysis_class::hand_class_veto_cuts(int nplane, int thisbar, bool&
 		pastVeto6R = (NA_nd_p4_rt_c[veto6bar]<vetoTDCcutmin || NA_nd_p4_rt_c[veto6bar]>vetoTDCcutmax);
 	}
 //	if (!pastVeto6L || !pastVeto6R) {return;}
-*/
+
 	bool inGoodBar = true;
 // vvvvvvvvvvvvvvvvvv Below is inGoodBar AND TD Cut vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 /*	if (nplane==0) {inGoodBar = (NA_veto_lt_c[thisbar]>vetoTDCcutmin && NA_veto_lt_c[thisbar]<vetoTDCcutmax && NA_veto_rt_c[thisbar]>vetoTDCcutmin && NA_veto_rt_c[thisbar]<vetoTDCcutmax);}
@@ -1308,12 +1277,10 @@ void neutron_analysis_class::hand_class_veto_cuts(int nplane, int thisbar, bool&
 // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
-//	madePastLVetoCuts = (pastVeto1L &&  pastVeto2L && pastVeto3L &&  pastVeto4L &&  pastVeto5L &&  pastVeto6L);
-//	madePastRVetoCuts = (pastVeto1R &&  pastVeto2R && pastVeto3R &&  pastVeto4R &&  pastVeto5R &&  pastVeto6R);
+	madePastLVetoCuts = (pastVeto1L &&  pastVeto2L && pastVeto3L &&  pastVeto4L &&  pastVeto5L &&  pastVeto6L);
+	madePastRVetoCuts = (pastVeto1R &&  pastVeto2R && pastVeto3R &&  pastVeto4R &&  pastVeto5R &&  pastVeto6R);
 
-	madePastLVetoCuts = pastVetoL;
-	madePastRVetoCuts = pastVetoR;
-	if (includeVetos) {madePastVetoCuts = (madePastLVetoCuts && madePastRVetoCuts && inGoodBar && notEdge);}
+	if (includeVetos) {madePastVetoCuts = (madePastLVetoCuts && madePastRVetoCuts && inGoodBar);}
 	if (!includeVetos) {madePastVetoCuts = true;}
 
 //	if (includeVetos) {cout << "madePastVetoCuts: " << madePastLVetoCuts << ", Plane: " << nplane << ", Bar: " << thisbar << ", jentry: " << jentry << endl;}

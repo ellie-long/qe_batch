@@ -66,7 +66,7 @@ void make_target_asymmetry_class_files()
 //	target_asymmetry_analysis_class m;
 //	cout << "Running m.Loop()..." << endl;
 	cout << "Running m.AsymLoop(1)..." << endl;
-	gROOT->ProcessLine("m.AsymLoop(1)"); // No Vetos
+//	gROOT->ProcessLine("m.AsymLoop(1)"); // No Vetos
 	cout << "m.AsymLoop(1) ran successfully!" << endl;
 	cout << "Running m.AsymLoop(2)..." << endl;
 	gROOT->ProcessLine("m.AsymLoop(2)"); // Neutrons

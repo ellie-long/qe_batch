@@ -1,6 +1,6 @@
 //////////////////////////////////////////////////////////
 // This class has been automatically generated on
-// Mon Oct  6 11:22:43 2014 by ROOT version 5.34/13
+// Tue Mar 22 13:12:36 2016 by ROOT version 5.34/13
 // from TChain T/
 //////////////////////////////////////////////////////////
 
@@ -38,11 +38,11 @@ public :
    Int_t           Ndata_D_edtmNDadc;
    Double_t        D_edtmNDadc[1];   //[Ndata.D.edtmNDadc]
    Int_t           Ndata_NA_n_pad;
-   Double_t        NA_n_pad[42];   //[Ndata.NA.n.pad]
+   Double_t        NA_n_pad[18];   //[Ndata.NA.n.pad]
    Int_t           Ndata_NA_n_plane;
-   Double_t        NA_n_plane[42];   //[Ndata.NA.n.plane]
+   Double_t        NA_n_plane[18];   //[Ndata.NA.n.plane]
    Int_t           Ndata_NA_n_tof;
-   Double_t        NA_n_tof[42];   //[Ndata.NA.n.tof]
+   Double_t        NA_n_tof[18];   //[Ndata.NA.n.tof]
    Int_t           Ndata_NA_nd_p1_la;
    Double_t        NA_nd_p1_la[30];   //[Ndata.NA.nd.p1.la]
    Int_t           Ndata_NA_nd_p1_la_c;
@@ -108,9 +108,9 @@ public :
    Int_t           Ndata_NA_nd_p4_rt_c;
    Double_t        NA_nd_p4_rt_c[12];   //[Ndata.NA.nd.p4.rt_c]
    Int_t           Ndata_NA_tr_firstpad;
-   Double_t        NA_tr_firstpad[9];   //[Ndata.NA.tr.firstpad]
+   Double_t        NA_tr_firstpad[8];   //[Ndata.NA.tr.firstpad]
    Int_t           Ndata_NA_tr_firstplane;
-   Double_t        NA_tr_firstplane[9];   //[Ndata.NA.tr.firstplane]
+   Double_t        NA_tr_firstplane[8];   //[Ndata.NA.tr.firstplane]
    Int_t           Ndata_NA_veto_ishit;
    Double_t        NA_veto_ishit[32];   //[Ndata.NA.veto.ishit]
    Int_t           Ndata_NA_veto_la;
@@ -130,15 +130,15 @@ public :
    Int_t           Ndata_NA_veto_rt_c;
    Double_t        NA_veto_rt_c[32];   //[Ndata.NA.veto.rt_c]
    Int_t           Ndata_R_tr_beta;
-   Double_t        R_tr_beta[1];   //[Ndata.R.tr.beta]
+   Double_t        R_tr_beta[8];   //[Ndata.R.tr.beta]
    Int_t           Ndata_R_tr_ph;
-   Double_t        R_tr_ph[1];   //[Ndata.R.tr.ph]
+   Double_t        R_tr_ph[8];   //[Ndata.R.tr.ph]
    Int_t           Ndata_R_tr_th;
-   Double_t        R_tr_th[1];   //[Ndata.R.tr.th]
+   Double_t        R_tr_th[8];   //[Ndata.R.tr.th]
    Int_t           Ndata_R_tr_x;
-   Double_t        R_tr_x[1];   //[Ndata.R.tr.x]
+   Double_t        R_tr_x[8];   //[Ndata.R.tr.x]
    Int_t           Ndata_R_tr_y;
-   Double_t        R_tr_y[1];   //[Ndata.R.tr.y]
+   Double_t        R_tr_y[8];   //[Ndata.R.tr.y]
    Double_t        D_evtypebits;
    Double_t        ExTgtCor_R_dp;
    Double_t        ExTgtCor_R_p;
@@ -348,6 +348,8 @@ public :
    Double_t        evright_d1c;
    Double_t        evright_d3c;
    Double_t        evright_d10c;
+   Double_t        evright_unserc;
+   Double_t        evright_edtmc;
    Double_t        evright_t1r;
    Double_t        evright_t2r;
    Double_t        evright_t3r;
@@ -361,6 +363,7 @@ public :
    Double_t        evright_clkr;
    Double_t        evright_l1ar;
    Double_t        evright_fclkr;
+   Double_t        evright_edtmr;
    Double_t        evright_l1app;
    Double_t        evright_l1apm;
    Double_t        evright_l1amp;
@@ -413,6 +416,10 @@ public :
    Double_t        evright_t4pm;
    Double_t        evright_t4mp;
    Double_t        evright_t4mm;
+   Double_t        evright_edtmpp;
+   Double_t        evright_edtmpm;
+   Double_t        evright_edtmmp;
+   Double_t        evright_edtmmm;
    Double_t        R_sv_x;
    Double_t        R_sv_y;
    Double_t        IsReftHelicity;
@@ -758,6 +765,8 @@ public :
    TBranch        *b_evright_d1c;   //!
    TBranch        *b_evright_d3c;   //!
    TBranch        *b_evright_d10c;   //!
+   TBranch        *b_evright_unserc;   //!
+   TBranch        *b_evright_edtmc;   //!
    TBranch        *b_evright_t1r;   //!
    TBranch        *b_evright_t2r;   //!
    TBranch        *b_evright_t3r;   //!
@@ -771,6 +780,7 @@ public :
    TBranch        *b_evright_clkr;   //!
    TBranch        *b_evright_l1ar;   //!
    TBranch        *b_evright_fclkr;   //!
+   TBranch        *b_evright_edtmr;   //!
    TBranch        *b_evright_l1app;   //!
    TBranch        *b_evright_l1apm;   //!
    TBranch        *b_evright_l1amp;   //!
@@ -823,6 +833,10 @@ public :
    TBranch        *b_evright_t4pm;   //!
    TBranch        *b_evright_t4mp;   //!
    TBranch        *b_evright_t4mm;   //!
+   TBranch        *b_evright_edtmpp;   //!
+   TBranch        *b_evright_edtmpm;   //!
+   TBranch        *b_evright_edtmmp;   //!
+   TBranch        *b_evright_edtmmm;   //!
    TBranch        *b_R_sv_x;   //!
    TBranch        *b_R_sv_y;   //!
    TBranch        *b_IsReftHelicity;   //!
@@ -875,7 +889,7 @@ neutron_analysis_class::neutron_analysis_class(TTree *tree) : fChain(0)
       // The following code should be used if you want this class to access a chain
       // of trees.
       TChain * chain = new TChain("T","");
-      chain->Add("./e05102_R_20494.root/T");
+      chain->Add("./e05102_R_20500.root/T");
       tree = chain;
 #endif // SINGLE_TREE
 
@@ -1249,6 +1263,8 @@ void neutron_analysis_class::Init(TTree *tree)
    fChain->SetBranchAddress("evright_d1c", &evright_d1c, &b_evright_d1c);
    fChain->SetBranchAddress("evright_d3c", &evright_d3c, &b_evright_d3c);
    fChain->SetBranchAddress("evright_d10c", &evright_d10c, &b_evright_d10c);
+   fChain->SetBranchAddress("evright_unserc", &evright_unserc, &b_evright_unserc);
+   fChain->SetBranchAddress("evright_edtmc", &evright_edtmc, &b_evright_edtmc);
    fChain->SetBranchAddress("evright_t1r", &evright_t1r, &b_evright_t1r);
    fChain->SetBranchAddress("evright_t2r", &evright_t2r, &b_evright_t2r);
    fChain->SetBranchAddress("evright_t3r", &evright_t3r, &b_evright_t3r);
@@ -1262,6 +1278,7 @@ void neutron_analysis_class::Init(TTree *tree)
    fChain->SetBranchAddress("evright_clkr", &evright_clkr, &b_evright_clkr);
    fChain->SetBranchAddress("evright_l1ar", &evright_l1ar, &b_evright_l1ar);
    fChain->SetBranchAddress("evright_fclkr", &evright_fclkr, &b_evright_fclkr);
+   fChain->SetBranchAddress("evright_edtmr", &evright_edtmr, &b_evright_edtmr);
    fChain->SetBranchAddress("evright_l1app", &evright_l1app, &b_evright_l1app);
    fChain->SetBranchAddress("evright_l1apm", &evright_l1apm, &b_evright_l1apm);
    fChain->SetBranchAddress("evright_l1amp", &evright_l1amp, &b_evright_l1amp);
@@ -1314,6 +1331,10 @@ void neutron_analysis_class::Init(TTree *tree)
    fChain->SetBranchAddress("evright_t4pm", &evright_t4pm, &b_evright_t4pm);
    fChain->SetBranchAddress("evright_t4mp", &evright_t4mp, &b_evright_t4mp);
    fChain->SetBranchAddress("evright_t4mm", &evright_t4mm, &b_evright_t4mm);
+   fChain->SetBranchAddress("evright_edtmpp", &evright_edtmpp, &b_evright_edtmpp);
+   fChain->SetBranchAddress("evright_edtmpm", &evright_edtmpm, &b_evright_edtmpm);
+   fChain->SetBranchAddress("evright_edtmmp", &evright_edtmmp, &b_evright_edtmmp);
+   fChain->SetBranchAddress("evright_edtmmm", &evright_edtmmm, &b_evright_edtmmm);
 //    fChain->SetBranchAddress("R_sv_x", &R_sv_x, &b_R_sv_x);
 //    fChain->SetBranchAddress("R_sv_y", &R_sv_y, &b_R_sv_y);
 //    fChain->SetBranchAddress("IsReftHelicity", &IsReftHelicity, &b_IsReftHelicity);
