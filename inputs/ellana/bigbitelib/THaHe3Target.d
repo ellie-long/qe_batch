@@ -65,5 +65,7 @@ THaHe3Target.o THaHe3Target.d : THaHe3Target.cxx \
  /apps/root/PRO/root/include/TArrayD.h \
  /apps/root/PRO/root/include/TClass.h \
  /apps/root/PRO/root/include/TObjString.h \
+ /apps/root/PRO/root/include/ThreadLocalStorage.h \
+ /apps/root/PRO/root/include/RConfigure.h \
  /apps/root/PRO/root/include/TVirtualTreePlayer.h \
  /u/home/ellie/analyzer-1.5.23/src/THaApparatus.h

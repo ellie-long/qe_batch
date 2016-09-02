@@ -1,9 +1,9 @@
 THaScintillatorPlane.o THaScintillatorPlane.d : THaScintillatorPlane.cxx THaScintillatorPlane.h \
- THaPlane.h /home/ellie/analyzer-1.5.23/src/THaNonTrackingDetector.h \
- /home/ellie/analyzer-1.5.23/src/THaSpectrometerDetector.h \
- /home/ellie/analyzer-1.5.23/src/THaDetector.h \
- /home/ellie/analyzer-1.5.23/src/THaDetectorBase.h \
- /home/ellie/analyzer-1.5.23/src/THaAnalysisObject.h \
+ THaPlane.h /u/home/ellie/analyzer-1.5.23/src/THaNonTrackingDetector.h \
+ /u/home/ellie/analyzer-1.5.23/src/THaSpectrometerDetector.h \
+ /u/home/ellie/analyzer-1.5.23/src/THaDetector.h \
+ /u/home/ellie/analyzer-1.5.23/src/THaDetectorBase.h \
+ /u/home/ellie/analyzer-1.5.23/src/THaAnalysisObject.h \
  /apps/root/PRO/root/include/TNamed.h \
  /apps/root/PRO/root/include/TObject.h \
  /apps/root/PRO/root/include/Rtypes.h \
@@ -21,10 +21,10 @@ THaScintillatorPlane.o THaScintillatorPlane.d : THaScintillatorPlane.cxx THaScin
  /apps/root/PRO/root/include/TBuffer.h \
  /apps/root/PRO/root/include/TString.h \
  /apps/root/PRO/root/include/TMathBase.h \
- /home/ellie/analyzer-1.5.23/src/THaGlobals.h \
+ /u/home/ellie/analyzer-1.5.23/src/THaGlobals.h \
  /apps/root/PRO/root/include/TDatime.h \
- /home/ellie/analyzer-1.5.23/src/VarDef.h \
- /home/ellie/analyzer-1.5.23/src/VarType.h \
+ /u/home/ellie/analyzer-1.5.23/src/VarDef.h \
+ /u/home/ellie/analyzer-1.5.23/src/VarType.h \
  /apps/root/PRO/root/include/TVector3.h \
  /apps/root/PRO/root/include/TError.h \
  /apps/root/PRO/root/include/TVector2.h \
@@ -41,26 +41,26 @@ THaScintillatorPlane.o THaScintillatorPlane.d : THaScintillatorPlane.cxx THaScin
  /apps/root/PRO/root/include/TMatrixFUtils.h \
  /apps/root/PRO/root/include/TMatrixFUtilsfwd.h \
  /apps/root/PRO/root/include/TRef.h \
- /home/ellie/analyzer-1.5.23/src/THaApparatus.h \
+ /u/home/ellie/analyzer-1.5.23/src/THaApparatus.h \
  /apps/root/PRO/root/include/TClonesArray.h \
  /apps/root/PRO/root/include/TObjArray.h \
  /apps/root/PRO/root/include/TSeqCollection.h \
  /apps/root/PRO/root/include/TCollection.h \
  /apps/root/PRO/root/include/TIterator.h \
- /home/ellie/analyzer-1.5.23/hana_decode/THaEvData.h \
+ /u/home/ellie/analyzer-1.5.23/hana_decode/THaEvData.h \
  /apps/root/PRO/root/include/TObject.h \
  /apps/root/PRO/root/include/TString.h \
- /home/ellie/analyzer-1.5.23/hana_decode/THaSlotData.h \
+ /u/home/ellie/analyzer-1.5.23/hana_decode/THaSlotData.h \
  /apps/root/PRO/root/include/TBits.h \
- /home/ellie/analyzer-1.5.23/hana_decode/evio.h \
- /home/ellie/analyzer-1.5.23/src/THaDetMap.h \
+ /u/home/ellie/analyzer-1.5.23/hana_decode/evio.h \
+ /u/home/ellie/analyzer-1.5.23/src/THaDetMap.h \
  /apps/root/PRO/root/include/Rtypes.h \
- /home/ellie/analyzer-1.5.23/src/VarDef.h \
- /home/ellie/analyzer-1.5.23/src/VarType.h \
- /home/ellie/analyzer-1.5.23/src/THaTrack.h \
- /home/ellie/analyzer-1.5.23/src/THaPIDinfo.h \
+ /u/home/ellie/analyzer-1.5.23/src/VarDef.h \
+ /u/home/ellie/analyzer-1.5.23/src/VarType.h \
+ /u/home/ellie/analyzer-1.5.23/src/THaTrack.h \
+ /u/home/ellie/analyzer-1.5.23/src/THaPIDinfo.h \
  /apps/root/PRO/root/include/TArrayD.h \
  /apps/root/PRO/root/include/TArray.h /apps/root/PRO/root/include/TMath.h \
- THaNAScintHit.h THaNA.h /home/ellie/analyzer-1.5.23/src/THaApparatus.h \
+ THaNAScintHit.h THaNA.h /u/home/ellie/analyzer-1.5.23/src/THaApparatus.h \
  THaVeto.h THaNeutronDetector.h THaNDTrack.h THaNDNeutron.h \
- /home/ellie/analyzer-1.5.23/src/THaTrackProj.h
+ /u/home/ellie/analyzer-1.5.23/src/THaTrackProj.h

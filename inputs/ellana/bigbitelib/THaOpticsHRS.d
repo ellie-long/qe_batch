@@ -64,6 +64,8 @@ THaOpticsHRS.o THaOpticsHRS.d : THaOpticsHRS.cxx \
  /apps/root/PRO/root/include/Property.h \
  /apps/root/PRO/root/include/ESTLType.h \
  /apps/root/PRO/root/include/TObjString.h \
+ /apps/root/PRO/root/include/ThreadLocalStorage.h \
+ /apps/root/PRO/root/include/RConfigure.h \
  /apps/root/PRO/root/include/TMath.h /apps/root/PRO/root/include/TList.h \
  /apps/root/PRO/root/include/TROOT.h \
  /apps/root/PRO/root/include/TDirectory.h \

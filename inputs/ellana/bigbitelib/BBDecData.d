@@ -61,4 +61,6 @@ BBDecData.o BBDecData.d : BBDecData.cxx BBDecData.h \
  /apps/root/PRO/root/include/ESTLType.h \
  /apps/root/PRO/root/include/TObjArray.h \
  /apps/root/PRO/root/include/TObjString.h \
+ /apps/root/PRO/root/include/ThreadLocalStorage.h \
+ /apps/root/PRO/root/include/RConfigure.h \
  /u/home/ellie/analyzer-1.5.23/src/VarDef.h

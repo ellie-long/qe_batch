@@ -70,6 +70,8 @@ THaScintPlaneDet.o THaScintPlaneDet.d : THaScintPlaneDet.cxx \
  /apps/root/PRO/root/include/TArrayI.h \
  /apps/root/PRO/root/include/TClass.h \
  /apps/root/PRO/root/include/TObjString.h \
+ /apps/root/PRO/root/include/ThreadLocalStorage.h \
+ /apps/root/PRO/root/include/RConfigure.h \
  /apps/root/PRO/root/include/TVirtualTreePlayer.h \
  /u/home/ellie/analyzer-1.5.23/src/THaOutput.h THaScintHit.h \
  THaScintBar.h THaScintPMT.h THaAdcHit.h THaTdcHit.h THaPartialHit.h \

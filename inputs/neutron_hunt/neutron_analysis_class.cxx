@@ -519,8 +519,8 @@ void neutron_analysis_class::AsymLoop(int dataType)
 // ^^^^^^^^^^^^^^^^^^^^^^ Define Kinematics Settings ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
-	double xmin = 0.6;
-	double xmax = 3.0;
+	double xmin = 0.0;
+	double xmax = 4.0;
 
 	int bins = 50;
 

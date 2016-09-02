@@ -1,32 +1,32 @@
 <Request>
 	<Project name="e05102"/>
 	<Track name="analysis"/>
-	<Name name="batch_analysis_22_20511"/>
+	<Name name="batch_analysis_2_20792"/>
 	<Command><![CDATA[
-printf '\nellie@ifarm> date\n' > /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160322_17:29:29/neutron_cuts_text_for_run_20511.out
-date >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160322_17:29:29/neutron_cuts_text_for_run_20511.out
-printf '\nellie@ifarm> source /lustre/expphy/work/halla/e05102/ellie/batch/inputs/ellana/set_environment_variables_for_vanalyzer.tcsh\n' >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160322_17:29:29/neutron_cuts_text_for_run_20511.out
-source /lustre/expphy/work/halla/e05102/ellie/batch/inputs/ellana/set_environment_variables_for_vanalyzer.tcsh >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160322_17:29:29/neutron_cuts_text_for_run_20511.out
-printf '\nellie@ifarm> printenv\n' >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160322_17:29:29/neutron_cuts_text_for_run_20511.out
-printenv >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160322_17:29:29/neutron_cuts_text_for_run_20511.out
-printf '\nellie@ifarm> ls -ltr\n' >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160322_17:29:29/neutron_cuts_text_for_run_20511.out
-ls -ltr >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160322_17:29:29/neutron_cuts_text_for_run_20511.out
-printf '\nellie@ifarm> rm input.file\n' >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160322_17:29:29/neutron_cuts_text_for_run_20511.out
-rm input.file >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160322_17:29:29/neutron_cuts_text_for_run_20511.out
-printf '\nellie@ifarm> ls -ltr\n' >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160322_17:29:29/neutron_cuts_text_for_run_20511.out
-ls -ltr >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160322_17:29:29/neutron_cuts_text_for_run_20511.out
-printf '\nellie@ifarm> printf 20511 > input.file\n' >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160322_17:29:29/neutron_cuts_text_for_run_20511.out
-printf 20511 > input.file
-printf '\nellie@ifarm> cat input.file\n' >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160322_17:29:29/neutron_cuts_text_for_run_20511.out
-cat input.file >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160322_17:29:29/neutron_cuts_text_for_run_20511.out
-printf '\nellie@ifarm> analyzer /lustre/expphy/work/halla/e05102/ellie/batch/inputs/ellana/run_replay.C\n' >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160322_17:29:29/neutron_cuts_text_for_run_20511.out
-analyzer /lustre/expphy/work/halla/e05102/ellie/batch/inputs/ellana/run_replay.C >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160322_17:29:29/neutron_cuts_text_for_run_20511.out
-printf '\nellie@ifarm> analyzer ./make_target_asymmetry_class_files.C\n' >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160322_17:29:29/neutron_cuts_text_for_run_20511.out
-analyzer ./make_target_asymmetry_class_files.C >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160322_17:29:29/neutron_cuts_text_for_run_20511.out
-printf '\nellie@ifarm> ls -ltr\n' >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160322_17:29:29/neutron_cuts_text_for_run_20511.out
-ls -ltr >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160322_17:29:29/neutron_cuts_text_for_run_20511.out
-printf '\nellie@ifarm> date\n' >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160322_17:29:29/neutron_cuts_text_for_run_20511.out
-date >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160322_17:29:29/neutron_cuts_text_for_run_20511.out
+printf '\nellie@ifarm> date\n' > /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160901_17:23:23/neutron_cuts_text_for_run_20792.out
+date >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160901_17:23:23/neutron_cuts_text_for_run_20792.out
+printf '\nellie@ifarm> source /lustre/expphy/work/halla/e05102/ellie/batch/inputs/ellana/set_environment_variables_for_vanalyzer.tcsh\n' >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160901_17:23:23/neutron_cuts_text_for_run_20792.out
+source /lustre/expphy/work/halla/e05102/ellie/batch/inputs/ellana/set_environment_variables_for_vanalyzer.tcsh >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160901_17:23:23/neutron_cuts_text_for_run_20792.out
+printf '\nellie@ifarm> printenv\n' >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160901_17:23:23/neutron_cuts_text_for_run_20792.out
+printenv >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160901_17:23:23/neutron_cuts_text_for_run_20792.out
+printf '\nellie@ifarm> ls -ltr\n' >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160901_17:23:23/neutron_cuts_text_for_run_20792.out
+ls -ltr >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160901_17:23:23/neutron_cuts_text_for_run_20792.out
+printf '\nellie@ifarm> rm input.file\n' >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160901_17:23:23/neutron_cuts_text_for_run_20792.out
+rm input.file >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160901_17:23:23/neutron_cuts_text_for_run_20792.out
+printf '\nellie@ifarm> ls -ltr\n' >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160901_17:23:23/neutron_cuts_text_for_run_20792.out
+ls -ltr >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160901_17:23:23/neutron_cuts_text_for_run_20792.out
+printf '\nellie@ifarm> printf 20792 > input.file\n' >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160901_17:23:23/neutron_cuts_text_for_run_20792.out
+printf 20792 > input.file
+printf '\nellie@ifarm> cat input.file\n' >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160901_17:23:23/neutron_cuts_text_for_run_20792.out
+cat input.file >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160901_17:23:23/neutron_cuts_text_for_run_20792.out
+printf '\nellie@ifarm> analyzer /lustre/expphy/work/halla/e05102/ellie/batch/inputs/ellana/run_replay.C\n' >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160901_17:23:23/neutron_cuts_text_for_run_20792.out
+analyzer /lustre/expphy/work/halla/e05102/ellie/batch/inputs/ellana/run_replay.C >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160901_17:23:23/neutron_cuts_text_for_run_20792.out
+printf '\nellie@ifarm> analyzer ./make_target_asymmetry_class_files.C\n' >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160901_17:23:23/neutron_cuts_text_for_run_20792.out
+analyzer ./make_target_asymmetry_class_files.C >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160901_17:23:23/neutron_cuts_text_for_run_20792.out
+printf '\nellie@ifarm> ls -ltr\n' >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160901_17:23:23/neutron_cuts_text_for_run_20792.out
+ls -ltr >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160901_17:23:23/neutron_cuts_text_for_run_20792.out
+printf '\nellie@ifarm> date\n' >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160901_17:23:23/neutron_cuts_text_for_run_20792.out
+date >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160901_17:23:23/neutron_cuts_text_for_run_20792.out
 	]]></Command>
 
 	<DiskSpace space="15" unit="GB"/>
@@ -54,13 +54,12 @@ date >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160322_17:29
 
 	<Job>
 		<Input src="/work/halla/e05102/disk1/ellie/batch/inputs/ellana/rootlogon.C" dest="rootlogon.C"/>
-		<Input src="mss:/mss/halla/e05102/raw/e05102_20511.dat.0" dest="./e05102_20511.dat.0"/>
-		<Input src="mss:/mss/halla/e05102/raw/e05102_20511.dat.1" dest="./e05102_20511.dat.1"/>
-		<Output src="./summaryphy_20511.log" dest="/lustre/expphy/work/halla/e05102/ellie/batch/results/output_160322_17:29:29/neutron_cuts_summaryphy_20511.log"/>
-		<Output src="neutron_cuts-hand_target_asym_vs_nu_for_run_20511.root" dest="/lustre/expphy/work/halla/e05102/ellie/batch/results/output_160322_17:29:29/neutron_cuts-hand_target_asym_vs_nu_for_run_20511.root"/>
-		<Output src="neutron_cuts-target_asymmetry_for_run_20511.txt" dest="/lustre/expphy/work/halla/e05102/ellie/batch/results/output_160322_17:29:29/neutron_cuts-target_asymmetry_for_run_20511.txt"/>
-		<Stdout dest="/lustre/expphy/work/halla/e05102/ellie/batch/logs/job_on_160322_17:29:29/e05102_R_20511.stdout"/>
-		<Stderr dest="/lustre/expphy/work/halla/e05102/ellie/batch/logs/job_on_160322_17:29:29/e05102_R_20511.stderr"/>
+		<Input src="mss:/mss/halla/e05102/raw/e05102_20792.dat.0" dest="./e05102_20792.dat.0"/>
+		<Output src="./summaryphy_20792.log" dest="/lustre/expphy/work/halla/e05102/ellie/batch/results/output_160901_17:23:23/neutron_cuts_summaryphy_20792.log"/>
+		<Output src="neutron_cuts-hand_target_asym_vs_nu_for_run_20792.root" dest="/lustre/expphy/work/halla/e05102/ellie/batch/results/output_160901_17:23:23/neutron_cuts-hand_target_asym_vs_nu_for_run_20792.root"/>
+		<Output src="neutron_cuts-target_asymmetry_for_run_20792.txt" dest="/lustre/expphy/work/halla/e05102/ellie/batch/results/output_160901_17:23:23/neutron_cuts-target_asymmetry_for_run_20792.txt"/>
+		<Stdout dest="/lustre/expphy/work/halla/e05102/ellie/batch/logs/job_on_160901_17:23:23/e05102_R_20792.stdout"/>
+		<Stderr dest="/lustre/expphy/work/halla/e05102/ellie/batch/logs/job_on_160901_17:23:23/e05102_R_20792.stderr"/>
 	</Job>
 
 </Request>

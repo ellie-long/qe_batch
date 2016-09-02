@@ -64,6 +64,8 @@ THaOpticsAGen.o THaOpticsAGen.d : THaOpticsAGen.cxx \
  /apps/root/PRO/root/include/Property.h \
  /apps/root/PRO/root/include/ESTLType.h \
  /apps/root/PRO/root/include/TObjString.h \
+ /apps/root/PRO/root/include/ThreadLocalStorage.h \
+ /apps/root/PRO/root/include/RConfigure.h \
  /apps/root/PRO/root/include/TMath.h /apps/root/PRO/root/include/TList.h \
  THaOpticsAGen.h THaOptics.h \
  /u/home/ellie/analyzer-1.5.23/src/THaAnalysisObject.h \

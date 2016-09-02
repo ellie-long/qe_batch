@@ -84,6 +84,8 @@ MWDC.o MWDC.d : MWDC.cxx MWDC.h \
  /apps/root/PRO/root/include/TSysEvtHandler.h \
  /apps/root/PRO/root/include/TQObject.h \
  /apps/root/PRO/root/include/TTime.h \
+ /apps/root/PRO/root/include/ThreadLocalStorage.h \
+ /apps/root/PRO/root/include/RConfigure.h \
  /apps/root/PRO/root/include/TThread.h \
  /apps/root/PRO/root/include/TMutex.h \
  /apps/root/PRO/root/include/TVirtualMutex.h \

@@ -67,4 +67,6 @@ WirePlane.o WirePlane.d : WirePlane.cxx WirePlane.h Types.h \
  /apps/root/PRO/root/include/TDictionary.h \
  /apps/root/PRO/root/include/Property.h \
  /apps/root/PRO/root/include/ESTLType.h \
- /apps/root/PRO/root/include/TObjString.h
+ /apps/root/PRO/root/include/TObjString.h \
+ /apps/root/PRO/root/include/ThreadLocalStorage.h \
+ /apps/root/PRO/root/include/RConfigure.h

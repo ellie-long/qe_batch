@@ -62,6 +62,9 @@ void neutron_analysis_class::hand_class_basic_cuts(Int_t jentry, bool& isGoodFor
 
 //	cout << "vvvvvvvvvvvvvvvvvvvvvvvvv hand_basic_cuts.h vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv" << endl;
 
+	bool showAllCuts = true;
+//	bool showAllCuts = false;
+
 //	Int_t ientry = LoadTree(jentry);
 
 //	TFile *outputRoot = new TFile(outputRootString,"UPDATE");
@@ -95,7 +98,11 @@ void neutron_analysis_class::hand_class_basic_cuts(Int_t jentry, bool& isGoodFor
 	bool thphGood = (ExTgtCor_R_ph<phboundhigh && ExTgtCor_R_ph>phboundlow && ExTgtCor_R_th<thboundhigh && ExTgtCor_R_th>thboundlow);
 
 
-	bool xbjGood = (PriKineRHe3_x_bj<2.0);
+//	bool xbjGood = (PriKineRHe3_x_bj<2.0);
+	bool xbjGood = (PriKineRHe3_x_bj>0.8 && PriKineRHe3_x_bj<1.2);
+	if (Q2 == "0.1") {xbjGood = (PriKineRHe3_x_bj>0.6 && PriKineRHe3_x_bj<1.0);}
+//	bool xbjGood = (PriKineRHe3_x_bj>0);
+//	bool xbjGood = (PriKineRHe3_x_bj>0.6 && PriKineRHe3_x_bj<0.8);
 //	bool xbjGood = (PriKineRHe3_x_bj>2.0);
 	bool psshGood;
 	if ((HeRunNumber>20403) && (HeRunNumber<20408)) {bool psshGood = ((R_ps_e + 0.44*R_sh_e)>200 && R_ps_e>1 && R_sh_e>1);}
@@ -121,23 +128,41 @@ void neutron_analysis_class::hand_class_basic_cuts(Int_t jentry, bool& isGoodFor
 // vvvvvvvvvvvvvvvvvv Fill Basic Cut Plots vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 // The chunk below will fill all of the Basic Cut Plots
 	HedpNoCut->Fill(ExTgtCor_R_dp);
-	if (dpGood) {HedpCut->Fill(ExTgtCor_R_dp);}
 	HeReactZNoCut->Fill(ReactPt_R_z);
-	if (targetGood) {HeReactZCut->Fill(ReactPt_R_z);}
-//	if (isGoodForAllBasic) {HeThetaPhiCut->Fill(ExTgtCor_R_th,ExTgtCor_R_ph);}
-	if (isGoodForAllBasic) {HeThetaPhiCut->Fill(ExTgtCor_R_ph,ExTgtCor_R_th);}
-//	HePsShNoCut->Fill(R_ps_e,R_sh_e);
 	HePsShNoCut->Fill(R_sh_e,R_ps_e);
-//	if (isGoodForAllBasic) {histQ2Nu->Fill(PriKineR_Q2,PriKineR_nu);}
-	if (isGoodForAllBasic) {histQ2Nu->Fill(PriKineR_nu,PriKineR_Q2);}
+//	HePsShNoCut->Fill(R_ps_e,R_sh_e);
 	histcerenkov->Fill(R_cer_asum_c);
-	if (cerenkovGood) {histcerenkovcut->Fill(R_cer_asum_c);}
-//	if (isGoodForAllBasic) {HePsShCut->Fill(R_ps_e,R_sh_e);}
-	if (isGoodForAllBasic) {HePsShCut->Fill(R_sh_e,R_ps_e);}
 	histx->Fill(PriKineR_x_bj);
-	if (isGoodForAllBasic) {histxcut->Fill(PriKineR_x_bj);}
-	if (isGoodForAllBasic) {ToFbasic->Fill(NA_n_tof[0]);}
 
+
+	if (showAllCuts)
+	{
+		if (isGoodForAllBasic) {HedpCut->Fill(ExTgtCor_R_dp);}
+		if (isGoodForAllBasic) {HeReactZCut->Fill(ReactPt_R_z);}
+//		if (isGoodForAllBasic) {HeThetaPhiCut->Fill(ExTgtCor_R_th,ExTgtCor_R_ph);}
+		if (isGoodForAllBasic) {HeThetaPhiCut->Fill(ExTgtCor_R_ph,ExTgtCor_R_th);}
+//		if (isGoodForAllBasic) {histQ2Nu->Fill(PriKineR_Q2,PriKineR_nu);}
+		if (isGoodForAllBasic) {histQ2Nu->Fill(PriKineR_nu,PriKineR_Q2);}
+		if (isGoodForAllBasic) {histcerenkovcut->Fill(R_cer_asum_c);}
+//		if (isGoodForAllBasic) {HePsShCut->Fill(R_ps_e,R_sh_e);}
+		if (isGoodForAllBasic) {HePsShCut->Fill(R_sh_e,R_ps_e);}
+		if (isGoodForAllBasic) {histxcut->Fill(PriKineR_x_bj);}
+		if (isGoodForAllBasic) {ToFbasic->Fill(NA_n_tof[0]);}
+	}
+	else
+	{
+		if (dpGood) {HedpCut->Fill(ExTgtCor_R_dp);}
+		if (targetGood) {HeReactZCut->Fill(ReactPt_R_z);}
+//		if (isGoodForAllBasic) {HeThetaPhiCut->Fill(ExTgtCor_R_th,ExTgtCor_R_ph);}
+		if (isGoodForAllBasic) {HeThetaPhiCut->Fill(ExTgtCor_R_ph,ExTgtCor_R_th);}
+//		if (isGoodForAllBasic) {histQ2Nu->Fill(PriKineR_Q2,PriKineR_nu);}
+		if (isGoodForAllBasic) {histQ2Nu->Fill(PriKineR_nu,PriKineR_Q2);}
+		if (cerenkovGood) {histcerenkovcut->Fill(R_cer_asum_c);}
+//		if (isGoodForAllBasic) {HePsShCut->Fill(R_ps_e,R_sh_e);}
+		if (isGoodForAllBasic) {HePsShCut->Fill(R_sh_e,R_ps_e);}
+		if (isGoodForAllBasic) {histxcut->Fill(PriKineR_x_bj);}
+		if (isGoodForAllBasic) {ToFbasic->Fill(NA_n_tof[0]);}
+	}
 // ^^^^^^^^^^^^^^^^^^ Fill Basic Cut Plots ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 

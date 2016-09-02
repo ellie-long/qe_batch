@@ -20,7 +20,7 @@
 	gInterpreter->AddIncludePath("$ANALYZER/hana_decode");
 	gInterpreter->AddIncludePath("$ANALYZER/hana_scaler");
 	gInterpreter->AddIncludePath("$ANALYZER/src");
-	gROOT->SetMacroPath(".:/work/halla/e05102/disk1/ellie/batch/inputs/ellana:/u/apps/root/5.34.13/root/macros");
+	gROOT->SetMacroPath(".:/lustre/expphy/work/halla/e05102/ellie/batch/inputs/ellana:/u/apps/root/5.34.13/root/macros");
 //	gInterpreter->AddIncludePath("$ROOTSYS/");
 
 	// Line below added by Ellie to fix an error thrown
@@ -108,7 +108,7 @@
 		"\0"
 	};
 
-	if (*macros[0]!=0)	cout << "\nrootlogon.C: Loading macro's:" << endl;
+	if (*macros[0]!=0) {cout << "\nrootlogon.C: Loading macro's:" << endl;}
 	for(UInt_t i=0; *macros[i]!=0; i++) {
 		cout << "\t " << macros[i] << endl;
 //		gROOT->LoadMacro(macros[i]);

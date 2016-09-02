@@ -1,9 +1,9 @@
 THaPlane.o THaPlane.d : THaPlane.cxx THaPlane.h \
- /home/ellie/analyzer-1.5.23/src/THaNonTrackingDetector.h \
- /home/ellie/analyzer-1.5.23/src/THaSpectrometerDetector.h \
- /home/ellie/analyzer-1.5.23/src/THaDetector.h \
- /home/ellie/analyzer-1.5.23/src/THaDetectorBase.h \
- /home/ellie/analyzer-1.5.23/src/THaAnalysisObject.h \
+ /u/home/ellie/analyzer-1.5.23/src/THaNonTrackingDetector.h \
+ /u/home/ellie/analyzer-1.5.23/src/THaSpectrometerDetector.h \
+ /u/home/ellie/analyzer-1.5.23/src/THaDetector.h \
+ /u/home/ellie/analyzer-1.5.23/src/THaDetectorBase.h \
+ /u/home/ellie/analyzer-1.5.23/src/THaAnalysisObject.h \
  /apps/root/PRO/root/include/TNamed.h \
  /apps/root/PRO/root/include/TObject.h \
  /apps/root/PRO/root/include/Rtypes.h \
@@ -21,10 +21,10 @@ THaPlane.o THaPlane.d : THaPlane.cxx THaPlane.h \
  /apps/root/PRO/root/include/TBuffer.h \
  /apps/root/PRO/root/include/TString.h \
  /apps/root/PRO/root/include/TMathBase.h \
- /home/ellie/analyzer-1.5.23/src/THaGlobals.h \
+ /u/home/ellie/analyzer-1.5.23/src/THaGlobals.h \
  /apps/root/PRO/root/include/TDatime.h \
- /home/ellie/analyzer-1.5.23/src/VarDef.h \
- /home/ellie/analyzer-1.5.23/src/VarType.h \
+ /u/home/ellie/analyzer-1.5.23/src/VarDef.h \
+ /u/home/ellie/analyzer-1.5.23/src/VarType.h \
  /apps/root/PRO/root/include/TVector3.h \
  /apps/root/PRO/root/include/TError.h \
  /apps/root/PRO/root/include/TVector2.h \
@@ -41,4 +41,4 @@ THaPlane.o THaPlane.d : THaPlane.cxx THaPlane.h \
  /apps/root/PRO/root/include/TMatrixFUtils.h \
  /apps/root/PRO/root/include/TMatrixFUtilsfwd.h \
  /apps/root/PRO/root/include/TRef.h \
- /home/ellie/analyzer-1.5.23/src/THaApparatus.h
+ /u/home/ellie/analyzer-1.5.23/src/THaApparatus.h

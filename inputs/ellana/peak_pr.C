@@ -20,7 +20,7 @@ void peak_pr(Int_t nrunped=-1, Int_t nrun=-1, Int_t detid=0)
 
   TTree *t1=0, *t2=0;
   if(ped){
-    sprintf(filename,"/work/halla/gdh-4/prchiran/batch/inputs/e04007_ped_%d.root",nrunped);  // pedestal data file
+    sprintf(filename,"/lustre/expphy/work/halla/gdh-4/prchiran/batch/inputs/e04007_ped_%d.root",nrunped);  // pedestal data file
     printf("%s openned\n",filename);
     f1 = new TFile(filename);
     t1 =  (TTree *)f1->Get("T"); 

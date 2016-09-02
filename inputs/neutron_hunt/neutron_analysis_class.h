@@ -1,6 +1,6 @@
 //////////////////////////////////////////////////////////
 // This class has been automatically generated on
-// Tue Mar 22 13:12:36 2016 by ROOT version 5.34/13
+// Thu Aug 25 14:31:13 2016 by ROOT version 5.34/36
 // from TChain T/
 //////////////////////////////////////////////////////////
 
@@ -38,11 +38,11 @@ public :
    Int_t           Ndata_D_edtmNDadc;
    Double_t        D_edtmNDadc[1];   //[Ndata.D.edtmNDadc]
    Int_t           Ndata_NA_n_pad;
-   Double_t        NA_n_pad[18];   //[Ndata.NA.n.pad]
+   Double_t        NA_n_pad[28];   //[Ndata.NA.n.pad]
    Int_t           Ndata_NA_n_plane;
-   Double_t        NA_n_plane[18];   //[Ndata.NA.n.plane]
+   Double_t        NA_n_plane[28];   //[Ndata.NA.n.plane]
    Int_t           Ndata_NA_n_tof;
-   Double_t        NA_n_tof[18];   //[Ndata.NA.n.tof]
+   Double_t        NA_n_tof[28];   //[Ndata.NA.n.tof]
    Int_t           Ndata_NA_nd_p1_la;
    Double_t        NA_nd_p1_la[30];   //[Ndata.NA.nd.p1.la]
    Int_t           Ndata_NA_nd_p1_la_c;
@@ -108,9 +108,9 @@ public :
    Int_t           Ndata_NA_nd_p4_rt_c;
    Double_t        NA_nd_p4_rt_c[12];   //[Ndata.NA.nd.p4.rt_c]
    Int_t           Ndata_NA_tr_firstpad;
-   Double_t        NA_tr_firstpad[8];   //[Ndata.NA.tr.firstpad]
+   Double_t        NA_tr_firstpad[7];   //[Ndata.NA.tr.firstpad]
    Int_t           Ndata_NA_tr_firstplane;
-   Double_t        NA_tr_firstplane[8];   //[Ndata.NA.tr.firstplane]
+   Double_t        NA_tr_firstplane[7];   //[Ndata.NA.tr.firstplane]
    Int_t           Ndata_NA_veto_ishit;
    Double_t        NA_veto_ishit[32];   //[Ndata.NA.veto.ishit]
    Int_t           Ndata_NA_veto_la;
@@ -889,7 +889,7 @@ neutron_analysis_class::neutron_analysis_class(TTree *tree) : fChain(0)
       // The following code should be used if you want this class to access a chain
       // of trees.
       TChain * chain = new TChain("T","");
-      chain->Add("./e05102_R_20500.root/T");
+      chain->Add("./e05102_R_20405.root/T");
       tree = chain;
 #endif // SINGLE_TREE
 
@@ -949,7 +949,7 @@ void neutron_analysis_class::Init(TTree *tree)
    fChain->SetBranchAddress("InvMass", &InvMass, &b_InvMass);
    fChain->SetBranchAddress("ScaAngle", &ScaAngle, &b_ScaAngle);
    fChain->SetBranchAddress("Ndata.D.edtmND", &Ndata_D_edtmND, &b_Ndata_D_edtmND);
-   fChain->SetBranchAddress("D.edtmND", D_edtmND, &b_D_edtmND);
+   fChain->SetBranchAddress("D.edtmND", &D_edtmND, &b_D_edtmND);
    fChain->SetBranchAddress("Ndata.D.edtmNDadc", &Ndata_D_edtmNDadc, &b_Ndata_D_edtmNDadc);
    fChain->SetBranchAddress("D.edtmNDadc", D_edtmNDadc, &b_D_edtmNDadc);
    fChain->SetBranchAddress("Ndata.NA.n.pad", &Ndata_NA_n_pad, &b_Ndata_NA_n_pad);
