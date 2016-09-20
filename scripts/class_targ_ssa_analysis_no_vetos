@@ -183,7 +183,7 @@ sub make_xml_sub_file
 	print SUBFILE "\t\t".xml_io("Output" , "no_vetos-target_asymmetry_for_run_".$run_num.".txt" , $path_output."no_vetos-target_asymmetry_for_run_".$run_num.".txt")."\n";
 #	print SUBFILE "\t\t".xml_io("Output" , "neutron_cuts-target_asymmetry_for_run_".$run_num.".txt" , $path_output."neutron_cuts-target_asymmetry_for_run_".$run_num.".txt")."\n";
 #	print SUBFILE "\t\t".xml_io("Output" , "charge_lt_for_run_".$run_num.".txt" , $path_output."charge_lt_for_run_".$run_num.".txt")."\n";
-#	print SUBFILE "\t\t".xml_io("Output" ,            $output , $output)."\n";
+	print SUBFILE "\t\t".xml_io("Output" ,            $output , $output)."\n";
 #	print SUBFILE "\t\t".xml_io("Output" , "text_for_run_".$run_num.".out" , $path_output."text_for_run_".$run_num.".out")."\n";
 	print SUBFILE "\t\t<Stdout dest=\"".$path_logs.$expbase."_".$run_num.$outbase."\.stdout\"/>\n";
 	print SUBFILE "\t\t<Stderr dest=\"".$path_logs.$expbase."_".$run_num.$outbase."\.stderr\"/>\n";
@@ -231,7 +231,7 @@ die print_usage($path_lists.$run_list."\t -> does not exist") if ( check_exist( 
 
 #setting some defaults
 # $path_root   =  "not set";
-$path_root   =  "/work/halla/e05102/disk1/ellie/batch/inputs/ROOTfiles/";
+$path_root   = "/lustre/expphy/work/halla/e05102/ellie/batch/inputs/ROOTfiles/";
 # $expbase     =  "not set";
 $expbase     =  "e05102_R";
 # $macro       =  "not set";
@@ -399,7 +399,7 @@ RUN: while (<RUNLIST>)
 		}
 #		$outputs[0] = $expbase."_".$run_num."$outbase\.root";
 #		$outputs[1] = $expbase."_".$run_num."$outbase\.log";
-#		$output = $expbase."_".$run_num."$outbase\.root";
+		$output = $expbase."_".$run_num."$outbase\.root";
 #		$output = "hand_target_asym_vs_nu_for_runs_22450-22450.root";
 #		$output = "hand_target_asym_vs_nu_for_run_".$run_num.".root";
 #		$output1 = "no_vetos-hand_target_asym_vs_nu_for_run_".$run_num.".root";

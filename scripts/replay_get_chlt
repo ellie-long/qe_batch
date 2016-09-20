@@ -219,7 +219,7 @@ sub make_xml_sub_file
 #	print SUBFILE "\t\t".xml_io("Output" , "no_vetos-target_asymmetry_for_run_".$run_num.".txt" , $path_output."no_vetos-target_asymmetry_for_run_".$run_num.".txt")."\n";
 	print SUBFILE "\t\t".xml_io("Output" , "charge_lt_for_run_".$run_num.".txt" , $path_output."charge_lt_for_run_".$run_num.".txt")."\n";
 #	print SUBFILE "\t\t".xml_io("Output" , "target_asymmetry_for_run_".$run_num.".txt" , $path_output."target_asymmetry_for_run_".$run_num.".txt")."\n";
-#	print SUBFILE "\t\t".xml_io("Output" ,            $output , $output)."\n";
+	print SUBFILE "\t\t".xml_io("Output" ,            $output , $path_output.$output)."\n";
 #	print SUBFILE "\t\t".xml_io("Output" , "text_for_run_".$run_num.".out" , $path_output."text_for_run_".$run_num.".out")."\n";
 	print SUBFILE "\t\t<Stdout dest=\"".$path_logs.$expbase."_".$run_num.$outbase."\.stdout\"/>\n";
 	print SUBFILE "\t\t<Stderr dest=\"".$path_logs.$expbase."_".$run_num.$outbase."\.stderr\"/>\n";
