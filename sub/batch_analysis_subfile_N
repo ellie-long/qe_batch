@@ -1,32 +1,32 @@
 <Request>
 	<Project name="e05102"/>
 	<Track name="analysis"/>
-	<Name name="batch_analysis_2_20792"/>
+	<Name name="batch_analysis_1_20915"/>
 	<Command><![CDATA[
-printf '\nellie@ifarm> date\n' > /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160919_13:55:29/charge_lt_text_for_run_20792.out
-date >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160919_13:55:29/charge_lt_text_for_run_20792.out
-printf '\nellie@ifarm> source /lustre/expphy/work/halla/e05102/ellie/batch/inputs/ellana/set_environment_variables_for_vanalyzer.tcsh\n' >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160919_13:55:29/charge_lt_text_for_run_20792.out
-source /lustre/expphy/work/halla/e05102/ellie/batch/inputs/ellana/set_environment_variables_for_vanalyzer.tcsh >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160919_13:55:29/charge_lt_text_for_run_20792.out
-printf '\nellie@ifarm> printenv\n' >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160919_13:55:29/charge_lt_text_for_run_20792.out
-printenv >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160919_13:55:29/charge_lt_text_for_run_20792.out
-printf '\nellie@ifarm> ls -ltr\n' >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160919_13:55:29/charge_lt_text_for_run_20792.out
-ls -ltr >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160919_13:55:29/charge_lt_text_for_run_20792.out
-printf '\nellie@ifarm> rm input.file\n' >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160919_13:55:29/charge_lt_text_for_run_20792.out
-rm input.file >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160919_13:55:29/charge_lt_text_for_run_20792.out
-printf '\nellie@ifarm> ls -ltr\n' >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160919_13:55:29/charge_lt_text_for_run_20792.out
-ls -ltr >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160919_13:55:29/charge_lt_text_for_run_20792.out
-printf '\nellie@ifarm> printf 20792 > input.file\n' >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160919_13:55:29/charge_lt_text_for_run_20792.out
-printf 20792 > input.file
-printf '\nellie@ifarm> cat input.file\n' >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160919_13:55:29/charge_lt_text_for_run_20792.out
-cat input.file >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160919_13:55:29/charge_lt_text_for_run_20792.out
-printf '\nellie@ifarm> analyzer /lustre/expphy/work/halla/e05102/ellie/batch/inputs/ellana/run_replay.C\n' >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160919_13:55:29/charge_lt_text_for_run_20792.out
-analyzer /lustre/expphy/work/halla/e05102/ellie/batch/inputs/ellana/run_replay.C >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160919_13:55:29/charge_lt_text_for_run_20792.out
-printf '\nellie@ifarm> analyzer ./make_charge_files.C\n' >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160919_13:55:29/charge_lt_text_for_run_20792.out
-analyzer ./make_charge_files.C >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160919_13:55:29/charge_lt_text_for_run_20792.out
-printf '\nellie@ifarm> ls -ltr\n' >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160919_13:55:29/charge_lt_text_for_run_20792.out
-ls -ltr >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160919_13:55:29/charge_lt_text_for_run_20792.out
-printf '\nellie@ifarm> date\n' >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160919_13:55:29/charge_lt_text_for_run_20792.out
-date >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160919_13:55:29/charge_lt_text_for_run_20792.out
+printf '\nellie@ifarm> date\n' > /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160920_13:36:46/charge_lt_text_for_run_20915.out
+date >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160920_13:36:46/charge_lt_text_for_run_20915.out
+printf '\nellie@ifarm> source /lustre/expphy/work/halla/e05102/ellie/batch/inputs/ellana/set_environment_variables_for_vanalyzer.tcsh\n' >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160920_13:36:46/charge_lt_text_for_run_20915.out
+source /lustre/expphy/work/halla/e05102/ellie/batch/inputs/ellana/set_environment_variables_for_vanalyzer.tcsh >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160920_13:36:46/charge_lt_text_for_run_20915.out
+printf '\nellie@ifarm> printenv\n' >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160920_13:36:46/charge_lt_text_for_run_20915.out
+printenv >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160920_13:36:46/charge_lt_text_for_run_20915.out
+printf '\nellie@ifarm> ls -ltr\n' >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160920_13:36:46/charge_lt_text_for_run_20915.out
+ls -ltr >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160920_13:36:46/charge_lt_text_for_run_20915.out
+printf '\nellie@ifarm> rm input.file\n' >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160920_13:36:46/charge_lt_text_for_run_20915.out
+rm input.file >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160920_13:36:46/charge_lt_text_for_run_20915.out
+printf '\nellie@ifarm> ls -ltr\n' >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160920_13:36:46/charge_lt_text_for_run_20915.out
+ls -ltr >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160920_13:36:46/charge_lt_text_for_run_20915.out
+printf '\nellie@ifarm> printf 20915 > input.file\n' >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160920_13:36:46/charge_lt_text_for_run_20915.out
+printf 20915 > input.file
+printf '\nellie@ifarm> cat input.file\n' >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160920_13:36:46/charge_lt_text_for_run_20915.out
+cat input.file >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160920_13:36:46/charge_lt_text_for_run_20915.out
+printf '\nellie@ifarm> analyzer /lustre/expphy/work/halla/e05102/ellie/batch/inputs/ellana/run_replay.C\n' >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160920_13:36:46/charge_lt_text_for_run_20915.out
+analyzer /lustre/expphy/work/halla/e05102/ellie/batch/inputs/ellana/run_replay.C >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160920_13:36:46/charge_lt_text_for_run_20915.out
+printf '\nellie@ifarm> analyzer ./make_charge_files.C\n' >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160920_13:36:46/charge_lt_text_for_run_20915.out
+analyzer ./make_charge_files.C >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160920_13:36:46/charge_lt_text_for_run_20915.out
+printf '\nellie@ifarm> ls -ltr\n' >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160920_13:36:46/charge_lt_text_for_run_20915.out
+ls -ltr >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160920_13:36:46/charge_lt_text_for_run_20915.out
+printf '\nellie@ifarm> date\n' >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160920_13:36:46/charge_lt_text_for_run_20915.out
+date >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160920_13:36:46/charge_lt_text_for_run_20915.out
 	]]></Command>
 
 	<DiskSpace space="15" unit="GB"/>
@@ -44,12 +44,12 @@ date >> /lustre/expphy/work/halla/e05102/ellie/batch/results/output_160919_13:55
 
 	<Job>
 		<Input src="/lustre/expphy/work/halla/e05102/ellie/batch/inputs/ellana/rootlogon.C" dest="rootlogon.C"/>
-		<Input src="mss:/mss/halla/e05102/raw/e05102_20792.dat.0" dest="./e05102_20792.dat.0"/>
-		<Output src="./summaryphy_20792.log" dest="/lustre/expphy/work/halla/e05102/ellie/batch/results/output_160919_13:55:29/charge_lt_summaryphy_20792.log"/>
-		<Output src="charge_lt_for_run_20792.txt" dest="/lustre/expphy/work/halla/e05102/ellie/batch/results/output_160919_13:55:29/charge_lt_for_run_20792.txt"/>
-		<Output src="e05102_R_20792.root" dest="/lustre/expphy/work/halla/e05102/ellie/batch/results/output_160919_13:55:29/e05102_R_20792.root"/>
-		<Stdout dest="/lustre/expphy/work/halla/e05102/ellie/batch/logs/job_on_160919_13:55:29/e05102_R_20792.stdout"/>
-		<Stderr dest="/lustre/expphy/work/halla/e05102/ellie/batch/logs/job_on_160919_13:55:29/e05102_R_20792.stderr"/>
+		<Input src="mss:/mss/halla/e05102/raw/e05102_20915.dat.0" dest="./e05102_20915.dat.0"/>
+		<Output src="./summaryphy_20915.log" dest="/lustre/expphy/work/halla/e05102/ellie/batch/results/output_160920_13:36:46/charge_lt_summaryphy_20915.log"/>
+		<Output src="charge_lt_for_run_20915.txt" dest="/lustre/expphy/work/halla/e05102/ellie/batch/results/output_160920_13:36:46/charge_lt_for_run_20915.txt"/>
+		<Output src="e05102_R_20915.root" dest="/lustre/expphy/work/halla/e05102/ellie/batch/results/output_160920_13:36:46/e05102_R_20915.root"/>
+		<Stdout dest="/lustre/expphy/work/halla/e05102/ellie/batch/logs/job_on_160920_13:36:46/e05102_R_20915.stdout"/>
+		<Stderr dest="/lustre/expphy/work/halla/e05102/ellie/batch/logs/job_on_160920_13:36:46/e05102_R_20915.stderr"/>
 	</Job>
 
 </Request>

@@ -287,20 +287,21 @@ void neutron_analysis_class::AsymLoop(int dataType)
 		int ADCbins = 700;
 		double ADCmin = -100;
 		double ADCmax = 11100;
-/*		double goodTDCleftcutmin = 1390;
+
+		double goodTDCleftcutmin = 1390;
 		double goodTDCleftcutmax = 1440;
 		double goodTDCrightcutmin = 1390;
 		double goodTDCrightcutmax = 1440;
 		double vetoTDCcutmin = 1390;
 		double vetoTDCcutmax = 1440;
-*/	
+/*	
 		double goodTDCleftcutmin = 10;
 		double goodTDCleftcutmax = 3100;
 		double goodTDCrightcutmin = 10;
 		double goodTDCrightcutmax = 3100;
 		double vetoTDCcutmin = 0;
 		double vetoTDCcutmax = 3100;
-	
+*/	
 		const int nuBins = 100;
 		double nuMin = numin;
 		double nuMax = numax;
