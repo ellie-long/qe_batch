@@ -253,8 +253,8 @@ $path_results = $pwd."/results/output_".$timestamp."/";
 
 #setting some defaults
 # $path_root   =  "not set";
-$path_root   = "/lustre/expphy/work/halla/e05102/ellie/batch/inputs/ROOTfiles/";
-$path_ellana = "/lustre/expphy/work/halla/e05102/ellie/batch/inputs/ellana/";
+$path_root   = "/work/halla/e05102/disk1/ellie/batch/inputs/ROOTfiles/";
+$path_ellana = "/work/halla/e05102/disk1/ellie/batch/inputs/ellana/";
 # $expbase   =  "not set";
 $expbase     =  "e05102_R";
 # $macro     =  "not set";

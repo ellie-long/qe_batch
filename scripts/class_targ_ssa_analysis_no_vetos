@@ -231,7 +231,7 @@ die print_usage($path_lists.$run_list."\t -> does not exist") if ( check_exist( 
 
 #setting some defaults
 # $path_root   =  "not set";
-$path_root   = "/lustre/expphy/work/halla/e05102/ellie/batch/inputs/ROOTfiles/";
+$path_root   = "/work/halla/e05102/disk1/ellie/batch/inputs/ROOTfiles/";
 # $expbase     =  "not set";
 $expbase     =  "e05102_R";
 # $macro       =  "not set";

@@ -115,6 +115,7 @@ sub make_xml_sub_file
 #	my ($inbase , $outbase , $path_subs , $path_logs , $path_inputs , $subinfo , $macro , $commands , $path_root , $input , $output , $path_output , $expbase , $run_num ,$this_file_1, $this_file_2, $this_file_3, $macro2) = @_;
 	my $subfile = $path_subs."batch_analysis_subfile_N";
 	$textout = $path_output."charge_lt_text_for_run_".$run_num.".out\n";
+	$rootout = $path_output.".";
 #	my $destfile = "e05102_R_".$run_num.".root";
 #	my $destfile1 = "neutron_cuts-hand_target_asym_vs_nu_for_run_".$run_num.".root";
 # appending "mss:" to the front of the path if the file is located in the mss
@@ -151,6 +152,8 @@ sub make_xml_sub_file
 #       print SUBFILE "cp -v *.root ".$path_results.". >> ".$textout;
 	print SUBFILE "printf '\\nellie\@ifarm> analyzer ./".$macro1."\\n' >> ".$textout;
 	print SUBFILE "analyzer ./".$macro1." >> ".$textout;
+	print SUBFILE "printf '\\nellie\@ifarm> cp -v *.root ".$rootout."' >> ".$textout;
+	print SUBFILE "cp -v *.root ".$rootout." >> ".$textout;
 #       print SUBFILE "analyzer  ".$neutron_path_inputs.$macro." > /work/halla/e05102/disk1/ellie/batch/inputs/neutron_hunt/text/text_for_run_".$run_num.".out\n";
 
 # input options
@@ -219,7 +222,7 @@ sub make_xml_sub_file
 #	print SUBFILE "\t\t".xml_io("Output" , "no_vetos-target_asymmetry_for_run_".$run_num.".txt" , $path_output."no_vetos-target_asymmetry_for_run_".$run_num.".txt")."\n";
 	print SUBFILE "\t\t".xml_io("Output" , "charge_lt_for_run_".$run_num.".txt" , $path_output."charge_lt_for_run_".$run_num.".txt")."\n";
 #	print SUBFILE "\t\t".xml_io("Output" , "target_asymmetry_for_run_".$run_num.".txt" , $path_output."target_asymmetry_for_run_".$run_num.".txt")."\n";
-	print SUBFILE "\t\t".xml_io("Output" ,            $output , $path_output.$output)."\n";
+#	print SUBFILE "\t\t".xml_io("Output" ,            $output , $path_output.$output)."\n";
 #	print SUBFILE "\t\t".xml_io("Output" , "text_for_run_".$run_num.".out" , $path_output."text_for_run_".$run_num.".out")."\n";
 	print SUBFILE "\t\t<Stdout dest=\"".$path_logs.$expbase."_".$run_num.$outbase."\.stdout\"/>\n";
 	print SUBFILE "\t\t<Stderr dest=\"".$path_logs.$expbase."_".$run_num.$outbase."\.stderr\"/>\n";
@@ -257,8 +260,8 @@ $path_results = $pwd."/results/output_".$timestamp."/";
 
 #setting some defaults
 # $path_root   =  "not set";
-$path_root   = "/lustre/expphy/work/halla/e05102/ellie/batch/inputs/ROOTfiles/";
-$path_ellana = "/lustre/expphy/work/halla/e05102/ellie/batch/inputs/ellana/";
+$path_root   = "/work/halla/e05102/disk1/ellie/batch/inputs/ROOTfiles/";
+$path_ellana = "/work/halla/e05102/disk1/ellie/batch/inputs/ellana/";
 # $expbase   =  "not set";
 $expbase     =  "e05102_R";
 # $macro     =  "not set";
