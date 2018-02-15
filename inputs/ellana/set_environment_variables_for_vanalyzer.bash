@@ -4,7 +4,7 @@ export DEBUG=0
 #xport ROOTSYS=/u/apps/root/5.34.01/root
 source /u/apps/root/PRO/setroot_CUE
 export ANALYZER=/u/home/ellie/analyzer-1.5.23
-export ELLANA=/lustre/expphy/work/halla/e05102/ellie/batch/inputs/ellana
+export ELLANA=/work/halla/e05102/disk1/ellie/batch/inputs/ellana
 export PATH=${ROOTSYS}/bin:${ANALYZER}:${PATH}   
 #export DB_DIR=${ANALYZER}/DB
 export DB_DIR=${ELLANA}/DB

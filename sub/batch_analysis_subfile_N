@@ -3,32 +3,32 @@
 	<Track name="analysis"/>
 	<Name name="batch_analysis_63_21006"/>
 	<Command><![CDATA[
-printf '\nellie@ifarm> date\n' > /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_11:55:32/charge_lt_text_for_run_21006.out
-date >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_11:55:32/charge_lt_text_for_run_21006.out
-printf '\nellie@ifarm> source /w/halla-scifs17exp/e05102/disk1/ellie/batch/inputs/ellana/set_environment_variables_for_vanalyzer.tcsh\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_11:55:32/charge_lt_text_for_run_21006.out
-source /w/halla-scifs17exp/e05102/disk1/ellie/batch/inputs/ellana/set_environment_variables_for_vanalyzer.tcsh >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_11:55:32/charge_lt_text_for_run_21006.out
-printf '\nellie@ifarm> printenv\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_11:55:32/charge_lt_text_for_run_21006.out
-printenv >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_11:55:32/charge_lt_text_for_run_21006.out
-printf '\nellie@ifarm> ls -ltr\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_11:55:32/charge_lt_text_for_run_21006.out
-ls -ltr >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_11:55:32/charge_lt_text_for_run_21006.out
-printf '\nellie@ifarm> rm input.file\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_11:55:32/charge_lt_text_for_run_21006.out
-rm input.file >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_11:55:32/charge_lt_text_for_run_21006.out
-printf '\nellie@ifarm> ls -ltr\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_11:55:32/charge_lt_text_for_run_21006.out
-ls -ltr >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_11:55:32/charge_lt_text_for_run_21006.out
-printf '\nellie@ifarm> printf 21006 > input.file\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_11:55:32/charge_lt_text_for_run_21006.out
+printf '\nellie@ifarm> date\n' > /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_12:43:38/charge_lt_text_for_run_21006.out
+date >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_12:43:38/charge_lt_text_for_run_21006.out
+printf '\nellie@ifarm> source /w/halla-scifs17exp/e05102/disk1/ellie/batch/inputs/ellana/set_environment_variables_for_vanalyzer.tcsh\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_12:43:38/charge_lt_text_for_run_21006.out
+source /w/halla-scifs17exp/e05102/disk1/ellie/batch/inputs/ellana/set_environment_variables_for_vanalyzer.tcsh >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_12:43:38/charge_lt_text_for_run_21006.out
+printf '\nellie@ifarm> printenv\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_12:43:38/charge_lt_text_for_run_21006.out
+printenv >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_12:43:38/charge_lt_text_for_run_21006.out
+printf '\nellie@ifarm> ls -ltr\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_12:43:38/charge_lt_text_for_run_21006.out
+ls -ltr >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_12:43:38/charge_lt_text_for_run_21006.out
+printf '\nellie@ifarm> rm input.file\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_12:43:38/charge_lt_text_for_run_21006.out
+rm input.file >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_12:43:38/charge_lt_text_for_run_21006.out
+printf '\nellie@ifarm> ls -ltr\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_12:43:38/charge_lt_text_for_run_21006.out
+ls -ltr >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_12:43:38/charge_lt_text_for_run_21006.out
+printf '\nellie@ifarm> printf 21006 > input.file\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_12:43:38/charge_lt_text_for_run_21006.out
 printf 21006 > input.file
-printf '\nellie@ifarm> cat input.file\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_11:55:32/charge_lt_text_for_run_21006.out
-cat input.file >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_11:55:32/charge_lt_text_for_run_21006.out
-printf '\nellie@ifarm> analyzer /w/halla-scifs17exp/e05102/disk1/ellie/batch/inputs/ellana/run_replay.C\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_11:55:32/charge_lt_text_for_run_21006.out
-analyzer /w/halla-scifs17exp/e05102/disk1/ellie/batch/inputs/ellana/run_replay.C >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_11:55:32/charge_lt_text_for_run_21006.out
-printf '\nellie@ifarm> analyzer ./make_charge_files.C\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_11:55:32/charge_lt_text_for_run_21006.out
-analyzer ./make_charge_files.C >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_11:55:32/charge_lt_text_for_run_21006.out
-printf '\nellie@ifarm> cp -v *.root /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_11:55:32/.' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_11:55:32/charge_lt_text_for_run_21006.out
-cp -v *.root /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_11:55:32/. >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_11:55:32/charge_lt_text_for_run_21006.out
-printf '\nellie@ifarm> ls -ltr\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_11:55:32/charge_lt_text_for_run_21006.out
-ls -ltr >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_11:55:32/charge_lt_text_for_run_21006.out
-printf '\nellie@ifarm> date\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_11:55:32/charge_lt_text_for_run_21006.out
-date >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_11:55:32/charge_lt_text_for_run_21006.out
+printf '\nellie@ifarm> cat input.file\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_12:43:38/charge_lt_text_for_run_21006.out
+cat input.file >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_12:43:38/charge_lt_text_for_run_21006.out
+printf '\nellie@ifarm> analyzer /w/halla-scifs17exp/e05102/disk1/ellie/batch/inputs/ellana/run_replay.C\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_12:43:38/charge_lt_text_for_run_21006.out
+analyzer /w/halla-scifs17exp/e05102/disk1/ellie/batch/inputs/ellana/run_replay.C >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_12:43:38/charge_lt_text_for_run_21006.out
+printf '\nellie@ifarm> analyzer ./make_charge_files.C\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_12:43:38/charge_lt_text_for_run_21006.out
+analyzer ./make_charge_files.C >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_12:43:38/charge_lt_text_for_run_21006.out
+printf '\nellie@ifarm> cp -v *.root /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_12:43:38/.' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_12:43:38/charge_lt_text_for_run_21006.out
+cp -v *.root /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_12:43:38/. >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_12:43:38/charge_lt_text_for_run_21006.out
+printf '\nellie@ifarm> ls -ltr\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_12:43:38/charge_lt_text_for_run_21006.out
+ls -ltr >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_12:43:38/charge_lt_text_for_run_21006.out
+printf '\nellie@ifarm> date\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_12:43:38/charge_lt_text_for_run_21006.out
+date >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_12:43:38/charge_lt_text_for_run_21006.out
 	]]></Command>
 
 	<DiskSpace space="15" unit="GB"/>
@@ -48,10 +48,10 @@ date >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_11:55
 		<Input src="/work/halla/e05102/disk1/ellie/batch/inputs/ellana/rootlogon.C" dest="rootlogon.C"/>
 		<Input src="mss:/mss/halla/e05102/raw/e05102_21006.dat.0" dest="./e05102_21006.dat.0"/>
 		<Input src="mss:/mss/halla/e05102/raw/e05102_21006.dat.1" dest="./e05102_21006.dat.1"/>
-		<Output src="./summaryphy_21006.log" dest="/w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_11:55:32/charge_lt_summaryphy_21006.log"/>
-		<Output src="charge_lt_for_run_21006.txt" dest="/w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_11:55:32/charge_lt_for_run_21006.txt"/>
-		<Stdout dest="/w/halla-scifs17exp/e05102/disk1/ellie/batch/logs/job_on_180215_11:55:32/e05102_R_21006.stdout"/>
-		<Stderr dest="/w/halla-scifs17exp/e05102/disk1/ellie/batch/logs/job_on_180215_11:55:32/e05102_R_21006.stderr"/>
+		<Output src="./summaryphy_21006.log" dest="/w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_12:43:38/charge_lt_summaryphy_21006.log"/>
+		<Output src="charge_lt_for_run_21006.txt" dest="/w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_12:43:38/charge_lt_for_run_21006.txt"/>
+		<Stdout dest="/w/halla-scifs17exp/e05102/disk1/ellie/batch/logs/job_on_180215_12:43:38/e05102_R_21006.stdout"/>
+		<Stderr dest="/w/halla-scifs17exp/e05102/disk1/ellie/batch/logs/job_on_180215_12:43:38/e05102_R_21006.stderr"/>
 	</Job>
 
 </Request>
