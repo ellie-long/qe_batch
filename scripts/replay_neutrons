@@ -111,7 +111,7 @@ sub xml_io
 # makes an xml sub file and returns the file name
 sub make_xml_sub_file
 {
-	my ($inbase , $outbase , $path_subs , $path_logs , $path_inputs , $subinfo , $macro , $commands , $path_root , $this_file , $output , $path_output , $expbase , $run_num, $this_file_1, $this_file_2, $this_file_3, $macro1, $output2) = @_;
+	my ($inbase , $outbase , $path_subs , $path_logs , $path_inputs , $subinfo , $macro , $commands , $path_root , $this_file , $output , $path_output , $expbase , $run_num, $this_file_1, $this_file_2, $this_file_3, $macro1, $macro2, $output2) = @_;
 #	my ($inbase , $outbase , $path_subs , $path_logs , $path_inputs , $subinfo , $macro , $commands , $path_root , $input , $output , $path_output , $expbase , $run_num ,$this_file_1, $this_file_2, $this_file_3, $macro2) = @_;
 	my $subfile = $path_subs."batch_analysis_subfile_N";
 	$textout = $path_output."neutron_cuts_text_for_run_".$run_num.".out\n";
@@ -124,6 +124,7 @@ sub make_xml_sub_file
 	print SUBFILE "<Request>\n";
 	print SUBFILE "\t".xml_tag("Project" , $subinfo{"project"})."\n";
 	print SUBFILE "\t".xml_tag("Track"   , $subinfo{"track"})."\n";
+#	print SUBFILE "\t".xml_tag("OS"      , $subinfo{"os"})."\n";
 	print SUBFILE "\t".xml_tag("Name"    , $subinfo{"jobname"})."\n";
 	print SUBFILE "\t<Command><![CDATA[\n";
 #	print SUBFILE join "\n" , @{$commands};
@@ -144,6 +145,10 @@ sub make_xml_sub_file
 	print SUBFILE "printf '\\nellie\@ifarm> cat input.file\\n' >> ".$textout;
 	print SUBFILE "cat input.file >> ".$textout;
 #	print SUBFILE "analyzer  ".$neutron_path_inputs.$macro." > /work/halla/e05102/disk1/ellie/batch/input/neutron/text/text_for_run_".$run_num.".out\n";
+	print SUBFILE "printf '\\nellie\@ifarm> root ".$macro2."\\n' >> ".$textout;
+	print SUBFILE "root ".$macro2." >> ".$textout;
+	print SUBFILE "printf '\\nellie\@ifarm> analyzer ./".$macro2."\\n' >> ".$textout;
+	print SUBFILE "analyzer ./".$macro2." >> ".$textout;
 	print SUBFILE "printf '\\nellie\@ifarm> analyzer ".$ellana_path_inputs.$macro."\\n' >> ".$textout;
 #	print SUBFILE "analyzer ".$ellana_path_inputs.$macro." >> ".$path_results."text_for_run_".$run_num.".out";
 	print SUBFILE "analyzer ".$ellana_path_inputs.$macro." >> ".$textout;
@@ -160,11 +165,13 @@ sub make_xml_sub_file
 	print SUBFILE "date >> ".$textout;
 	print SUBFILE "\t]]></Command>\n\n";
 	print SUBFILE "\t<DiskSpace space=\"15\" unit=\"GB\"/>\n\n";
+	print SUBFILE "\t<OS name=\"centos7\"/>\n\n";
 	print SUBFILE "\t<Memory space=\"4\" unit=\"GB\"/>\n\n";
 	print SUBFILE "\t<TimeLimit unit=\"hours\" time=\"72\"/>\n\n";
 #	print SUBFILE "\t<TimeLimit unit=\"hours\" time=\"24\"/>\n\n";
 #	print SUBFILE "\t<TimeLimit unit=\"minutes\" time=\"10\"/>\n\n";
 	print SUBFILE "\t<Input src=\"".$ellana_path_inputs."run_replay.C\" dest=\"run_replay.C\"/>\n";
+	print SUBFILE "\t<Input src=\"".$neutron_path_inputs."root_test.cxx\" dest=\"root_test.cxx\"/>\n";
 	print SUBFILE "\t<Input src=\"".$neutron_path_inputs."make_target_asymmetry_class_files-neutrons_only.C\" dest=\"make_target_asymmetry_class_files.C\"/>\n";
 	print SUBFILE "\t<Input src=\"".$neutron_path_inputs."neutron_analysis_class.cxx\" dest=\"neutron_analysis_class.cxx\"/>\n";
 	print SUBFILE "\t<Input src=\"".$neutron_path_inputs."neutron_analysis_class.h\" dest=\"neutron_analysis_class.h\"/>\n";
@@ -242,8 +249,8 @@ $pwd = qx(pwd);
 chomp($pwd);
 $path_subs    = $pwd."/sub/";
 $path_logs    = $pwd."/logs/job_on_".$timestamp."/";
-#$path_inputs  = $pwd."/inputs/";
-$path_inputs  = $pwd."/inputs/ellana/";
+$path_inputs  = $pwd."/inputs/";
+#$path_inputs  = $pwd."/inputs/ellana/";
 $neutron_path_inputs  = $pwd."/inputs/neutron_hunt/";
 $ellana_path_inputs  = $pwd."/inputs/ellana/";
 #$path_lists   = $pwd."/info_lists/";
@@ -253,13 +260,14 @@ $path_results = $pwd."/results/output_".$timestamp."/";
 
 #setting some defaults
 # $path_root   =  "not set";
-$path_root   = "/work/halla/e05102/disk1/ellie/batch/inputs/ROOTfiles/";
-$path_ellana = "/work/halla/e05102/disk1/ellie/batch/inputs/ellana/";
+$path_root   = $pwd."/inputs/ROOTfiles/";
+$path_ellana = $pwd."/inputs/ellana/";
 # $expbase   =  "not set";
 $expbase     =  "e05102_R";
 # $macro     =  "not set";
 $macro       =  "run_replay.C";
 $macro1      =  "make_target_asymmetry_class_files.C";
+$macro2      =  "root_test.cxx";
 # $macro     =  "test_code.C";
 $inbase      =  "none";
 $outbase     =  "none";
@@ -377,6 +385,7 @@ if ( check_exist($path_logs) ne "directory" )
 %subinfo            = ();
 # $subinfo{"project"} = $expbase;
 $subinfo{"project"} = "e05102";
+#$subinfo{"track"}   = "production";
 $subinfo{"track"}   = "analysis";
 # $subinfo{"track"}   = "debug";
 $subinfo{"os"}      = "linux";
@@ -457,7 +466,7 @@ RUN: while (<RUNLIST>)
 		$job_count++;
 		$subinfo{"jobname"} = $jobname."_".$job_count."_".$run_num;
 #		generating the xml sub file
-		$sub_file_name = make_xml_sub_file($inbase , $outbase , $path_subs , $path_logs , $path_inputs , $subinfo , $macro , \@commands , $path_root , $this_file , $output , $path_output , $expbase , $run_num, $this_file_1, $this_file_2, $this_file_3, $macro1, $output2);
+		$sub_file_name = make_xml_sub_file($inbase , $outbase , $path_subs , $path_logs , $path_inputs , $subinfo , $macro , \@commands , $path_root , $this_file , $output , $path_output , $expbase , $run_num, $this_file_1, $this_file_2, $this_file_3, $macro1, $macro2, $output2);
 		# outputting the first sub file to make sure it looks okay
 		if ($job_count == 1)
 		{

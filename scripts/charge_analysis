@@ -139,6 +139,7 @@ sub make_xml_sub_file
 	print SUBFILE "date\n";
 	print SUBFILE "\t]]></Command>\n\n";
 	print SUBFILE "\t<DiskSpace space=\"15\" unit=\"GB\"/>\n\n";
+	print SUBFILE "\t<OS=\"centos7\"/>\n\n";
 	print SUBFILE "\t<Memory space=\"2\" unit=\"GB\"/>\n\n";
 	print SUBFILE "\t<TimeLimit unit=\"hours\" time=\"72\"/>\n\n";
 #	print SUBFILE "\t<TimeLimit unit=\"hours\" time=\"24\"/>\n\n";

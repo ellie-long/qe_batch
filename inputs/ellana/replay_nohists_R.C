@@ -95,6 +95,7 @@ void replay_nohists_R(Int_t runnumber=0,Int_t all=0,Int_t fstEvt=0,Bool_t QuietR
 
   cout<<"replay: Adding NormAna_R & saving result to "<<buff<<endl;
   NormAna_R* norm = new NormAna_R("N","Normalization Analysis",buff,8);
+  cout << endl;
   gHaPhysics->Add(norm);
 
  
@@ -119,8 +120,8 @@ void replay_nohists_R(Int_t runnumber=0,Int_t all=0,Int_t fstEvt=0,Bool_t QuietR
 	    all,                  //-1=replay all;0=ask for a number
 	    100000000000,                   //defaut replay event num
 	    "%s/e05102_R_%d.root", //output file format
-	    "/work/halla/e05102/disk1/ellie/batch/inputs/ellana/replay_nohists_R.odef",	//out define
-	    "/work/halla/e05102/disk1/ellie/batch/inputs/ellana/replay_nohists_R.cdef", 	//empty cut define
+	    "/w/halla-scifs17exp/e05102/disk1/ellie/batch/inputs/ellana/replay_nohists_R.odef",	//out define
+	    "/w/halla-scifs17exp/e05102/disk1/ellie/batch/inputs/ellana/replay_nohists_R.cdef", 	//empty cut define
 	    kTRUE,                 	//replay scalar?
 	    fstEvt,					//First Event To Replay
 		QuietRun				//whether ask user for inputs

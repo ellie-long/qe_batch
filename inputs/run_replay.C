@@ -12,7 +12,7 @@ void run_replay()
 {
 	cout << "Running run_replay..." << endl;
 
-	gROOT->SetMacroPath(".:/lustre/expphy/work/halla/e05102/ellie/batch/inputs/ellana:/u/apps/root/5.34.13/root/macros");
+	gROOT->SetMacroPath(".:/w/halla-scifs17exp/e05102/ellie/batch/inputs/ellana:/u/apps/root/5.34.13/root/macros");
 //	gROOT->ProcessLine(".x /w/halla-1/e05102/ellie/batch/inputs/ellana/rootlogon.C");
 	gROOT->ProcessLine(".x rootlogon.C");
 

@@ -123,11 +123,12 @@ sub make_xml_sub_file
 	{ $path_root = "mss:".$path_root; }
 	open(SUBFILE,">$subfile");
 	print SUBFILE "<Request>\n";
-	print SUBFILE "\t".xml_tag("Project" , $subinfo{"project"})."\n";
-	print SUBFILE "\t".xml_tag("Track"   , $subinfo{"track"})."\n";
-	print SUBFILE "\t".xml_tag("Name"	, $subinfo{"jobname"})."\n";
+ 	print SUBFILE "\t".xml_tag("Project" , $subinfo{"project"})."\n";
+ 	print SUBFILE "\t".xml_tag("Track"   , $subinfo{"track"})."\n";
+#	print SUBFILE "\t".xml_tag("OS"      , $subinfo{"os"})."\n";
+ 	print SUBFILE "\t".xml_tag("Name"    , $subinfo{"jobname"})."\n";
 	print SUBFILE "\t<Command><![CDATA[\n";
-#       print SUBFILE join "\n" , @{$commands};
+#     print SUBFILE join "\n" , @{$commands};
 	print SUBFILE "printf '\\nellie\@ifarm> date\\n' > ".$textout;
 	print SUBFILE "date >> ".$textout;
 	print SUBFILE "printf '\\nellie\@ifarm> source ".$path_inputs."set_environment_variables_for_vanalyzer\.tcsh\\n' >> ".$textout;
@@ -163,6 +164,7 @@ sub make_xml_sub_file
 	print SUBFILE "date >> ".$textout;
 	print SUBFILE "\t]]></Command>\n\n";
 	print SUBFILE "\t<DiskSpace space=\"15\" unit=\"GB\"/>\n\n";
+	print SUBFILE "\t<OS name=\"centos7\"/>\n\n";
 	print SUBFILE "\t<Memory space=\"4\" unit=\"GB\"/>\n\n";
 	print SUBFILE "\t<TimeLimit unit=\"hours\" time=\"72\"/>\n\n";
 #	print SUBFILE "\t<TimeLimit unit=\"hours\" time=\"24\"/>\n\n";
@@ -249,8 +251,8 @@ $pwd = qx(pwd);
 chomp($pwd);
 $path_subs    = $pwd."/sub/";
 $path_logs    = $pwd."/logs/job_on_".$timestamp."/";
-#$path_inputs  = $pwd."/inputs/";
-$path_inputs  = $pwd."/inputs/ellana/";
+$path_inputs  = $pwd."/inputs/";
+#$path_inputs  = $pwd."/inputs/ellana/";
 $neutron_path_inputs  = $pwd."/inputs/neutron_hunt/";
 $ellana_path_inputs  = $pwd."/inputs/ellana/";
 #$path_lists   = $pwd."/info_lists/";
@@ -260,8 +262,8 @@ $path_results = $pwd."/results/output_".$timestamp."/";
 
 #setting some defaults
 # $path_root   =  "not set";
-$path_root   = "/work/halla/e05102/disk1/ellie/batch/inputs/ROOTfiles/";
-$path_ellana = "/work/halla/e05102/disk1/ellie/batch/inputs/ellana/";
+$path_root   = $pwd."/inputs/ROOTfiles/";
+$path_ellana = $pwd."/inputs/ellana/";
 # $expbase   =  "not set";
 $expbase     =  "e05102_R";
 # $macro     =  "not set";

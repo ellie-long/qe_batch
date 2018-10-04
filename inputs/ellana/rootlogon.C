@@ -20,7 +20,7 @@
 	gInterpreter->AddIncludePath("$ANALYZER/hana_decode");
 	gInterpreter->AddIncludePath("$ANALYZER/hana_scaler");
 	gInterpreter->AddIncludePath("$ANALYZER/src");
-	gROOT->SetMacroPath(".:/work/halla/e05102/disk1/ellie/batch/inputs/ellana:/u/apps/root/5.34.13/root/macros");
+	gROOT->SetMacroPath(".:$ELLANA:/u/apps/root/5.34.13/root/macros");
 //	gInterpreter->AddIncludePath("$ROOTSYS/");
 
 	// Line below added by Ellie to fix an error thrown

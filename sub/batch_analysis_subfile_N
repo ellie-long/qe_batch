@@ -1,57 +1,73 @@
 <Request>
 	<Project name="e05102"/>
 	<Track name="analysis"/>
-	<Name name="batch_analysis_63_21006"/>
+	<Name name="batch_analysis_16_20977"/>
 	<Command><![CDATA[
-printf '\nellie@ifarm> date\n' > /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_12:43:38/charge_lt_text_for_run_21006.out
-date >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_12:43:38/charge_lt_text_for_run_21006.out
-printf '\nellie@ifarm> source /w/halla-scifs17exp/e05102/disk1/ellie/batch/inputs/ellana/set_environment_variables_for_vanalyzer.tcsh\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_12:43:38/charge_lt_text_for_run_21006.out
-source /w/halla-scifs17exp/e05102/disk1/ellie/batch/inputs/ellana/set_environment_variables_for_vanalyzer.tcsh >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_12:43:38/charge_lt_text_for_run_21006.out
-printf '\nellie@ifarm> printenv\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_12:43:38/charge_lt_text_for_run_21006.out
-printenv >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_12:43:38/charge_lt_text_for_run_21006.out
-printf '\nellie@ifarm> ls -ltr\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_12:43:38/charge_lt_text_for_run_21006.out
-ls -ltr >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_12:43:38/charge_lt_text_for_run_21006.out
-printf '\nellie@ifarm> rm input.file\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_12:43:38/charge_lt_text_for_run_21006.out
-rm input.file >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_12:43:38/charge_lt_text_for_run_21006.out
-printf '\nellie@ifarm> ls -ltr\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_12:43:38/charge_lt_text_for_run_21006.out
-ls -ltr >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_12:43:38/charge_lt_text_for_run_21006.out
-printf '\nellie@ifarm> printf 21006 > input.file\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_12:43:38/charge_lt_text_for_run_21006.out
-printf 21006 > input.file
-printf '\nellie@ifarm> cat input.file\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_12:43:38/charge_lt_text_for_run_21006.out
-cat input.file >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_12:43:38/charge_lt_text_for_run_21006.out
-printf '\nellie@ifarm> analyzer /w/halla-scifs17exp/e05102/disk1/ellie/batch/inputs/ellana/run_replay.C\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_12:43:38/charge_lt_text_for_run_21006.out
-analyzer /w/halla-scifs17exp/e05102/disk1/ellie/batch/inputs/ellana/run_replay.C >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_12:43:38/charge_lt_text_for_run_21006.out
-printf '\nellie@ifarm> analyzer ./make_charge_files.C\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_12:43:38/charge_lt_text_for_run_21006.out
-analyzer ./make_charge_files.C >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_12:43:38/charge_lt_text_for_run_21006.out
-printf '\nellie@ifarm> cp -v *.root /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_12:43:38/.' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_12:43:38/charge_lt_text_for_run_21006.out
-cp -v *.root /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_12:43:38/. >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_12:43:38/charge_lt_text_for_run_21006.out
-printf '\nellie@ifarm> ls -ltr\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_12:43:38/charge_lt_text_for_run_21006.out
-ls -ltr >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_12:43:38/charge_lt_text_for_run_21006.out
-printf '\nellie@ifarm> date\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_12:43:38/charge_lt_text_for_run_21006.out
-date >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_12:43:38/charge_lt_text_for_run_21006.out
+printf '\nellie@ifarm> date\n' > /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180928_09:46:00/neutron_cuts_text_for_run_20977.out
+date >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180928_09:46:00/neutron_cuts_text_for_run_20977.out
+printf '\nellie@ifarm> source /w/halla-scifs17exp/e05102/disk1/ellie/batch/inputs/set_environment_variables_for_vanalyzer.tcsh\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180928_09:46:00/neutron_cuts_text_for_run_20977.out
+source /w/halla-scifs17exp/e05102/disk1/ellie/batch/inputs/set_environment_variables_for_vanalyzer.tcsh >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180928_09:46:00/neutron_cuts_text_for_run_20977.out
+printf '\nellie@ifarm> printenv\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180928_09:46:00/neutron_cuts_text_for_run_20977.out
+printenv >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180928_09:46:00/neutron_cuts_text_for_run_20977.out
+printf '\nellie@ifarm> ls -ltr\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180928_09:46:00/neutron_cuts_text_for_run_20977.out
+ls -ltr >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180928_09:46:00/neutron_cuts_text_for_run_20977.out
+printf '\nellie@ifarm> rm input.file\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180928_09:46:00/neutron_cuts_text_for_run_20977.out
+rm input.file >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180928_09:46:00/neutron_cuts_text_for_run_20977.out
+printf '\nellie@ifarm> ls -ltr\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180928_09:46:00/neutron_cuts_text_for_run_20977.out
+ls -ltr >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180928_09:46:00/neutron_cuts_text_for_run_20977.out
+printf '\nellie@ifarm> printf 20977 > input.file\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180928_09:46:00/neutron_cuts_text_for_run_20977.out
+printf 20977 > input.file
+printf '\nellie@ifarm> cat input.file\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180928_09:46:00/neutron_cuts_text_for_run_20977.out
+cat input.file >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180928_09:46:00/neutron_cuts_text_for_run_20977.out
+printf '\nellie@ifarm> root root_test.cxx\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180928_09:46:00/neutron_cuts_text_for_run_20977.out
+root root_test.cxx >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180928_09:46:00/neutron_cuts_text_for_run_20977.out
+printf '\nellie@ifarm> analyzer ./root_test.cxx\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180928_09:46:00/neutron_cuts_text_for_run_20977.out
+analyzer ./root_test.cxx >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180928_09:46:00/neutron_cuts_text_for_run_20977.out
+printf '\nellie@ifarm> analyzer /w/halla-scifs17exp/e05102/disk1/ellie/batch/inputs/ellana/run_replay.C\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180928_09:46:00/neutron_cuts_text_for_run_20977.out
+analyzer /w/halla-scifs17exp/e05102/disk1/ellie/batch/inputs/ellana/run_replay.C >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180928_09:46:00/neutron_cuts_text_for_run_20977.out
+printf '\nellie@ifarm> analyzer ./make_target_asymmetry_class_files.C\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180928_09:46:00/neutron_cuts_text_for_run_20977.out
+analyzer ./make_target_asymmetry_class_files.C >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180928_09:46:00/neutron_cuts_text_for_run_20977.out
+printf '\nellie@ifarm> ls -ltr\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180928_09:46:00/neutron_cuts_text_for_run_20977.out
+ls -ltr >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180928_09:46:00/neutron_cuts_text_for_run_20977.out
+printf '\nellie@ifarm> date\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180928_09:46:00/neutron_cuts_text_for_run_20977.out
+date >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180928_09:46:00/neutron_cuts_text_for_run_20977.out
 	]]></Command>
 
 	<DiskSpace space="15" unit="GB"/>
+
+	<OS name="centos7"/>
 
 	<Memory space="4" unit="GB"/>
 
 	<TimeLimit unit="hours" time="72"/>
 
 	<Input src="/w/halla-scifs17exp/e05102/disk1/ellie/batch/inputs/ellana/run_replay.C" dest="run_replay.C"/>
+	<Input src="/w/halla-scifs17exp/e05102/disk1/ellie/batch/inputs/neutron_hunt/root_test.cxx" dest="root_test.cxx"/>
+	<Input src="/w/halla-scifs17exp/e05102/disk1/ellie/batch/inputs/neutron_hunt/make_target_asymmetry_class_files-neutrons_only.C" dest="make_target_asymmetry_class_files.C"/>
+	<Input src="/w/halla-scifs17exp/e05102/disk1/ellie/batch/inputs/neutron_hunt/neutron_analysis_class.cxx" dest="neutron_analysis_class.cxx"/>
+	<Input src="/w/halla-scifs17exp/e05102/disk1/ellie/batch/inputs/neutron_hunt/neutron_analysis_class.h" dest="neutron_analysis_class.h"/>
+	<Input src="/w/halla-scifs17exp/e05102/disk1/ellie/batch/inputs/neutron_hunt/neutron_analysis_class.C" dest="neutron_analysis_class.C"/>
+	<Input src="/w/halla-scifs17exp/e05102/disk1/ellie/batch/inputs/neutron_hunt/hand_class_basic_cuts.h" dest="hand_class_basic_cuts.h"/>
+	<Input src="/w/halla-scifs17exp/e05102/disk1/ellie/batch/inputs/neutron_hunt/hand_draw.h" dest="hand_draw.h"/>
+	<Input src="/w/halla-scifs17exp/e05102/disk1/ellie/batch/inputs/neutron_hunt/hand_class_veto_cuts.h" dest="hand_class_veto_cuts.h"/>
+	<Input src="/w/halla-scifs17exp/e05102/disk1/ellie/batch/inputs/neutron_hunt/hand_class_veto_cuts2.h" dest="hand_class_veto_cuts2.h"/>
+	<Input src="/w/halla-scifs17exp/e05102/disk1/ellie/batch/inputs/neutron_hunt/hand_class_bar_th_cuts.h" dest="hand_class_bar_th_cuts.h"/>
+	<Input src="/w/halla-scifs17exp/e05102/disk1/ellie/batch/inputs/neutron_hunt/hand_class_draw_basic.h" dest="hand_class_draw_basic.h"/>
+	<Input src="/w/halla-scifs17exp/e05102/disk1/ellie/batch/inputs/neutron_hunt/hand_class_fill_bar_by_bar_cuts.h" dest="hand_class_fill_bar_by_bar_cuts.h"/>
+	<Input src="/w/halla-scifs17exp/e05102/disk1/ellie/batch/inputs/neutron_hunt/hand_class_draw_bar_by_bar_cuts.h" dest="hand_class_draw_bar_by_bar_cuts.h"/>
+	<Input src="/w/halla-scifs17exp/e05102/disk1/ellie/batch/inputs/neutron_hunt/hand_class_fill_good_events.h" dest="hand_class_fill_good_events.h"/>
+	<Input src="/w/halla-scifs17exp/e05102/disk1/ellie/batch/inputs/neutron_hunt/hand_class_draw_tof_nu.h" dest="hand_class_draw_tof_nu.h"/>
 	<Input src="/w/halla-scifs17exp/e05102/disk1/ellie/batch/inputs/neutron_hunt/THaEvent.h" dest="THaEvent.h"/>
-	<Input src="/w/halla-scifs17exp/e05102/disk1/ellie/batch/inputs/neutron_hunt/make_charge_files.C" dest="make_charge_files.C"/>
-	<Input src="/w/halla-scifs17exp/e05102/disk1/ellie/batch/inputs/neutron_hunt/charge_analysis_class.cxx" dest="charge_analysis_class.cxx"/>
-	<Input src="/w/halla-scifs17exp/e05102/disk1/ellie/batch/inputs/neutron_hunt/charge_analysis_class.h" dest="charge_analysis_class.h"/>
-	<Input src="/w/halla-scifs17exp/e05102/disk1/ellie/batch/inputs/neutron_hunt/charge_analysis_class.C" dest="charge_analysis_class.C"/>
 
 	<Job>
-		<Input src="/work/halla/e05102/disk1/ellie/batch/inputs/ellana/rootlogon.C" dest="rootlogon.C"/>
-		<Input src="mss:/mss/halla/e05102/raw/e05102_21006.dat.0" dest="./e05102_21006.dat.0"/>
-		<Input src="mss:/mss/halla/e05102/raw/e05102_21006.dat.1" dest="./e05102_21006.dat.1"/>
-		<Output src="./summaryphy_21006.log" dest="/w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_12:43:38/charge_lt_summaryphy_21006.log"/>
-		<Output src="charge_lt_for_run_21006.txt" dest="/w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180215_12:43:38/charge_lt_for_run_21006.txt"/>
-		<Stdout dest="/w/halla-scifs17exp/e05102/disk1/ellie/batch/logs/job_on_180215_12:43:38/e05102_R_21006.stdout"/>
-		<Stderr dest="/w/halla-scifs17exp/e05102/disk1/ellie/batch/logs/job_on_180215_12:43:38/e05102_R_21006.stderr"/>
+		<Input src="/w/halla-scifs17exp/e05102/disk1/ellie/batch/inputs/ellana/rootlogon.C" dest="rootlogon.C"/>
+		<Input src="mss:/mss/halla/e05102/raw/e05102_20977.dat.0" dest="./e05102_20977.dat.0"/>
+		<Input src="mss:/mss/halla/e05102/raw/e05102_20977.dat.1" dest="./e05102_20977.dat.1"/>
+		<Output src="./summaryphy_20977.log" dest="/w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180928_09:46:00/neutron_cuts_summaryphy_20977.log"/>
+		<Output src="neutron_cuts-hand_target_asym_vs_nu_for_run_20977.root" dest="/w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180928_09:46:00/neutron_cuts-hand_target_asym_vs_nu_for_run_20977.root"/>
+		<Output src="neutron_cuts-target_asymmetry_for_run_20977.txt" dest="/w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_180928_09:46:00/neutron_cuts-target_asymmetry_for_run_20977.txt"/>
+		<Stdout dest="/w/halla-scifs17exp/e05102/disk1/ellie/batch/logs/job_on_180928_09:46:00/e05102_R_20977.stdout"/>
+		<Stderr dest="/w/halla-scifs17exp/e05102/disk1/ellie/batch/logs/job_on_180928_09:46:00/e05102_R_20977.stderr"/>
 	</Job>
 
 </Request>
