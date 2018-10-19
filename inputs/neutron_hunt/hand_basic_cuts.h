@@ -89,9 +89,9 @@ void hand_basic_cuts(TCut& cut, TCut& kinematics, TCut& eventtype, TCut& dp, TCu
 	thetaphiRStr += thboundlow;
 
 	thph = thetaphiRStr;
-//	xbj = "PriKineRHe3.x_bj<2.0";
+	xbj = "PriKineRHe3.x_bj<2.0";
 //	xbj = "PriKineRHe3.x_bj>0.6 && PriKineRHe3.x_bj<0.8";
-	xbj = "PriKineRHe3.x_bj>0.8 && PriKineRHe3.x_bj<1.2";
+//	xbj = "PriKineRHe3.x_bj>0.8 && PriKineRHe3.x_bj<1.2";
 	pssh = "(R.ps.e + 2*R.sh.e)>900 && R.ps.e>1 && R.sh.e>1";
 	cerenkov = "R.cer.asum_c>150";
 //	if (Q2 == "1.0") {q2nu = "(PriKineR.Q2 - (2*PriKineR.nu) + 0.1)>0 && (PriKineR.Q2 - (2*PriKineR.nu) + 0.03)<0";}
