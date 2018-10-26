@@ -98,8 +98,8 @@ void neutron_analysis_class::hand_class_basic_cuts(Int_t jentry, bool& isGoodFor
 	bool thphGood = (ExTgtCor_R_ph<phboundhigh && ExTgtCor_R_ph>phboundlow && ExTgtCor_R_th<thboundhigh && ExTgtCor_R_th>thboundlow);
 
 
-//	bool xbjGood = (PriKineRHe3_x_bj<2.0);
-	bool xbjGood = (PriKineRHe3_x_bj>0.8 && PriKineRHe3_x_bj<1.2);
+	bool xbjGood = (PriKineRHe3_x_bj<2.0);
+//	bool xbjGood = (PriKineRHe3_x_bj>0.8 && PriKineRHe3_x_bj<1.2);
 //	if (Q2 == "0.1") {xbjGood = (PriKineRHe3_x_bj>0.6 && PriKineRHe3_x_bj<1.0);}
 //	bool xbjGood = (PriKineRHe3_x_bj>0);
 //	bool xbjGood = (PriKineRHe3_x_bj>0.6 && PriKineRHe3_x_bj<0.8);
