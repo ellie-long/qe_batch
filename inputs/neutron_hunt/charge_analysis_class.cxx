@@ -516,7 +516,8 @@ void charge_analysis_class::AsymLoop(int dataType)
 // ^^^^^^^^^^^^^^^^^^^^^^ Define Kinematics Settings ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
-	double xmin = 0.6;
+//	double xmin = 0.6;
+	double xmin = 0;
 	double xmax = 3.0;
 
 	int bins = 50;
