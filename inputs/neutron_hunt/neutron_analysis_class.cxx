@@ -274,16 +274,16 @@ void neutron_analysis_class::AsymLoop(int dataType)
 //		int TDCbins = 40;
 //		double TDCmin = 1325;
 //		double TDCmax = 1525;
-		int TDCbins = 50;
+		int TDCbins = 300;
 		double TDCmin = 0;
-		double TDCmax = 3100;
-		if (includeVetos)
+		double TDCmax = 3000;
+/*		if (includeVetos)
 		{
 			TDCbins = 40;
 			TDCmin = 1325;
 			TDCmax = 1525;
 		}
-
+*/
 		int ADCbins = 700;
 		double ADCmin = -100;
 		double ADCmax = 11100;
@@ -939,6 +939,7 @@ void neutron_analysis_class::AsymLoop(int dataType)
 	bool newHeState = false;
 	bool firstTime = true;
 
+	bool TDCsanity = true;
 
         HeNumberOfEvents = int(chainHe->GetEntries());
         chainHe->SetBranchAddress("he3R.IsSpinValid", &HeIsSpinValid);
@@ -1071,7 +1072,12 @@ void neutron_analysis_class::AsymLoop(int dataType)
 		cerenkovGood = true;
 		hand_class_basic_cuts(jentry, isGoodForAllBasic, HeRunNumber, Q2, dpGood, targetGood, cerenkovGood, HedpNoCut, HedpCut, HeReactZNoCut, HeReactZCut, HeThetaPhiCut, HePsShNoCut, histQ2Nu, histcerenkov, histcerenkovcut, HePsShCut, histx, histxcut, ToFbasic);
 
-
+	// Adding sanity cut for Q2=0.1 to improve TOF, otherwise it gets overloaded with false events
+		if (Q2=="0.1")
+		{
+			TDCsanity = NA_nd_p1_lt_c>1000 && NA_nd_p1_rt_c>1000 && NA_nd_p2_lt_c>1000 && NA_nd_p2_rt_c>1000 && NA_nd_p3_lt_c>1000 && NA_nd_p3_rt_c>1000 && NA_nd_p4_lt_c>1000 && NA_nd_p4_rt_c>1000;
+			isGoodForAllBasic = isGoodForAllBasic && TDCsanity;
+		}
 
 		if (isGoodForAllBasic) { goodEvent = true;}
 		else {goodEvent = false;}
@@ -1434,7 +1440,7 @@ void neutron_analysis_class::AsymLoop(int dataType)
 		if (i==4) maxbars=12;
 		for (int j=whichbar; j<maxbars; j++)
 		{
-//			hand_class_draw_bar_by_bar_cuts(HeRunNumber, i, j, HANDleft[i][j], HANDleftcut[i][j], HANDright[i][j], HANDrightcut[i][j], HeThetaCut[i][j], HePhiCut[i][j], HeThetaPhiBarCut[i][j], allVetos[i][j], outputRootString);
+			hand_class_draw_bar_by_bar_cuts(HeRunNumber, i, j, HANDleft[i][j], HANDleftcut[i][j], HANDright[i][j], HANDrightcut[i][j], HeThetaCut[i][j], HePhiCut[i][j], HeThetaPhiBarCut[i][j], allVetos[i][j], outputRootString);
 		}
 	}
 

@@ -1,36 +1,36 @@
 <Request>
 	<Project name="e05102"/>
 	<Track name="analysis"/>
-	<Name name="batch_analysis_5_20895"/>
+	<Name name="batch_analysis_4_20490"/>
 	<Command><![CDATA[
-printf '\nellie@ifarm> date\n' > /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_181026_10:13:57/neutron_cuts_text_for_run_20895.out
-date >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_181026_10:13:57/neutron_cuts_text_for_run_20895.out
-printf '\nellie@ifarm> source /w/halla-scifs17exp/e05102/disk1/ellie/batch/inputs/set_environment_variables_for_vanalyzer.tcsh\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_181026_10:13:57/neutron_cuts_text_for_run_20895.out
-source /w/halla-scifs17exp/e05102/disk1/ellie/batch/inputs/set_environment_variables_for_vanalyzer.tcsh >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_181026_10:13:57/neutron_cuts_text_for_run_20895.out
-printf '\nellie@ifarm> printenv\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_181026_10:13:57/neutron_cuts_text_for_run_20895.out
-printenv >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_181026_10:13:57/neutron_cuts_text_for_run_20895.out
-printf '\nellie@ifarm> ls -ltr\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_181026_10:13:57/neutron_cuts_text_for_run_20895.out
-ls -ltr >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_181026_10:13:57/neutron_cuts_text_for_run_20895.out
-printf '\nellie@ifarm> rm input.file\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_181026_10:13:57/neutron_cuts_text_for_run_20895.out
-rm input.file >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_181026_10:13:57/neutron_cuts_text_for_run_20895.out
-printf '\nellie@ifarm> ls -ltr\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_181026_10:13:57/neutron_cuts_text_for_run_20895.out
-ls -ltr >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_181026_10:13:57/neutron_cuts_text_for_run_20895.out
-printf '\nellie@ifarm> printf 20895 > input.file\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_181026_10:13:57/neutron_cuts_text_for_run_20895.out
-printf 20895 > input.file
-printf '\nellie@ifarm> cat input.file\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_181026_10:13:57/neutron_cuts_text_for_run_20895.out
-cat input.file >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_181026_10:13:57/neutron_cuts_text_for_run_20895.out
-printf '\nellie@ifarm> root root_test.cxx\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_181026_10:13:57/neutron_cuts_text_for_run_20895.out
-root root_test.cxx >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_181026_10:13:57/neutron_cuts_text_for_run_20895.out
-printf '\nellie@ifarm> analyzer ./root_test.cxx\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_181026_10:13:57/neutron_cuts_text_for_run_20895.out
-analyzer ./root_test.cxx >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_181026_10:13:57/neutron_cuts_text_for_run_20895.out
-printf '\nellie@ifarm> analyzer /w/halla-scifs17exp/e05102/disk1/ellie/batch/inputs/ellana/run_replay.C\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_181026_10:13:57/neutron_cuts_text_for_run_20895.out
-analyzer /w/halla-scifs17exp/e05102/disk1/ellie/batch/inputs/ellana/run_replay.C >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_181026_10:13:57/neutron_cuts_text_for_run_20895.out
-printf '\nellie@ifarm> analyzer ./make_target_asymmetry_class_files.C\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_181026_10:13:57/neutron_cuts_text_for_run_20895.out
-analyzer ./make_target_asymmetry_class_files.C >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_181026_10:13:57/neutron_cuts_text_for_run_20895.out
-printf '\nellie@ifarm> ls -ltr\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_181026_10:13:57/neutron_cuts_text_for_run_20895.out
-ls -ltr >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_181026_10:13:57/neutron_cuts_text_for_run_20895.out
-printf '\nellie@ifarm> date\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_181026_10:13:57/neutron_cuts_text_for_run_20895.out
-date >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_181026_10:13:57/neutron_cuts_text_for_run_20895.out
+printf '\nellie@ifarm> date\n' > /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_181206_10:24:19/neutron_cuts_text_for_run_20490.out
+date >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_181206_10:24:19/neutron_cuts_text_for_run_20490.out
+printf '\nellie@ifarm> source /w/halla-scifs17exp/e05102/disk1/ellie/batch/inputs/set_environment_variables_for_vanalyzer.tcsh\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_181206_10:24:19/neutron_cuts_text_for_run_20490.out
+source /w/halla-scifs17exp/e05102/disk1/ellie/batch/inputs/set_environment_variables_for_vanalyzer.tcsh >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_181206_10:24:19/neutron_cuts_text_for_run_20490.out
+printf '\nellie@ifarm> printenv\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_181206_10:24:19/neutron_cuts_text_for_run_20490.out
+printenv >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_181206_10:24:19/neutron_cuts_text_for_run_20490.out
+printf '\nellie@ifarm> ls -ltr\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_181206_10:24:19/neutron_cuts_text_for_run_20490.out
+ls -ltr >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_181206_10:24:19/neutron_cuts_text_for_run_20490.out
+printf '\nellie@ifarm> rm input.file\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_181206_10:24:19/neutron_cuts_text_for_run_20490.out
+rm input.file >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_181206_10:24:19/neutron_cuts_text_for_run_20490.out
+printf '\nellie@ifarm> ls -ltr\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_181206_10:24:19/neutron_cuts_text_for_run_20490.out
+ls -ltr >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_181206_10:24:19/neutron_cuts_text_for_run_20490.out
+printf '\nellie@ifarm> printf 20490 > input.file\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_181206_10:24:19/neutron_cuts_text_for_run_20490.out
+printf 20490 > input.file
+printf '\nellie@ifarm> cat input.file\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_181206_10:24:19/neutron_cuts_text_for_run_20490.out
+cat input.file >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_181206_10:24:19/neutron_cuts_text_for_run_20490.out
+printf '\nellie@ifarm> root root_test.cxx\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_181206_10:24:19/neutron_cuts_text_for_run_20490.out
+root root_test.cxx >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_181206_10:24:19/neutron_cuts_text_for_run_20490.out
+printf '\nellie@ifarm> analyzer ./root_test.cxx\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_181206_10:24:19/neutron_cuts_text_for_run_20490.out
+analyzer ./root_test.cxx >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_181206_10:24:19/neutron_cuts_text_for_run_20490.out
+printf '\nellie@ifarm> analyzer /w/halla-scifs17exp/e05102/disk1/ellie/batch/inputs/ellana/run_replay.C\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_181206_10:24:19/neutron_cuts_text_for_run_20490.out
+analyzer /w/halla-scifs17exp/e05102/disk1/ellie/batch/inputs/ellana/run_replay.C >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_181206_10:24:19/neutron_cuts_text_for_run_20490.out
+printf '\nellie@ifarm> analyzer ./make_target_asymmetry_class_files.C\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_181206_10:24:19/neutron_cuts_text_for_run_20490.out
+analyzer ./make_target_asymmetry_class_files.C >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_181206_10:24:19/neutron_cuts_text_for_run_20490.out
+printf '\nellie@ifarm> ls -ltr\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_181206_10:24:19/neutron_cuts_text_for_run_20490.out
+ls -ltr >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_181206_10:24:19/neutron_cuts_text_for_run_20490.out
+printf '\nellie@ifarm> date\n' >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_181206_10:24:19/neutron_cuts_text_for_run_20490.out
+date >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_181206_10:24:19/neutron_cuts_text_for_run_20490.out
 	]]></Command>
 
 	<DiskSpace space="15" unit="GB"/>
@@ -61,12 +61,14 @@ date >> /w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_181026_10:13
 
 	<Job>
 		<Input src="/w/halla-scifs17exp/e05102/disk1/ellie/batch/inputs/ellana/rootlogon.C" dest="rootlogon.C"/>
-		<Input src="mss:/mss/halla/e05102/raw/e05102_20895.dat.0" dest="./e05102_20895.dat.0"/>
-		<Output src="./summaryphy_20895.log" dest="/w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_181026_10:13:57/neutron_cuts_summaryphy_20895.log"/>
-		<Output src="neutron_cuts-hand_target_asym_vs_nu_for_run_20895.root" dest="/w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_181026_10:13:57/neutron_cuts-hand_target_asym_vs_nu_for_run_20895.root"/>
-		<Output src="neutron_cuts-target_asymmetry_for_run_20895.txt" dest="/w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_181026_10:13:57/neutron_cuts-target_asymmetry_for_run_20895.txt"/>
-		<Stdout dest="/w/halla-scifs17exp/e05102/disk1/ellie/batch/logs/job_on_181026_10:13:57/e05102_R_20895.stdout"/>
-		<Stderr dest="/w/halla-scifs17exp/e05102/disk1/ellie/batch/logs/job_on_181026_10:13:57/e05102_R_20895.stderr"/>
+		<Input src="mss:/mss/halla/e05102/raw/e05102_20490.dat.0" dest="./e05102_20490.dat.0"/>
+		<Input src="mss:/mss/halla/e05102/raw/e05102_20490.dat.1" dest="./e05102_20490.dat.1"/>
+		<Input src="mss:/mss/halla/e05102/raw/e05102_20490.dat.2" dest="./e05102_20490.dat.2"/>
+		<Output src="./summaryphy_20490.log" dest="/w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_181206_10:24:19/neutron_cuts_summaryphy_20490.log"/>
+		<Output src="neutron_cuts-hand_target_asym_vs_nu_for_run_20490.root" dest="/w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_181206_10:24:19/neutron_cuts-hand_target_asym_vs_nu_for_run_20490.root"/>
+		<Output src="neutron_cuts-target_asymmetry_for_run_20490.txt" dest="/w/halla-scifs17exp/e05102/disk1/ellie/batch/results/output_181206_10:24:19/neutron_cuts-target_asymmetry_for_run_20490.txt"/>
+		<Stdout dest="/w/halla-scifs17exp/e05102/disk1/ellie/batch/logs/job_on_181206_10:24:19/e05102_R_20490.stdout"/>
+		<Stderr dest="/w/halla-scifs17exp/e05102/disk1/ellie/batch/logs/job_on_181206_10:24:19/e05102_R_20490.stderr"/>
 	</Job>
 
 </Request>
