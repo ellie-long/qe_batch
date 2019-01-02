@@ -1256,6 +1256,35 @@ void neutron_analysis_class::hand_class_veto_cuts(int nplane, int thisbar, bool&
 //	if (!pastVeto6L || !pastVeto6R) {return;}
 
 	bool inGoodBar = true;
+
+	// Adding sanity cut for Q2=0.1 to improve TOF, otherwise it gets overloaded with false events
+	bool goodTDC = true;
+	double goodTDCcut = 0;
+	if (Q2=="0.1")
+	{
+		goodTDCcut = 1000;
+	}
+	if (nplane==0) 
+	{
+		goodTDC = (NA_veto_lt_c[thisbar]>goodTDCcut && NA_veto_rt_c[thisbar]>goodTDCcut);
+	}
+	else if (nplane==1)
+	{ 
+		goodTDC = (NA_nd_p1_lt_c[thisbar]>goodTDCcut && NA_nd_p1_rt_c[thisbar]>goodTDCcut);
+	}
+	else if (nplane==2)
+	{ 
+		goodTDC = (NA_nd_p2_lt_c[thisbar]>goodTDCcut && NA_nd_p2_rt_c[thisbar]>goodTDCcut);
+	}
+	else if (nplane==3)
+	{ 
+		goodTDC = (NA_nd_p3_lt_c[thisbar]>goodTDCcut && NA_nd_p3_rt_c[thisbar]>goodTDCcut);
+	}
+	else if (nplane==4)
+	{ 
+		goodTDC = (NA_nd_p4_lt_c[thisbar]>goodTDCcut && NA_nd_p4_rt_c[thisbar]>goodTDCcut);
+	}
+
 // vvvvvvvvvvvvvvvvvv Below is inGoodBar AND TD Cut vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 /*	if (nplane==0) {inGoodBar = (NA_veto_lt_c[thisbar]>vetoTDCcutmin && NA_veto_lt_c[thisbar]<vetoTDCcutmax && NA_veto_rt_c[thisbar]>vetoTDCcutmin && NA_veto_rt_c[thisbar]<vetoTDCcutmax);}
 	if (nplane==1) {inGoodBar = (NA_nd_p1_lt_c[thisbar]>vetoTDCcutmin && NA_nd_p1_lt_c[thisbar]<vetoTDCcutmax && NA_nd_p1_rt_c[thisbar]>vetoTDCcutmin && NA_nd_p1_rt_c[thisbar]<vetoTDCcutmax);}
@@ -1280,7 +1309,7 @@ void neutron_analysis_class::hand_class_veto_cuts(int nplane, int thisbar, bool&
 	madePastLVetoCuts = (pastVeto1L &&  pastVeto2L && pastVeto3L &&  pastVeto4L &&  pastVeto5L &&  pastVeto6L);
 	madePastRVetoCuts = (pastVeto1R &&  pastVeto2R && pastVeto3R &&  pastVeto4R &&  pastVeto5R &&  pastVeto6R);
 
-	if (includeVetos) {madePastVetoCuts = (madePastLVetoCuts && madePastRVetoCuts && inGoodBar);}
+	if (includeVetos) {madePastVetoCuts = (madePastLVetoCuts && madePastRVetoCuts && goodTDC && inGoodBar);}
 	if (!includeVetos) {madePastVetoCuts = true;}
 
 //	if (includeVetos) {cout << "madePastVetoCuts: " << madePastLVetoCuts << ", Plane: " << nplane << ", Bar: " << thisbar << ", jentry: " << jentry << endl;}

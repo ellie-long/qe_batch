@@ -1026,6 +1026,8 @@ void neutron_analysis_class::AsymLoop(int dataType)
 //      int thisRunSpinDown = 0;
         int thisRunNumber = 0;
 
+	int numGoodEventsBasic = 0;
+
 	if (int(HeSpin)==1)
 	{
 		t1cUpInitial = He_t1c;
@@ -1072,14 +1074,11 @@ void neutron_analysis_class::AsymLoop(int dataType)
 		cerenkovGood = true;
 		hand_class_basic_cuts(jentry, isGoodForAllBasic, HeRunNumber, Q2, dpGood, targetGood, cerenkovGood, HedpNoCut, HedpCut, HeReactZNoCut, HeReactZCut, HeThetaPhiCut, HePsShNoCut, histQ2Nu, histcerenkov, histcerenkovcut, HePsShCut, histx, histxcut, ToFbasic);
 
-	// Adding sanity cut for Q2=0.1 to improve TOF, otherwise it gets overloaded with false events
-		if (Q2=="0.1")
-		{
-			TDCsanity = NA_nd_p1_lt_c>1000 && NA_nd_p1_rt_c>1000 && NA_nd_p2_lt_c>1000 && NA_nd_p2_rt_c>1000 && NA_nd_p3_lt_c>1000 && NA_nd_p3_rt_c>1000 && NA_nd_p4_lt_c>1000 && NA_nd_p4_rt_c>1000;
-			isGoodForAllBasic = isGoodForAllBasic && TDCsanity;
+		if (isGoodForAllBasic) 
+		{ 
+			goodEvent = true;
+			numGoodEventsBasic = numGoodEventsBasic + 1;
 		}
-
-		if (isGoodForAllBasic) { goodEvent = true;}
 		else {goodEvent = false;}
 
 		if (isGoodForAllBasic)
@@ -1404,6 +1403,13 @@ void neutron_analysis_class::AsymLoop(int dataType)
 //		if (ientry < 0) break;
 		nb = fChain->GetEntry(jentry);   nbytes += nb;
 		// if (Cut(ientry) < 0) continue;
+	if (!test && ((jentry%10000)==0)) 
+	{
+		cout << "	allEvents: " << allEvents << endl;
+		cout << "	goodEventsBasic: " << numGoodEventsBasic << " (" << numGoodEventsBasic/allEvents*100 << "%)" << endl;
+		cout << "	goodEvents: " << goodEvents << " (" << goodEvents/allEvents*100 << "%)" << endl;
+	}
+
 	}
 	TString HeRunNumberString = "Run ";
 	HeRunNumberString += HeRunNumber;
@@ -1428,6 +1434,7 @@ void neutron_analysis_class::AsymLoop(int dataType)
     if (dataType==1) {legend << "HeRunNumberString\nthisRunCharge\nHeT2total\nHeTriggerstotal\nthisRunTargetChargeUp\nHeT2up\nHeTriggersUp\nthisRunTargetChargeDown\nHeT2down\nHeTriggersDown\nthisRunBeamChargeUp\nBeamT2up\nBeamTriggersUp\nthisRunBeamChargeDown\nBeamT2down\nBeamTriggersDown\nt1_scalar\nt1cUpTot\nt1c0Tot\nt1cDownTot\nugChargeUpTot\nugCharge0Tot\nugChargeDownTot\nugChargeUpInitial\nugCharge0Initial\nugChargeDownInitial\n\n"; }
         legend.close();	
 	cout << "allEvents: " << allEvents << endl;
+	cout << "goodEventsBasic: " << numGoodEventsBasic << endl;
 	cout << "goodEvents: " << goodEvents << endl;
 	hand_class_draw_basic(HedpNoCut, HedpCut, HeReactZNoCut, HeReactZCut, HeThetaPhiCut, HePsShNoCut, histQ2Nu, histcerenkov, histcerenkovcut, HePsShCut, histx, histxcut, outputRootString, HeRunNumber);
 
