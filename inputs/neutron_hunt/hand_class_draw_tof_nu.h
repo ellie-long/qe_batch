@@ -1,13 +1,6 @@
 
 
-
-
-
-
-//void neutron_analysis_class::hand_class_draw_tof_nu(TH1F* ToFbasic[], TH1F* ToFgoodEvent[], TH1F* ToFcut[], TH1F* ToFup[], TH1F* ToFdown[], TH1F* nuAllCuts[], TH1F* nuUpAllCuts[], TH1F* nuDownAllCuts[], TString outputRootString, int HeRunNumber)
-
-//void neutron_analysis_class::hand_class_draw_tof_nu(TH1F* ToFbasic, TH1F* ToFgoodEvent[], TH1F* ToFcut[], TH1F* ToFup[], TH1F* ToFdown[], TH1F* nuAllCuts[], TString outputRootString, int HeRunNumber, int iterator)
-void neutron_analysis_class::hand_class_draw_tof_nu(TH1F* ToFbasic, TH1F* ToFgoodEventTotal, TH1F* ToFcutTotal, TH1F* ToFupTotal, TH1F* ToFdownTotal, TH1F* nuAllCutsTotal, TH1F* ToFgoodEvent, TH1F* ToFcut, TH1F* ToFup, TH1F* ToFdown, TH1F* nuAllCuts, TH1F* nuUp, TH1F* nuDown, TString outputRootString, int HeRunNumber, int iterator, TH1F* nuUpAllCuts, TH1F* nuDownAllCuts)
+void neutron_analysis_class::hand_class_draw_tof_nu(TH1F* ToFbasic, TH1F* ToFgoodEventTotal, TH1F* ToFcutTotal, TH1F* ToFupTotal, TH1F* ToFdownTotal, TH1F* nuAllCutsTotal, TH1F* ToFgoodEvent, TH1F* ToFcut, TH1F* ToFup, TH1F* ToFdown, TH1F* nuAllCuts, TH1F* nuUp, TH1F* nuDown, TString outputRootString, int HeRunNumber, int iterator, TH1F* nuUpAllCuts, TH1F* nuDownAllCuts, TH1F* TDC1up, TH1F* TDC1dn, TH1F* TDC2up, TH1F* TDC2dn, TH1F* TDC3up, TH1F* TDC3dn, TH1F* TDC4up, TH1F* TDC4dn)
 {
 
 	cout << "vvvvvvvvvvvvvvvvvvvvvvv hand_class_draw_tof_nu.h vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv" << endl;
@@ -16,7 +9,17 @@ void neutron_analysis_class::hand_class_draw_tof_nu(TH1F* ToFbasic, TH1F* ToFgoo
 	TFile *outputRoot = new TFile(outputRootString,"UPDATE");
 
 	gStyle->SetPalette(1);
-	
+
+	// Output the TDC plots
+	TDC1up->Write();	
+	TDC1dn->Write();	
+	TDC2up->Write();	
+	TDC2dn->Write();	
+	TDC3up->Write();	
+	TDC3dn->Write();	
+	TDC4up->Write();	
+	TDC4dn->Write();
+
 	// The section below plots the ToF and Nu plots
 	// **********************************************************************************************
 	// Defines Canvas

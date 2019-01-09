@@ -1259,11 +1259,12 @@ void neutron_analysis_class::hand_class_veto_cuts(int nplane, int thisbar, bool&
 
 	// Adding sanity cut for Q2=0.1 to improve TOF, otherwise it gets overloaded with false events
 	bool goodTDC = true;
-	double goodTDCcut = 0;
-	if (Q2=="0.1")
+	double goodTDCcut = 1000;
+/*	if (Q2=="0.1")
 	{
 		goodTDCcut = 1000;
 	}
+*/
 	if (nplane==0) 
 	{
 		goodTDC = (NA_veto_lt_c[thisbar]>goodTDCcut && NA_veto_rt_c[thisbar]>goodTDCcut);
@@ -1285,7 +1286,7 @@ void neutron_analysis_class::hand_class_veto_cuts(int nplane, int thisbar, bool&
 		goodTDC = (NA_nd_p4_lt_c[thisbar]>goodTDCcut && NA_nd_p4_rt_c[thisbar]>goodTDCcut);
 	}
 
-// vvvvvvvvvvvvvvvvvv Below is inGoodBar AND TD Cut vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+// vvvvvvvvvvvvvvvvvv Below is inGoodBar AND TDC Cut vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 /*	if (nplane==0) {inGoodBar = (NA_veto_lt_c[thisbar]>vetoTDCcutmin && NA_veto_lt_c[thisbar]<vetoTDCcutmax && NA_veto_rt_c[thisbar]>vetoTDCcutmin && NA_veto_rt_c[thisbar]<vetoTDCcutmax);}
 	if (nplane==1) {inGoodBar = (NA_nd_p1_lt_c[thisbar]>vetoTDCcutmin && NA_nd_p1_lt_c[thisbar]<vetoTDCcutmax && NA_nd_p1_rt_c[thisbar]>vetoTDCcutmin && NA_nd_p1_rt_c[thisbar]<vetoTDCcutmax);}
 	if (nplane==2) {inGoodBar = (NA_nd_p2_lt_c[thisbar]>vetoTDCcutmin && NA_nd_p2_lt_c[thisbar]<vetoTDCcutmax && NA_nd_p2_rt_c[thisbar]>vetoTDCcutmin && NA_nd_p2_rt_c[thisbar]<vetoTDCcutmax);}
@@ -1296,7 +1297,7 @@ void neutron_analysis_class::hand_class_veto_cuts(int nplane, int thisbar, bool&
 
 
 /*
-// vvvvvvvvvvvvvvvvvv Below is inGoodBar OR TD Cut vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+// vvvvvvvvvvvvvvvvvv Below is inGoodBar OR TDC Cut vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 	if (nplane==0) {inGoodBar = ((NA_veto_lt_c[thisbar]>vetoTDCcutmin && NA_veto_lt_c[thisbar]<vetoTDCcutmax) || (NA_veto_rt_c[thisbar]>vetoTDCcutmin && NA_veto_rt_c[thisbar]<vetoTDCcutmax));}
 	if (nplane==1) {inGoodBar = ((NA_nd_p1_lt_c[thisbar]>vetoTDCcutmin && NA_nd_p1_lt_c[thisbar]<vetoTDCcutmax) || (NA_nd_p1_rt_c[thisbar]>vetoTDCcutmin && NA_nd_p1_rt_c[thisbar]<vetoTDCcutmax));}
 	if (nplane==2) {inGoodBar = ((NA_nd_p2_lt_c[thisbar]>vetoTDCcutmin && NA_nd_p2_lt_c[thisbar]<vetoTDCcutmax) || (NA_nd_p2_rt_c[thisbar]>vetoTDCcutmin && NA_nd_p2_rt_c[thisbar]<vetoTDCcutmax));}

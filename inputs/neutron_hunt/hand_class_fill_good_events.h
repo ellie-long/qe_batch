@@ -1,9 +1,5 @@
-
-
-
-
-//void neutron_analysis_class::hand_class_fill_good_events(TH1F* ToFgoodEvent[], TH1F* ToFcut[], TH1F* ToFup[], TH1F* ToFdown[], TH1F* nuAllCuts[], TH1F* nuUp, TH1F* nuDown, int tofCutMin, int tofCutMax, double numin, double numax, int nuBins, TString asymType)
-void neutron_analysis_class::hand_class_fill_good_events(TH1F* ToFgoodEvent, TH1F* ToFcut, TH1F* ToFup, TH1F* ToFdown, TH1F* nuAllCuts, TH1F* nuUp, TH1F* nuDown, int tofCutMin, int tofCutMax, double numin, double numax, int nuBins, TString asymType, int iterator, TH1F* nuUpAllCuts, TH1F* nuDownAllCuts)
+//void neutron_analysis_class::hand_class_fill_good_events(TH1F* ToFgoodEvent, TH1F* ToFcut, TH1F* ToFup, TH1F* ToFdown, TH1F* nuAllCuts, TH1F* nuUp, TH1F* nuDown, int tofCutMin, int tofCutMax, double numin, double numax, int nuBins, TString asymType, int iterator, TH1F* nuUpAllCuts, TH1F* nuDownAllCuts)
+void neutron_analysis_class::hand_class_fill_good_events(TH1F* ToFgoodEvent, TH1F* ToFcut, TH1F* ToFup, TH1F* ToFdown, TH1F* nuAllCuts, TH1F* nuUp, TH1F* nuDown, int tofCutMin, int tofCutMax, double numin, double numax, int nuBins, TString asymType, int iterator, TH1F* nuUpAllCuts, TH1F* nuDownAllCuts, TH1F* TDC1up, TH1F* TDC1dn, TH1F* TDC2up, TH1F* TDC2dn, TH1F* TDC3up, TH1F* TDC3dn, TH1F* TDC4up, TH1F* TDC4dn)
 {
 //	cout << "vvvvvvvvvvvvvvvvvvv hand_class_fill_good_events.h vvvvvvvvvvvvvvvvvvvvvvvvvvvvvv" << endl;
 //	cout << "asymType: " << asymType << endl;
@@ -91,6 +87,10 @@ void neutron_analysis_class::hand_class_fill_good_events(TH1F* ToFgoodEvent, TH1
 			ToFup->Fill(NA_n_tof[0]);
 			nuUp->Fill(PriKineR_nu);
 			nuUpAllCuts->Fill(PriKineR_nu);
+			TDC1up->Fill(NA_nd_p1_lt_c);
+			TDC2up->Fill(NA_nd_p2_lt_c);
+			TDC3up->Fill(NA_nd_p3_lt_c);
+			TDC4up->Fill(NA_nd_p4_lt_c);
 		}
 		if (spinDown) 
 		{
@@ -98,6 +98,10 @@ void neutron_analysis_class::hand_class_fill_good_events(TH1F* ToFgoodEvent, TH1
 			ToFdown->Fill(NA_n_tof[0]);
 			nuDown->Fill(PriKineR_nu);
 			nuDownAllCuts->Fill(PriKineR_nu);
+			TDC1dn->Fill(NA_nd_p1_lt_c);
+			TDC2dn->Fill(NA_nd_p2_lt_c);
+			TDC3dn->Fill(NA_nd_p3_lt_c);
+			TDC4dn->Fill(NA_nd_p4_lt_c);
 		}
 	}
 	if (iterator>0)
@@ -239,12 +243,20 @@ void neutron_analysis_class::hand_class_fill_good_events(TH1F* ToFgoodEvent, TH1
 //				ToFup[i]->Fill(NA_n_tof[0]);
 				ToFup->Fill(NA_n_tof[0]);
 				nuUpAllCuts->Fill(PriKineR_nu);
+				TDC1up->Fill(NA_nd_p1_lt_c);
+				TDC2up->Fill(NA_nd_p2_lt_c);
+				TDC3up->Fill(NA_nd_p3_lt_c);
+				TDC4up->Fill(NA_nd_p4_lt_c);
 			}
 			if (spinDown) 
 			{
 //				ToFdown[i]->Fill(NA_n_tof[0]);
 				ToFdown->Fill(NA_n_tof[0]);
 				nuDownAllCuts->Fill(PriKineR_nu);
+				TDC1dn->Fill(NA_nd_p1_lt_c);
+				TDC2dn->Fill(NA_nd_p2_lt_c);
+				TDC3dn->Fill(NA_nd_p3_lt_c);
+				TDC4dn->Fill(NA_nd_p4_lt_c);
 			}
 		}
 	}

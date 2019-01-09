@@ -288,12 +288,20 @@ void neutron_analysis_class::AsymLoop(int dataType)
 		double ADCmin = -100;
 		double ADCmax = 11100;
 
-		double goodTDCleftcutmin = 1390;
+		double goodTDCleftcutmin = 1000;
+		double goodTDCleftcutmax = 1600;
+		double goodTDCrightcutmin = 1000;
+		double goodTDCrightcutmax = 1600;
+		double vetoTDCcutmin = 1000;
+		double vetoTDCcutmax = 1600;
+
+/*		double goodTDCleftcutmin = 1390;
 		double goodTDCleftcutmax = 1440;
 		double goodTDCrightcutmin = 1390;
 		double goodTDCrightcutmax = 1440;
 		double vetoTDCcutmin = 1390;
 		double vetoTDCcutmax = 1440;
+*/
 /*	
 		double goodTDCleftcutmin = 10;
 		double goodTDCleftcutmax = 3100;
@@ -661,7 +669,7 @@ void neutron_analysis_class::AsymLoop(int dataType)
 
 
 // vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv Define ToF & Nu  Settings vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
-	int tofBins = 100;
+	int tofBins = 300;
 //	int tofMin = 0;
 //	int tofMax = 1600;
 	int tofMin = 200;
@@ -687,6 +695,36 @@ void neutron_analysis_class::AsymLoop(int dataType)
 	TString plotToFdown = "ToFdown";
 	TH1F *ToFdown = new TH1F(plotToFdown,titleToFdown,tofBins,tofMin,tofMax);
 */
+
+
+
+	TH1F* TDC1up[11];
+	TH1F* TDC1dn[11];
+	TH1F* TDC2up[11];
+	TH1F* TDC2dn[11];
+	TH1F* TDC3up[11];
+	TH1F* TDC3dn[11];
+	TH1F* TDC4up[11];
+	TH1F* TDC4dn[11];
+	TString titleTDC1up;
+	TString titleTDC1dn;
+	TString plotTDC1up;
+	TString plotTDC1dn;
+	TString titleTDC2up;
+	TString titleTDC2dn;
+	TString plotTDC2up;
+	TString plotTDC2dn;
+	TString titleTDC3up;
+	TString titleTDC3dn;
+	TString plotTDC3up;
+	TString plotTDC3dn;
+	TString titleTDC4up;
+	TString titleTDC4dn;
+	TString plotTDC4up;
+	TString plotTDC4dn;
+	int tdcBins = 300;
+	double tdcMin = 0;
+	double tdcMax = 3000;
 
 
 
@@ -748,6 +786,39 @@ void neutron_analysis_class::AsymLoop(int dataType)
 		plotnuUpAllCuts += i;
 		plotnuDownAllCuts = "nuDownAllCuts_bin_";
 		plotnuDownAllCuts += i;
+		titleTDC1up = "TDC Plane 1, Spin Up, for Nu Bin ";
+		titleTDC1up += i;
+		plotTDC1up += "TDC1up_bin_";
+		plotTDC1up += i;
+		titleTDC1dn = "TDC Plane 1, Spin Down, for Nu Bin ";
+		titleTDC1dn += i;
+		plotTDC1dn += "TDC1dn_bin_";
+		plotTDC1dn += i;
+		titleTDC2up = "TDC Plane 2, Spin Up, for Nu Bin ";
+		titleTDC2up += i;
+		plotTDC2up += "TDC2up_bin_";
+		plotTDC2up += i;
+		titleTDC2dn = "TDC Plane 2, Spin Down, for Nu Bin ";
+		titleTDC2dn += i;
+		plotTDC2dn += "TDC2dn_bin_";
+		plotTDC2dn += i;
+		titleTDC3up = "TDC Plane 3, Spin Up, for Nu Bin ";
+		titleTDC3up += i;
+		plotTDC3up += "TDC3up_bin_";
+		plotTDC3up += i;
+		titleTDC3dn = "TDC Plane 3, Spin Down, for Nu Bin ";
+		titleTDC3dn += i;
+		plotTDC3dn += "TDC3dn_bin_";
+		plotTDC3dn += i;
+		titleTDC4up = "TDC Plane 4, Spin Up, for Nu Bin ";
+		titleTDC4up += i;
+		plotTDC4up += "TDC4up_bin_";
+		plotTDC4up += i;
+		titleTDC4dn = "TDC Plane 4, Spin Down, for Nu Bin ";
+		titleTDC4dn += i;
+		plotTDC4dn += "TDC4dn_bin_";
+		plotTDC4dn += i;
+
 		if (i==0)
 		{
 			titleToFgoodEvent = "ToFgoodEvent Total";
@@ -764,6 +835,22 @@ void neutron_analysis_class::AsymLoop(int dataType)
 			plotnuAllCuts = "nuAllCuts_Total";
 			plotnuUpAllCuts = "nuUpAllCuts_Total";
 			plotnuDownAllCuts = "nuDownAllCuts_Total";
+			titleTDC1up = "TDC Plane 1, Spin Up, Total";
+			plotTDC1up += "TDC1up_Total";
+			titleTDC1dn = "TDC Plane 1, Spin Down, Total";
+			plotTDC1dn += "TDC1dn_Total";
+			titleTDC2up = "TDC Plane 2, Spin Up, Total";
+			plotTDC2up += "TDC2up_Total";
+			titleTDC2dn = "TDC Plane 2, Spin Down, Total";
+			plotTDC2dn += "TDC2dn_Total";
+			titleTDC3up = "TDC Plane 3, Spin Up, Total";
+			plotTDC3up += "TDC3up_Total";
+			titleTDC3dn = "TDC Plane 3, Spin Down, Total";
+			plotTDC3dn += "TDC3dn_Total";
+			titleTDC4up = "TDC Plane 4, Spin Up, Total";
+			plotTDC4up += "TDC4up_Total";
+			titleTDC4dn = "TDC Plane 4, Spin Down, Total";
+			plotTDC4dn += "TDC4dn_Total";
 		}
 		ToFgoodEvent[i] = new TH1F(plotToFgoodEvent,titleToFgoodEvent,tofBins,tofMin,tofMax);
 		ToFcut[i] = new TH1F(plotToFcut,titleToFcut,tofBins,tofMin,tofMax);
@@ -778,6 +865,14 @@ void neutron_analysis_class::AsymLoop(int dataType)
 		nuAllCuts[i] = new TH1F(plotnuAllCuts,titlenuAllCuts,nuBins,nuMin,nuMax);
 		nuUpAllCuts[i] = new TH1F(plotnuUpAllCuts,titlenuUpAllCuts,nuBins,nuMin,nuMax);
 		nuDownAllCuts[i] = new TH1F(plotnuDownAllCuts,titlenuDownAllCuts,nuBins,nuMin,nuMax);
+		TDC1up[i] = new TH1F(plotTDC1up,titleDC1up,tdcBins,tdcMin,tdcMax);
+		TDC1dn[i] = new TH1F(plotTDC1dn,titleDC1dn,tdcBins,tdcMin,tdcMax);
+		TDC2up[i] = new TH2F(plotTDC2up,titleDC2up,tdcBins,tdcMin,tdcMax);
+		TDC2dn[i] = new TH2F(plotTDC2dn,titleDC2dn,tdcBins,tdcMin,tdcMax);
+		TDC3up[i] = new TH3F(plotTDC3up,titleDC3up,tdcBins,tdcMin,tdcMax);
+		TDC3dn[i] = new TH3F(plotTDC3dn,titleDC3dn,tdcBins,tdcMin,tdcMax);
+		TDC4up[i] = new TH4F(plotTDC4up,titleDC4up,tdcBins,tdcMin,tdcMax);
+		TDC4dn[i] = new TH4F(plotTDC4dn,titleDC4dn,tdcBins,tdcMin,tdcMax);
 	}
 	nuUp = new TH1F("nuUp","Nu - Spin Up (e,e')",nuBins,nuMin,nuMax);
 	nuDown = new TH1F("nuDown","Nu - Spin Down (e,e')",nuBins,nuMin,nuMax);
@@ -841,12 +936,12 @@ void neutron_analysis_class::AsymLoop(int dataType)
 	double HeChargeScale;
 	double Helivetime;
 	int i;
-        TString outFileName = "./charge_lt_for_run_";
-        outFileName += HeRunNumber;
-        outFileName += ".txt";
-        ofstream outFile;
-        outFile.open(outFileName, ios::app);
-        ifstream inFile (outFileName);
+	TString outFileName = "./charge_lt_for_run_";
+	outFileName += HeRunNumber;
+	outFileName += ".txt";
+	ofstream outFile;
+	outFile.open(outFileName, ios::app);
+	ifstream inFile (outFileName);
 
 	TString newOutputFolder = ".";
 	TString legendName = newOutputFolder;
@@ -857,63 +952,63 @@ void neutron_analysis_class::AsymLoop(int dataType)
 // This section will put the 3He root data into doubles so that
 // it can be calculated through C++ instead of as histograms
 // ****************************************************************************************************************
-        int HeNumberOfEvents;
-        double HeIsSpinValid;
-//      double HeQSquare;
-//      double HeNu;
-        double HeEvTypeBits;
-//      double HeDp;
-//      double HeReactZ;
-//      double HeTh;
-//      double HePh;
-//      double He_x_bj;
-//      double HeShE;
-//      double HePShE;
-//      double HeCerAsum;
-        double HeRunNum;
-        double HeSpin;
-        double g0helicity;
-        int HeRunNumberForArray;
+	int HeNumberOfEvents;
+	double HeIsSpinValid;
+//	double HeQSquare;
+//	double HeNu;
+	double HeEvTypeBits;
+//	double HeDp;
+//	double HeReactZ;
+//	double HeTh;
+//	double HePh;
+//	double He_x_bj;
+//	double HeShE;
+//	double HePShE;
+//	double HeCerAsum;
+	double HeRunNum;
+	double HeSpin;
+	double g0helicity;
+	int HeRunNumberForArray;
 	double He_edtm;
 	double He_fclk;
-        double He_u3c;
-        double He_u3pp;
-        double He_u3pm;
-        double He_u3mm;
-        double He_u3mp;
-        double He_u1c;
-        double He_u1pp;
-        double He_u1pm;
-        double He_u1mm;
-        double He_u1mp;
-        double He_u10c;
-        double He_u10pp;
-        double He_u10pm;
-        double He_u10mm;
-        double He_u10mp;
-        double He_d3c;
-        double He_d3pp;
-        double He_d3pm;
-        double He_d3mm;
-        double He_d3mp;
-        double He_d1c;
-        double He_d1pp;
-        double He_d1pm;
-        double He_d1mm;
-        double He_d1mp;
-        double He_d10c;
-        double He_d10pp;
-        double He_d10pm;
-        double He_d10mm;
-        double He_d10mp;
+	double He_u3c;
+	double He_u3pp;
+	double He_u3pm;
+	double He_u3mm;
+	double He_u3mp;
+	double He_u1c;
+	double He_u1pp;
+	double He_u1pm;
+	double He_u1mm;
+	double He_u1mp;
+	double He_u10c;
+	double He_u10pp;
+	double He_u10pm;
+	double He_u10mm;
+	double He_u10mp;
+	double He_d3c;
+	double He_d3pp;
+	double He_d3pm;
+	double He_d3mm;
+	double He_d3mp;
+	double He_d1c;
+	double He_d1pp;
+	double He_d1pm;
+	double He_d1mm;
+	double He_d1mp;
+	double He_d10c;
+	double He_d10pp;
+	double He_d10pm;
+	double He_d10mm;
+	double He_d10mp;
 	double He_t1c;
 
-        double thisRunCharge;
-        double thisRunTargetChargeUp;
-        double thisRunTargetChargeDown;
-        double thisRunBeamChargeUp;
-        double thisRunBeamChargeDown;
-        double thisRunError;
+	double thisRunCharge;
+	double thisRunTargetChargeUp;
+	double thisRunTargetChargeDown;
+	double thisRunBeamChargeUp;
+	double thisRunBeamChargeDown;
+	double thisRunError;
 
 	double t1c0Tot=0;
 	double t1cUpTot=0;
@@ -941,90 +1036,90 @@ void neutron_analysis_class::AsymLoop(int dataType)
 
 	bool TDCsanity = true;
 
-        HeNumberOfEvents = int(chainHe->GetEntries());
-        chainHe->SetBranchAddress("he3R.IsSpinValid", &HeIsSpinValid);
-        chainHe->SetBranchAddress("he3R.Spin", &HeSpin);
-        chainHe->SetBranchAddress("g0hel.R.helicity", &g0helicity);
-//        chainHe->SetBranchAddress("PriKineR.Q2", &HeQSquare);
-//        chainHe->SetBranchAddress("PriKineR.nu", &HeNu);
-        chainHe->SetBranchAddress("D.evtypebits", &HeEvTypeBits);
-//        chainHe->SetBranchAddress("ExTgtCor_R.dp", &HeDp);
-//        chainHe->SetBranchAddress("ExTgtCor_R.th", &HeTh);
-//        chainHe->SetBranchAddress("ExTgtCor_R.ph", &HePh);
-//        chainHe->SetBranchAddress("ReactPt_R.z", &HeReactZ);
-//        chainHe->SetBranchAddress("PriKineRHe3.x_bj", &He_x_bj);
-//        chainHe->SetBranchAddress("R.sh.e", &HeShE);
-//        chainHe->SetBranchAddress("R.ps.e", &HePShE);
-//        chainHe->SetBranchAddress("R.cer.asum_c", &HeCerAsum);
-        chainHe->SetBranchAddress("g.runnum", &HeRunNum);
-        chainHe->SetBranchAddress("evright_u3c", &He_u3c);
-        chainHe->SetBranchAddress("evright_u3pp", &He_u3pp);
-        chainHe->SetBranchAddress("evright_u3pm", &He_u3pm);
-        chainHe->SetBranchAddress("evright_u3mm", &He_u3mm);
-        chainHe->SetBranchAddress("evright_u3mp", &He_u3mp);
-        chainHe->SetBranchAddress("evright_u1c", &He_u1c);
-        chainHe->SetBranchAddress("evright_u1pp", &He_u1pp);
-        chainHe->SetBranchAddress("evright_u1pm", &He_u1pm);
-        chainHe->SetBranchAddress("evright_u1mm", &He_u1mm);
-        chainHe->SetBranchAddress("evright_u1mp", &He_u1mp);
-        chainHe->SetBranchAddress("evright_u10c", &He_u10c);
-        chainHe->SetBranchAddress("evright_u10pp", &He_u10pp);
-        chainHe->SetBranchAddress("evright_u10pm", &He_u10pm);
-        chainHe->SetBranchAddress("evright_u10mm", &He_u10mm);
-        chainHe->SetBranchAddress("evright_u10mp", &He_u10mp);
-        chainHe->SetBranchAddress("evright_d3c", &He_d3c);
-        chainHe->SetBranchAddress("evright_d3pp", &He_d3pp);
-        chainHe->SetBranchAddress("evright_d3pm", &He_d3pm);
-        chainHe->SetBranchAddress("evright_d3mm", &He_d3mm);
-        chainHe->SetBranchAddress("evright_d3mp", &He_d3mp);
-        chainHe->SetBranchAddress("evright_d1c", &He_d1c);
-        chainHe->SetBranchAddress("evright_d1pp", &He_d1pp);
-        chainHe->SetBranchAddress("evright_d1pm", &He_d1pm);
-        chainHe->SetBranchAddress("evright_d1mm", &He_d1mm);
-        chainHe->SetBranchAddress("evright_d1mp", &He_d1mp);
-        chainHe->SetBranchAddress("evright_d10c", &He_d10c);
-        chainHe->SetBranchAddress("evright_d10pp", &He_d10pp);
-        chainHe->SetBranchAddress("evright_d10pm", &He_d10pm);
-        chainHe->SetBranchAddress("evright_d10mm", &He_d10mm);
-        chainHe->SetBranchAddress("evright_d10mp", &He_d10mp);
-        chainHe->SetBranchAddress("evright_t1c", &He_t1c);
-        chainHe->SetBranchAddress("evright_edtmc", &He_edtm);
-        chainHe->SetBranchAddress("evright_fclkc", &He_fclk);
+	HeNumberOfEvents = int(chainHe->GetEntries());
+	chainHe->SetBranchAddress("he3R.IsSpinValid", &HeIsSpinValid);
+	chainHe->SetBranchAddress("he3R.Spin", &HeSpin);
+	chainHe->SetBranchAddress("g0hel.R.helicity", &g0helicity);
+//	chainHe->SetBranchAddress("PriKineR.Q2", &HeQSquare);
+//	chainHe->SetBranchAddress("PriKineR.nu", &HeNu);
+	chainHe->SetBranchAddress("D.evtypebits", &HeEvTypeBits);
+//	chainHe->SetBranchAddress("ExTgtCor_R.dp", &HeDp);
+//	chainHe->SetBranchAddress("ExTgtCor_R.th", &HeTh);
+//	chainHe->SetBranchAddress("ExTgtCor_R.ph", &HePh);
+//	chainHe->SetBranchAddress("ReactPt_R.z", &HeReactZ);
+//	chainHe->SetBranchAddress("PriKineRHe3.x_bj", &He_x_bj);
+//	chainHe->SetBranchAddress("R.sh.e", &HeShE);
+//	chainHe->SetBranchAddress("R.ps.e", &HePShE);
+//	chainHe->SetBranchAddress("R.cer.asum_c", &HeCerAsum);
+	chainHe->SetBranchAddress("g.runnum", &HeRunNum);
+	chainHe->SetBranchAddress("evright_u3c", &He_u3c);
+	chainHe->SetBranchAddress("evright_u3pp", &He_u3pp);
+	chainHe->SetBranchAddress("evright_u3pm", &He_u3pm);
+	chainHe->SetBranchAddress("evright_u3mm", &He_u3mm);
+	chainHe->SetBranchAddress("evright_u3mp", &He_u3mp);
+	chainHe->SetBranchAddress("evright_u1c", &He_u1c);
+	chainHe->SetBranchAddress("evright_u1pp", &He_u1pp);
+	chainHe->SetBranchAddress("evright_u1pm", &He_u1pm);
+	chainHe->SetBranchAddress("evright_u1mm", &He_u1mm);
+	chainHe->SetBranchAddress("evright_u1mp", &He_u1mp);
+	chainHe->SetBranchAddress("evright_u10c", &He_u10c);
+	chainHe->SetBranchAddress("evright_u10pp", &He_u10pp);
+	chainHe->SetBranchAddress("evright_u10pm", &He_u10pm);
+	chainHe->SetBranchAddress("evright_u10mm", &He_u10mm);
+	chainHe->SetBranchAddress("evright_u10mp", &He_u10mp);
+	chainHe->SetBranchAddress("evright_d3c", &He_d3c);
+	chainHe->SetBranchAddress("evright_d3pp", &He_d3pp);
+	chainHe->SetBranchAddress("evright_d3pm", &He_d3pm);
+	chainHe->SetBranchAddress("evright_d3mm", &He_d3mm);
+	chainHe->SetBranchAddress("evright_d3mp", &He_d3mp);
+	chainHe->SetBranchAddress("evright_d1c", &He_d1c);
+	chainHe->SetBranchAddress("evright_d1pp", &He_d1pp);
+	chainHe->SetBranchAddress("evright_d1pm", &He_d1pm);
+	chainHe->SetBranchAddress("evright_d1mm", &He_d1mm);
+	chainHe->SetBranchAddress("evright_d1mp", &He_d1mp);
+	chainHe->SetBranchAddress("evright_d10c", &He_d10c);
+	chainHe->SetBranchAddress("evright_d10pp", &He_d10pp);
+	chainHe->SetBranchAddress("evright_d10pm", &He_d10pm);
+	chainHe->SetBranchAddress("evright_d10mm", &He_d10mm);
+	chainHe->SetBranchAddress("evright_d10mp", &He_d10mp);
+	chainHe->SetBranchAddress("evright_t1c", &He_t1c);
+	chainHe->SetBranchAddress("evright_edtmc", &He_edtm);
+	chainHe->SetBranchAddress("evright_fclkc", &He_fclk);
 
-        cout << "Number of events: " << HeNumberOfEvents << endl;
-        chainHe->GetEntry(1);
+	cout << "Number of events: " << HeNumberOfEvents << endl;
+	chainHe->GetEntry(1);
 	double initial_t1count = He_t1c;
 	double initial_ugChargeCount = He_u3c;
-        HeRunNumberForArray = int(HeRunNum);
-        int HePrevRunNumber = HeRunNumberForArray;
-        int HeRunNumPlace = 0;
-        double HePrev_u3c = He_u3c;
-        double He_u3p = 0;
-        double He_u3m = 0;
-        double He_u3c_real = 0;
-        double He_u3c_real_for_event = 0;
-        double HeEndOfRun_u3c = 0;
-        double HeEndOfRun_u3p = 0;
-        double HeEndOfRun_u3m = 0;
-        int HeRealNumOfRuns = 1;
-        double HeRatio = 1e-15;
-        int HeTrueRunCounter = 0;
-        double HeChargeScale = 1e-15;
-        int HeTriggerstotal = 0;
-        int HeTriggersUp = 0;
-        int HeTriggersDown = 0;
-        int BeamTriggersUp = 0;
-        int BeamTriggersDown = 0;
-        int HeT2total = 0;
-        int HeT2up = 0;
-        int HeT2down = 0;
-        int BeamT2up = 0;
-        int BeamT2down = 0;
+	HeRunNumberForArray = int(HeRunNum);
+	int HePrevRunNumber = HeRunNumberForArray;
+	int HeRunNumPlace = 0;
+	double HePrev_u3c = He_u3c;
+	double He_u3p = 0;
+	double He_u3m = 0;
+	double He_u3c_real = 0;
+	double He_u3c_real_for_event = 0;
+	double HeEndOfRun_u3c = 0;
+	double HeEndOfRun_u3p = 0;
+	double HeEndOfRun_u3m = 0;
+	int HeRealNumOfRuns = 1;
+	double HeRatio = 1e-15;
+	int HeTrueRunCounter = 0;
+	double HeChargeScale = 1e-15;
+	int HeTriggerstotal = 0;
+	int HeTriggersUp = 0;
+	int HeTriggersDown = 0;
+	int BeamTriggersUp = 0;
+	int BeamTriggersDown = 0;
+	int HeT2total = 0;
+	int HeT2up = 0;
+	int HeT2down = 0;
+	int BeamT2up = 0;
+	int BeamT2down = 0;
 
-//      int HeT2unpolcuts = 0;
-//      int thisRunSpinUp = 0;
-//      int thisRunSpinDown = 0;
-        int thisRunNumber = 0;
+//	int HeT2unpolcuts = 0;
+//	int thisRunSpinUp = 0;
+//	int thisRunSpinDown = 0;
+	int thisRunNumber = 0;
 
 	int numGoodEventsBasic = 0;
 
@@ -1054,12 +1149,19 @@ void neutron_analysis_class::AsymLoop(int dataType)
 	if (test) {maxentries = 1000;}
 	if (!test) {maxentries = nentries;}
 	cout << "maxentries = " << maxentries << endl;
+	double goodEventsPct = 0.0;
+	double basicEventsPct = 0.0;
 	for (Int_t jentry=0; jentry<maxentries;jentry++) 
 	{
 //		if (dataType==1) {TString eventType = "No Vetos - ";}
 //		if (dataType==2) {TString eventType = "Neutrons - ";}
 //		if (dataType==3) {TString eventType = "Protons - ";}
-		if (!test && ((jentry%10000)==0)) {cout << eventType << "Processing Event " << jentry << "..." << endl;}
+		if (jentry>1)
+		{
+			goodEventsPct = (goodEvents/jentry)*100.0;
+			basicEventsPct = (numGoodEventsBasic/jentry)*100.0;
+		}
+		if (!test && ((jentry%10000)==0)) {cout << eventType << "Processing Event " << jentry << "." << "So far, basicEvents = " << numGoodEventsBasic << " (" << basicEventsPct << "\%), goodEvents = " << goodEvents << " (" << goodEventsPct << "\%)" << endl;}
 		if (test && (jentry%100)==0) {cout << eventType << "Processing Event " << jentry << "..." << endl;}
 		Int_t ientry = LoadTree(jentry);
 		goodEvent = true;
@@ -1073,7 +1175,6 @@ void neutron_analysis_class::AsymLoop(int dataType)
 		targetGood = true;
 		cerenkovGood = true;
 		hand_class_basic_cuts(jentry, isGoodForAllBasic, HeRunNumber, Q2, dpGood, targetGood, cerenkovGood, HedpNoCut, HedpCut, HeReactZNoCut, HeReactZCut, HeThetaPhiCut, HePsShNoCut, histQ2Nu, histcerenkov, histcerenkovcut, HePsShCut, histx, histxcut, ToFbasic);
-
 		if (isGoodForAllBasic) 
 		{ 
 			goodEvent = true;
@@ -1087,101 +1188,20 @@ void neutron_analysis_class::AsymLoop(int dataType)
 			thisbar = (int) NA_n_pad[0];
 			if ((nplane>-1 && nplane<5) && (thisbar>-1 && thisbar<34))
 			{
-//				hand_class_bar_th_cuts(Q2, nplane, thisbar, pastThetaCut);
-
-// vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv The chunk below is for TDC OR cut vvvvvvvvvvvvvvvvvvvvvvvvvvv
-//				goodEvent = (goodEvent && pastThetaCut);
-//				if (nplane==0) {inGoodBar = ((NA_veto_lt_c[thisbar]>vetoTDCcutmin && NA_veto_lt_c[thisbar]<vetoTDCcutmax) || (NA_veto_rt_c[thisbar]>vetoTDCcutmin && NA_veto_rt_c[thisbar]<vetoTDCcutmax));}
-//				if (nplane==1) {inGoodBar = ((NA_nd_p1_lt_c[thisbar]>vetoTDCcutmin && NA_nd_p1_lt_c[thisbar]<vetoTDCcutmax) || (NA_nd_p1_rt_c[thisbar]>vetoTDCcutmin && NA_nd_p1_rt_c[thisbar]<vetoTDCcutmax));}
-//				if (nplane==2) {inGoodBar = ((NA_nd_p2_lt_c[thisbar]>vetoTDCcutmin && NA_nd_p2_lt_c[thisbar]<vetoTDCcutmax) || (NA_nd_p2_rt_c[thisbar]>vetoTDCcutmin && NA_nd_p2_rt_c[thisbar]<vetoTDCcutmax));}
-//				if (nplane==3) {inGoodBar = ((NA_nd_p3_lt_c[thisbar]>vetoTDCcutmin && NA_nd_p3_lt_c[thisbar]<vetoTDCcutmax) || (NA_nd_p3_rt_c[thisbar]>vetoTDCcutmin && NA_nd_p3_rt_c[thisbar]<vetoTDCcutmax));}
-//				if (nplane==4) {inGoodBar = ((NA_nd_p4_lt_c[thisbar]>vetoTDCcutmin && NA_nd_p4_lt_c[thisbar]<vetoTDCcutmax) || (NA_nd_p4_rt_c[thisbar]>vetoTDCcutmin && NA_nd_p4_rt_c[thisbar]<vetoTDCcutmax));}
-// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-				
-// vvvvvvvvvvvvvvvvvvvvvvvvvvvvv The chunk below is for background ONLY vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
-//	if (nplane==0) {inGoodBar = ((NA_veto_lt_c[thisbar]<vetoTDCcutmin || NA_veto_lt_c[thisbar]>vetoTDCcutmax) && (NA_veto_rt_c[thisbar]<vetoTDCcutmin || NA_veto_rt_c[thisbar]>vetoTDCcutmax));}
-//				if (nplane==1) {inGoodBar = ((NA_nd_p1_lt_c[thisbar]<vetoTDCcutmin || NA_nd_p1_lt_c[thisbar]>vetoTDCcutmax) && (NA_nd_p1_rt_c[thisbar]<vetoTDCcutmin || NA_nd_p1_rt_c[thisbar]>vetoTDCcutmax));}
-//				if (nplane==2) {inGoodBar = ((NA_nd_p2_lt_c[thisbar]<vetoTDCcutmin || NA_nd_p2_lt_c[thisbar]>vetoTDCcutmax) && (NA_nd_p2_rt_c[thisbar]<vetoTDCcutmin || NA_nd_p2_rt_c[thisbar]>vetoTDCcutmax));}
-//				if (nplane==3) {inGoodBar = ((NA_nd_p3_lt_c[thisbar]<vetoTDCcutmin || NA_nd_p3_lt_c[thisbar]>vetoTDCcutmax) && (NA_nd_p3_rt_c[thisbar]<vetoTDCcutmin || NA_nd_p3_rt_c[thisbar]>vetoTDCcutmax));}
-//				if (nplane==4) {inGoodBar = ((NA_nd_p4_lt_c[thisbar]<vetoTDCcutmin || NA_nd_p4_lt_c[thisbar]>vetoTDCcutmax) && (NA_nd_p4_rt_c[thisbar]<vetoTDCcutmin || NA_nd_p4_rt_c[thisbar]>vetoTDCcutmax));}
-// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-
-//				if (nplane==0) {inGoodBar = ((NA_veto_lt_c[thisbar]>vetoTDCcutmin && NA_veto_lt_c[thisbar]<vetoTDCcutmax) && (NA_veto_rt_c[thisbar]>vetoTDCcutmin && NA_veto_rt_c[thisbar]<vetoTDCcutmax));}
-//				if (nplane==1) {inGoodBar = ((NA_nd_p1_lt_c[thisbar]>vetoTDCcutmin && NA_nd_p1_lt_c[thisbar]<vetoTDCcutmax) && (NA_nd_p1_rt_c[thisbar]>vetoTDCcutmin && NA_nd_p1_rt_c[thisbar]<vetoTDCcutmax));}
-//				if (nplane==2) {inGoodBar = ((NA_nd_p2_lt_c[thisbar]>vetoTDCcutmin && NA_nd_p2_lt_c[thisbar]<vetoTDCcutmax) && (NA_nd_p2_rt_c[thisbar]>vetoTDCcutmin && NA_nd_p2_rt_c[thisbar]<vetoTDCcutmax));}
-//				if (nplane==3) {inGoodBar = ((NA_nd_p3_lt_c[thisbar]>vetoTDCcutmin && NA_nd_p3_lt_c[thisbar]<vetoTDCcutmax) && (NA_nd_p3_rt_c[thisbar]>vetoTDCcutmin && NA_nd_p3_rt_c[thisbar]<vetoTDCcutmax));}
-//				if (nplane==4) {inGoodBar = ((NA_nd_p4_lt_c[thisbar]>vetoTDCcutmin && NA_nd_p4_lt_c[thisbar]<vetoTDCcutmax) && (NA_nd_p4_rt_c[thisbar]>vetoTDCcutmin && NA_nd_p4_rt_c[thisbar]<vetoTDCcutmax));}
-
-
 				if (!includeVetos) {goodEvent = (goodEvent && inGoodBar);}
-
-// vvvvvvvvvvvvvvv This bit looks at only the top 1/2 of HAND vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
-//			if ((nplane==1 && thisbar>14 && thisbar<34) || (nplane==2 && thisbar>11 && thisbar<34) || (nplane==3 && thisbar>10 && thisbar<34) || (nplane==4 && thisbar>5 && thisbar<34)) {goodEvent = false;}
-// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-// vvvvvvvvvvvvvvv This bit looks at only the bottom 1/2 of HAND vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
-//			if ((nplane==1 && thisbar>-1 && thisbar<15) || (nplane==2 && thisbar>-1 && thisbar<12) || (nplane==3 && thisbar>-1 && thisbar<11) || (nplane==4 && thisbar>-1 && thisbar<6)) {goodEvent = false;}
-// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-// vvvvvvvvvvvvvvv This bit looks at only the center of HAND vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
-//			if (((nplane==1 && (thisbar<10 || thisbar>19)) || (nplane==2 && (thisbar<8 || thisbar>15)) || (nplane==3 && (thisbar<7 || thisbar>14)) || (nplane==4 && (thisbar<4 || thisbar>7)))) {goodEvent = false;}
-// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-// vvvvvvvvvvvvvvv This bit looks at only the top 1/3 of HAND vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
-//			if (((nplane==1 && (thisbar>9)) || (nplane==2 && (thisbar>7)) || (nplane==3 && (thisbar>6)) || (nplane==4 && (thisbar>3)))) {goodEvent = false;}
-// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-// vvvvvvvvvvvvvvv This bit looks at only the bottom 1/3 of HAND vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
-//			if (((nplane==1 && (thisbar<20)) || (nplane==2 && (thisbar<16)) || (nplane==3 && (thisbar<15)) || (nplane==4 && (thisbar<8)))) {goodEvent = false;}
-// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-// vvvvvvvvvvvvvvv This bit looks at only the ((top 1/3) of the bottom 1/3) of HAND vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
-//			if (((nplane==1 && (thisbar<20 || thisbar>22)) || (nplane==2 && (thisbar<16 || thisbar>17)) || (nplane==3 && (thisbar<15 || thisbar>16)) || (nplane==4 && (thisbar<8 || thisbar>8)))) {goodEvent = false;}
-// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-// vvvvvvvvvvvvvvv This bit looks at only the ((center 1/3) of the bottom 1/3) of HAND vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
-//			if (((nplane==1 && (thisbar<23 || thisbar>25)) || (nplane==2 && (thisbar<18 || thisbar>20)) || (nplane==3 && (thisbar<17 || thisbar>18)) || (nplane==4 && (thisbar<9 || thisbar>9)))) {goodEvent = false;}
-// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-// vvvvvvvvvvvvvvv This bit looks at only the (bottom 1/3) of the bottom 1/3) of HAND vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
-//			if (((nplane==1 && (thisbar<26)) || (nplane==2 && (thisbar<21)) || (nplane==3 && (thisbar<19)) || (nplane==4 && (thisbar<10)))) {goodEvent = false;}
-// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-
-
-
-// vvvvvvvvvvvvvvv No 4th Plane vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
-//			if (nplane==4) {goodEvent = false;}
-//			if (nplane==3) {goodEvent = false;}
-// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-
-
-
-// vvvvvvvvvvvvvvv This bit looks at only at bars in HAND with obvious peaks vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
-//			if ((nplane==1 && !(thisbar==26 || thisbar==24 || thisbar==21 || thisbar==15 || thisbar==14 || thisbar==13 || thisbar==12 || thisbar==11 || thisbar==10 || thisbar==9 || thisbar==8 || thisbar==5 || thisbar==4 || thisbar==3)) || (nplane==2 && !(thisbar==22 || thisbar==20 || thisbar==19 || thisbar==13 || thisbar==6 || thisbar==5 || thisbar==4)) || (nplane==3 && !(thisbar==10 || thisbar==9 || thisbar==8 || thisbar==7 || thisbar==6 || thisbar==5)) || (nplane==4 && !(thisbar==8 || thisbar==6 || thisbar==5 || thisbar==4))) {goodEvent = false;}
-// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-
-
-
-
 				if (includeVetos && !findProtons) {hand_class_veto_cuts(nplane, thisbar, madePastLVetoCuts, madePastRVetoCuts, madePastVetoCuts, vetoTDCcutmin, vetoTDCcutmax, jentry, allVetos[nplane][thisbar], useIf, useIfElse, useSwitch, includeVetos, notEdge);}
 				if (includeVetos && findProtons) {hand_class_veto_cuts2(nplane, thisbar, madePastLVetoCuts, madePastRVetoCuts, madePastVetoCuts, vetoTDCcutmin, vetoTDCcutmax, jentry, allVetos[nplane][thisbar], useIf, useIfElse, useSwitch, includeVetos);}
 				goodEvent = (goodEvent && madePastVetoCuts);
 				hand_class_fill_bar_by_bar_cuts(HeRunNumber, nplane, thisbar, pastThetaCut, madePastLVetoCuts, madePastRVetoCuts, madePastVetoCuts, HANDleft[nplane][thisbar], HANDleftcut[nplane][thisbar], HANDright[nplane][thisbar], HANDrightcut[nplane][thisbar], HeThetaCut[nplane][thisbar], HePhiCut[nplane][thisbar], HeThetaPhiBarCut[nplane][thisbar], goodTDCleftcutmin, goodTDCleftcutmax, goodTDCrightcutmin, goodTDCrightcutmax);
-
 			}
-
-
 			if (goodEvent)
 			{
 				goodEvents = goodEvents+1;
-				for (int k=0; k<11; k++) {hand_class_fill_good_events(ToFgoodEvent[k], ToFcut[k], ToFup[k], ToFdown[k], nuAllCuts[k], nuUp, nuDown, tofCutMin, tofCutMax, nuMin, nuMax, nuBins, asymType,k, nuUpAllCuts[k], nuDownAllCuts[k]);}
-//				hand_class_fill_good_events(ToFgoodEvent, ToFcut, ToFup, ToFdown, nuAllCuts, nuUp, nuDown, tofCutMin, tofCutMax, nuMin, nuMax, nuBins, asymType);
-//				hand_class_fill_good_events(ToFgoodEvent[], ToFcut[], ToFup[], ToFdown[], nuAllCuts[], nuUp, nuDown, tofCutMin, tofCutMax, nuMin, nuMax, nuBins, asymType);
+				for (int k=0; k<11; k++)
+				{
+					hand_class_fill_good_events(ToFgoodEvent[k], ToFcut[k], ToFup[k], ToFdown[k], nuAllCuts[k], nuUp, nuDown, tofCutMin, tofCutMax, nuMin, nuMax, nuBins, asymType,k, nuUpAllCuts[k], nuDownAllCuts[k], TDC1up[k], TDC1dn[k], TDC2up[k], TDC2dn[k], TDC3up[k], TDC3dn[k], TDC4up[k], TDC4dn[k]);
+				}
+//				for (int k=0; k<11; k++) {hand_class_fill_good_events(ToFgoodEvent[k], ToFcut[k], ToFup[k], ToFdown[k], nuAllCuts[k], nuUp, nuDown, tofCutMin, tofCutMax, nuMin, nuMax, nuBins, asymType,k, nuUpAllCuts[k], nuDownAllCuts[k]);}
 			}
 	
 		}
@@ -1453,7 +1473,7 @@ void neutron_analysis_class::AsymLoop(int dataType)
 
 	for (int i=0; i<11; i++)
 	{
-		hand_class_draw_tof_nu(ToFbasic, ToFgoodEvent[0], ToFcut[0], ToFup[0], ToFdown[0], nuAllCuts[0], ToFgoodEvent[i], ToFcut[i], ToFup[i], ToFdown[i], nuAllCuts[i], nuUp, nuDown, outputRootString, HeRunNumber, i, nuUpAllCuts[i], nuDownAllCuts[i]);
+		hand_class_draw_tof_nu(ToFbasic, ToFgoodEvent[0], ToFcut[0], ToFup[0], ToFdown[0], nuAllCuts[0], ToFgoodEvent[i], ToFcut[i], ToFup[i], ToFdown[i], nuAllCuts[i], nuUp, nuDown, outputRootString, HeRunNumber, i, nuUpAllCuts[i], nuDownAllCuts[i], TDC1up[i], TDC1dn[i], TDC2up[i], TDC2dn[i], TDC3up[i], TDC3dn[i], TDC4up[i], TDC4dn[i]);
 	}
 
 	TFile *outputRoot1 = new TFile(outputRootString,"UPDATE");
