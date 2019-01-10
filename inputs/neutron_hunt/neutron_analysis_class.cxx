@@ -32,17 +32,13 @@ void neutron_analysis_class::AsymLoop(int dataType)
 	if (dataType==2) {includeVetos = true; findProtons = false; eventType = "Neutrons - ";}
 	if (dataType==3) {includeVetos = true; findProtons = true; eventType = "Protons - ";}
 
-//	bool includeVetos = true;
-//	bool includeVetos = false;
 
 	bool drawCuts = true;
 //	bool drawCuts = false;
 
-	bool test = true;
-//	bool test = false;
+//	bool test = true;
+	bool test = false;
 
-//	bool findProtons = true;
-//	bool findProtons = false;
 
 	TString otherSpecs;
 	otherSpecs = "No HAND -- (e,e') only";
@@ -57,9 +53,9 @@ void neutron_analysis_class::AsymLoop(int dataType)
 //	otherSpecs = "3He data, with NO veto cuts (protons + neutrons + other stuff) -- WITH inGoodBar -> Contains AND (instead of OR)";
 //	otherSpecs = "3He data, with Proton Tracks -- WITH ''inGoodBar'' var in veto_cuts2.h -- MODIFIED inGoodBar -> Contains OR (instead of AND)";
 //	otherSpecs = "3He data, with NO veto cuts, but WITH inGoodBar cuts such that only the background is counted";
-	if (!includeVetos) {otherSpecs = "Data, with NO veto cuts (protons + neutrons + other stuff) -- NO TDC CUT -- NO inGoodBar CUT";}
-	if (includeVetos && !findProtons) {otherSpecs = "Data, with Neutron Vetoes -- NO TDC CUT -- NO inGoodBar CUT";}
-	if (includeVetos && findProtons) {otherSpecs = "Data, with Proton Tracks -- NO TDC CUT -- NO inGoodBar CUT";}
+	if (!includeVetos) {otherSpecs = "Data, with NO veto cuts (protons + neutrons + other stuff)";}
+	if (includeVetos && !findProtons) {otherSpecs = "Data, with Neutron Vetoes";}
+	if (includeVetos && findProtons) {otherSpecs = "Data, with Proton Tracks";}
 	if (findProtons) {otherSpecs += "\nLooking for Protons...";}
 	if (test) { otherSpecs += "\n !!!!!!!!!!!!!!THIS RUN IS IN TEST MODE!!!!!!!!!!!!!!!!!!!!";}
 	otherSpecs += "\nOther: Nothing Special...";
@@ -72,15 +68,12 @@ void neutron_analysis_class::AsymLoop(int dataType)
 	getline(runNumberInputFile, line);
 	int inRunNumber = atoi(line.c_str());
 	int HeRunNumber = inRunNumber;
-
 	if (inRunNumber<20533 || (inRunNumber>20570 && inRunNumber<21050)) {TString asymType = "ssa";}
 	else {TString asymType = "dsa";}
 	otherSpecs += "\nAsym Type: ";
 	otherSpecs += asymType;
 
 	cout << otherSpecs << endl;       
-
-
 	cout << "HeRunNumber: " << HeRunNumber << endl;
 
 	gROOT->SetStyle("Plain");
@@ -111,7 +104,6 @@ void neutron_analysis_class::AsymLoop(int dataType)
 			t=999999999;
 		}
 	}
-
 
 	TString dataset;
 
@@ -683,22 +675,6 @@ void neutron_analysis_class::AsymLoop(int dataType)
 	TString titleToFbasic = "ToFbasic";
 	TString plotToFbasic = "ToFbasic";
 	TH1F *ToFbasic = new TH1F(plotToFbasic,titleToFbasic,tofBins,tofMin,tofMax);
-/*	TString titleToFgoodEvent = "ToFgoodEvent";
-	TString plotToFgoodEvent = "ToFgoodEvent";
-	TH1F *ToFgoodEvent = new TH1F(plotToFgoodEvent,titleToFgoodEvent,tofBins,tofMin,tofMax);
-	TString titleToFcut = "ToFcut";
-	TString plotToFcut = "ToFcut";
-	TH1F *ToFcut = new TH1F(plotToFcut,titleToFcut,tofBins,tofMin,tofMax);
-	TString titleToFup = "ToFup";
-	TString plotToFup = "ToFup";
-	TH1F *ToFup = new TH1F(plotToFup,titleToFup,tofBins,tofMin,tofMax);
-	TString titleToFdown = "ToFdown";
-	TString plotToFdown = "ToFdown";
-	TH1F *ToFdown = new TH1F(plotToFdown,titleToFdown,tofBins,tofMin,tofMax);
-*/
-
-
-
 	TH1F* TDC1up[11];
 	TH1F* TDC1dn[11];
 	TH1F* TDC2up[11];
@@ -726,9 +702,6 @@ void neutron_analysis_class::AsymLoop(int dataType)
 	int tdcBins = 300;
 	double tdcMin = 0;
 	double tdcMax = 3000;
-
-
-
 	TH1F* ToFgoodEvent[11];
 	TH1F* ToFcut[11];
 	TH1F* ToFup[11];
@@ -736,12 +709,7 @@ void neutron_analysis_class::AsymLoop(int dataType)
 	TH1F* nuAllCuts[11];
 	TH1F* nuUpAllCuts[11];
 	TH1F* nuDownAllCuts[11];
-/*	TH1F** ToFgoodEvent = new TH1F * [11];
-	TH1F** ToFcut = new TH1F * [11];
-	TH1F** ToFup = new TH1F * [11];
-	TH1F** ToFdown = new TH1F * [11];
-	TH1F** nuAllCuts = new TH1F * [11];
-*/	TString titleToFgoodEvent;
+	TString titleToFgoodEvent;
 	TString plotToFgoodEvent;
 	TString titleToFcut;
 	TString plotToFcut;
@@ -755,7 +723,6 @@ void neutron_analysis_class::AsymLoop(int dataType)
 	TString plotnuAllCuts;
 	TString plotnuUpAllCuts;
 	TString plotnuDownAllCuts;
-
 
 	cout << "Initalizing Histograms..." << endl;
 	for (int i=0; i<11; i++)
@@ -867,10 +834,6 @@ void neutron_analysis_class::AsymLoop(int dataType)
 		nuAllCuts[i] = new TH1F(plotnuAllCuts,titlenuAllCuts,nuBins,nuMin,nuMax);
 		nuUpAllCuts[i] = new TH1F(plotnuUpAllCuts,titlenuUpAllCuts,nuBins,nuMin,nuMax);
 		nuDownAllCuts[i] = new TH1F(plotnuDownAllCuts,titlenuDownAllCuts,nuBins,nuMin,nuMax);
-//		TDC1up[i] = new TH1F(plotTDC1up,titleTDC1up,300,0,3000);
-//		tdcBins = 300;
-//		tdcMin = 0.0;
-//		tdcMax = 3000.0;
 		TDC1up[i] = new TH1F(plotTDC1up,titleTDC1up,tdcBins,tdcMin,tdcMax);
 		TDC1dn[i] = new TH1F(plotTDC1dn,titleTDC1dn,tdcBins,tdcMin,tdcMax);
 		TDC2up[i] = new TH1F(plotTDC2up,titleTDC2up,tdcBins,tdcMin,tdcMax);
@@ -883,24 +846,6 @@ void neutron_analysis_class::AsymLoop(int dataType)
 	nuUp = new TH1F("nuUp","Nu - Spin Up (e,e')",nuBins,nuMin,nuMax);
 	nuDown = new TH1F("nuDown","Nu - Spin Down (e,e')",nuBins,nuMin,nuMax);
 	cout << "Histograms initialized!" << endl;
-
-
-/*	TString titlenuAllCuts = "Nu with All Cuts";
-	if (includeVetos) {titlenuAllCuts += " with vetos";}
-	else {titlenuAllCuts += " without vetos";}
-	TString plotnuAllCuts = "nuAllCuts";
-	TH1F *nuAllCuts = new TH1F(plotnuAllCuts,titlenuAllCuts,nuBins,nuMin,nuMax);
-	TString titlenuUpAllCuts = "Target Spin Up vs. nu";
-	if (includeVetos) {titlenuUpAllCuts += " with vetos";}
-	else {titlenuUpAllCuts += " without vetos";}
-	TString plotnuUpAllCuts = "nuUpAllCuts";
-	TH1F *nuUpAllCuts = new TH1F(plotnuUpAllCuts,titlenuUpAllCuts,nuBins,nuMin,nuMax);
-	TString titlenuDownAllCuts = "Target Spin Down vs. nu";
-	if (includeVetos) {titlenuDownAllCuts += " with vetos";}
-	else {titlenuDownAllCuts += " without vetos";}
-	TString plotnuDownAllCuts = "nuDownAllCuts";
-	TH1F *nuDownAllCuts = new TH1F(plotnuDownAllCuts,titlenuDownAllCuts,nuBins,nuMin,nuMax);
-*/
 // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ Define ToF & Nu  Settings ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 	cout << "Processing cuts event-by-event..." << endl;
@@ -917,14 +862,12 @@ void neutron_analysis_class::AsymLoop(int dataType)
 	bool cerenkovGood = true;
 	Int_t nbytes = 0, nb = 0;
 	TString allVetos[5][32];
-
-
-//      int whichplane = 0;
-        int whichplane = 1;
-        int endplane = 5;
-//        if (SinglePlane) {whichplane = singleplane; endplane = singleplane+1;}
-        int whichbar=0;
-//      int whichbar=11;
+//	int whichplane = 0;
+	int whichplane = 1;
+	int endplane = 5;
+//	if (SinglePlane) {whichplane = singleplane; endplane = singleplane+1;}
+	int whichbar=0;
+//	int whichbar=11;
 	bool goodEvent;
 	int nplane;
 	int thisbar;
@@ -952,25 +895,15 @@ void neutron_analysis_class::AsymLoop(int dataType)
 	TString newOutputFolder = ".";
 	TString legendName = newOutputFolder;
 	legendName = "/charge_lt_legend.txt";
-//	TString legendName = "./charge_lt_legend.txt";
 	ofstream legend;
 	legend.open(legendName, ios::app);
+
 // This section will put the 3He root data into doubles so that
 // it can be calculated through C++ instead of as histograms
 // ****************************************************************************************************************
 	int HeNumberOfEvents;
 	double HeIsSpinValid;
-//	double HeQSquare;
-//	double HeNu;
 	double HeEvTypeBits;
-//	double HeDp;
-//	double HeReactZ;
-//	double HeTh;
-//	double HePh;
-//	double He_x_bj;
-//	double HeShE;
-//	double HePShE;
-//	double HeCerAsum;
 	double HeRunNum;
 	double HeSpin;
 	double g0helicity;
@@ -1040,23 +973,11 @@ void neutron_analysis_class::AsymLoop(int dataType)
 	bool newHeState = false;
 	bool firstTime = true;
 
-	bool TDCsanity = true;
-
 	HeNumberOfEvents = int(chainHe->GetEntries());
 	chainHe->SetBranchAddress("he3R.IsSpinValid", &HeIsSpinValid);
 	chainHe->SetBranchAddress("he3R.Spin", &HeSpin);
 	chainHe->SetBranchAddress("g0hel.R.helicity", &g0helicity);
-//	chainHe->SetBranchAddress("PriKineR.Q2", &HeQSquare);
-//	chainHe->SetBranchAddress("PriKineR.nu", &HeNu);
 	chainHe->SetBranchAddress("D.evtypebits", &HeEvTypeBits);
-//	chainHe->SetBranchAddress("ExTgtCor_R.dp", &HeDp);
-//	chainHe->SetBranchAddress("ExTgtCor_R.th", &HeTh);
-//	chainHe->SetBranchAddress("ExTgtCor_R.ph", &HePh);
-//	chainHe->SetBranchAddress("ReactPt_R.z", &HeReactZ);
-//	chainHe->SetBranchAddress("PriKineRHe3.x_bj", &He_x_bj);
-//	chainHe->SetBranchAddress("R.sh.e", &HeShE);
-//	chainHe->SetBranchAddress("R.ps.e", &HePShE);
-//	chainHe->SetBranchAddress("R.cer.asum_c", &HeCerAsum);
 	chainHe->SetBranchAddress("g.runnum", &HeRunNum);
 	chainHe->SetBranchAddress("evright_u3c", &He_u3c);
 	chainHe->SetBranchAddress("evright_u3pp", &He_u3pp);
@@ -1194,7 +1115,6 @@ void neutron_analysis_class::AsymLoop(int dataType)
 				{
 					hand_class_fill_good_events(ToFgoodEvent[k], ToFcut[k], ToFup[k], ToFdown[k], nuAllCuts[k], nuUp, nuDown, tofCutMin, tofCutMax, nuMin, nuMax, nuBins, asymType,k, nuUpAllCuts[k], nuDownAllCuts[k], TDC1up[k], TDC1dn[k], TDC2up[k], TDC2dn[k], TDC3up[k], TDC3dn[k], TDC4up[k], TDC4dn[k]);
 				}
-//				for (int k=0; k<11; k++) {hand_class_fill_good_events(ToFgoodEvent[k], ToFcut[k], ToFup[k], ToFdown[k], nuAllCuts[k], nuUp, nuDown, tofCutMin, tofCutMax, nuMin, nuMax, nuBins, asymType,k, nuUpAllCuts[k], nuDownAllCuts[k]);}
 			}
 	
 		}
@@ -1223,199 +1143,78 @@ void neutron_analysis_class::AsymLoop(int dataType)
 				BeamTriggersDown++;
 			}
 
-            if (i<(maxentries-1))
-            {
-//              chainHe->GetEntry(i+1);
-                fChain->GetEntry(i+1);
-                if (HeSpin != oldHeState) {newHeState = true;}
-            }
-//          chainHe->GetEntry(i);
-            fChain->GetEntry(i);
-            if (newHeState || (i==(maxentries-1)))
-            {
-                if (int(HeSpin)==1)
-                {
-                    t1cUpFinal = He_t1c;
-                    t1cUpTot = t1cUpTot + (t1cUpFinal - t1cUpInitial);
-//                  ugChargeUpFinal = He_u3c;
-                    ugChargeUpFinal = ((He_u3c-He_edtm) - 490.0*(He_fclk/(103.7*1000.0)))/2067.7;
-                    ugChargeUpTot = ugChargeUpTot + (ugChargeUpFinal - ugChargeUpInitial);
-                }
-                if (int(HeSpin)==0)
-                {
-                    t1c0Final = He_t1c;
-                    t1c0Tot = t1c0Tot + (t1c0Final - t1c0Initial);
-//                  ugCharge0Final = He_u3c;
-                    ugCharge0Final = ((He_u3c-He_edtm) - 490.0*(He_fclk/(103.7*1000.0)))/2067.7;
-                    ugCharge0Tot = ugCharge0Tot + (ugCharge0Final - ugCharge0Initial);
-                }
-                if (int(HeSpin)==-1)
-                {
-                    t1cDownFinal = He_t1c;
-                    t1cDownTot = t1cDownTot + (t1cDownFinal - t1cDownInitial);
-//                  ugChargeDownFinal = He_u3c;
-                    ugChargeDownFinal = ((He_u3c-He_edtm) - 490.0*(He_fclk/(103.7*1000.0)))/2067.7;
-                    ugChargeDownTot = ugChargeDownTot + (ugChargeDownFinal - ugChargeDownInitial);
-                }
-                newHeState = false;
-            }
-            if (i<(maxentries-1))
-            {
-//              chainHe->GetEntry(i+1);
-                fChain->GetEntry(i+1);
-                if (HeSpin != oldHeState)
-                {
-                    if (int(HeSpin)==1)
-                    {
-                        t1cUpInitial = He_t1c;
-//                      ugChargeUpInitial = He_u3c;
-                        ugChargeUpInitial = ((He_u3c-He_edtm) - 490.0*(He_fclk/(103.7*1000.0)))/2067.7;
-                    }
-                    if (int(HeSpin)==0)
-                    {
-                        t1c0Initial = He_t1c;
-//                      ugCharge0Initial = He_u3c;
-                        ugCharge0Initial = ((He_u3c-He_edtm) - 490.0*(He_fclk/(103.7*1000.0)))/2067.7;
-                    }
-                    if (int(HeSpin)==-1)
-                    {
-                        t1cDownInitial = He_t1c;
-//                      ugChargeDownInitial = He_u3c;
-                        ugChargeDownInitial = ((He_u3c-He_edtm) - 490.0*(He_fclk/(103.7*1000.0)))/2067.7;
-                    }
-                    oldHeState = HeSpin;
-                }
-//              chainHe->GetEntry(i);
-                fChain->GetEntry(i);
-            }
-
-
-			HeRunNumberForArray = int(HeRunNum);
-			He_u3c_real_for_event = He_u3c - HePrev_u3c;
-/*
-			if ((HeRunNumberForArray > HePrevRunNumber) || (i==(HeNumberOfEvents-1)))
+			if (i<(maxentries-1))
 			{
-				He_u3c_real = 0;
-				He_u3p = 0;
-				He_u3m = 0;
-				chainHe->GetEntry(i-1);
-				HeEndOfRun_u3c = He_u3c;
-				HeEndOfRun_u3p = He_u3pp + He_u3pm;
-				HeEndOfRun_u3m = He_u3mm + He_u3mp;
-				thisRunCharge = HeEndOfRun_u3c;
-				thisRunTargetChargeUp = HeEndOfRun_u3p;
-				thisRunTargetChargeDown = HeEndOfRun_u3m;
-				thisRunBeamChargeUp = He_u3pp + He_u3mp;
-				thisRunBeamChargeDown = He_u3mm + He_u3pm;
-
-				double thisHe_u1c = He_u1c;
-				double thisHe_u1pp = He_u1pp;
-				double thisHe_u1pm = He_u1pm;
-				double thisHe_u1mp = He_u1mp;
-				double thisHe_u1mm = He_u1mm;
-				double thisHe_u3c = He_u3c;
-				double thisHe_u3pp = He_u3pp;
-				double thisHe_u3pm = He_u3pm;
-				double thisHe_u3mp = He_u3mp;
-				double thisHe_u3mm = He_u3mm;
-				double thisHe_u10c = He_u10c;
-				double thisHe_u10pp = He_u10pp;
-				double thisHe_u10pm = He_u10pm;
-				double thisHe_u10mp = He_u10mp;
-				double thisHe_u10mm = He_u10mm;
-				double thisHe_d1c = He_d1c;
-				double thisHe_d1pp = He_d1pp;
-				double thisHe_d1pm = He_d1pm;
-				double thisHe_d1mp = He_d1mp;
-				double thisHe_d1mm = He_d1mm;
-				double thisHe_d3c = He_d3c;
-				double thisHe_d3pp = He_d3pp;
-				double thisHe_d3pm = He_d3pm;
-				double thisHe_d3mp = He_d3mp;
-				double thisHe_d3mm = He_d3mm;
-				double thisHe_d10c = He_d10c;
-				double thisHe_d10pp = He_d10pp;
-				double thisHe_d10pm = He_d10pm;
-				double thisHe_d10mp = He_d10mp;
-				double thisHe_d10mm = He_d10mm;
-
-				thisRunNumber = HePrevRunNumber;
-				chainHe->GetEntry(i);
-				HeRunNumPlace++;
-				HePrevRunNumber = HeRunNumberForArray;
-				HeRealNumOfRuns++;
+				fChain->GetEntry(i+1);
+				if (HeSpin != oldHeState) {newHeState = true;}
 			}
-*/
-			if (int(HeEvTypeBits)==2)
+			fChain->GetEntry(i);
+			if (newHeState || (i==(maxentries-1)))
 			{
-				HeT2total++;
 				if (int(HeSpin)==1)
 				{
-					HeT2up++;
+					t1cUpFinal = He_t1c;
+					t1cUpTot = t1cUpTot + (t1cUpFinal - t1cUpInitial);
+					ugChargeUpFinal = ((He_u3c-He_edtm) - 490.0*(He_fclk/(103.7*1000.0)))/2067.7;
+					ugChargeUpTot = ugChargeUpTot + (ugChargeUpFinal - ugChargeUpInitial);
+				}
+				if (int(HeSpin)==0)
+				{
+					t1c0Final = He_t1c;
+					t1c0Tot = t1c0Tot + (t1c0Final - t1c0Initial);
+					ugCharge0Final = ((He_u3c-He_edtm) - 490.0*(He_fclk/(103.7*1000.0)))/2067.7;
+					ugCharge0Tot = ugCharge0Tot + (ugCharge0Final - ugCharge0Initial);
 				}
 				if (int(HeSpin)==-1)
 				{
-					HeT2down++;
+					t1cDownFinal = He_t1c;
+					t1cDownTot = t1cDownTot + (t1cDownFinal - t1cDownInitial);
+					ugChargeDownFinal = ((He_u3c-He_edtm) - 490.0*(He_fclk/(103.7*1000.0)))/2067.7;
+					ugChargeDownTot = ugChargeDownTot + (ugChargeDownFinal - ugChargeDownInitial);
 				}
-				if (int(g0helicity)==1)
-				{
-					BeamT2up++;
-				}
-				if (int(g0helicity)==-1)
-				{
-					BeamT2down++;
-				}
+				newHeState = false;
 			}
-
-			HePrev_u3c = He_u3c;
-			HeChargeScale = HeChargeScale + thisRunCharge;
-/*			if (thisRunCharge != 0) {
-				HeTrueRunCounter++;
-
-				int offset;
-				string line;
-				std::string HeRunNumberString;
-				std::stringstream out;
-				out << thisRunNumber;
-				HeRunNumberString = "Run ";
-				HeRunNumberString += out.str();
-				bool isFound = false;
-				inFile.open(outFileName);
-				while (!inFile.eof()){
-					getline(inFile, line);
-					if ((offset = line.find(HeRunNumberString, 0)) != string::npos)
-					{
-	//                                        cout << "Found " << HeRunNumberString << endl;
-						isFound = true;
-					}
-				}
-				if (!isFound)
+		if (i<(maxentries-1))
+		{
+			fChain->GetEntry(i+1);
+			if (HeSpin != oldHeState)
+			{
+				if (int(HeSpin)==1)
 				{
-	//                                cout << "Run Number " << string(HeRunNumberString) << " not found in " << outFileName << ". Adding now..." << endl;
-					outFile << HeRunNumberString << "\n" << thisRunCharge << "\n" << HeT2total << "\n" << HeTriggerstotal << "\n" << thisRunTargetChargeUp << "\n" << HeT2up << "\n" << HeTriggersUp << "\n" << thisRunTargetChargeDown << "\n" << HeT2down << "\n" << HeTriggersDown << "\n" << thisRunBeamChargeUp << "\n" << BeamT2up << "\n" << BeamTriggersUp << "\n" << thisRunBeamChargeDown << "\n" << BeamT2down << "\n" << BeamTriggersDown << "\n\n";
-
-					HeT2total = 0;
-					HeT2up = 0;
-					HeT2down = 0;
-					BeamT2up = 0;
-					BeamT2down = 0;
-					HeTriggerstotal = 0;
-					HeTriggersUp = 0;
-					HeTriggersDown = 0;
-					BeamTriggersUp = 0;
-					BeamTriggersDown = 0;
+					t1cUpInitial = He_t1c;
+					ugChargeUpInitial = ((He_u3c-He_edtm) - 490.0*(He_fclk/(103.7*1000.0)))/2067.7;
 				}
+				if (int(HeSpin)==0)
+				{
+					t1c0Initial = He_t1c;
+					ugCharge0Initial = ((He_u3c-He_edtm) - 490.0*(He_fclk/(103.7*1000.0)))/2067.7;
+				}
+				if (int(HeSpin)==-1)
+				{
+					t1cDownInitial = He_t1c;
+					ugChargeDownInitial = ((He_u3c-He_edtm) - 490.0*(He_fclk/(103.7*1000.0)))/2067.7;
+				}
+				oldHeState = HeSpin;
 			}
-			thisRunCharge = 0;
-			thisRunTargetChargeUp = 0;
-			thisRunTargetChargeDown = 0;
-			inFile.close();
-*/
-// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+			fChain->GetEntry(i);
 		}
-//		if (ientry < 0) break;
-		nb = fChain->GetEntry(jentry);   nbytes += nb;
-		// if (Cut(ientry) < 0) continue;
+
+		HeRunNumberForArray = int(HeRunNum);
+		He_u3c_real_for_event = He_u3c - HePrev_u3c;
+		if (int(HeEvTypeBits)==2)
+		{
+			HeT2total++;
+			if (int(HeSpin)==1){HeT2up++;}
+			if (int(HeSpin)==-1){HeT2down++;}
+			if (int(g0helicity)==1){BeamT2up++;}
+			if (int(g0helicity)==-1){BeamT2down++;}
+		}
+
+		HePrev_u3c = He_u3c;
+		HeChargeScale = HeChargeScale + thisRunCharge;
+// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+	}
+	nb = fChain->GetEntry(jentry);   nbytes += nb;
 	if (!test && ((jentry%10000)==0)) 
 	{
 		cout << "	allEvents: " << allEvents << endl;
@@ -1440,12 +1239,10 @@ void neutron_analysis_class::AsymLoop(int dataType)
 	thisRunBeamChargeUp = He_u3pp + He_u3mp;
 	thisRunBeamChargeDown = He_u3mm + He_u3pm;
 
-//	if (dataType==1) {outFile << HeRunNumberString << "\n" << thisRunCharge << "\n" << HeT2total << "\n" << HeTriggerstotal << "\n" << thisRunTargetChargeUp << "\n" << HeT2up << "\n" << HeTriggersUp << "\n" << thisRunTargetChargeDown << "\n" << HeT2down << "\n" << HeTriggersDown << "\n" << thisRunBeamChargeUp << "\n" << BeamT2up << "\n" << BeamTriggersUp << "\n" << thisRunBeamChargeDown << "\n" << BeamT2down << "\n" << BeamTriggersDown << "\n" << t1_scalar << "\n\n";}
 	if (dataType==1) {outFile << HeRunNumberString << "\n" << thisRunCharge << "\n" << HeT2total << "\n" << HeTriggerstotal << "\n" << thisRunTargetChargeUp << "\n" << HeT2up << "\n" << HeTriggersUp << "\n" << thisRunTargetChargeDown << "\n" << HeT2down << "\n" << HeTriggersDown << "\n" << thisRunBeamChargeUp << "\n" << BeamT2up << "\n" << BeamTriggersUp << "\n" << thisRunBeamChargeDown << "\n" << BeamT2down << "\n" << BeamTriggersDown << "\n" << t1_scalar << "\n" << t1cUpTot << "\n" << t1c0Tot << "\n" << t1cDownTot << "\n" << ugChargeUpTot << "\n" << ugCharge0Tot << "\n" << ugChargeDownTot << "\n" << ugChargeUpInitial << "\n" << ugCharge0Initial << "\n" << ugChargeDownInitial << "\n\n"; }
-        outFile.close();
-
-    if (dataType==1) {legend << "HeRunNumberString\nthisRunCharge\nHeT2total\nHeTriggerstotal\nthisRunTargetChargeUp\nHeT2up\nHeTriggersUp\nthisRunTargetChargeDown\nHeT2down\nHeTriggersDown\nthisRunBeamChargeUp\nBeamT2up\nBeamTriggersUp\nthisRunBeamChargeDown\nBeamT2down\nBeamTriggersDown\nt1_scalar\nt1cUpTot\nt1c0Tot\nt1cDownTot\nugChargeUpTot\nugCharge0Tot\nugChargeDownTot\nugChargeUpInitial\nugCharge0Initial\nugChargeDownInitial\n\n"; }
-        legend.close();	
+	outFile.close();
+	if (dataType==1) {legend << "HeRunNumberString\nthisRunCharge\nHeT2total\nHeTriggerstotal\nthisRunTargetChargeUp\nHeT2up\nHeTriggersUp\nthisRunTargetChargeDown\nHeT2down\nHeTriggersDown\nthisRunBeamChargeUp\nBeamT2up\nBeamTriggersUp\nthisRunBeamChargeDown\nBeamT2down\nBeamTriggersDown\nt1_scalar\nt1cUpTot\nt1c0Tot\nt1cDownTot\nugChargeUpTot\nugCharge0Tot\nugChargeDownTot\nugChargeUpInitial\nugCharge0Initial\nugChargeDownInitial\n\n"; }
+	legend.close();	
 	cout << "allEvents: " << allEvents << endl;
 	cout << "goodEventsBasic: " << numGoodEventsBasic << endl;
 	cout << "goodEvents: " << goodEvents << endl;
