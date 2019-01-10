@@ -87,10 +87,10 @@ void neutron_analysis_class::hand_class_fill_good_events(TH1F* ToFgoodEvent, TH1
 			ToFup->Fill(NA_n_tof[0]);
 			nuUp->Fill(PriKineR_nu);
 			nuUpAllCuts->Fill(PriKineR_nu);
-			TDC1up->Fill(NA_nd_p1_lt_c);
-			TDC2up->Fill(NA_nd_p2_lt_c);
-			TDC3up->Fill(NA_nd_p3_lt_c);
-			TDC4up->Fill(NA_nd_p4_lt_c);
+			for (int bar=0; bar<30; bar++){TDC1up->Fill(NA_nd_p1_lt_c[bar]);}
+			for (int bar=0; bar<24; bar++){TDC2up->Fill(NA_nd_p2_lt_c[bar]);}
+			for (int bar=0; bar<22; bar++){TDC3up->Fill(NA_nd_p3_lt_c[bar]);}
+			for (int bar=0; bar<12; bar++){TDC4up->Fill(NA_nd_p4_lt_c[bar]);}
 		}
 		if (spinDown) 
 		{
@@ -98,10 +98,10 @@ void neutron_analysis_class::hand_class_fill_good_events(TH1F* ToFgoodEvent, TH1
 			ToFdown->Fill(NA_n_tof[0]);
 			nuDown->Fill(PriKineR_nu);
 			nuDownAllCuts->Fill(PriKineR_nu);
-			TDC1dn->Fill(NA_nd_p1_lt_c);
-			TDC2dn->Fill(NA_nd_p2_lt_c);
-			TDC3dn->Fill(NA_nd_p3_lt_c);
-			TDC4dn->Fill(NA_nd_p4_lt_c);
+			for (int bar=0; bar<30; bar++){TDC1dn->Fill(NA_nd_p1_lt_c[bar]);}
+			for (int bar=0; bar<24; bar++){TDC2dn->Fill(NA_nd_p2_lt_c[bar]);}
+			for (int bar=0; bar<22; bar++){TDC3dn->Fill(NA_nd_p3_lt_c[bar]);}
+			for (int bar=0; bar<12; bar++){TDC4dn->Fill(NA_nd_p4_lt_c[bar]);}
 		}
 	}
 	if (iterator>0)
@@ -243,20 +243,20 @@ void neutron_analysis_class::hand_class_fill_good_events(TH1F* ToFgoodEvent, TH1
 //				ToFup[i]->Fill(NA_n_tof[0]);
 				ToFup->Fill(NA_n_tof[0]);
 				nuUpAllCuts->Fill(PriKineR_nu);
-				TDC1up->Fill(NA_nd_p1_lt_c);
-				TDC2up->Fill(NA_nd_p2_lt_c);
-				TDC3up->Fill(NA_nd_p3_lt_c);
-				TDC4up->Fill(NA_nd_p4_lt_c);
+				for (int bar=0; bar<30; bar++){TDC1up->Fill(NA_nd_p1_lt_c[bar]);}
+				for (int bar=0; bar<24; bar++){TDC2up->Fill(NA_nd_p2_lt_c[bar]);}
+				for (int bar=0; bar<22; bar++){TDC3up->Fill(NA_nd_p3_lt_c[bar]);}
+				for (int bar=0; bar<12; bar++){TDC4up->Fill(NA_nd_p4_lt_c[bar]);}
 			}
 			if (spinDown) 
 			{
 //				ToFdown[i]->Fill(NA_n_tof[0]);
 				ToFdown->Fill(NA_n_tof[0]);
 				nuDownAllCuts->Fill(PriKineR_nu);
-				TDC1dn->Fill(NA_nd_p1_lt_c);
-				TDC2dn->Fill(NA_nd_p2_lt_c);
-				TDC3dn->Fill(NA_nd_p3_lt_c);
-				TDC4dn->Fill(NA_nd_p4_lt_c);
+				for (int bar=0; bar<30; bar++){TDC1dn->Fill(NA_nd_p1_lt_c[bar]);}
+				for (int bar=0; bar<24; bar++){TDC2dn->Fill(NA_nd_p2_lt_c[bar]);}
+				for (int bar=0; bar<22; bar++){TDC3dn->Fill(NA_nd_p3_lt_c[bar]);}
+				for (int bar=0; bar<12; bar++){TDC4dn->Fill(NA_nd_p4_lt_c[bar]);}
 			}
 		}
 	}

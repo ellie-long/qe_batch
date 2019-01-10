@@ -19,7 +19,7 @@
 
 void neutron_analysis_class::AsymLoop(int dataType)
 {
-	cout << "vvvvvvvvvvvvvvvvvvvvv neutron_analysis_class.C vvvvvvvvvvvvvvvvvvvvvv" << endl;
+	cout << "vvvvvvvvvvvvvvvvvvvvv neutron_analysis_class.cxx vvvvvvvvvvvvvvvvvvvvvv" << endl;
 
 //      If includeVetos = false, then only good bars will be displayed. If 
 //      includeVetos = true, then veto bars will be shown along with the good bars.
@@ -38,8 +38,8 @@ void neutron_analysis_class::AsymLoop(int dataType)
 	bool drawCuts = true;
 //	bool drawCuts = false;
 
-//	bool test = true;
-	bool test = false;
+	bool test = true;
+//	bool test = false;
 
 //	bool findProtons = true;
 //	bool findProtons = false;
@@ -669,6 +669,7 @@ void neutron_analysis_class::AsymLoop(int dataType)
 
 
 // vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv Define ToF & Nu  Settings vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+	cout << "Defining ToF and Nu Settings..." << endl;
 	int tofBins = 300;
 //	int tofMin = 0;
 //	int tofMax = 1600;
@@ -756,6 +757,7 @@ void neutron_analysis_class::AsymLoop(int dataType)
 	TString plotnuDownAllCuts;
 
 
+	cout << "Initalizing Histograms..." << endl;
 	for (int i=0; i<11; i++)
 	{
 		titleToFgoodEvent = "ToFgoodEvent for nu bin ";
@@ -788,35 +790,35 @@ void neutron_analysis_class::AsymLoop(int dataType)
 		plotnuDownAllCuts += i;
 		titleTDC1up = "TDC Plane 1, Spin Up, for Nu Bin ";
 		titleTDC1up += i;
-		plotTDC1up += "TDC1up_bin_";
+		plotTDC1up = "TDC1up_bin_";
 		plotTDC1up += i;
 		titleTDC1dn = "TDC Plane 1, Spin Down, for Nu Bin ";
 		titleTDC1dn += i;
-		plotTDC1dn += "TDC1dn_bin_";
+		plotTDC1dn = "TDC1dn_bin_";
 		plotTDC1dn += i;
 		titleTDC2up = "TDC Plane 2, Spin Up, for Nu Bin ";
 		titleTDC2up += i;
-		plotTDC2up += "TDC2up_bin_";
+		plotTDC2up = "TDC2up_bin_";
 		plotTDC2up += i;
 		titleTDC2dn = "TDC Plane 2, Spin Down, for Nu Bin ";
 		titleTDC2dn += i;
-		plotTDC2dn += "TDC2dn_bin_";
+		plotTDC2dn = "TDC2dn_bin_";
 		plotTDC2dn += i;
 		titleTDC3up = "TDC Plane 3, Spin Up, for Nu Bin ";
 		titleTDC3up += i;
-		plotTDC3up += "TDC3up_bin_";
+		plotTDC3up = "TDC3up_bin_";
 		plotTDC3up += i;
 		titleTDC3dn = "TDC Plane 3, Spin Down, for Nu Bin ";
 		titleTDC3dn += i;
-		plotTDC3dn += "TDC3dn_bin_";
+		plotTDC3dn = "TDC3dn_bin_";
 		plotTDC3dn += i;
 		titleTDC4up = "TDC Plane 4, Spin Up, for Nu Bin ";
 		titleTDC4up += i;
-		plotTDC4up += "TDC4up_bin_";
+		plotTDC4up = "TDC4up_bin_";
 		plotTDC4up += i;
 		titleTDC4dn = "TDC Plane 4, Spin Down, for Nu Bin ";
 		titleTDC4dn += i;
-		plotTDC4dn += "TDC4dn_bin_";
+		plotTDC4dn = "TDC4dn_bin_";
 		plotTDC4dn += i;
 
 		if (i==0)
@@ -836,21 +838,21 @@ void neutron_analysis_class::AsymLoop(int dataType)
 			plotnuUpAllCuts = "nuUpAllCuts_Total";
 			plotnuDownAllCuts = "nuDownAllCuts_Total";
 			titleTDC1up = "TDC Plane 1, Spin Up, Total";
-			plotTDC1up += "TDC1up_Total";
+			plotTDC1up = "TDC1up_Total";
 			titleTDC1dn = "TDC Plane 1, Spin Down, Total";
-			plotTDC1dn += "TDC1dn_Total";
+			plotTDC1dn = "TDC1dn_Total";
 			titleTDC2up = "TDC Plane 2, Spin Up, Total";
-			plotTDC2up += "TDC2up_Total";
+			plotTDC2up = "TDC2up_Total";
 			titleTDC2dn = "TDC Plane 2, Spin Down, Total";
-			plotTDC2dn += "TDC2dn_Total";
+			plotTDC2dn = "TDC2dn_Total";
 			titleTDC3up = "TDC Plane 3, Spin Up, Total";
-			plotTDC3up += "TDC3up_Total";
+			plotTDC3up = "TDC3up_Total";
 			titleTDC3dn = "TDC Plane 3, Spin Down, Total";
-			plotTDC3dn += "TDC3dn_Total";
+			plotTDC3dn = "TDC3dn_Total";
 			titleTDC4up = "TDC Plane 4, Spin Up, Total";
-			plotTDC4up += "TDC4up_Total";
+			plotTDC4up = "TDC4up_Total";
 			titleTDC4dn = "TDC Plane 4, Spin Down, Total";
-			plotTDC4dn += "TDC4dn_Total";
+			plotTDC4dn = "TDC4dn_Total";
 		}
 		ToFgoodEvent[i] = new TH1F(plotToFgoodEvent,titleToFgoodEvent,tofBins,tofMin,tofMax);
 		ToFcut[i] = new TH1F(plotToFcut,titleToFcut,tofBins,tofMin,tofMax);
@@ -865,18 +867,22 @@ void neutron_analysis_class::AsymLoop(int dataType)
 		nuAllCuts[i] = new TH1F(plotnuAllCuts,titlenuAllCuts,nuBins,nuMin,nuMax);
 		nuUpAllCuts[i] = new TH1F(plotnuUpAllCuts,titlenuUpAllCuts,nuBins,nuMin,nuMax);
 		nuDownAllCuts[i] = new TH1F(plotnuDownAllCuts,titlenuDownAllCuts,nuBins,nuMin,nuMax);
-		TDC1up[i] = new TH1F(plotTDC1up,titleDC1up,tdcBins,tdcMin,tdcMax);
-		TDC1dn[i] = new TH1F(plotTDC1dn,titleDC1dn,tdcBins,tdcMin,tdcMax);
-		TDC2up[i] = new TH2F(plotTDC2up,titleDC2up,tdcBins,tdcMin,tdcMax);
-		TDC2dn[i] = new TH2F(plotTDC2dn,titleDC2dn,tdcBins,tdcMin,tdcMax);
-		TDC3up[i] = new TH3F(plotTDC3up,titleDC3up,tdcBins,tdcMin,tdcMax);
-		TDC3dn[i] = new TH3F(plotTDC3dn,titleDC3dn,tdcBins,tdcMin,tdcMax);
-		TDC4up[i] = new TH4F(plotTDC4up,titleDC4up,tdcBins,tdcMin,tdcMax);
-		TDC4dn[i] = new TH4F(plotTDC4dn,titleDC4dn,tdcBins,tdcMin,tdcMax);
+//		TDC1up[i] = new TH1F(plotTDC1up,titleTDC1up,300,0,3000);
+//		tdcBins = 300;
+//		tdcMin = 0.0;
+//		tdcMax = 3000.0;
+		TDC1up[i] = new TH1F(plotTDC1up,titleTDC1up,tdcBins,tdcMin,tdcMax);
+		TDC1dn[i] = new TH1F(plotTDC1dn,titleTDC1dn,tdcBins,tdcMin,tdcMax);
+		TDC2up[i] = new TH1F(plotTDC2up,titleTDC2up,tdcBins,tdcMin,tdcMax);
+		TDC2dn[i] = new TH1F(plotTDC2dn,titleTDC2dn,tdcBins,tdcMin,tdcMax);
+		TDC3up[i] = new TH1F(plotTDC3up,titleTDC3up,tdcBins,tdcMin,tdcMax);
+		TDC3dn[i] = new TH1F(plotTDC3dn,titleTDC3dn,tdcBins,tdcMin,tdcMax);
+		TDC4up[i] = new TH1F(plotTDC4up,titleTDC4up,tdcBins,tdcMin,tdcMax);
+		TDC4dn[i] = new TH1F(plotTDC4dn,titleTDC4dn,tdcBins,tdcMin,tdcMax);
 	}
 	nuUp = new TH1F("nuUp","Nu - Spin Up (e,e')",nuBins,nuMin,nuMax);
 	nuDown = new TH1F("nuDown","Nu - Spin Down (e,e')",nuBins,nuMin,nuMax);
-
+	cout << "Histograms initialized!" << endl;
 
 
 /*	TString titlenuAllCuts = "Nu with All Cuts";
@@ -1115,54 +1121,41 @@ void neutron_analysis_class::AsymLoop(int dataType)
 	int HeT2down = 0;
 	int BeamT2up = 0;
 	int BeamT2down = 0;
-
-//	int HeT2unpolcuts = 0;
-//	int thisRunSpinUp = 0;
-//	int thisRunSpinDown = 0;
 	int thisRunNumber = 0;
-
 	int numGoodEventsBasic = 0;
-
 	if (int(HeSpin)==1)
 	{
 		t1cUpInitial = He_t1c;
-//		ugChargeUpInitial = He_u3c;
 		ugChargeUpInitial = ((He_u3c-He_edtm) - 490.0*(He_fclk/(103.7*1000.0)))/2067.7;
 	}
 	if (int(HeSpin)==0)
 	{
 		t1c0Initial = He_t1c;
-//		ugCharge0Initial = He_u3c;
 		ugCharge0Initial = ((He_u3c-He_edtm) - 490.0*(He_fclk/(103.7*1000.0)))/2067.7;
 	}
 	if (int(HeSpin)==-1)
 	{
 		t1cDownInitial = He_t1c;
-//		ugChargeDownInitial = He_u3c;
 		ugChargeDownInitial = ((He_u3c-He_edtm) - 490.0*(He_fclk/(103.7*1000.0)))/2067.7;
 	}
 	oldHeState = HeSpin;
 
-
 	Int_t maxentries;
-//	if (test) {maxentries = 10000;}
-	if (test) {maxentries = 1000;}
+	if (test) {maxentries = 10000;}
+//	if (test) {maxentries = 1000;}
 	if (!test) {maxentries = nentries;}
 	cout << "maxentries = " << maxentries << endl;
-	double goodEventsPct = 0.0;
-	double basicEventsPct = 0.0;
+	double goodEventsPct;
+	double basicEventsPct;
 	for (Int_t jentry=0; jentry<maxentries;jentry++) 
 	{
-//		if (dataType==1) {TString eventType = "No Vetos - ";}
-//		if (dataType==2) {TString eventType = "Neutrons - ";}
-//		if (dataType==3) {TString eventType = "Protons - ";}
 		if (jentry>1)
 		{
-			goodEventsPct = (goodEvents/jentry)*100.0;
-			basicEventsPct = (numGoodEventsBasic/jentry)*100.0;
+			goodEventsPct = (goodEvents/(double)jentry)*100.0;
+			basicEventsPct = (numGoodEventsBasic/(double)jentry)*100.0;
 		}
-		if (!test && ((jentry%10000)==0)) {cout << eventType << "Processing Event " << jentry << "." << "So far, basicEvents = " << numGoodEventsBasic << " (" << basicEventsPct << "\%), goodEvents = " << goodEvents << " (" << goodEventsPct << "\%)" << endl;}
-		if (test && (jentry%100)==0) {cout << eventType << "Processing Event " << jentry << "..." << endl;}
+		if (!test && ((jentry%10000)==0)) {cout << eventType << "Processing Event " << jentry << "	basicEvents = " << numGoodEventsBasic << " (" << basicEventsPct << "\%) 	goodEvents = " << goodEvents << " (" << goodEventsPct << "\%)" << endl;}
+		if (test && ((jentry%100)==0)) {cout << eventType << "Processing Event " << jentry << "	basicEvents = " << numGoodEventsBasic << " (" << basicEventsPct << "\%) 	goodEvents = " << goodEvents << " (" << goodEventsPct << "\%)" << endl;}
 		Int_t ientry = LoadTree(jentry);
 		goodEvent = true;
 		allEvents = allEvents+1;
@@ -1192,7 +1185,7 @@ void neutron_analysis_class::AsymLoop(int dataType)
 				if (includeVetos && !findProtons) {hand_class_veto_cuts(nplane, thisbar, madePastLVetoCuts, madePastRVetoCuts, madePastVetoCuts, vetoTDCcutmin, vetoTDCcutmax, jentry, allVetos[nplane][thisbar], useIf, useIfElse, useSwitch, includeVetos, notEdge);}
 				if (includeVetos && findProtons) {hand_class_veto_cuts2(nplane, thisbar, madePastLVetoCuts, madePastRVetoCuts, madePastVetoCuts, vetoTDCcutmin, vetoTDCcutmax, jentry, allVetos[nplane][thisbar], useIf, useIfElse, useSwitch, includeVetos);}
 				goodEvent = (goodEvent && madePastVetoCuts);
-				hand_class_fill_bar_by_bar_cuts(HeRunNumber, nplane, thisbar, pastThetaCut, madePastLVetoCuts, madePastRVetoCuts, madePastVetoCuts, HANDleft[nplane][thisbar], HANDleftcut[nplane][thisbar], HANDright[nplane][thisbar], HANDrightcut[nplane][thisbar], HeThetaCut[nplane][thisbar], HePhiCut[nplane][thisbar], HeThetaPhiBarCut[nplane][thisbar], goodTDCleftcutmin, goodTDCleftcutmax, goodTDCrightcutmin, goodTDCrightcutmax);
+//				hand_class_fill_bar_by_bar_cuts(HeRunNumber, nplane, thisbar, pastThetaCut, madePastLVetoCuts, madePastRVetoCuts, madePastVetoCuts, HANDleft[nplane][thisbar], HANDleftcut[nplane][thisbar], HANDright[nplane][thisbar], HANDrightcut[nplane][thisbar], HeThetaCut[nplane][thisbar], HePhiCut[nplane][thisbar], HeThetaPhiBarCut[nplane][thisbar], goodTDCleftcutmin, goodTDCleftcutmax, goodTDCrightcutmin, goodTDCrightcutmax);
 			}
 			if (goodEvent)
 			{
@@ -1467,7 +1460,7 @@ void neutron_analysis_class::AsymLoop(int dataType)
 		if (i==4) maxbars=12;
 		for (int j=whichbar; j<maxbars; j++)
 		{
-			hand_class_draw_bar_by_bar_cuts(HeRunNumber, i, j, HANDleft[i][j], HANDleftcut[i][j], HANDright[i][j], HANDrightcut[i][j], HeThetaCut[i][j], HePhiCut[i][j], HeThetaPhiBarCut[i][j], allVetos[i][j], outputRootString);
+//			hand_class_draw_bar_by_bar_cuts(HeRunNumber, i, j, HANDleft[i][j], HANDleftcut[i][j], HANDright[i][j], HANDrightcut[i][j], HeThetaCut[i][j], HePhiCut[i][j], HeThetaPhiBarCut[i][j], allVetos[i][j], outputRootString);
 		}
 	}
 
@@ -1508,5 +1501,5 @@ void neutron_analysis_class::AsymLoop(int dataType)
 	}
 */
 	cout << endl << "All done!" << endl << endl;
-	cout << "^^^^^^^^^^^^^^^^^^^^^ neutron_analysis_class.C ^^^^^^^^^^^^^^^^^^^^^^" << endl;
+	cout << "^^^^^^^^^^^^^^^^^^^^^ neutron_analysis_class.cxx ^^^^^^^^^^^^^^^^^^^^^^" << endl;
 }
