@@ -1185,7 +1185,7 @@ void neutron_analysis_class::AsymLoop(int dataType)
 				if (includeVetos && !findProtons) {hand_class_veto_cuts(nplane, thisbar, madePastLVetoCuts, madePastRVetoCuts, madePastVetoCuts, vetoTDCcutmin, vetoTDCcutmax, jentry, allVetos[nplane][thisbar], useIf, useIfElse, useSwitch, includeVetos, notEdge);}
 				if (includeVetos && findProtons) {hand_class_veto_cuts2(nplane, thisbar, madePastLVetoCuts, madePastRVetoCuts, madePastVetoCuts, vetoTDCcutmin, vetoTDCcutmax, jentry, allVetos[nplane][thisbar], useIf, useIfElse, useSwitch, includeVetos);}
 				goodEvent = (goodEvent && madePastVetoCuts);
-//				hand_class_fill_bar_by_bar_cuts(HeRunNumber, nplane, thisbar, pastThetaCut, madePastLVetoCuts, madePastRVetoCuts, madePastVetoCuts, HANDleft[nplane][thisbar], HANDleftcut[nplane][thisbar], HANDright[nplane][thisbar], HANDrightcut[nplane][thisbar], HeThetaCut[nplane][thisbar], HePhiCut[nplane][thisbar], HeThetaPhiBarCut[nplane][thisbar], goodTDCleftcutmin, goodTDCleftcutmax, goodTDCrightcutmin, goodTDCrightcutmax);
+				hand_class_fill_bar_by_bar_cuts(HeRunNumber, nplane, thisbar, pastThetaCut, madePastLVetoCuts, madePastRVetoCuts, madePastVetoCuts, HANDleft[nplane][thisbar], HANDleftcut[nplane][thisbar], HANDright[nplane][thisbar], HANDrightcut[nplane][thisbar], HeThetaCut[nplane][thisbar], HePhiCut[nplane][thisbar], HeThetaPhiBarCut[nplane][thisbar], goodTDCleftcutmin, goodTDCleftcutmax, goodTDCrightcutmin, goodTDCrightcutmax);
 			}
 			if (goodEvent)
 			{
@@ -1460,11 +1460,11 @@ void neutron_analysis_class::AsymLoop(int dataType)
 		if (i==4) maxbars=12;
 		for (int j=whichbar; j<maxbars; j++)
 		{
-//			hand_class_draw_bar_by_bar_cuts(HeRunNumber, i, j, HANDleft[i][j], HANDleftcut[i][j], HANDright[i][j], HANDrightcut[i][j], HeThetaCut[i][j], HePhiCut[i][j], HeThetaPhiBarCut[i][j], allVetos[i][j], outputRootString);
+			hand_class_draw_bar_by_bar_cuts(HeRunNumber, i, j, HANDleft[i][j], HANDleftcut[i][j], HANDright[i][j], HANDrightcut[i][j], HeThetaCut[i][j], HePhiCut[i][j], HeThetaPhiBarCut[i][j], allVetos[i][j], outputRootString);
 		}
 	}
 
-	for (int i=0; i<11; i++)
+	for (int i=0; i<5; i++)
 	{
 		hand_class_draw_tof_nu(ToFbasic, ToFgoodEvent[0], ToFcut[0], ToFup[0], ToFdown[0], nuAllCuts[0], ToFgoodEvent[i], ToFcut[i], ToFup[i], ToFdown[i], nuAllCuts[i], nuUp, nuDown, outputRootString, HeRunNumber, i, nuUpAllCuts[i], nuDownAllCuts[i], TDC1up[i], TDC1dn[i], TDC2up[i], TDC2dn[i], TDC3up[i], TDC3dn[i], TDC4up[i], TDC4dn[i]);
 	}

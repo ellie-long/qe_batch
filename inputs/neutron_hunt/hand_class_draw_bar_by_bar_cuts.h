@@ -6,7 +6,16 @@
 //void MyClass::hand_class_draw_bar_by_bar_cuts(int HeRunNumber, int nplane, int thisbar, TH1F* HANDleft, TH1F* HANDleftcut, TH1F* HANDright, TH1F* HANDrightcut, TH1F* HeThetaCut, TH1F* HePhiCut, TH2F* HeThetaPhiCut, TString allVetos, TString outputRootString)
 void neutron_analysis_class::hand_class_draw_bar_by_bar_cuts(int HeRunNumber, int nplane, int thisbar, TH1F* HANDleft, TH1F* HANDleftcut, TH1F* HANDright, TH1F* HANDrightcut, TH1F* HeThetaCut, TH1F* HePhiCut, TH2F* HeThetaPhiCut, TString allVetos, TString outputRootString)
 {
-//	cout << "vvvvvvvvvvvvvvvvv hand_class_draw_bar_by_bar_cuts.h vvvvvvvvvvvvvvvvvvvvvvvvvvvv" << endl;
+	if (nplane==1 && thisbar==0)
+	{
+		cout << "vvvvvvvvvvvvvvvvv hand_class_draw_bar_by_bar_cuts.h vvvvvvvvvvvvvvvvvvvvvvvvvvvv" << endl;
+		cout << "Plane 1, bars: ";
+	}
+	if (nplane==2 && thisbar==0){cout << endl << "Plane 2, bars: ";}
+	if (nplane==3 && thisbar==0){cout << endl << "Plane 3, bars: ";}
+	if (nplane==4 && thisbar==0){cout << endl << "Plane 4, bars: ";}
+	cout << thisbar << " ";
+
 //	cout << "outputRootString: " << outputRootString << endl;
 	TFile *outputRoot = new TFile(outputRootString,"UPDATE");
 	gStyle->SetPalette(1);
@@ -17,7 +26,7 @@ void neutron_analysis_class::hand_class_draw_bar_by_bar_cuts(int HeRunNumber, in
 	goodBar += thisbar;
 	goodBar += " ";
 
-	TString canvasName = "handp";
+/*	TString canvasName = "handp";
 	canvasName += nplane;
 	canvasName += "b";
 	canvasName += thisbar;
@@ -34,43 +43,47 @@ void neutron_analysis_class::hand_class_draw_bar_by_bar_cuts(int HeRunNumber, in
 	handpad06 =  new TPad("handpad06","handpad06",0.7000,0.0000,1.0000,0.5000,0,0,0);
 	handpad01->Draw(); handpad02->Draw(); handpad03->Draw(); handpad04->Draw(); 
 	handpad05->Draw(); handpad06->Draw();
-
+*/
 	// This section will run hand_draw.h which will draw the HAND in handpad01.
-	handpad01->cd();
-	hand_draw(HeRunNumber, HeRunNumber, false, allVetos, goodBar, "");
-	handpad01->Update();
+//	handpad01->cd();
+//	hand_draw(HeRunNumber, HeRunNumber, false, allVetos, goodBar, "");
+//	handpad01->Update();
 
-	handpad02->cd();
+//	handpad02->cd();
 	HANDleft->Write();
-	HANDleft->Draw();
+//	HANDleft->Draw();
 	HANDleftcut->SetFillColor(kViolet);
 	HANDleftcut->Write();
-	HANDleftcut->Draw("same");
-	handpad02->Update();
+//	HANDleftcut->Draw("same");
+//	handpad02->Update();
 
-	handpad03->cd();
+//	handpad03->cd();
 	HANDright->Write();
-	HANDright->Draw();
+//	HANDright->Draw();
 	HANDrightcut->SetFillColor(kViolet);
 	HANDrightcut->Write();
-	HANDrightcut->Draw("same");
-	handpad03->Update();
+//	HANDrightcut->Draw("same");
+//	handpad03->Update();
 
-	handpad04->cd();
+//	handpad04->cd();
 	HeThetaCut->Write();
-	HeThetaCut->Draw();
-	handpad04->Update();
+//	HeThetaCut->Draw();
+//	handpad04->Update();
 
-	handpad05->cd();
+//	handpad05->cd();
 	HeThetaPhiCut->Write();
-	HeThetaPhiCut->Draw("COLZ");
-	handpad05->Update();
+//	HeThetaPhiCut->Draw("COLZ");
+//	handpad05->Update();
 
-	handpad06->cd();
+//	handpad06->cd();
 	HePhiCut->Write();
-	HePhiCut->Draw();
-	handpad06->Update();
+//	HePhiCut->Draw();
+//	handpad06->Update();
 	outputRoot->Close();
+	if (nplane==4 && thisbar==11)
+	{
+		cout << endl << "^^^^^^^^^^^^^^^^^ hand_class_draw_bar_by_bar_cuts.h ^^^^^^^^^^^^^^^^^^^^^^^^^^^^" << endl;
+	}
 
 //	cout << "^^^^^^^^^^^^^^^^^ hand_class_draw_bar_by_bar_cuts.h ^^^^^^^^^^^^^^^^^^^^^^^^^^^^" << endl;
 }

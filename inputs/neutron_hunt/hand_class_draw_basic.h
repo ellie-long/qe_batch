@@ -77,7 +77,7 @@ void neutron_analysis_class::hand_class_draw_basic(TH1F* HedpNoCut, TH1F* HedpCu
 //	double phbound = 0.03;
 	double phbound = 0.025;
 
-	// The section below plots the basic cuts used throughout the HAND plots
+/*	// The section below plots the basic cuts used throughout the HAND plots
 	// **********************************************************************************************
 	// Defines Canvas
 	TCanvas *cutsCanvas = new TCanvas("cutsCanvas","Cuts",1360,768); //x,y
@@ -90,35 +90,35 @@ void neutron_analysis_class::hand_class_draw_basic(TH1F* HedpNoCut, TH1F* HedpCu
 	cutpad7  =  new  TPad("cutpad7","cutpad7",0.5000,0.0000,0.7500,0.5000,0,0,0);
 	cutpad8  =  new  TPad("cutpad8","cutpad8",0.7500,0.0000,1.0000,0.5000,0,0,0);
 	cutpad1->Draw();cutpad2->Draw();cutpad3->Draw();cutpad4->Draw();cutpad5->Draw();cutpad6->Draw();cutpad7->Draw();cutpad8->Draw();
-
+*/
 	// Everything below here makes graphs for each section of the canvas
 
-	cutpad1->cd();
+//	cutpad1->cd();
 	TString titledp = "dp Cut, Run ";
 	titledp += HeRunNumber;
 	cout << "Drawing " << titledp << "..." << endl;
 	HedpNoCut->Write();
-	HedpNoCut->Draw();
+//	HedpNoCut->Draw();
 	HedpCut->SetLineColor(kBlack);
 	HedpCut->SetFillColor(kViolet);
 	HedpCut->Write();
-	HedpCut->Draw("same");
-	cutpad1->Update();
+//	HedpCut->Draw("same");
+//	cutpad1->Update();
 
-	cutpad2->cd();
+//	cutpad2->cd();
 	cout << "Drawing Target Cut..." << endl;
 	HeReactZNoCut->Write();
-	HeReactZNoCut->Draw();
+//	HeReactZNoCut->Draw();
 	HeReactZCut->SetLineColor(kBlack);
 	HeReactZCut->SetFillColor(kViolet);
 	HeReactZCut->Write();
-	HeReactZCut->Draw("same");
-	cutpad2->Update();
+//	HeReactZCut->Draw("same");
+//	cutpad2->Update();
 
-	cutpad3->cd();
+//	cutpad3->cd();
 	cout << "Drawing Theta and Phi Cut..." << endl;
 	HeThetaPhiCut->Write();
-	HeThetaPhiCut->Draw("COLZ");
+//	HeThetaPhiCut->Draw("COLZ");
 	bottom = new TLine(-phbound,thboundlow,phbound,thboundlow);
 	top = new TLine(-phbound,thboundhigh,phbound,thboundhigh);
 	left = new TLine(-phbound,thboundlow,-phbound,thboundhigh);
@@ -131,61 +131,61 @@ void neutron_analysis_class::hand_class_draw_basic(TH1F* HedpNoCut, TH1F* HedpCu
 	top->SetLineWidth(3);
 	left->SetLineWidth(3);
 	right->SetLineWidth(3);
-	bottom->Draw("same");
-	top->Draw("same");
-	left->Draw("same");
-	right->Draw("same");
-	cutpad3->Update();
+//	bottom->Draw("same");
+//	top->Draw("same");
+//	left->Draw("same");
+//	right->Draw("same");
+//	cutpad3->Update();
 
-	cutpad7->cd();
+//	cutpad7->cd();
 	cout << "Drawing Preshower/Shower, No Cut..." << endl;
 	HePsShNoCut->SetStats(kFALSE);
 	HePsShNoCut->Write();
-	HePsShNoCut->Draw("COLZ");
+//	HePsShNoCut->Draw("COLZ");
 	if ((HeRunNumber>20403) && (HeRunNumber<20408)) {psshcut = new TLine(0,200,450,0);}
 	else {psshcut = new TLine(0,900,450,0);}
 	psshcut->SetLineColor(kViolet);
 	psshcut->SetLineWidth(3);
-	psshcut->Draw("same");
-	cutpad7->Update();
+//	psshcut->Draw("same");
+//	cutpad7->Update();
 
-	cutpad4->cd();
+//	cutpad4->cd();
 	TString titleQ2Nu = "Q2 and Nu";
 	cout << "Drawing " << titleQ2Nu << "..." << endl;
 	histQ2Nu->Write();
-	histQ2Nu->Draw("COLZ");
-	cutpad4->Update();
+//	histQ2Nu->Draw("COLZ");
+//	cutpad4->Update();
 
-	cutpad5->cd();
+//	cutpad5->cd();
 	TString titlecerenkov = "Cerenkov Cut";
 	cout << "Drawing " << titlecerenkov << "..." << endl;
 	histcerenkov->SetStats(kFALSE);
 	histcerenkovcut->SetFillColor(kViolet);
 	histcerenkov->Write();
-	histcerenkov->Draw();
+//	histcerenkov->Draw();
 	histcerenkovcut->Write();
-	histcerenkovcut->Draw("same");
-	cutpad5->Update();
+//	histcerenkovcut->Draw("same");
+//	cutpad5->Update();
 
-	cutpad8->cd();
+//	cutpad8->cd();
 	cout << "Drawing Preshower/Shower with All Cut..." << endl;
 	HePsShCut->SetStats(kFALSE);
 	HePsShCut->Write();
-	HePsShCut->Draw("COLZ");
+//	HePsShCut->Draw("COLZ");
 	psshcut->SetLineColor(kViolet);
 	psshcut->SetLineWidth(3);
-	psshcut->Draw("same");
-	cutpad8->Update();
+//	psshcut->Draw("same");
+//	cutpad8->Update();
 
-	cutpad6->cd(); 
+//	cutpad6->cd(); 
 	TString titlex = "Bjorken x ";
 	cout << "Drawing " << titlex << "..." << endl;
 	histx->Write();
-	histx->Draw();
+//	histx->Draw();
 	histxcut->SetFillColor(kViolet);
 	histxcut->Write();
-	histxcut->Draw("same");
-	cutpad6->Update();
+//	histxcut->Draw("same");
+//	cutpad6->Update();
 
 //	cutsCanvas->Print(imageCutsTitle);
 
