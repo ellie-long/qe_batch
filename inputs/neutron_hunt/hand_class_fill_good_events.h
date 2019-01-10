@@ -1,5 +1,5 @@
 //void neutron_analysis_class::hand_class_fill_good_events(TH1F* ToFgoodEvent, TH1F* ToFcut, TH1F* ToFup, TH1F* ToFdown, TH1F* nuAllCuts, TH1F* nuUp, TH1F* nuDown, int tofCutMin, int tofCutMax, double numin, double numax, int nuBins, TString asymType, int iterator, TH1F* nuUpAllCuts, TH1F* nuDownAllCuts)
-void neutron_analysis_class::hand_class_fill_good_events(TH1F* ToFgoodEvent, TH1F* ToFcut, TH1F* ToFup, TH1F* ToFdown, TH1F* nuAllCuts, TH1F* nuUp, TH1F* nuDown, int tofCutMin, int tofCutMax, double numin, double numax, int nuBins, TString asymType, int iterator, TH1F* nuUpAllCuts, TH1F* nuDownAllCuts, TH1F* TDC1up, TH1F* TDC1dn, TH1F* TDC2up, TH1F* TDC2dn, TH1F* TDC3up, TH1F* TDC3dn, TH1F* TDC4up, TH1F* TDC4dn)
+void neutron_analysis_class::hand_class_fill_good_events(TH1F* ToFgoodEvent, TH1F* ToFcut, TH1F* ToFup, TH1F* ToFdown, TH1F* nuAllCuts, TH1F* nuUp, TH1F* nuDown, int tofCutMin, int tofCutMax, double numin, double numax, int nuBins, TString asymType, int iterator, TH1F* nuUpAllCuts, TH1F* nuDownAllCuts, TH1F* TDC1up, TH1F* TDC1dn, TH1F* TDC2up, TH1F* TDC2dn, TH1F* TDC3up, TH1F* TDC3dn, TH1F* TDC4up, TH1F* TDC4dn, TH1F* ToF1goodEvent, TH1F* ToF1cut, TH1F* ToF1up, TH1F* ToF1down,TH1F* ToF2goodEvent, TH1F* ToF2cut, TH1F* ToF2up, TH1F* ToF2down,TH1F* ToF3goodEvent, TH1F* ToF3cut, TH1F* ToF3up, TH1F* ToF3down)
 {
 //	cout << "vvvvvvvvvvvvvvvvvvv hand_class_fill_good_events.h vvvvvvvvvvvvvvvvvvvvvvvvvvvvvv" << endl;
 //	cout << "asymType: " << asymType << endl;
@@ -78,6 +78,11 @@ void neutron_analysis_class::hand_class_fill_good_events(TH1F* ToFgoodEvent, TH1
 	{
 //		ToFgoodEvent[0]->Fill(NA_n_tof[0]);
 		ToFgoodEvent->Fill(NA_n_tof[0]);
+		ToF1goodEvent->Fill(NA_n_tof[1]);
+		ToF2goodEvent->Fill(NA_n_tof[2]);
+		ToF3goodEvent->Fill(NA_n_tof[3]);
+//		ToF4goodEvent->Fill(NA_n_tof[4]);
+//		ToF5goodEvent->Fill(NA_n_tof[5]);
 //		nuAllCuts[0]->Fill(PriKineR_nu);
 		nuAllCuts->Fill(PriKineR_nu);
 		
@@ -85,6 +90,11 @@ void neutron_analysis_class::hand_class_fill_good_events(TH1F* ToFgoodEvent, TH1
 		{
 //			ToFup[0]->Fill(NA_n_tof[0]);
 			ToFup->Fill(NA_n_tof[0]);
+			ToF1up->Fill(NA_n_tof[1]);
+			ToF2up->Fill(NA_n_tof[2]);
+			ToF3up->Fill(NA_n_tof[3]);
+//			ToF4up->Fill(NA_n_tof[4]);
+//			ToF5up->Fill(NA_n_tof[5]);
 			nuUp->Fill(PriKineR_nu);
 			nuUpAllCuts->Fill(PriKineR_nu);
 			for (int bar=0; bar<30; bar++){TDC1up->Fill(NA_nd_p1_lt_c[bar]);}
@@ -96,6 +106,11 @@ void neutron_analysis_class::hand_class_fill_good_events(TH1F* ToFgoodEvent, TH1
 		{
 //			ToFdown[0]->Fill(NA_n_tof[0]);
 			ToFdown->Fill(NA_n_tof[0]);
+			ToF1down->Fill(NA_n_tof[1]);
+			ToF2down->Fill(NA_n_tof[2]);
+			ToF3down->Fill(NA_n_tof[3]);
+//			ToF4down->Fill(NA_n_tof[4]);
+//			ToF5down->Fill(NA_n_tof[5]);
 			nuDown->Fill(PriKineR_nu);
 			nuDownAllCuts->Fill(PriKineR_nu);
 			for (int bar=0; bar<30; bar++){TDC1dn->Fill(NA_nd_p1_lt_c[bar]);}
@@ -236,12 +251,22 @@ void neutron_analysis_class::hand_class_fill_good_events(TH1F* ToFgoodEvent, TH1
 		{
 //			ToFgoodEvent[i]->Fill(NA_n_tof[0]);
 			ToFgoodEvent->Fill(NA_n_tof[0]);
+			ToF1goodEvent->Fill(NA_n_tof[1]);
+			ToF2goodEvent->Fill(NA_n_tof[2]);
+			ToF3goodEvent->Fill(NA_n_tof[3]);
+//			ToF4goodEvent->Fill(NA_n_tof[4]);
+//			ToF5goodEvent->Fill(NA_n_tof[5]);
 //			nuAllCuts[i]->Fill(PriKineR_nu);
 			nuAllCuts->Fill(PriKineR_nu);
 			if (spinUp)
  			{
 //				ToFup[i]->Fill(NA_n_tof[0]);
 				ToFup->Fill(NA_n_tof[0]);
+				ToF1up->Fill(NA_n_tof[1]);
+				ToF2up->Fill(NA_n_tof[2]);
+				ToF3up->Fill(NA_n_tof[3]);
+//				ToF4up->Fill(NA_n_tof[4]);
+//				ToF5up->Fill(NA_n_tof[5]);
 				nuUpAllCuts->Fill(PriKineR_nu);
 				for (int bar=0; bar<30; bar++){TDC1up->Fill(NA_nd_p1_lt_c[bar]);}
 				for (int bar=0; bar<24; bar++){TDC2up->Fill(NA_nd_p2_lt_c[bar]);}
@@ -252,6 +277,11 @@ void neutron_analysis_class::hand_class_fill_good_events(TH1F* ToFgoodEvent, TH1
 			{
 //				ToFdown[i]->Fill(NA_n_tof[0]);
 				ToFdown->Fill(NA_n_tof[0]);
+				ToF1down->Fill(NA_n_tof[1]);
+				ToF2down->Fill(NA_n_tof[2]);
+				ToF3down->Fill(NA_n_tof[3]);
+//				ToF4down->Fill(NA_n_tof[4]);
+//				ToF5down->Fill(NA_n_tof[5]);
 				nuDownAllCuts->Fill(PriKineR_nu);
 				for (int bar=0; bar<30; bar++){TDC1dn->Fill(NA_nd_p1_lt_c[bar]);}
 				for (int bar=0; bar<24; bar++){TDC2dn->Fill(NA_nd_p2_lt_c[bar]);}

@@ -1,7 +1,7 @@
 #define neutron_analysis_class_cxx
 //#include "./THaEvent.h"
-#include <THaEvent.h>
 #include "neutron_analysis_class.h"
+#include <THaEvent.h>
 #include <TH2.h>
 #include <TStyle.h>
 #include <TCanvas.h>
@@ -724,31 +724,173 @@ void neutron_analysis_class::AsymLoop(int dataType)
 	TString plotnuUpAllCuts;
 	TString plotnuDownAllCuts;
 
+	// Below for multi-track ToF plots (2-tracks [1] to 6-tracks [5])
+	TH1F* ToF1goodEvent[11];
+	TH1F* ToF1cut[11];
+	TH1F* ToF1up[11];
+	TH1F* ToF1down[11];
+	TString titleToF1goodEvent;
+	TString plotToF1goodEvent;
+	TString titleToF1cut;
+	TString plotToF1cut;
+	TString titleToF1up;
+	TString plotToF1up;
+	TString titleToF1down;
+	TString plotToF1down;
+	TH1F* ToF2goodEvent[11];
+	TH1F* ToF2cut[11];
+	TH1F* ToF2up[11];
+	TH1F* ToF2down[11];
+	TString titleToF2goodEvent;
+	TString plotToF2goodEvent;
+	TString titleToF2cut;
+	TString plotToF2cut;
+	TString titleToF2up;
+	TString plotToF2up;
+	TString titleToF2down;
+	TString plotToF2down;
+	TH1F* ToF3goodEvent[11];
+	TH1F* ToF3cut[11];
+	TH1F* ToF3up[11];
+	TH1F* ToF3down[11];
+	TString titleToF3goodEvent;
+	TString plotToF3goodEvent;
+	TString titleToF3cut;
+	TString plotToF3cut;
+	TString titleToF3up;
+	TString plotToF3up;
+	TString titleToF3down;
+	TString plotToF3down;
+	TH1F* ToF4goodEvent[11];
+	TH1F* ToF4cut[11];
+	TH1F* ToF4up[11];
+	TH1F* ToF4down[11];
+	TString titleToF4goodEvent;
+	TString plotToF4goodEvent;
+	TString titleToF4cut;
+	TString plotToF4cut;
+	TString titleToF4up;
+	TString plotToF4up;
+	TString titleToF4down;
+	TString plotToF4down;
+	TH1F* ToF5goodEvent[11];
+	TH1F* ToF5cut[11];
+	TH1F* ToF5up[11];
+	TH1F* ToF5down[11];
+	TString titleToF5goodEvent;
+	TString plotToF5goodEvent;
+	TString titleToF5cut;
+	TString plotToF5cut;
+	TString titleToF5up;
+	TString plotToF5up;
+	TString titleToF5down;
+	TString plotToF5down;
+
 	cout << "Initalizing Histograms..." << endl;
 	for (int i=0; i<11; i++)
 	{
 		titleToFgoodEvent = "ToFgoodEvent for nu bin ";
 		titleToFgoodEvent += i;
+		titleToF1goodEvent = titleToFgoodEvent;
+		titleToF1goodEvent += ", ToF1";
+		titleToF2goodEvent = titleToFgoodEvent;
+		titleToF2goodEvent += ", ToF2";
+		titleToF3goodEvent = titleToFgoodEvent;
+		titleToF3goodEvent += ", ToF3";
+		titleToF4goodEvent = titleToFgoodEvent;
+		titleToF4goodEvent += ", ToF4";
+		titleToF5goodEvent = titleToFgoodEvent;
+		titleToF5goodEvent += ", ToF5";
 		plotToFgoodEvent = "ToFgoodEvent_bin_";
 		plotToFgoodEvent += i;
+		plotToF1goodEvent = plotToFgoodEvent;
+		plotToF1goodEvent += "_ToF1";
+		plotToF2goodEvent = plotToFgoodEvent;
+		plotToF2goodEvent += "_ToF2";
+		plotToF3goodEvent = plotToFgoodEvent;
+		plotToF3goodEvent += "_ToF3";
+		plotToF4goodEvent = plotToFgoodEvent;
+		plotToF4goodEvent += "_ToF4";
+		plotToF5goodEvent = plotToFgoodEvent;
+		plotToF5goodEvent += "_ToF5";
 		titleToFcut = "ToFcut for nu bin ";
 		titleToFcut += i;
+		titleToF1cut = titleToFcut;
+		titleToF1cut += ", ToF1";
+		titleToF2cut = titleToFcut;
+		titleToF2cut += ", ToF2";
+		titleToF3cut = titleToFcut;
+		titleToF3cut += ", ToF3";
+		titleToF4cut = titleToFcut;
+		titleToF4cut += ", ToF4";
+		titleToF5cut = titleToFcut;
+		titleToF5cut += ", ToF5";
 		plotToFcut = "ToFcut_bin_";
 		plotToFcut += i;
+		plotToF1cut = plotToFcut;
+		plotToF1cut += "_ToF1";
+		plotToF2cut = plotToFcut;
+		plotToF2cut += "_ToF2";
+		plotToF3cut = plotToFcut;
+		plotToF3cut += "_ToF3";
+		plotToF4cut = plotToFcut;
+		plotToF4cut += "_ToF4";
+		plotToF5cut = plotToFcut;
+		plotToF5cut += "_ToF5";
 		titleToFup = "ToFup for nu bin ";
 		titleToFup += i;
+		titleToF1up = titleToF1up;
+		titleToF1up += ", ToF1";
+		titleToF2up = titleToF2up;
+		titleToF2up += ", ToF2";
+		titleToF3up = titleToF3up;
+		titleToF3up += ", ToF3";
+		titleToF4up = titleToF4up;
+		titleToF4up += ", ToF4";
+		titleToF5up = titleToF5up;
+		titleToF5up += ", ToF5";
 		plotToFup = "ToFup_bin_";
 		plotToFup += i;
+		plotToF1up = plotToFup;
+		plotToF1up += "_ToF1";
+		plotToF2up = plotToFup;
+		plotToF2up += "_ToF2";
+		plotToF3up = plotToFup;
+		plotToF3up += "_ToF3";
+		plotToF4up = plotToFup;
+		plotToF4up += "_ToF4";
+		plotToF5up = plotToFup;
+		plotToF5up += "_ToF5";
 		titleToFdown = "ToFdown for nu bin ";
 		titleToFdown += i;
+		titleToF1down = titleToFdown;
+		titleToF1down += ", ToF1";
+		titleToF2down = titleToFdown;
+		titleToF2down += ", ToF2";
+		titleToF3down = titleToFdown;
+		titleToF3down += ", ToF3";
+		titleToF4down = titleToFdown;
+		titleToF4down += ", ToF4";
+		titleToF5down = titleToFdown;
+		titleToF5down += ", ToF5";
 		plotToFdown = "ToFdown_bin_";
 		plotToFdown += i;
+		plotToF1down = plotToFdown;
+		plotToF1down += "_ToF1";
+		plotToF2down = plotToFdown;
+		plotToF2down += "_ToF2";
+		plotToF3down = plotToFdown;
+		plotToF3down += "_ToF3";
+		plotToF4down = plotToFdown;
+		plotToF4down += "_ToF4";
+		plotToF5down = plotToFdown;
+		plotToF5down += "_ToF5";
 		titlenuAllCuts = "Nu for nu bin ";
 		titlenuAllCuts += i;
 		titlenuUpAllCuts = titlenuAllCuts;
-		titlenuUpAllCuts = ", Spin Up";
+		titlenuUpAllCuts += ", Spin Up";
 		titlenuDownAllCuts = titlenuAllCuts;
-		titlenuDownAllCuts = ", Spin Down";
+		titlenuDownAllCuts += ", Spin Down";
 		plotnuAllCuts = "nuAllCuts_bin_";
 		plotnuAllCuts += i;
 		plotnuUpAllCuts = "nuUpAllCuts_bin_";
@@ -791,13 +933,53 @@ void neutron_analysis_class::AsymLoop(int dataType)
 		if (i==0)
 		{
 			titleToFgoodEvent = "ToFgoodEvent Total";
+			titleToF1goodEvent = "ToF1goodEvent Total";
+			titleToF2goodEvent = "ToF2goodEvent Total";
+			titleToF3goodEvent = "ToF3goodEvent Total";
+			titleToF4goodEvent = "ToF4goodEvent Total";
+			titleToF5goodEvent = "ToF5goodEvent Total";
 			plotToFgoodEvent = "ToFgoodEvent_Total";
+			plotToF1goodEvent = "ToFgoodEvent_Total_ToF1";
+			plotToF2goodEvent = "ToFgoodEvent_Total_ToF2";
+			plotToF3goodEvent = "ToFgoodEvent_Total_ToF3";
+			plotToF4goodEvent = "ToFgoodEvent_Total_ToF4";
+			plotToF5goodEvent = "ToFgoodEvent_Total_ToF5";
 			titleToFcut = "ToFcut Total";
+			titleToF1cut = "ToF1cut Total";
+			titleToF2cut = "ToF2cut Total";
+			titleToF3cut = "ToF3cut Total";
+			titleToF4cut = "ToF4cut Total";
+			titleToF5cut = "ToF5cut Total";
 			plotToFcut = "ToFcut_Total";
+			plotToF1cut = "ToFcut_Total_ToF1";
+			plotToF2cut = "ToFcut_Total_ToF2";
+			plotToF3cut = "ToFcut_Total_ToF3";
+			plotToF4cut = "ToFcut_Total_ToF4";
+			plotToF5cut = "ToFcut_Total_ToF5";
 			titleToFup = "ToFup Total";
+			titleToF1up = "ToF1up Total";
+			titleToF2up = "ToF2up Total";
+			titleToF3up = "ToF3up Total";
+			titleToF4up = "ToF4up Total";
+			titleToF5up = "ToF5up Total";
 			plotToFup = "ToFup_Total";
+			plotToF1up = "ToFup_Total_ToF1";
+			plotToF2up = "ToFup_Total_ToF2";
+			plotToF3up = "ToFup_Total_ToF3";
+			plotToF4up = "ToFup_Total_ToF4";
+			plotToF5up = "ToFup_Total_ToF5";
 			titleToFdown = "ToFdown Total";
+			titleToF1down = "ToF1down Total";
+			titleToF2down = "ToF2down Total";
+			titleToF3down = "ToF3down Total";
+			titleToF4down = "ToF4down Total";
+			titleToF5down = "ToF5down Total";
 			plotToFdown = "ToFdown_Total";
+			plotToF1down = "ToFdown_Total_ToF1";
+			plotToF2down = "ToFdown_Total_ToF2";
+			plotToF3down = "ToFdown_Total_ToF3";
+			plotToF4down = "ToFdown_Total_ToF4";
+			plotToF5down = "ToFdown_Total_ToF5";
 			titlenuAllCuts = "Nu Total";
 			titlenuUpAllCuts = "Nu Up Total";
 			titlenuDownAllCuts = "Nu Down Total";
@@ -822,9 +1004,29 @@ void neutron_analysis_class::AsymLoop(int dataType)
 			plotTDC4dn = "TDC4dn_Total";
 		}
 		ToFgoodEvent[i] = new TH1F(plotToFgoodEvent,titleToFgoodEvent,tofBins,tofMin,tofMax);
+		ToF1goodEvent[i] = new TH1F(plotToF1goodEvent,titleToF1goodEvent,tofBins,tofMin,tofMax);
+		ToF2goodEvent[i] = new TH1F(plotToF2goodEvent,titleToF2goodEvent,tofBins,tofMin,tofMax);
+		ToF3goodEvent[i] = new TH1F(plotToF3goodEvent,titleToF3goodEvent,tofBins,tofMin,tofMax);
+		ToF4goodEvent[i] = new TH1F(plotToF4goodEvent,titleToF4goodEvent,tofBins,tofMin,tofMax);
+		ToF5goodEvent[i] = new TH1F(plotToF5goodEvent,titleToF5goodEvent,tofBins,tofMin,tofMax);
 		ToFcut[i] = new TH1F(plotToFcut,titleToFcut,tofBins,tofMin,tofMax);
+		ToF1cut[i] = new TH1F(plotToF1cut,titleToF1cut,tofBins,tofMin,tofMax);
+		ToF2cut[i] = new TH1F(plotToF2cut,titleToF2cut,tofBins,tofMin,tofMax);
+		ToF3cut[i] = new TH1F(plotToF3cut,titleToF3cut,tofBins,tofMin,tofMax);
+		ToF4cut[i] = new TH1F(plotToF4cut,titleToF4cut,tofBins,tofMin,tofMax);
+		ToF5cut[i] = new TH1F(plotToF5cut,titleToF5cut,tofBins,tofMin,tofMax);
 		ToFup[i] = new TH1F(plotToFup,titleToFup,tofBins,tofMin,tofMax);
+		ToF1up[i] = new TH1F(plotToF1up,titleToF1up,tofBins,tofMin,tofMax);
+		ToF2up[i] = new TH1F(plotToF2up,titleToF2up,tofBins,tofMin,tofMax);
+		ToF3up[i] = new TH1F(plotToF3up,titleToF3up,tofBins,tofMin,tofMax);
+		ToF4up[i] = new TH1F(plotToF4up,titleToF4up,tofBins,tofMin,tofMax);
+		ToF5up[i] = new TH1F(plotToF5up,titleToF5up,tofBins,tofMin,tofMax);
 		ToFdown[i] = new TH1F(plotToFdown,titleToFdown,tofBins,tofMin,tofMax);
+		ToF1down[i] = new TH1F(plotToF1down,titleToF1down,tofBins,tofMin,tofMax);
+		ToF2down[i] = new TH1F(plotToF2down,titleToF2down,tofBins,tofMin,tofMax);
+		ToF3down[i] = new TH1F(plotToF3down,titleToF3down,tofBins,tofMin,tofMax);
+		ToF4down[i] = new TH1F(plotToF4down,titleToF4down,tofBins,tofMin,tofMax);
+		ToF5down[i] = new TH1F(plotToF5down,titleToF5down,tofBins,tofMin,tofMax);
 		if (includeVetos) {titlenuAllCuts += " with vetos";}
 		if (includeVetos) {titlenuUpAllCuts += " with vetos";}
 		if (includeVetos) {titlenuDownAllCuts += " with vetos";}
@@ -1062,8 +1264,8 @@ void neutron_analysis_class::AsymLoop(int dataType)
 	oldHeState = HeSpin;
 
 	Int_t maxentries;
-	if (test) {maxentries = 10000;}
-//	if (test) {maxentries = 1000;}
+//	if (test) {maxentries = 10000;}
+	if (test) {maxentries = 1000;}
 	if (!test) {maxentries = nentries;}
 	cout << "maxentries = " << maxentries << endl;
 	double goodEventsPct;
@@ -1113,7 +1315,8 @@ void neutron_analysis_class::AsymLoop(int dataType)
 				goodEvents = goodEvents+1;
 				for (int k=0; k<11; k++)
 				{
-					hand_class_fill_good_events(ToFgoodEvent[k], ToFcut[k], ToFup[k], ToFdown[k], nuAllCuts[k], nuUp, nuDown, tofCutMin, tofCutMax, nuMin, nuMax, nuBins, asymType,k, nuUpAllCuts[k], nuDownAllCuts[k], TDC1up[k], TDC1dn[k], TDC2up[k], TDC2dn[k], TDC3up[k], TDC3dn[k], TDC4up[k], TDC4dn[k]);
+//					hand_class_fill_good_events(ToFgoodEvent[k], ToFcut[k], ToFup[k], ToFdown[k], nuAllCuts[k], nuUp, nuDown, tofCutMin, tofCutMax, nuMin, nuMax, nuBins, asymType,k, nuUpAllCuts[k], nuDownAllCuts[k], TDC1up[k], TDC1dn[k], TDC2up[k], TDC2dn[k], TDC3up[k], TDC3dn[k], TDC4up[k], TDC4dn[k]);
+					hand_class_fill_good_events(ToFgoodEvent[k], ToFcut[k], ToFup[k], ToFdown[k], nuAllCuts[k], nuUp, nuDown, tofCutMin, tofCutMax, nuMin, nuMax, nuBins, asymType,k, nuUpAllCuts[k], nuDownAllCuts[k], TDC1up[k], TDC1dn[k], TDC2up[k], TDC2dn[k], TDC3up[k], TDC3dn[k], TDC4up[k], TDC4dn[k], ToF1goodEvent[k], ToF1cut[k], ToF1up[k], ToF1down[k], ToF2goodEvent[k], ToF2cut[k], ToF2up[k], ToF2down[k],ToF3goodEvent[k], ToF3cut[k], ToF3up[k], ToF3down[k]);
 				}
 			}
 	
@@ -1215,13 +1418,6 @@ void neutron_analysis_class::AsymLoop(int dataType)
 // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 	}
 	nb = fChain->GetEntry(jentry);   nbytes += nb;
-	if (!test && ((jentry%10000)==0)) 
-	{
-		cout << "	allEvents: " << allEvents << endl;
-		cout << "	goodEventsBasic: " << numGoodEventsBasic << " (" << numGoodEventsBasic/allEvents*100 << "%)" << endl;
-		cout << "	goodEvents: " << goodEvents << " (" << goodEvents/allEvents*100 << "%)" << endl;
-	}
-
 	}
 	TString HeRunNumberString = "Run ";
 	HeRunNumberString += HeRunNumber;
@@ -1263,7 +1459,8 @@ void neutron_analysis_class::AsymLoop(int dataType)
 
 	for (int i=0; i<5; i++)
 	{
-		hand_class_draw_tof_nu(ToFbasic, ToFgoodEvent[0], ToFcut[0], ToFup[0], ToFdown[0], nuAllCuts[0], ToFgoodEvent[i], ToFcut[i], ToFup[i], ToFdown[i], nuAllCuts[i], nuUp, nuDown, outputRootString, HeRunNumber, i, nuUpAllCuts[i], nuDownAllCuts[i], TDC1up[i], TDC1dn[i], TDC2up[i], TDC2dn[i], TDC3up[i], TDC3dn[i], TDC4up[i], TDC4dn[i]);
+//		hand_class_draw_tof_nu(ToFbasic, ToFgoodEvent[0], ToFcut[0], ToFup[0], ToFdown[0], nuAllCuts[0], ToFgoodEvent[i], ToFcut[i], ToFup[i], ToFdown[i], nuAllCuts[i], nuUp, nuDown, outputRootString, HeRunNumber, i, nuUpAllCuts[i], nuDownAllCuts[i], TDC1up[i], TDC1dn[i], TDC2up[i], TDC2dn[i], TDC3up[i], TDC3dn[i], TDC4up[i], TDC4dn[i]);
+		hand_class_draw_tof_nu(ToFbasic, ToFgoodEvent[0], ToFcut[0], ToFup[0], ToFdown[0], nuAllCuts[0], ToFgoodEvent[i], ToFcut[i], ToFup[i], ToFdown[i], nuAllCuts[i], nuUp, nuDown, outputRootString, HeRunNumber, i, nuUpAllCuts[i], nuDownAllCuts[i], TDC1up[i], TDC1dn[i], TDC2up[i], TDC2dn[i], TDC3up[i], TDC3dn[i], TDC4up[i], TDC4dn[i], ToF1goodEvent[k], ToF1cut[k], ToF1up[k], ToF1down[k],ToF2goodEvent[k], ToF2cut[k], ToF2up[k], ToF2down[k],ToF3goodEvent[k], ToF3cut[k], ToF3up[k], ToF3down[k]);
 	}
 
 	TFile *outputRoot1 = new TFile(outputRootString,"UPDATE");

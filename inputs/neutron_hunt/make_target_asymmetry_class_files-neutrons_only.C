@@ -8,6 +8,13 @@
 //
 // *****************************************************
 
+#include<iostream>
+#include<fstream>
+#include "TString.h"
+#include "TChain.h"
+#include "TROOT.h"
+
+
 void make_target_asymmetry_class_files()
 {
 	cout << "Running make_target_asymmetry_class_files..." << endl;
@@ -59,7 +66,7 @@ void make_target_asymmetry_class_files()
 	gROOT->ProcessLine(".L neutron_analysis_class.h");
 	gROOT->ProcessLine(".L neutron_analysis_class.cxx");
 //	cout << "Defining MyClass ..." << endl;
-	cout << "Defining neutron_analsis_class ..." << endl;
+	cout << "Defining neutron_analysis_class ..." << endl;
 //	MyClass m;
 //	neutron_analysis_class m;
 	gROOT->ProcessLine("neutron_analysis_class m");

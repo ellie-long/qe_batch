@@ -1,6 +1,6 @@
 
 
-void neutron_analysis_class::hand_class_draw_tof_nu(TH1F* ToFbasic, TH1F* ToFgoodEventTotal, TH1F* ToFcutTotal, TH1F* ToFupTotal, TH1F* ToFdownTotal, TH1F* nuAllCutsTotal, TH1F* ToFgoodEvent, TH1F* ToFcut, TH1F* ToFup, TH1F* ToFdown, TH1F* nuAllCuts, TH1F* nuUp, TH1F* nuDown, TString outputRootString, int HeRunNumber, int iterator, TH1F* nuUpAllCuts, TH1F* nuDownAllCuts, TH1F* TDC1up, TH1F* TDC1dn, TH1F* TDC2up, TH1F* TDC2dn, TH1F* TDC3up, TH1F* TDC3dn, TH1F* TDC4up, TH1F* TDC4dn)
+void neutron_analysis_class::hand_class_draw_tof_nu(TH1F* ToFbasic, TH1F* ToFgoodEventTotal, TH1F* ToFcutTotal, TH1F* ToFupTotal, TH1F* ToFdownTotal, TH1F* nuAllCutsTotal, TH1F* ToFgoodEvent, TH1F* ToFcut, TH1F* ToFup, TH1F* ToFdown, TH1F* nuAllCuts, TH1F* nuUp, TH1F* nuDown, TString outputRootString, int HeRunNumber, int iterator, TH1F* nuUpAllCuts, TH1F* nuDownAllCuts, TH1F* TDC1up, TH1F* TDC1dn, TH1F* TDC2up, TH1F* TDC2dn, TH1F* TDC3up, TH1F* TDC3dn, TH1F* TDC4up, TH1F* TDC4dn, TH1F* ToF1goodEvent, TH1F* ToF1cut, TH1F* ToF1up, TH1F* ToF1down,TH1F* ToF2goodEvent, TH1F* ToF2cut, TH1F* ToF2up, TH1F* ToF2down,TH1F* ToF3goodEvent, TH1F* ToF3cut, TH1F* ToF3up, TH1F* ToF3down)
 {
 	if (iterator==0){cout << "vvvvvvvvvvvvvvvvvvvvvvv hand_class_draw_tof_nu.h vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv" << endl << "Plotting nu bins: ";}
 	cout << iterator << " ";
@@ -64,8 +64,40 @@ void neutron_analysis_class::hand_class_draw_tof_nu(TH1F* ToFbasic, TH1F* ToFgoo
 	ToFgoodEvent->SetFillColor(kViolet);
 	ToFgoodEvent->SetMinimum(0);
 	ToFgoodEvent->Write();
+//	ToFgoodEvent->Draw();
 //	ToFgoodEvent->Draw("same");
 //	tofpad2->Update();
+//	ToF1goodEventTotal->SetFillColor(kWhite);
+//	ToF1goodEventTotal->SetMinimum(0);
+//	ToF1goodEventTotal->Write();
+/*	ToF1goodEvent->SetFillColor(kViolet);
+	ToF1goodEvent->SetMinimum(0);
+	ToF1goodEvent->Write();
+//	ToF2goodEventTotal->SetFillColor(kWhite);
+//	ToF2goodEventTotal->SetMinimum(0);
+//	ToF2goodEventTotal->Write();
+	ToF2goodEvent->SetFillColor(kViolet);
+	ToF2goodEvent->SetMinimum(0);
+	ToF2goodEvent->Write();
+//	ToF3goodEventTotal->SetFillColor(kWhite);
+//	ToF3goodEventTotal->SetMinimum(0);
+//	ToF3goodEventTotal->Write();
+	ToF3goodEvent->SetFillColor(kViolet);
+	ToF3goodEvent->SetMinimum(0);
+	ToF3goodEvent->Write();
+//	ToF4goodEventTotal->SetFillColor(kWhite);
+//	ToF4goodEventTotal->SetMinimum(0);
+//	ToF4goodEventTotal->Write();
+//	ToF4goodEvent->SetFillColor(kViolet);
+//	ToF4goodEvent->SetMinimum(0);
+//	ToF4goodEvent->Write();
+//	ToF5goodEventTotal->SetFillColor(kWhite);
+//	ToF5goodEventTotal->SetMinimum(0);
+//	ToF5goodEventTotal->Write();
+//	ToF5goodEvent->SetFillColor(kViolet);
+//	ToF5goodEvent->SetMinimum(0);
+//	ToF5goodEvent->Write();
+*/
 
 //	tofpad3->cd();
 	ToFupTotal->SetFillColor(kWhite);
@@ -77,6 +109,38 @@ void neutron_analysis_class::hand_class_draw_tof_nu(TH1F* ToFbasic, TH1F* ToFgoo
 	ToFup->Write();
 //	ToFup->Draw("same");
 //	tofpad3->Update();
+//	ToF1upTotal->SetFillColor(kWhite);
+//	ToF1upTotal->SetMinimum(0);
+//	ToF1upTotal->Write();
+/*	ToF1up->SetFillColor(kViolet);
+	ToF1up->SetMinimum(0);
+	ToF1up->Write();
+//	ToF2upTotal->SetFillColor(kWhite);
+//	ToF2upTotal->SetMinimum(0);
+//	ToF2upTotal->Write();
+	ToF2up->SetFillColor(kViolet);
+	ToF2up->SetMinimum(0);
+	ToF2up->Write();
+//	ToF3upTotal->SetFillColor(kWhite);
+//	ToF3upTotal->SetMinimum(0);
+//	ToF3upTotal->Write();
+	ToF3up->SetFillColor(kViolet);
+	ToF3up->SetMinimum(0);
+	ToF3up->Write();
+*/
+/*	ToF4upTotal->SetFillColor(kWhite);
+	ToF4upTotal->SetMinimum(0);
+	ToF4upTotal->Write();
+	ToF4up->SetFillColor(kViolet);
+	ToF4up->SetMinimum(0);
+	ToF4up->Write();
+	ToF5upTotal->SetFillColor(kWhite);
+	ToF5upTotal->SetMinimum(0);
+	ToF5upTotal->Write();
+	ToF5up->SetFillColor(kViolet);
+	ToF5up->SetMinimum(0);
+	ToF5up->Write();
+*/
 
 //	tofpad4->cd();
 	ToFdownTotal->SetFillColor(kWhite);
@@ -89,6 +153,38 @@ void neutron_analysis_class::hand_class_draw_tof_nu(TH1F* ToFbasic, TH1F* ToFgoo
 //	ToFdown->Draw("same");
 //	tofpad4->Update();
 
+/*	ToF1downTotal->SetFillColor(kWhite);
+	ToF1downTotal->SetMinimum(0);
+	ToF1downTotal->Write();
+	ToF1down->SetFillColor(kViolet);
+	ToF1down->SetMinimum(0);
+	ToF1down->Write();
+	ToF2downTotal->SetFillColor(kWhite);
+	ToF2downTotal->SetMinimum(0);
+	ToF2downTotal->Write();
+	ToF2down->SetFillColor(kViolet);
+	ToF2down->SetMinimum(0);
+	ToF2down->Write();
+	ToF3downTotal->SetFillColor(kWhite);
+	ToF3downTotal->SetMinimum(0);
+	ToF3downTotal->Write();
+	ToF3down->SetFillColor(kViolet);
+	ToF3down->SetMinimum(0);
+	ToF3down->Write();
+*/
+/*	ToF4downTotal->SetFillColor(kWhite);
+	ToF4downTotal->SetMinimum(0);
+	ToF4downTotal->Write();
+	ToF4down->SetFillColor(kViolet);
+	ToF4down->SetMinimum(0);
+	ToF4down->Write();
+	ToF5downTotal->SetFillColor(kWhite);
+	ToF5downTotal->SetMinimum(0);
+	ToF5downTotal->Write();
+	ToF5down->SetFillColor(kViolet);
+	ToF5down->SetMinimum(0);
+	ToF5down->Write();
+*/
 	if (i==4)
 	{
 		// The section below plots the nu plots
